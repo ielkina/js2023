@@ -13,7 +13,7 @@ console.log(typeof Number(valueB)); // "number"
 //parseInt
 let elementWidth = '50px';
 console.log(elementWidth);
-elementWidth = Number.parseInt(elementWidth);
+elementWidth = Number.parseInt(elementWidth); //запинается на первом не числе
 
 const result = Number.parseInt(elementWidth);
 
@@ -39,19 +39,19 @@ console.log('elementHeight: ', elementHeight);
 //отсекает от числа 
 let salary = 1300.16472;
 //вызывается на самом числе
-console.log(salary.toFixed());
+// console.log(salary.toFixed());
 salary = salary.toFixed(2);//в скобках количество символов которые мы хотим оставить после запятой
 //Приведение (преобразование) к числу с Number(value)
 // console.log(salary);//возвращает строку
 salary = Number.parseFloat(salary);
-console.log(salary);//возвращает число
+// console.log(salary);//возвращает число
 
 salary = Number(salary.toFixed(2));
 //вызов дву методов преобразование в число и отсекание цифр после точки
 //сначала метод отсечет число а потом преобразует в число
-console.log(salary);
-//так  же что б не создавать новую переменную выражение можно сразу записать в консоль лог
-console.log(Number(salary.toFixed(2)));//матрешка
+// console.log(salary);
+// //так  же что б не создавать новую переменную выражение можно сразу записать в консоль лог
+// console.log(Number(salary.toFixed(2)));//матрешка
 //порядок выполнения выражение - из глубины! с начало выполняется метод во вложенных скобках потом во внешних 
 
 
@@ -60,11 +60,11 @@ console.log(Number(salary.toFixed(2)));//матрешка
 
 let quantity = '30';
 let value = 'Эту строку невозможно привести к числу';
-console.log(Number('5'));
-console.log(Number(false));//true приводиться в числовом преобразовании (да), false - 0 (нет).
-console.log(Number('dfg')); //NaN(not a number) не смог преобразовать в числовой формат 
-console.log(Number(quantity));
-console.log(Number(value));
+// console.log(Number('5'));
+// console.log(Number(false));//true приводиться в числовом преобразовании (да), false - 0 (нет).
+// console.log(Number('dfg')); //NaN(not a number) не смог преобразовать в числовой формат 
+// console.log(Number(quantity));
+// console.log(Number(value));
 
 
 
@@ -78,10 +78,10 @@ const base = 2;
 const power = 5;
 const res = Math.pow(2, 3);//возведение в степень
 const ult = Math.pow(base, power);//возведение в степень
-console.log(res);
-console.log(ult);
-//**оператор экпонента
-console.log(2 ** 3);//2 в третей степени аналог функции Math.pow(2, 3)
+// console.log(res);
+// console.log(ult);
+//**оператор экспонента аналог Math.pow
+// console.log(2 ** 3);//2 в третей степени аналог функции Math.pow(2, 3)
 
 
 //Задача
@@ -108,52 +108,25 @@ console.log(2 ** 3);//2 в третей степени аналог функци
 //Math.random
 //Math.round()
 
-console.log(Math.random());//возвращает рандомное число от 0 до 1
+// console.log(Math.random());//возвращает рандомно число от 0 до 1
 //Math.random() * (max - min) + min
 const max = 50;
 const min = 30;
 const a = Math.round(Math.random() * (max - min) + min);
 
-console.log(Math.random() * (max - min) + min);
-console.log(Math.random() * (50 - 30) + 30);
+// console.log(Math.random() * (max - min) + min);
+// console.log(Math.random() * (50 - 30) + 30);
 
 //округление 
-console.log(a);
+// console.log(a);
 
 
-const color = ['tomato', 'orange', 'blue', 'black', 'red', 'green', '#000', 'pink'];
+const color = ['tomato', 'orange', 'blue','teal', 'black', 'red', 'green', 'pink'];
 const colorMax = color.length - 1;
 const colorMin = 0;
 const index = Math.round(Math.random() * (colorMax - colorMin) + colorMin);
 const colors = color[index];
-console.log(index);
-console.log(colors);
+// console.log(index, colors);
+console.log(index, colors);//индекс возвращает строкой
+// console.log(colors);
 document.body.style.background = colors;
-
-
-
-// Math.floor(num) - возвращает наибольшее целое число,
-// меньшее, либо равное указанному
-console.log(Math.floor(1.7)); // 1
-
-// Math.ceil(num) - возвращает наименьшее целое число,
-// большее, либо равное указанному числу.
-console.log(Math.ceil(1.2)); // 2
-
-// Math.round(num) - возвращает значение числа,
-// округлённое до ближайшего целого
-console.log(Math.round(1.2)); // 1
-console.log(Math.round(1.5)); // 2
-
-// Math.max(num1, num2, ...) - возвращает наибольшее число из набора
-console.log(Math.max(20, 10, 50, 40)); // 50
-
-// Math.min(num1, num2, ...) - возвращает наименьшее число из набора
-console.log(Math.min(20, 10, 50, 40)); // 10
-
-// Math.pow(base, exponent) - возведение в степень
-console.log(Math.pow(2, 4)); // 16
-
-// Math.random() - возвращает псевдослучайное число в диапазоне [0, 1)
-console.log(Math.random()); // случайное число между 0 и 1
-console.log(Math.random() * (10 - 1) + 1); // псевдослучайное число от 1 до 10

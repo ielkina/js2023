@@ -21,7 +21,6 @@ const room = 716;
 const type = 'VIP';
 const welcomeMsg = 'Гость ' + firstName + ' ' + lastName + ' поселяется ' + 'в ' + room + ' ' + type;
 
-
 console.log(welcomeMsg);
 
 //Шаблонные строки (template strings)
@@ -33,7 +32,7 @@ const orderMsg = `Вы заказываете ${quantity} холодильник
 
 console.log(`Гость ${firstName + ' ' + lastName} поселяется в ${type} номер ${room}`);
 console.log(`Гость ${firstName} ${lastName} поселяется в ${type} номер ${room}`);
-console.log(`dlgfhl; fdlgj; skafh ${5 + 5}`);
+console.log(`duffel; fdlgj; skafh ${5 + 5}`);
 console.log(orderMsg);
 
 //Нормализация с методом toLowerCase()

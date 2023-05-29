@@ -33,7 +33,7 @@ console.log(number);
 
 console.log(typeof isOpen);
 
-// Как window.alert() блокирует интернет
+// Как window.alert() блокирует интерпретацию
 console.log('to');
 alert('sdf');
 console.log('after');

@@ -10,7 +10,21 @@ console.log(Number('0'));
 console.log(Boolean('0'));//не пустая строка поэтому в консоли будет true
 console.log(Boolean(-5));
 console.log(Boolean('xgf'));
-//запомните 6 ложных значений (falsy), приводятся к false в логическом преобразовании: 0, NaN, undefined, пустая строка "", или false. Абсолютно все остальные приводят к труе
+//запомните 6 ложных значений (falsy),
+//приводятся к false в логическом преобразовании:
+// 1. 0,
+console.log(Boolean(0));
+// 2. null,
+console.log(Boolean(null));
+// 3. NaN,
+console.log(Boolean(NaN));
+// 4. undefined,
+console.log(Boolean(undefined));
+// 5. пустая строка "",'', ``,
+console.log(Boolean(''));
+// 6. или false.
+console.log(false);
+// Абсолютно все остальные приводят к тру
 
 console.log();
 
@@ -40,4 +54,4 @@ console.log("!");
 
 console.log(!false);//true
 console.log(!0);//true
-console.log(!1);//true
+console.log(!1);//

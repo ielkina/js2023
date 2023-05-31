@@ -5,7 +5,7 @@
 ```console.log(Number.parseInt("5px")); // 5
 console.log(Number.parseInt("12qwe74")); // 12
 console.log(Number.parseInt("12.46qwe79")); // 12
-console.log(Number.parseInt("qweqwe")); // NaN
+console.log(Number.parseInt("QWERTY")); // NaN
 ```
 
 ---
@@ -15,7 +15,7 @@ console.log(Number.parseInt("qweqwe")); // NaN
 ```console.log(Number.parseFloat("5px")); // 5
 console.log(Number.parseFloat("12qwe74")); // 12
 console.log(Number.parseFloat("12.46qwe79")); // 12.46
-console.log(Number.parseFloat("qweqwe")); // NaN
+console.log(Number.parseFloat("QWERTY")); // NaN
 ```
 
 ---
@@ -25,7 +25,7 @@ console.log(Number.parseFloat("qweqwe")); // NaN
 ```const validNumber = Number("51"); // 51
 console.log(Number.isNaN(validNumber)); // false
 
-const invalidNumber = Number("qweqwe"); // NaN
+const invalidNumber = Number("QWERTY"); // NaN
 console.log(Number.isNaN(invalidNumber)); // true
 ```
 ---
@@ -78,6 +78,13 @@ console.log(Math.pow(2, 4)); // 16
 ```
 console.log(Math.random()); // случайное число между 0 и 1
 console.log(Math.random() * (10 - 1) + 1); // псевдослучайное число от 1 до 10
+```
+---
+***Math.abs()*** - <u>возвращает модуль числа, то есть из отрицательного числа делает положительное.</u>
+```
+console.log(Math.abs(-3));//3
+
+console.log(Math.abs(3));//3
 ```
 ---
 # <u>Строки</u>
@@ -145,5 +152,23 @@ console.log(productName.slice(0, 4)); // "Repa"
 console.log(productName.slice(3, 9)); // "air dr"
 console.log(productName.slice(0, productName.length)); // "Repair droid"
 console.log(productName.slice(7, productName.length)); // "droid"
+```
+---
+***replace()*** - <u>универсальный метод поиска-и-замены</u>
+variable.replace('что заменяем', 'на что заменяем')
+
+```
+// заменить тире двоеточием
+alert('12-34-56'.replace("-", ":")) // 12:34-56
+// заменить все тире двоеточием
+alert( '12-34-56'.replace( /-/g, ":" ))  // 12:34:56
+
+// поменять местами имя и фамилию
+let str = "John Smith";
+alert(str.replace(/(\w+) (\w+)/i, '$2, $1')) // Smith, John
+
+let str = "html and css";
+let result = str.replace(/html|css/gi, str => str.toUpperCase());
+alert(result); // HTML and CSS
 ```
 ---

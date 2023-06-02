@@ -176,7 +176,7 @@
 
 // console.log(null || (2 && 3) || 4); //3
 //null - false
-//2&&3 - 3 - && возвращает первый true или последний false если нет true
+//2&&3 - 3 - && возвращает true или последний false если нет true
 //4 - true
 //||-возвращает первый тру или последний false если в выражении нет true
 
@@ -189,9 +189,11 @@
 
 //|| или он работает на 6 значение которые возвращают false
 //?? он работает на два значение null и undefined
-const incomingValue = 5;
-let test;
-console.log(test);
-test = 0;
-const value = test ?? 'some value';
-console.log(value);
+// const incomingValue = 5;
+// let test;
+// console.log(test);
+// test = 0;
+// const value = test ?? 'some value';
+// console.log(value);
+
+

@@ -130,3 +130,17 @@ const colors = color[index];
 console.log(index, colors);//индекс возвращает строкой
 // console.log(colors);
 document.body.style.background = colors;
+
+
+var max = 10;
+var min = 5;
+// max = Math.floor();
+// max = Math.random()
+// max = max - min + 1;
+// max = max + min
+// console.log(max);
+// Math.floor( Math.random () * (max - min + 1)) + min
+
+// const result = Math.floor(Math.random() * (max - min + 1)) + min;
+
+// console.log(result);

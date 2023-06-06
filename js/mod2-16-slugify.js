@@ -2,13 +2,10 @@
 //Строка состоит только из букв и пробелов
 
 const title = 'Top 10 benefits of React framework';
-
 const normalizedTitle = title.toLowerCase();
 const words = normalizedTitle.split(' ');
 const slug = words.join('-');
-
 const slug1 = title.toLowerCase().split(' ').join('-');
-
 console.log(slug1);
 
 //первый вариант решения
@@ -22,7 +19,6 @@ console.log(slug1);
 
 //второй вариант решения
 const slugify = function (string) {
-
   return string.toLowerCase().split(' ').join('-');
 }
 

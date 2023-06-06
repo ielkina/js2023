@@ -1,5 +1,3 @@
-console.log('calculate total price');
-
 //Напиши функцию calculateTotalPrice(items)
 //которая принимает массив цен (чисел) и возвращает их сумму
 

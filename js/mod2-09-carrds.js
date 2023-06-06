@@ -1,7 +1,7 @@
 console.log(`cards`);
 //Работаем с коллекцией карточек в trello
 //Метод splice()
-//Удалить 
+//Удалить
 //Добавить
 //Обновить
 
@@ -11,7 +11,7 @@ const cards = [
   'Карточка-3',
   'Карточка-4',
   'Карточка-5',
-]
+];
 
 console.table(cards);
 
@@ -25,27 +25,27 @@ console.table(cards);
 // cards.splice(index, 1)
 // console.table(cards);
 
-
-
 //Добавить (по индексу)
 const cardToInsert = 'Карточка-6';
 // const index = 3;
-// // 0 - означает что при выполнение кода не будет удаляться элемент из массива
 // cards.splice(index, 0, cardToInsert);
+// // 0 - означает что при выполнение кода не будет удаляться элемент из массива
 // //добавление в конец массива элемента
 // cards.push(cardToInsert)
 // console.table(cards);
+cards.splice(3, 0, 5, 10, 20);
+//в массив с индекса 3,ничего не удаляя(0),  вставь 3 элемента(5,10,20)
 
-
+//удаление с заменой 
+cards.splice(1, 1, 5);
+//на 1 индексе, удали 1 элемент(1), и вместо нее поставь 5
 
 //Обновление (по индексу)
-const cardToUpdate = 'Карточка-4'
+const cardToUpdate = 'Карточка-4';
 //Находим индекс элемента
 const index = cards.indexOf(cardToUpdate);
 console.log(index);
 //заменяем найденный элемент по индексу на новый элемент
-cards.splice(index, 1, `Обновленная ${cardToUpdate}`)
+cards.splice(index, 1, `Обновленная ${cardToUpdate}`);
 
 console.table(cards);
-
-

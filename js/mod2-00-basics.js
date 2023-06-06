@@ -1,6 +1,5 @@
-console.log(`basics`);
 //Знакомство с массивами 
-// - Обьявление
+// - Объявление
 // - Индексация 
 // -Длина
 // - индекс последнего эдемента
@@ -8,14 +7,14 @@ console.log(`basics`);
 // 'Mango', 'Kiwi', 'Poly', 'Ajax'
 
 const friends = ['Margo', 'Pit', 'Mango', 'Kiwi', 'Poly', 'Ajax'];
-console.log(friends.length);
+console.log(friends.length);//длинна массива
 console.table(friends);//вывод в консоль индекса и значения
 const lastIndex = friends.length - 1;//индекс последнего элемента массива
 console.log(lastIndex);
-console.log(friends.length - 1);
-console.log(friends[5]);
-friends[1] = 'Gary';//изменение элемента массива
-console.table(friends);
+// console.log(friends.length - 1);
+// console.log(friends[5]);//элемент массива
+// friends[1] = 'Gary';//изменение элемента массива
+// console.table(friends);
 // console.count(friends)
 // console.countReset(friends);
 // console.debug(friends)
@@ -32,24 +31,24 @@ console.table(friends);
 // Передача по ссылке и по значению
 // - Примитивы и сложные типы
 // - Ссылочные равенства(referential equality)
-let a = 10;
-let b = a;
-console.log(a);//10
-console.log(b);//10
-a = 20;
-console.log(a);//20
-console.log(b);//10
+// let a = 10;
+// let b = a;
+// console.log(a);//10
+// console.log(b);//10
+// a = 20;
+// console.log(a);//20
+// console.log(b);//10
 
-const c = [1, 2, 3];
-const d = c;
-console.log('a', c);
-console.log('b', d);
+// const c = [1, 2, 3];
+// const d = c;
+// console.log('a', c);
+// console.log('b', d);
 
-c[0] = 500;
-console.log(c);
-console.log(d);
-console.log(c === d);//ссылки на один и тот же массив
-console.log([1, 2, 3] === [1, 2, 3]);//два разных массива
+// c[0] = 500;
+// console.log(c);
+// console.log(d);
+// console.log(c === d);//ссылки на один и тот же массив
+// console.log([1, 2, 3] === [1, 2, 3]);//два разных массива
 
 //Перебор (итерация) массива
 
@@ -61,12 +60,12 @@ console.log([1, 2, 3] === [1, 2, 3]);//два разных массива
 //const friends = ;
 
 // console.log(friends);
-for (let i = 0; i <= lastIndex; i += 1) {
-  // console.log(i);
-  // console.log(friends[i]);//обращение к каждому элементу  массива
-  // friends[i] += '-1'
-}
-console.table(friends);
+// for (let i = 0; i <= lastIndex; i += 1) {
+//   // console.log(i);
+//   // console.log(friends[i]);//обращение к каждому элементу  массива
+//   // friends[i] += '-1'
+// }
+// console.table(friends);
 
 for (let i = 0; i < friends.length; i += 1) {
   friends[i] += `-${i}`

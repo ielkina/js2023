@@ -4,7 +4,7 @@
 //   console.log(arguments);
 
 //   //первый метод
-//   const args = Array.from(arguments)
+//   const args = Array.from(arguments) //сделай массив из...
 
 //   // for (const arg of arguments) {
 //   //   console.log(arg);
@@ -18,8 +18,9 @@
 
 
 //Второй метод решения
+//тоже самое что Array.from(arguments)
 //передача двух аргументов в функцию
-const fn = function (a, b, ...args) {
+const fn = function (a, b, ...args) { //arguments = ...args 
   //rest(args)- ставится в самом конце 
   console.log(`${a} ${b}`);
   console.log(args);
@@ -33,6 +34,8 @@ fn('hello', 1, 2, 3, 4, 5, 6, 7);
 //Операция ... (rest)
 console.log('Задача вторая');
 
+
+//если в параметры функции передать  ...args то в нее передастся все аргументы из вызова функции 
 const add = function (...args) {
   console.log(args);
   let total = 0;

@@ -1,17 +1,15 @@
-console.log('find smallest numbers');
-
 //Напиши функцию findSmilesNumber(numbers)  для поиска самого меньшего числа в массиве
 //при условии что числа уникальные (не повторяются)
 
-const numbers = [51, 18, 13, 24, 7, 85, 19]
-let smallestNumber = numbers[0];
-for (const number of numbers) {
-  if (number < smallestNumber) {
-    smallestNumber = number;
-  }
-}
+// const numbers = [51, 18, 13, 24, 7, 85, 19]
+// let smallestNumber = numbers[0];
+// for (const number of numbers) {
+//   if (number < smallestNumber) {
+//     smallestNumber = number;
+//   }
+// }
 
-console.log('smallestNumber: ', smallestNumber);
+// console.log('smallestNumber: ', smallestNumber);
 
 //первый вариант решения
 const findSmallestNumber = function (numbers) 

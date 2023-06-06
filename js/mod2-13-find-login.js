@@ -1,10 +1,9 @@
-console.log('find login');
-//Напиши функцию findLogin(allLogin, login) 
-//для поиска логина 
+//Напиши функцию findLogin(allLogin, login)
+//для поиска логина
 //Если логина нет, вывести сообщение `Пользователь [логин] не найден`
 //Если нашли логин, вывести сообщение `Пользователь [логин] найден`
 
-const logins = ['avocado', 'kiwi', 'apple', 'ajax']
+const logins = ['avocado', 'kiwi', 'apple', 'ajax'];
 // const logonToFind = '';
 
 // const message = logins.includes(logonToFind)
@@ -13,8 +12,7 @@ const logins = ['avocado', 'kiwi', 'apple', 'ajax']
 
 // console.log(message);
 
-
-//первый вариант 
+//первый вариант
 // const findLogin = function (allLogins, logonToFind) {
 
 //   // let message = `Пользователь ${logonToFind} не найден`;
@@ -29,7 +27,7 @@ const logins = ['avocado', 'kiwi', 'apple', 'ajax']
 //       return `Пользователь ${logonToFind} найден`
 //     }
 //   }
-//   //1 
+//   //1
 //   // return message;
 //   //или
 //   //Если совпадений не будет найдено return прервет выполнение функции с сообщением "не найден"
@@ -37,10 +35,11 @@ const logins = ['avocado', 'kiwi', 'apple', 'ajax']
 //   return `Пользователь ${logonToFind} не найден`;
 // };
 
-
-
 //Второй вариант
-const findLogin = function (allLogin, logonToFind) {
+const findLogin = function (logins, logonToFind) {
+  //переменная logins в параметрах функции и глобальная переменная logins с массивом это две разные функции.
+  //задавать в параметры такие переменные не считается ошибкой
+
   // const message = logins.includes(logonToFind)
   //   ? `Пользователь ${logonToFind} найден`
   //   : `Пользователь ${logonToFind} не найден`
@@ -48,11 +47,10 @@ const findLogin = function (allLogin, logonToFind) {
   //или
   return logins.includes(logonToFind)
     ? `Пользователь ${logonToFind} найден`
-    : `Пользователь ${logonToFind} не найден`
+    : `Пользователь ${logonToFind} не найден`;
   // false ? 1 : 2//венет 2
   // true ? 1 : 2//вернет 1
-}
-
+};
 
 console.log(findLogin(logins, 'avocado'));
 console.log(findLogin(logins, 'kiwi'));

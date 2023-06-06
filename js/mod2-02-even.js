@@ -3,10 +3,12 @@ console.log(`even`);
 const numbers = [1, 5, 8, 9, 12, 4, 15, 27, 30, 18, 11]
 //переменная суммы четных чисел total 
 let total = 0;
-console.log(numbers);
+// console.log(numbers);
 
 //первый вариант
+
 //перебрать массив
+
 // for(let i = 0; i < numbers.length; i += 1){
 //   const number = numbers[i]
 //   console.log(number);

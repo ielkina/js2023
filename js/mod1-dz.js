@@ -598,4 +598,8 @@
 // console.log(checkForSpam('Amazing SalE, only tonight!'));
 // console.log(checkForSpam('Trust me, this is not a spam message'));
 // console.log(checkForSpam('Get rid of sPaM emails. Our book in on sale!'));
+<<<<<<< Updated upstream
 // console.log(checkForSpam('[SPAM] How to earn fast money?'));
+=======
+// console.log(checkForSpam('[SPAM] How to earn fast money?'));
+>>>>>>> Stashed changes

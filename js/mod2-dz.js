@@ -248,7 +248,6 @@
 
 // const start = 3;
 // const end = 7;
-
 // for (let i = start; i <= end; i +=1 ) {
 //   console.log(i);
 // }
@@ -328,17 +327,17 @@
 //Задача 23
 // Напиши функцию filterArray(numbers, value), которая принимает массив чисел (параметр numbers) и возвращает новый массив, в котором будут только те элементы массива numbers, которые больше чем значение параметра value (число).
 
-function filterArray(numbers, value) {
-  const array = [];
-  for (const item of numbers) {
-    if (item > value) {
-      array.push(item);
-    }
-  }
-  return array;
-}
+// function filterArray(numbers, value) {
+//   const array = [];
+//   for (const item of numbers) {
+//     if (item > value) {
+//       array.push(item);
+//     }
+//   }
+//   return array;
+// }
 
-console.log(filterArray([1, 2, 3, 4, 5], 3));
+// console.log(filterArray([1, 2, 3, 4, 5], 3));
 
 // function filterArray(numbers, value) {
 //   const newArray = [];

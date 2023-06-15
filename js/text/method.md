@@ -112,7 +112,9 @@ console.log(Math.abs(3));//3
 
 ---
 <span style="color:green"> Этот текст голубой.</span>
+
 # <u>Строки</u>
+
 [![Typing SVG](https://readme-typing-svg.herokuapp.com?color=%2336BCF7&lines=Computer+science+student)](https://git.io/typing-svg)
 
 **_length_** - <u>Длинна строки</u>
@@ -423,3 +425,5 @@ console.log(allClientsWithNewFirst); // ["Monkong", "Singu", "Mango", "Ajax", "P
 console.log(oldClients); // ["Mango", "Ajax", "Poly", "Kiwi"]
 console.log(newClients); // ["Monkong", "Singu"]
 ```
+---
+# <u>Объекты</u>

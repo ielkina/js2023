@@ -288,7 +288,6 @@
 // else if (deadLine >= 3) console.log('in the future');
 // else console.log('you are fired');
 
-
 //подходит только с условием со строгим равенством и не подходит с условиями с какими то доп условиями
 // switch (deadLine) {
 //   case 0:
@@ -309,5 +308,98 @@
 // }
 
 /********************** */
-const max = 120;
-const min = 100;
+// const max = 120;
+// const min = 100;
+
+/******************** */
+// const numbers = '5456464646454';
+// let even = 0; //pairNumber
+// let notEvent = 0; //unpairNumber
+
+// // for (let i = 0; i < numbers.length; i += 1) {
+// //   console.log(numbers[i]);
+// //   numbers[i] % 2 ? (notEvent += 1) : (even += 1);
+// //   //или
+// //   // if (numbers[i] % 2) {
+// //   //   notEvent += 1;
+// //   // } else {
+// //   //   even += 1;
+// //   // }
+
+// // }
+// for (let i = 0; i < numbers.length; i += 1) {
+//   console.log(numbers[i]);
+//   // numbers[i] % 2 ? (notEvent += 1) : (even += 1);
+//   // if (numbers[i] % 2) {
+//   //   notEvent += 1;
+//   //   continue;
+//   // }
+//   // even += 1;
+// }
+
+// console.log(`${even}  ${notEvent}`);
+
+/******************************** */
+
+// const numbers = '123456789';
+// const slug = numbers.split('').join('-');
+// console.log(slug);
+
+//или
+
+// const numbers = '123456789';
+// let newNumber = '';
+// for (let i = 0; i <= numbers.length - 1; i += 1) {
+//   newNumber += numbers[i] + '-';
+// }
+// newNumber = newNumber.slice(0, newNumber.length - 1);
+// console.log(newNumber);
+
+//или
+// const numbers = '123456789';
+// let newNumber = '';
+// for (let i = 0; i <= numbers.length - 1; i += 1) {
+//   if (i === numbers.length - 1) {
+//     newNumber += numbers[i];
+//     continue;
+//   }
+//   newNumber += numbers[i] + '-';
+// }
+// console.log(newNumber);
+
+/***************** */
+
+// let number = 1000;
+// let currentNumber = number;
+
+// for (let i = 1; i < number; i += 1) {
+//   currentNumber /= 2;
+
+//   if (currentNumber < 20) {
+//     console.log(Math.round(currentNumber), i);
+//     console.log(
+//       `текущее число -${Math.round(currentNumber)}, число итераций -${i}`);
+//     break;
+//   }
+// }
+// console.log(currentNumber);
+
+/**************** */
+const phase = 'I am a student again ';
+let currentWord = '';
+let result = '';
+
+for (let i = 0; i < phase.length; i += 1) {
+  currentWord += phase[i];
+
+  if (phase[i + 1] === ' ') {
+    currentWord = currentWord.trim();
+
+    if (currentWord.length > 2) {
+      result += currentWord[0].toLocaleUpperCase() + '.';
+    }
+
+    currentWord = '';
+  }
+}
+console.log(result.slice(0, -1));

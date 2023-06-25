@@ -188,3 +188,126 @@
 // console.log('hours', hours);
 // const hours = totalMinutes / 60
 // console.log('hours', hours.toFixed(2));
+
+// const answer = prompt('JS');
+// const currentAnswer = 'JS';
+
+// if (answer !== null) {
+//   // const normalizeAnswer = answer.toLocaleLowerCase();
+//   if (answer.toLocaleLowerCase() === currentAnswer.toLocaleLowerCase()) {
+//     alert('yes');
+//   } else {
+//     alert('no');
+//   }
+// }
+
+// console.log(true === !null);
+// console.log(true !== null);
+
+// const hours = 14;
+// const minutes = 0;
+// let timeString;
+// if (minutes > 0) {
+//   timeString = `${hours}ч.  ${minutes}хв.`;
+// } else {
+//   timeString = `${hours}ч.`;
+// }
+// console.log(timeString);
+/***********/
+// const userInput = prompt('Введите число');
+// let message;
+// // if (userInput !== null) {
+// if (userInput > 0) {
+//   message = 'Это положительное число';
+// } else if (userInput === null) {
+//   message = 'Вы отменили ввод';
+// } else if (userInput === undefined || userInput === ' ' || userInput === '') {
+//   message = 'Вы ничего не ввели';
+// } else if (Number(userInput) === 0) {
+//   message = 'Это ноль';
+// } else if (userInput < 0) {
+//   message = 'Это отрицательное число';
+// } else {
+//   message = 'Это не число';
+// }
+// console.log(message);
+// // }
+// //alert(message);
+/********** */
+
+// const a = 120;
+// const b = 180;
+// const maxValue = a > b ? a : b;
+
+// if (a > 100 && b > 100) {
+//   console.log(maxValue);
+// } else {
+//   console.log(maxValue + 512);
+// }
+
+// console.log(maxValue + 512);
+/************************** */
+
+// let link = 'https://my-site.com/about';
+
+// if (link.endsWith('/')) {
+//   console.log(link);
+// } else link += '/';
+
+// console.log(link);
+
+/************************ */
+
+// let link = 'https://my-site.com/about';
+
+// if (!link.endsWith('/') && link.includes('my-site')) link += '/';
+
+// console.log(link);
+
+/*************************** */
+// let link = 'https://my-site.com/about';
+
+// // if (link.includes('my-site') && !link.endsWith('/')) link += '/';
+
+// link.includes('my-site') && !link.endsWith('/') ? (link += '/') : link;
+
+// console.log(link);
+
+/******************* */
+// const hours = 10;
+// if (hours > 17) console.log('Pending');
+// else if (hours >= 17 && hours <= 24) console.log('Expires');
+// else console.log('Overdue');
+
+/************* */
+
+// const deadLine = 3;
+// if (deadLine === 0) console.log('today');
+// else if (deadLine === 1) console.log('tomorrow');
+// else if (deadLine === 2) console.log('after tomorrow');
+// else if (deadLine >= 3) console.log('in the future');
+// else console.log('you are fired');
+
+
+//подходит только с условием со строгим равенством и не подходит с условиями с какими то доп условиями
+// switch (deadLine) {
+//   case 0:
+//     console.log('today');
+//     break;
+//   case 1:
+//     console.log('tomorrow');
+//     break;
+//   case 2:
+//     console.log('after tomorrow');
+//     break;
+//   case 3:
+//     console.log('in the future');
+//     break;
+//   default:
+//     console.log('you are fired');
+//     break;
+// }
+
+/********************** */
+const max = 120;
+const min = 100;

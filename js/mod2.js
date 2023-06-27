@@ -221,3 +221,90 @@
 // }
 // console.log(arrClearNumber);
 
+// let arr = [1, 2, 3, 6, 4]
+// arr.age = 25
+// console.log(arr);
+// for (let i = 0; i < arr.length; i += 1) {
+//   console.log(`${i} ${arr[i]}`);
+// }
+// console.log(arr);
+
+//⁡⁣⁣⁢​‌‌‍‍‍З͟а͟д͟а͟ч͟а м͟а͟г͟а͟з͟и͟н​⁡
+​
+const productFromFirst = [
+  'мяч',
+  'ручка',
+  'карандаш',
+  'краска',
+  'тетрадь',
+  'книга',
+];
+const codeFromFirst = [
+  '65464646654',
+  '9899989898',
+  '5454979766533',
+  '566566598989',
+  '1232659696456',
+  '32332323232',
+];
+const productFromSecond = [
+  'подушка',
+  'чашка',
+  'ложка',
+  'нож',
+  'вилка',
+  'тарелка',
+];
+const codeFromSecond = [
+  '465546',
+  '7896879',
+  '546361356',
+  '65345584',
+  '986656',
+  '546545466646',
+];
+const cashRegister = [
+  '65464646654',
+  '9899989898',
+  '5454979766533',
+  '465546',
+  '7896879',
+  '546361356',
+];
+const startOrderPrise = 10;
+const showCase = productFromFirst.concat(productFromSecond);
+
+let counterFirst = 0;
+let counterSecond = 0;
+const arr = [];
+const arr2 = [];
+for (let i = 0; i < showCase.length; i += 1) {
+  let index;
+  if (productFromFirst.includes(showCase[i])) {
+    index = productFromFirst.indexOf(showCase[i]);
+    const value = codeFromFirst[index];
+    if (cashRegister.includes(value)) {
+      arr.push(...showCase.slice(i, i + 1));
+      counterFirst++;
+    } else arr2.push(...showCase.slice(i, i + 1));
+  }
+  if (productFromSecond.includes(showCase[i])) {
+    index = productFromSecond.indexOf(showCase[i]);
+    const value = codeFromSecond[index];
+    if (cashRegister.includes(value)) {
+      showCase.slice(i, i + 1);
+      counterSecond++;
+    } else arr2.push(...showCase.slice(i, i + 1));
+  }
+}
+//
+
+showCase.splice(0, showCase.length, ...arr2);
+
+const totalCashFirst = startOrderPrise * counterFirst;
+const totalCashSecond = startOrderPrise * counterSecond;
+console.log(totalCashFirst);
+console.log(totalCashSecond);
+console.log(showCase);
+console.log(arr);
+console.log(arr2);

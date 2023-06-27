@@ -101,12 +101,123 @@
 
 /*поиск элементов*/
 
-const numbers = [2, 17, 94, 1, 23, 37];
-let min = numbers[0];
-let max = numbers[0];
-for (let i = 1; i < numbers.length; i += 1) {
-  if (numbers[i] < min) min = numbers[i];
-  if (numbers[i] > max) max = numbers[i];
-}
-console.log(min);
-console.log(max);
+// const numbers = [2, 17, 94, 1, 23, 37];
+// let min = numbers[0];
+// let max = numbers[0];
+// for (let i = 1; i < numbers.length; i += 1) {
+//   if (numbers[i] < min) min = numbers[i];
+//   if (numbers[i] > max) max = numbers[i];
+// }
+// console.log(min);
+// console.log(max);
+
+/**************** */
+
+// const arr = [1, 2, true, 3, undefined, 'str', null, 'asd', false];
+// const missedArr = [true, undefined, null, false];
+// // console.log(arr.filter((item) => !missedArr.includes(item)));
+// //или
+// const newArr = [];
+
+// for (let i = 0; i < arr.length; i += 1) {
+//   if (missedArr.includes(arr[i])) continue
+//   newArr.push(arr[i])
+// }
+// console.log(arr);
+
+//или
+// for (const item of arr) {
+//   switch (item) {
+//     case true:
+//     case undefined:
+//     case null:
+//     case false:
+//       break;
+//     default:
+//       newArr.push(item);
+//   }
+// }
+// console.log(newArr);
+
+// const obj = {};
+// obj[1] = 'hi';
+// obj['1'] = 'hello';
+// console.log(obj[1]);
+// console.log(obj['1']);
+// console.log(obj);
+/******************* */
+// const phase = 'I am a student again ';
+// let currentWord = '';
+// let result = '';
+
+// for (let i = 0; i < phase.length; i += 1) {
+//   currentWord += phase[i];
+
+//   if (phase[i + 1] === ' ') {
+//     currentWord = currentWord.trim();
+
+//     if (currentWord.length > 2) {
+//       result += currentWord[0].toLocaleUpperCase() + '.';
+//     }
+
+//     currentWord = '';
+//   }
+// }
+// console.log(result.slice(0, -1));
+
+// const phase = 'I am a student again ';
+// const arr = phase.split(' ');
+// let result = [];
+
+// for (const word of arr) {
+//   if (word.length > 2) {
+//     result.push(word[0].toLocaleUpperCase());
+//   }
+// }
+
+// console.log(result.join('.'));
+/****************** */
+// let a = 1_230 + 2_000;
+// console.log(a);
+
+// let sayHiMixin = {
+//   sayHi() {
+//     console.log(`Привет, ${this.name}`);
+//   },
+//   sayBye() {
+//     console.log(`Пока, ${this.name}`);
+//   },
+// };
+
+// class User {
+//   constructor(name) {
+//     this.name = name;
+//   }
+// }
+
+// Object.assign(User.prototype, sayHiMixin);
+// new User('Вася').sayHi();
+
+// const arrNumbers = [1, 1, 3, 4, 5, 6, 7, 8, 9, 12, 9, 9, 7];
+// const arrClearNumber = [];
+// // const arrRepeatedNumbers = [];
+// // // for (const number of arrNumbers) {
+// // //   if (arrClearNumber.includes(number)) {
+// // //     arrRepeatedNumbers.push(number);
+// // //   } else {
+// // //     arrClearNumber.push(number);
+// // //   }
+// // // }
+// // // console.log(arrClearNumber);
+// // // console.log(arrRepeatedNumbers);
+// // // console.log(`количество повторяющихся номеров -
+// // // ${arrRepeatedNumbers.length}`);
+
+// // //или
+// for (let i = 0; i < arrNumbers.length; i += 1) {
+//   if (arrNumbers.indexOf(arrNumbers[i]) === i) {
+//     arrClearNumber.push(arrNumbers[i]);
+//   }
+// }
+// console.log(arrClearNumber);
+

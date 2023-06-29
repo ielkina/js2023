@@ -438,12 +438,33 @@
 
 //Логирование контактов
 
-function printContactInfo(name, phones) {
-  const arrNames = name.split(',');
-  const arrPhones = phones.split(',');
-  for (let i = 0; i < arrNames.length; i += 1) {
-    console.log(`${arrNames[i]} - ${arrPhones[i]}`);
-  }
-}
+// function printContactInfo(name, phones) {
+//   const arrNames = name.split(',');
+//   const arrPhones = phones.split(',');
+//   for (let i = 0; i < arrNames.length; i += 1) {
+//     console.log(`${arrNames[i]} - ${arrPhones[i]}`);
+//   }
+// }
 
-printContactInfo('Jacob, William, Solomon','545444, 4545454, 4545454');
+// printContactInfo('Jacob, William, Solomon','545444, 4545454, 4545454');
+
+// function strFormate(str1, str2) {
+//   // return `${str1}-${str2}`
+
+//   //или
+//   const result = str1.split(' ').concat(str2.split(' '))
+//   return result.join('-')
+// }
+
+// console.log(strFormate('str1', 'str2'));
+
+
+//Замыкание  функции
+function addN(n) {
+  return function addA(n2) {
+    return n + n2;
+  };
+}
+const result = addN(2);
+
+console.log(result(5));

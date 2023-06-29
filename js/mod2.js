@@ -230,81 +230,220 @@
 // console.log(arr);
 
 //⁡⁣⁣⁢​‌‌‍‍‍З͟а͟д͟а͟ч͟а м͟а͟г͟а͟з͟и͟н​⁡
-​
-const productFromFirst = [
-  'мяч',
-  'ручка',
-  'карандаш',
-  'краска',
-  'тетрадь',
-  'книга',
-];
-const codeFromFirst = [
-  '65464646654',
-  '9899989898',
-  '5454979766533',
-  '566566598989',
-  '1232659696456',
-  '32332323232',
-];
-const productFromSecond = [
-  'подушка',
-  'чашка',
-  'ложка',
-  'нож',
-  'вилка',
-  'тарелка',
-];
-const codeFromSecond = [
-  '465546',
-  '7896879',
-  '546361356',
-  '65345584',
-  '986656',
-  '546545466646',
-];
-const cashRegister = [
-  '65464646654',
-  '9899989898',
-  '5454979766533',
-  '465546',
-  '7896879',
-  '546361356',
-];
-const startOrderPrise = 10;
-const showCase = productFromFirst.concat(productFromSecond);
 
-let counterFirst = 0;
-let counterSecond = 0;
-const arr = [];
-const arr2 = [];
-for (let i = 0; i < showCase.length; i += 1) {
-  let index;
-  if (productFromFirst.includes(showCase[i])) {
-    index = productFromFirst.indexOf(showCase[i]);
-    const value = codeFromFirst[index];
-    if (cashRegister.includes(value)) {
-      arr.push(...showCase.slice(i, i + 1));
-      counterFirst++;
-    } else arr2.push(...showCase.slice(i, i + 1));
-  }
-  if (productFromSecond.includes(showCase[i])) {
-    index = productFromSecond.indexOf(showCase[i]);
-    const value = codeFromSecond[index];
-    if (cashRegister.includes(value)) {
-      showCase.slice(i, i + 1);
-      counterSecond++;
-    } else arr2.push(...showCase.slice(i, i + 1));
+// const productFromFirst = [
+//   'мяч',
+//   'ручка',
+//   'карандаш',
+//   'краска',
+//   'тетрадь',
+//   'книга',
+// ];
+// const codeFromFirst = [
+//   '65464646654',
+//   '9899989898',
+//   '5454979766533',
+//   '566566598989',
+//   '1232659696456',
+//   '32332323232',
+// ];
+// const productFromSecond = [
+//   'подушка',
+//   'чашка',
+//   'ложка',
+//   'нож',
+//   'вилка',
+//   'тарелка',
+// ];
+// const codeFromSecond = [
+//   '465546',
+//   '7896879',
+//   '546361356',
+//   '65345584',
+//   '986656',
+//   '546545466646',
+// ];
+// const cashRegister = [
+//   '65464646654',
+//   '9899989898',
+//   '5454979766533',
+//   '465546',
+//   '7896879',
+//   '546361356',
+// ];
+// const startOrderPrise = 10;
+// const showCase = productFromFirst.concat(productFromSecond);
+
+// let counterFirst = 0;
+// let counterSecond = 0;
+// const arr = [];
+// const arr2 = [];
+// for (let i = 0; i < showCase.length; i += 1) {
+//   let index;
+//   if (productFromFirst.includes(showCase[i])) {
+//     index = productFromFirst.indexOf(showCase[i]);
+//     const value = codeFromFirst[index];
+//     if (cashRegister.includes(value)) {
+//       arr.push(...showCase.slice(i, i + 1));
+//       counterFirst++;
+//     } else arr2.push(...showCase.slice(i, i + 1));
+//   }
+//   if (productFromSecond.includes(showCase[i])) {
+//     index = productFromSecond.indexOf(showCase[i]);
+//     const value = codeFromSecond[index];
+//     if (cashRegister.includes(value)) {
+//       showCase.slice(i, i + 1);
+//       counterSecond++;
+//     } else arr2.push(...showCase.slice(i, i + 1));
+//   }
+// }
+// //
+
+// showCase.splice(0, showCase.length, ...arr2);
+
+// const totalCashFirst = startOrderPrise * counterFirst;
+// const totalCashSecond = startOrderPrise * counterSecond;
+// console.log(totalCashFirst);
+// console.log(totalCashSecond);
+// console.log(showCase);
+// console.log(arr);
+// console.log(arr2);
+
+//⁡⁣⁣⁡⁣⁣⁢​‌‍‌⁡⁣⁣⁢‍Индекс массы тела⁡
+
+// function getInfo() {
+//   const weight = prompt('ВВедите ваш вес').replace(',', '.');
+//   const height = prompt('Ведите ваш рост в формате 1м').replace(',', '.');
+//   return [weight, height];
+// }
+
+// function calcInfo(array) {
+//   return array[0] / Math.pow(array[1], 2);
+// }
+
+// function setResult(bmi) {
+//   if (bmi < 18.5) alert('недостаточно');
+//   else if (bmi >= 18.5 && bmi < 25) alert('норм');
+//   else alert('чрезмерная');
+// }
+
+// function calcBMI() {
+//   const arrInfo = getInfo();
+//   const result = calcInfo(arrInfo);
+//   setResult(result);
+//   // return
+//   console.log(result);
+// }
+// calcBMI();
+
+// function min(a, b) {
+//   return a > b ? b : a;
+// }
+// console.log(min(2, 5));
+// console.log(min(3, -1));
+// console.log(min(1, 1));
+
+// function getRectArea(dimensions) {
+//   const arr = dimensions.split(' ');
+//   return arr[0] * arr[1];
+// }
+// console.log(getRectArea('8 11'));
+
+// function logItems(items) {}
+// console.log(logItems());
+
+// function findLargesNumber(numbers) {
+//   let max = numbers[0];
+//   for (const number of numbers) if (number > max) max = number;
+//   return max;
+// }
+// console.log(findLargesNumber([1, 2, 3, -4000, 5, 6, 7, 8, 9, 94]));
+
+//‍⁡⁢⁣⁣​‌‍​‌‍⁡⁣⁢⁣‌Среднее арифметическое⁡⁡⁡
+
+// function calAverage() {
+//   let result = 0;
+//   for (const number of arguments) result += number;
+//   return result / arguments.length;
+// }
+// console.log(calAverage(14, 8, 2, 1));
+
+//⁡⁣⁣⁢Формат времени⁡
+
+// function formatTime(totalMinutes) {
+//   return doubleDigit(time(totalMinutes));
+// }
+// const doubleDigit = function (array) {
+//   return `${getStringTime(array[0])}:${getStringTime(array[1])}`;
+// };
+// const getStringTime = function (item) {
+//   return String(item).padStart(2, 0);
+// };
+// const time = function (totalMinutes) {
+//   return [Math.floor(totalMinutes / 60), totalMinutes % 60];
+// };
+
+// function formatTime(minutes) {
+//   const hours = Math.floor(minutes / 60);
+//   const day = Math.floor(hours / 24);
+//   const minute = minutes % 60;
+//   const doubleDigitDay = String(day).padStart(2, 0);
+//   const doubleDigitHours = String(hours).padStart(2, 0);
+//   const doubleDigitMinutes = String(minute).padStart(2, 0);
+//   const result = `${doubleDigitDay} день  ${doubleDigitHours}:${doubleDigitMinutes}`;
+//   return result;
+// }
+// console.log(formatTime(70));
+// console.log(formatTime(450));
+// console.log(formatTime(1441));
+// console.log(formatTime(4114));
+
+//⁡⁣⁣⁢Коллекция курсов⁡
+
+// const courses = ['HTML', 'CSS', 'JS', 'REACT', 'PostgreSQ'];
+
+// function addCourse(cours) {
+//   if (!courses.includes(cours)) {
+//     courses.push(cours);
+//   } else alert(`У вас есть такой курс ${cours}`);
+// }
+
+// function removeCourse(cours) {
+//   if (courses.includes(cours)) {
+//     courses.splice(courses.indexOf(cours), 1);
+//   } else alert(`Курс с таким названием ${cours} не найдено`);
+// }
+
+// function updateCourse(old, newName) {
+//   if (courses.includes(old)) {
+//     courses.splice(courses.indexOf(old), 1, newName);
+//   } else alert(`Курс с таким названием ${old} не найдено`);
+// }
+
+// // addCourse('Express');
+// // addCourse('HTML');
+// // addCourse('CSS');
+// updateCourse('HTML', 'Node.js');
+// console.log(courses);
+
+//⁡⁣⁣⁢Логирование⁡
+
+// function logItems(items) {
+//   for (let i = 0; i < items.length; i += 1) {
+//     console.log(`${i + 1} - ${items[i]}`);
+//   }
+// }
+
+// logItems(['1', 2, 'igjh', 54, 'khg']);
+
+//Логирование контактов
+
+function printContactInfo(name, phones) {
+  const arrNames = name.split(',');
+  const arrPhones = phones.split(',');
+  for (let i = 0; i < arrNames.length; i += 1) {
+    console.log(`${arrNames[i]} - ${arrPhones[i]}`);
   }
 }
-//
 
-showCase.splice(0, showCase.length, ...arr2);
-
-const totalCashFirst = startOrderPrise * counterFirst;
-const totalCashSecond = startOrderPrise * counterSecond;
-console.log(totalCashFirst);
-console.log(totalCashSecond);
-console.log(showCase);
-console.log(arr);
-console.log(arr2);
+printContactInfo('Jacob, William, Solomon','545444, 4545454, 4545454');

@@ -12,17 +12,15 @@
 // console.log('smallestNumber: ', smallestNumber);
 
 //первый вариант решения
-const findSmallestNumber = function (numbers) 
- { 
+const findSmallestNumber = function (numbers) {
   let smallestNumber = numbers[0];
   for (const number of numbers) {
     if (number < smallestNumber) {
       smallestNumber = number;
     }
   }
-  return smallestNumber
-}
-
+  return smallestNumber;
+};
 
 console.log(findSmallestNumber([3, 8, 12, -2, 15]));
 console.log(findSmallestNumber([100, 54, 8, 12, 47]));

@@ -273,12 +273,10 @@ console.log(findFilmByName(filmoteka, 'Saw'));
 
 function getAdultFilms(films) {
   const adult = [];
-  const notAdult = [];
-
   for (let filmObj of films) {
     if (filmObj.adult) {
       adult.push(filmObj);
-    } 
+    }
   }
   return adult;
 }
@@ -288,13 +286,165 @@ console.log(getAdultFilms(filmoteka));
 //напиши функцию которая возвращает массив всех фильмов без взрослого ограничения
 
 function getNotAdultFilms(films) {
-  const notAdult = []
+  const notAdult = [];
   for (let filmObj of films) {
     if (!filmObj.adult) {
-      notAdult.push(filmObj)
+      notAdult.push(filmObj);
     }
   }
   return notAdult;
 }
 
 console.log(getNotAdultFilms(filmoteka));
+
+//практика
+const hogwarts = {
+  gryffindor: [
+    {
+      name: 'Harry',
+      points: 15,
+    },
+    {
+      name: 'Hermiona',
+      points: 20,
+    },
+    {
+      name: 'Ron',
+      points: 14,
+    },
+  ],
+  sliserin: [
+    {
+      name: 'Draco',
+      points: 20,
+    },
+    {
+      name: 'Goyl',
+      points: 5,
+    },
+    {
+      name: 'Crabbe',
+      points: 5,
+    },
+  ],
+  getTotalPoints(faculty) {
+    // if (!faculty) {
+    //   console.log('Wrong');
+    //   return;
+    // }
+    if (this.hasOwnProperty(faculty)) {
+      let result = 0;
+      for (const student of this[faculty]) {
+        result += student.points;
+      }
+      console.log(`Faculty ${faculty} has ${result} points`);
+    } else {
+      console.log('Wrong');
+    }
+  },
+};
+
+hogwarts.getTotalPoints('sliserin');
+
+//
+
+const workers = [
+  {
+    name: 'Alex',
+    salary: 3500,
+    month: 12,
+  },
+  {
+    name: 'Nick',
+    salary: 2500,
+    month: 9,
+  },
+  {
+    name: 'Anna',
+    salary: 3000,
+    month: 36,
+  },
+];
+
+function getTotalWorkerSalary(workers, name) {
+  for (const worker of workers) {
+    if (worker.name === name) {
+      return console.log(
+        `Работник ${name} заработал ${worker.salary * worker.month}`
+      );
+    }
+  }
+  console.log(`Работник с именем ${name} не найден`);
+}
+
+getTotalWorkerSalary(workers, 'Alex1');
+
+function getAllSalary(array) {
+  let total = 0;
+  for (const worker of array) {
+    total += worker.salary * worker.month;
+  }
+  console.log(total);
+}
+
+getAllSalary(workers);
+
+//
+
+const friends = [
+  { name: 'Anna', books: ['Bible', 'Harry Potter', ''], age: 21 },
+  { name: 'Bob', books: ['War and peace', 'Romeo and Juliet', ''], age: 26 },
+  { name: 'Alice', books: ['War and peace', ' Romeo and Juliet', ''], age: 0 },
+  {
+    name: 'Oleksii',
+    books: ['Bible', 'War and peace', 'Harry Potter', 'Romeo and Juliet'],
+    age: 26,
+  },
+];
+
+function getAverageAge(array) {
+  let totalAge = 0;
+  let result = 0;
+  for (const friends of array) {
+    if (friends.hasOwnProperty('age')) {
+      totalAge += friends.age;
+      result += 1;
+      console.log(result);
+    }
+  }
+  return console.log(Math.round(totalAge / result));
+}
+
+getAverageAge(friends);
+
+function getUserWithBook(friends, bookName) {
+  const arr = [];
+
+  for (const friend of friends) {
+    if (friend.books.includes(bookName)) arr.push(friend.name);
+  }
+
+  if (!arr.length) return console.log(`Такой книги нет в библиотеки`);
+
+  return console.log(
+    `Такая книга есть у следующих пользователей: ${arr.join(', ')}`
+  );
+}
+
+getUserWithBook(friends, 'Bible');
+
+//
+
+function countLetters(word) {
+  const obj = {};
+  for (const item of word) {
+    if (obj.hasOwnProperty(item)) {
+      obj[item] += 1;
+    } else {
+      obj[item] = 1;
+    }
+  }
+  return obj;
+}
+
+console.log(countLetters('hello'));

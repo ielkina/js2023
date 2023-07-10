@@ -396,7 +396,7 @@ const friends = [
   { name: 'Bob', books: ['War and peace', 'Romeo and Juliet', ''], age: 26 },
   { name: 'Alice', books: ['War and peace', ' Romeo and Juliet', ''], age: 0 },
   {
-    name: 'Oleksii',
+    name: 'Oleksiy',
     books: ['Bible', 'War and peace', 'Harry Potter', 'Romeo and Juliet'],
     age: 26,
   },
@@ -448,3 +448,96 @@ function countLetters(word) {
 }
 
 console.log(countLetters('hello'));
+
+//mod 3 lection 2
+//spread
+const array = [1, 2, 3, 4];
+// const newArray = array.concat()
+//или
+// const newArray = [...array]
+// console.log(newArray);
+// console.log(array === newArray);
+
+const numbers1 = [1, 2, 3, 4, 5];
+const numbers2 = [6, 7, 8, 9, 10];
+
+// const allNumbers = numbers1.concat(numbers2)
+//или
+const allNumbers = [...numbers1, ...numbers2];
+console.log(allNumbers);
+
+const numbers = [-100, 5, 100, 1000];
+console.log(Math.max(...numbers));
+
+const user = {
+  firstName: 'Jonathan',
+  lastName: 'Barnett',
+  age: 30,
+  someArr: [1, 2, 3, {}],
+};
+
+// const newUser = Object.assign({}, user);
+// console.log(newUser);
+// const newUser = { ...user, age: 50 };
+// console.log(newUser);
+// console.log(newUser === user);
+
+//
+
+const newUser = { ...user };
+
+console.log(newUser);
+
+console.log(user.someArr === newUser.someArr);
+//
+function sum() {
+  let total = 0;
+  for (const number of arguments) {
+    console.log(number);
+    total += number;
+  }
+  return total;
+}
+
+console.log(sum(1000, 200, 300));
+
+function sum(...numbers) {
+  let total = 0;
+  console.log(numbers);
+  console.log(arguments);
+  for (const item of numbers) {
+    total += item;
+  }
+  return total;
+}
+
+console.log(sum(100, 200, 300));
+
+//диструктуризация
+const user2 = {
+  firstName: 'John',
+  lastName: 'Reese',
+  age: 30,
+  hobbies: [],
+  occupation: 'pianist',
+};
+
+// let { firstName, lastName, age } = user2;
+// age = 25
+// const { firstName, lastName, age, ...otherProps } = user2;
+
+// console.log(firstName, age, otherProps);
+
+//Задача
+
+const user3 = {
+  firstName: 'John',
+  lastName: 'Reese',
+  age: 30,
+  hobbies: [],
+  occupation: 'pianist',
+};
+
+const { firstName, age: userAge = 25 } = user3; //age присваиваем переменную
+
+console.log(firstName, userAge);

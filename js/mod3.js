@@ -536,8 +536,117 @@ const user3 = {
   age: 30,
   hobbies: [],
   occupation: 'pianist',
+  isAdmin: true,
 };
 
-const { firstName, age: userAge = 25 } = user3; //age присваиваем переменную
+const { firstName, lastName: userName, isAdmin = false } = user3; //age присваиваем переменную
 
-console.log(firstName, userAge);
+console.log(firstName, isAdmin);
+
+const data = {
+  user_age: 29, //snack case
+  'user-age': 30, //kebab case
+};
+const { user_age: userAge, 'user-age': userAgge } = data;
+console.log(data['user-age']);
+
+console.log(userAge, userAgge);
+
+//глубокая деструктуризация обьекта
+
+const team = {
+  number: 4,
+  flag: './images/flag.jpg',
+  employees: ['Anton', 'Oleg', 'Ronnie', 'Carr'],
+  langs: {
+    original: 'uk',
+    secondary: 'en',
+  },
+};
+
+const {
+  flag,
+  employees,
+  langs: { original, secondary },
+} = team;
+console.log(flag, employees, original);
+
+const names = ['Herbert Todd', 'Belle Soto', 'Robert Marsh', 'Ethan Lindsey'];
+const [, secondName, thirdName, ...otherProps] = names;
+console.log(secondName, thirdName, otherProps);
+
+//
+
+const rgb = [0, 25, 34];
+
+const [red, green, blue, alpha = 1] = rgb;
+
+console.log(red, green, blue, alpha);
+
+//
+
+const salary = {
+  John: 100,
+  Pete: 300,
+  Mary: 250,
+};
+
+function topSalary(salary) {
+  const entries = Object.entries(salary);
+  if (entries.length === 0) {
+    return null;
+  }
+  let topSalaryValue = -Infinity;
+  let topPaidEmployee = '';
+  for (const [name, salary] of entries) {
+    if (salary > topSalaryValue) {
+      topSalaryValue = salary;
+      topPaidEmployee = name;
+    }
+  }
+  return topPaidEmployee;
+}
+
+console.log(topSalary(salary));
+
+//патерн
+
+// function seyHi(name, age, height, weight) {
+//   console.log(
+//     `Hi, ${name}. Your age is ${age}, your height is ${height}, your weight is ${weight}`
+//   );
+// }
+function seyHi(userProps) {
+  // console.log(
+  //   `Hi, ${userMariya.name}
+  //   . Your age is ${userMariya.age}, your height is ${userMariya.height}, your weight is ${userMariya.weight}`
+  // );
+  //или так
+  const { name, age, height, weight } = userProps;
+  console.log(
+    `Hi, ${name}
+    . Your age is ${age}, your height is ${height}, your weight is ${weight}`
+  );
+}
+//или так
+function seyHi({ name, age, height, weight }) {
+  console.log(
+    `Hi, ${name}. Your age is ${age}, your height is ${height}, your weight is ${weight}`
+  );
+}
+
+// const userMariya = {
+//   name: 'Mariya',
+//   age: 30,
+//   height: 168,
+//   weight: 65,
+// };
+// seyHi(userMariya);
+
+seyHi({
+  name: 'Mariya',
+  age: 30,
+  height: 168,
+  weight: 65,
+  hobbies: '0'
+});

@@ -427,3 +427,6 @@ console.log(newClients); // ["Monkong", "Singu"]
 ```
 ---
 # <u>Объекты</u>
+Object.entries
+Object.keys
+Object.value

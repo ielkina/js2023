@@ -501,17 +501,17 @@ function sum() {
 
 console.log(sum(1000, 200, 300));
 
-function sum(...numbers) {
-  let total = 0;
-  console.log(numbers);
-  console.log(arguments);
-  for (const item of numbers) {
-    total += item;
-  }
-  return total;
-}
+// function sum(...numbers) {
+//   let total = 0;
+//   console.log(numbers);
+//   console.log(arguments);
+//   for (const item of numbers) {
+//     total += item;
+//   }
+//   return total;
+// }
 
-console.log(sum(100, 200, 300));
+// console.log(sum(100, 200, 300));
 
 //диструктуризация
 const user2 = {
@@ -586,9 +586,9 @@ console.log(red, green, blue, alpha);
 //
 
 const salary = {
-  John: 100,
-  Pete: 300,
-  Mary: 250,
+  // John: 100,
+  // Pete: 300,
+  // Mary: 250,
 };
 
 function topSalary(salary) {
@@ -624,16 +624,15 @@ function seyHi(userProps) {
   //или так
   const { name, age, height, weight } = userProps;
   console.log(
-    `Hi, ${name}
-    . Your age is ${age}, your height is ${height}, your weight is ${weight}`
-  );
-}
-//или так
-function seyHi({ name, age, height, weight }) {
-  console.log(
     `Hi, ${name}. Your age is ${age}, your height is ${height}, your weight is ${weight}`
   );
 }
+//или так
+// function seyHi({ name, age, height, weight }) {
+//   console.log(
+//     `Hi, ${name}. Your age is ${age}, your height is ${height}, your weight is ${weight}`
+//   );
+// }
 
 // const userMariya = {
 //   name: 'Mariya',
@@ -648,5 +647,141 @@ seyHi({
   age: 30,
   height: 168,
   weight: 65,
-  hobbies: '0'
+  hobbies: '0',
 });
+
+//mod 3 lesson 2 practice
+
+const salariess = {
+  John: 500,
+  Mariya: 1400,
+  Serhii: 1200,
+  Yana: 750,
+  Fedir: 2000,
+  Ivan: 750,
+};
+
+// function topSalaries(salariess) {
+
+//   let topSalary = 0;
+//   let topStaff;
+
+//   // if (arr.length === 0) {
+//   //   return null;
+//   // }
+
+//   for (const [name, salary] of Object.entries(salariess)) {
+//     console.log(salariess);
+//     if (salary > topSalary) {
+//       topSalary = salary;
+//       topStaff = name;
+//     }
+//   }
+
+//   return topStaff;
+// }
+
+function topSalaries(salariess) {
+  // const salaryValue = Object.values(salariess);
+  // console.log(salaryValue);
+  // const maxSalary = Math.max(...salaryValue);
+  // console.log(maxSalary);
+  // const index = salaryValue.indexOf(maxSalary);
+  // console.log(index);
+  // const keys = Object.keys(salariess);
+  // console.log(keys);
+
+  return console.log(
+    Object.keys(salariess)[
+      Object.values(salariess).indexOf(Math.max(...Object.values(salariess)))
+    ]
+  );
+}
+
+topSalaries(salariess);
+
+//
+
+function getFilterValue(...numbers) {
+  let even = [];
+  let unEven = [];
+
+  for (const number of numbers) {
+    if (number % 2 === 0) {
+      even.push(number);
+    } else {
+      unEven.push(number);
+    }
+  }
+
+  let max = Math.max(...even);
+  let min = Math.min(...unEven);
+  return { min, max };
+}
+
+console.log(getFilterValue(12, 2, 33, 4001, 3442, 2, -11, -12));
+
+const people1 = [
+  { name: 'Alex', know: ['Eva', 'Jhon'] },
+  { name: 'Jhon', know: ['Ivan'] },
+  { name: 'Eva', know: ['Ivan', 'Jhon'] },
+  { name: 'Ivan ', know: ['Alex', 'Jhon'] },
+];
+
+const people3 = [
+  { name: 'Alex', know: ['Eva', 'Jhon'] },
+  { name: 'Jhon', know: [] },
+  { name: 'Eva', know: ['Alex', 'Jhon'] },
+  { name: 'Ivan ', know: ['Alex', 'Jhon'] },
+];
+const people2 = [
+  { name: 'Alex', know: ['Eva', 'Jhon'] },
+  { name: 'Jhon', know: [] },
+  { name: 'Eva', know: [] },
+  { name: 'Ivan ', know: ['Alex', 'Jhon'] },
+];
+const people4 = [
+  { name: 'Alex', know: ['Eva', 'Jhon'] },
+  { name: 'Jhon', know: [] },
+  { name: 'Eva', know: ['Alex'] },
+  { name: 'Ivan ', know: ['Alex', 'Jhon'] },
+];
+
+function findBaffodil(people) {
+  const baffodil = [];
+
+  for (const { name, know } of people) {
+    if (know.length === 0) {
+      baffodil.push(name);
+    }
+  }
+
+  if (baffodil.length !== 1) {
+    return 'Not found'
+  }
+  // const suspected = baffodil.length[0]
+  const [suspected] = baffodil
+
+ for (const {name, know} of people) {
+   if (name === suspected) {
+     continue
+   }
+   if (know.includes(suspected) === false) {
+     console.log('Not found');
+     return;
+   }
+ }
+
+  return baffodil
+}
+
+
+findBaffodil(people1)
+findBaffodil(people2)
+findBaffodil(people3)
+findBaffodil(people4)
+
+console.log(findBaffodil(people1));
+console.log(findBaffodil(people2));
+console.log(findBaffodil(people3));
+console.log(findBaffodil(people3));

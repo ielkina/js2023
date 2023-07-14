@@ -64,18 +64,28 @@
 // 1. Объявление функции multiply
 // function multiply() {
 //   // Тело функции
-//   console.log("multiply function invocation");
+//   console.log('multiply function invocation');
 // }
 
 // // 2. Вызовы функции multiply
 // multiply(); // multiply function invocation
 // multiply(); // multiply function invocation
 // multiply(); // multiply function invocation
+// multiply(); // multiply function invocation
+
+//update function arrow fn
+const upMultiply = () => console.log('multiply function invocation');
+
+upMultiply();
 
 // function sayHi() {
 //   console.log('Hello, this is my first function!');
 // }
 // sayHi();
+
+//update fn arrow
+const sayHi = () => console.log('Hello, this is my first function!');
+sayHi();
 
 //Задача 8
 //Функция add должна уметь складывать три числа и выводить результат в консоль. Добавь функции add три параметра a, b и c, которые будут получать значения аргументов при её вызове.
@@ -89,6 +99,14 @@
 // multiply(2, 3, 5); // Результат умножения равен 30
 // multiply(4, 8, 12); // Результат умножения равен 384
 // multiply(17, 6, 25); // Результат умножения равен 2550
+//update arrow fn
+const multiply = (x, y, z) => {
+  console.log(`Результат умножения равен ${x * y * z}`);
+};
+// 2. Передача аргументов
+multiply(2, 3, 5); // Результат умножения равен 30
+multiply(4, 8, 12); // Результат умножения равен 384
+multiply(17, 6, 25); // Результат умножения равен 2550
 
 // function add(a, b, c) {
 //   console.log(`Addition result equals ${a + b + c}`);
@@ -96,6 +114,14 @@
 // add(15, 27, 10);
 // add(10, 20, 30);
 // add(5, 10, 15);
+
+//update fn arrow
+
+const add = (a, b, c) => console.log(`Addition result equals ${a + b + c}`);
+
+add(15, 27, 10);
+add(10, 20, 30);
+add(5, 10, 15);
 
 //Задача 9
 //Дополни код функции add так, чтобы она возвращала результат сложения значений трёх параметров a, b и c.
@@ -106,6 +132,14 @@
 // console.log(add(15, 27, 10));
 // console.log(add(10, 20, 30));
 // console.log(add(5, 10, 15));
+
+//update arrow fn
+const acc = (a, d, c) => a + d + c;
+
+console.log(acc(2, 5, 8));
+console.log(acc(15, 27, 10));
+console.log(acc(10, 20, 30));
+console.log(acc(5, 10, 15));
 
 //ЗАдача 10
 //Функция makeMessage(name, price) составляет и возвращает сообщение о покупке. Она объявляет два параметра, значения которых будут задаваться во время её вызова.
@@ -125,6 +159,16 @@
 // console.log(makeMessage('Reactor', 8000));
 // console.log(makeMessage('Engine', 4070));
 
+//update arrow fn
+
+const makeMessage = (name, price) =>
+  `You picked ${name}, price per item is ${price} credits`;
+
+console.log(makeMessage('Radar', 6150));
+console.log(makeMessage('Scanner', 3500));
+console.log(makeMessage('Reactor', 8000));
+console.log(makeMessage('Engine', 4070));
+
 //Задача 11
 //Функция calculateTotalPrice считает и возвращает общую сумму покупки. Она принимает два параметра, значения которых будут задаваться во время её вызова.
 
@@ -139,6 +183,17 @@
 // console.log(calculateTotalPrice(1, 3500));
 // console.log(calculateTotalPrice(12, 70));
 
+//update arrow fn
+
+const calculateTotalPrice = (orderedQuantity, pricePerItem) =>
+  orderedQuantity * pricePerItem;
+
+console.log(calculateTotalPrice(5, 10));
+console.log(calculateTotalPrice(8, 60));
+console.log(calculateTotalPrice(3, 400));
+console.log(calculateTotalPrice(1, 3500));
+console.log(calculateTotalPrice(12, 70));
+
 //Задача 12
 //Функция makeOrderMessage(orderedQuantity, pricePerDroid, deliveryFee) составляет и возвращает сообщение о покупке ремонтных дроидов. Она объявляет три параметра, значения которых будут задаваться во время её вызова.
 
@@ -152,6 +207,17 @@
 // console.log(makeOrderMessage(4, 300, 100));
 // console.log(makeOrderMessage(10, 70, 200));
 
+//update arrow fn
+
+const makeOrderMessage = (orderedQuantity, pricePerDroid, deliveryFee) =>
+  `You ordered droids worth ${
+    orderedQuantity * pricePerDroid + deliveryFee
+  } credits. Delivery (${deliveryFee} credits) is included in total price`;
+
+console.log(makeOrderMessage(2, 100, 50));
+console.log(makeOrderMessage(4, 300, 100));
+console.log(makeOrderMessage(10, 70, 200));
+
 //Задача 13
 //Функция isAdult объявляет один параметр age (возраст), значение которого будет задаваться во время её вызова. Присвой переменной passed выражение проверки возраста пользователя на совершеннолетие. Человек считается совершеннолетним в возрасте 18 лет и старше.
 
@@ -163,6 +229,14 @@
 // console.log(isAdult(14));
 // console.log(isAdult(8));
 // console.log(isAdult(37));
+
+//update arrow fn
+
+const isAdult = age => age >= 18;
+console.log(isAdult(20));
+console.log(isAdult(14));
+console.log(isAdult(8));
+console.log(isAdult(37));
 
 //Задача 14
 //Функция isValidPassword(password) проверяет равенство сохранённого и введённого паролей и возвращает результат проверки - буль true или false. Переменная SAVED_PASSWORD хранит значение ранее сохраненного пароля. Введённый пароль передаётся в параметр password.
@@ -176,6 +250,15 @@
 // console.log(isValidPassword('mangodab3st'));
 // console.log(isValidPassword('kiwirul3z'));
 // console.log(isValidPassword("jqueryismyjam"));
+
+//update arrow fn
+
+const SAVED_PASSWORD = 'jqueryismyjam';
+const isValidPassword = password => password === SAVED_PASSWORD;
+
+console.log(isValidPassword('mangodab3st'));
+console.log(isValidPassword('kiwirul3z'));
+console.log(isValidPassword('jqueryismyjam'));
 
 //Задача 15
 //Добавь выражение проверки совершеннолетия пользователя, значения параметра age, в условие для инструкции if.
@@ -196,6 +279,16 @@
 // console.log(checkAge(8));
 // console.log(checkAge(14));
 // console.log(checkAge(38));
+
+//update arrow fn
+
+const checkAge = age => (age >= 18 ? 'You are an adult' : 'You are a minor');
+
+console.log(checkAge(18));
+console.log(checkAge(20));
+console.log(checkAge(8));
+console.log(checkAge(14));
+console.log(checkAge(38));
 
 //Задача 16
 //Функция checkStorage(available, ordered) проверяет возможность оформления заказа и возвращает сообщение о результате. Она объявляет два параметра, значения которых будут задаваться во время её вызова:
@@ -222,8 +315,22 @@
 // console.log(checkStorage(200, 150));
 // console.log(checkStorage(150, 180));
 
+//update arrow fn
+
+// const checkStorage = (available, ordered) =>
+//   available < ordered
+//     ? 'Not enough goods in stock!'
+//     : 'Order is processed, our manager will contact you.';
+
+// console.log(checkStorage(30, 40));
+// console.log(checkStorage(100, 50));
+// console.log(checkStorage(100, 130));
+// console.log(checkStorage(200, 20));
+// console.log(checkStorage(200, 150));
+// console.log(checkStorage(150, 180));
+
 //Задача 17
-//Замени выражения со стандартными математеческими операторами на комбинированный оператор присвоения с добавлением, вычитанием, умножением и делением.
+//Замени выражения со стандартными математическими операторами на комбинированный оператор присвоения с добавлением, вычитанием, умножением и делением.
 
 // let a = 5
 // let b = 10
@@ -259,6 +366,21 @@
 // console.log(makeTransaction(2000, 8, 10000));
 // console.log(makeTransaction(500, 10, 5000));
 
+//update arrow fn
+
+const makeTransaction = (pricePerDroid, orderedQuantity, customerCredits) =>
+  pricePerDroid * orderedQuantity > customerCredits
+    ? 'Insufficient funds!'
+    : `You ordered  ${orderedQuantity} droids, you have ${
+        customerCredits - pricePerDroid * orderedQuantity
+      } credits left`;
+
+console.log(makeTransaction(3000, 5, 23000));
+console.log(makeTransaction(1000, 3, 15000));
+console.log(makeTransaction(5000, 10, 8000));
+console.log(makeTransaction(2000, 8, 10000));
+console.log(makeTransaction(500, 10, 5000));
+
 //Задача 19
 //Функция checkPassword(password) получает пароль пользователя в параметр password, проверяет его на совпадение с паролем администратора в переменной ADMIN_PASSWORD и возвращает сообщение о результате сравнения, хранящееся в переменной message.
 
@@ -268,16 +390,31 @@
 
 // function checkPassword(password) {
 //   const ADMIN_PASSWORD = 'jqueryismyjam';
-//   let message
+//   let message;
 //   if (password === null) {
 //     message = 'Canceled by user!';
-//   } else if (password === ADMIN_PASSWORD){
+//   } else if (password === ADMIN_PASSWORD) {
 //     message = 'Welcome!';
 //   } else {
 //     message = 'Access denied, wrong password!';
 //   }
-//   return message
+//   return message;
 // }
+
+// console.log(checkPassword('mangohackzor'));
+// console.log(checkPassword(null));
+// console.log(checkPassword('polyhax'));
+// console.log(checkPassword('jqueryismyjam'));
+
+//update arrow fn
+
+// const ADMIN_PASSWORD = 'jqueryismyjam';
+// const checkPassword = password =>
+//   password === null
+//     ? 'Canceled by user!'
+//     : 'Access denied, wrong password!' && password === ADMIN_PASSWORD
+//     ? 'Welcome!'
+//     : 'Access denied, wrong password!';
 
 // console.log(checkPassword('mangohackzor'));
 // console.log(checkPassword(null));
@@ -308,6 +445,27 @@
 // console.log(checkStorage(200, 250));
 // console.log(checkStorage(150, 0));
 
+//update arrow fn
+// const checkStorage = (available, ordered) => {
+//   let message;
+//   if (ordered === 0) {
+//     message = 'There are no products in the order!';
+//   } else if (ordered > available) {
+//     message = 'Your order is too large, there are not enough items in stock!';
+//   } else {
+//     message = 'The order is accepted, our manager will contact you';
+//   }
+
+//   return message;
+// };
+
+// console.log(checkStorage(100, 50));
+// console.log(checkStorage(100, 130));
+// console.log(checkStorage(70, 0));
+// console.log(checkStorage(200, 20));
+// console.log(checkStorage(200, 250));
+// console.log(checkStorage(150, 0));
+
 //Задача 21
 //Функция isNumberInRange(start, end, number) проверяет, входит ли число в промежуток. Она объявляет три параметра, значения которых будут задаваться во время её вызова:
 //Присвой переменной isInRange выражение проверки вхождения number в числовой промежуток от start до end. То есть число должно быть больше либо равно start и меньше либо равно end. Результатом выражения проверки будет буль true или false.
@@ -316,6 +474,16 @@
 //   const isInRange = start <= number && number <= end;
 //   return isInRange;
 // }
+// console.log(isNumberInRange(10, 30, 17));
+// console.log(isNumberInRange(10, 30, 5));
+// console.log(isNumberInRange(20, 50, 24));
+// console.log(isNumberInRange(20, 50, 76));
+
+//update arrow fn
+
+// const isNumberInRange = (start, end, number) =>
+//   start <= number && number <= end;
+
 // console.log(isNumberInRange(10, 30, 17));
 // console.log(isNumberInRange(10, 30, 5));
 // console.log(isNumberInRange(20, 50, 24));
@@ -335,6 +503,16 @@
 // console.log(checkIfCanAccessContent('vip'));
 // console.log(checkIfCanAccessContent('free'));
 
+//update arrow fn
+
+const checkIfCanAccessContent = subType =>
+  subType === 'vip' || subType === 'pro';
+
+console.log(checkIfCanAccessContent('pro'));
+console.log(checkIfCanAccessContent('starter'));
+console.log(checkIfCanAccessContent('vip'));
+console.log(checkIfCanAccessContent('free'));
+
 //Задача 23
 //Функция isNumberNotInRange(start, end, number) проверяет, не входит ли число в промежуток. То есть число должно быть меньше либо равно start и больше либо равно end. Результатом выражения проверки будет буль true или false.
 //Присвой переменной isNotInRange выражение инверсии значения переменной isInRange используя оператор !.
@@ -348,6 +526,16 @@
 // console.log(isNumberInRange(10, 30, 5));
 // console.log(isNumberInRange(20, 50, 24));
 // console.log(isNumberInRange(20, 50, 76));
+
+//update arrow fn
+
+const isNumberInRange = (start, end, number) =>
+  !(start <= number && number <= end);
+
+console.log(isNumberInRange(10, 30, 17));
+console.log(isNumberInRange(10, 30, 5));
+console.log(isNumberInRange(20, 50, 24));
+console.log(isNumberInRange(20, 50, 76));
 
 //Задача 24
 //Функция getDiscount(totalSpent) определяет значение скидки в зависимости от общей суммы потраченных денег (параметр totalSpent) в магазине за всё время (партнёрская программа). Скидка записывается в переменную discount и возвращается из функции как результат её работы.
@@ -374,6 +562,30 @@
 // console.log(getDiscount(8250));
 // console.log(getDiscount());
 
+//update arrow fn
+const GOLD_DISCOUNT = 0.1;
+const SILVER_DISCOUNT = 0.05;
+const BRONZE_DISCOUNT = 0.02;
+const BASE_DISCOUNT = 0;
+
+const getDiscount = totalSpent => {
+  let discount;
+  if (50000 <= totalSpent) {
+    discount = GOLD_DISCOUNT;
+  } else if (totalSpent >= 20000 && totalSpent <= 50000) {
+    discount = SILVER_DISCOUNT;
+  } else if (totalSpent >= 5000 && totalSpent <= 20000) {
+    discount = BRONZE_DISCOUNT;
+  } else {
+    discount = BASE_DISCOUNT;
+  }
+  return discount;
+};
+console.log(getDiscount(137000));
+console.log(getDiscount(46900));
+console.log(getDiscount(8250));
+console.log(getDiscount());
+
 //Задача 25
 //Выполни рефакторинг решения задачи «Склад товаров», заменив инструкцию if...else тернарным оператором.
 
@@ -389,6 +601,19 @@
 //   return message;
 // }
 
+//update arrow fn
+
+const checkStorage = (available, ordered) =>
+  available < ordered
+    ? 'Not enough goods in stock!'
+    : 'The order is accepted, our manager will contact you';
+
+console.log(checkStorage(100, 50));
+console.log(checkStorage(100, 130));
+console.log(checkStorage(200, 20));
+console.log(checkStorage(200, 150));
+console.log(checkStorage(150, 180));
+
 //Задача 26
 //Функция checkPassword(password) сравнивает переданный ей пароль (параметр password) с сохранённым паролем администратора (константа ADMIN_PASSWORD) и возвращает строку с сообщением о результате.
 
@@ -400,6 +625,18 @@
 //       : 'Access denied, wrong password!';
 //   return message;
 // }
+// console.log(checkPassword('jqueryismyjam'));
+// console.log(checkPassword('angul4r1sl1f3'));
+// console.log(checkPassword('r3actsux'));
+
+//update arrow fn
+
+// const ADMIN_PASSWORD = 'jqueryismyjam';
+// const checkPassword = password =>
+//   password === ADMIN_PASSWORD
+//     ? 'Access is allowed'
+//     : 'Access denied, wrong password!';
+
 // console.log(checkPassword('jqueryismyjam'));
 // console.log(checkPassword('angul4r1sl1f3'));
 // console.log(checkPassword('r3actsux'));
@@ -431,6 +668,32 @@
 // console.log(getSubscriptionPrice('organization'));
 // console.log(getSubscriptionPrice('starter'));
 
+//update arrow fn
+
+const getSubscriptionPrice = type => {
+  let price;
+
+  switch (type) {
+    case 'organization':
+      price = 50;
+
+      break;
+    case 'professional':
+      price = 20;
+      break;
+
+    default:
+      'starter';
+      price = 0;
+  }
+
+  return price;
+};
+
+console.log(getSubscriptionPrice('professional'));
+console.log(getSubscriptionPrice('organization'));
+console.log(getSubscriptionPrice('starter'));
+
 //Задача 28
 //Функция checkPassword(password) получает пароль в параметр password, проверяет его на совпадение с паролем администратора в переменной ADMIN_PASSWORD и возвращает сообщение о результате сравнения, хранящееся в переменной message.
 
@@ -457,6 +720,27 @@
 // console.log(checkPassword('mangohackzor'));
 // console.log(checkPassword('polyhax'));
 // console.log(checkPassword('jqueryismyjam'));
+
+//update arrow fn
+
+const ADMIN_PASSWORD = 'jqueryismyjam';
+const checkPassword = password => {
+  let message;
+  switch (password) {
+    case null:
+      message = 'Canceled by user!';
+      break;
+    case ADMIN_PASSWORD:
+      message = 'Welcome!';
+      break;
+    default:
+      message = 'Access denied, wrong password!';
+  }
+  return message;
+};
+console.log(checkPassword('mangohackzor'));
+console.log(checkPassword('polyhax'));
+console.log(checkPassword('jqueryismyjam'));
 
 //ЗАдача 29
 //Функция getShippingCost(country) должна проверять возможность доставки товара в страну пользователя (параметр country) и возвращать сообщение о результате хранящееся в переменной message. Обязательно используй инструкцию switch.
@@ -491,6 +775,37 @@
 // console.log(getShippingCost('Jamaica'));
 // console.log(getShippingCost('Sweden'));
 
+//update arrow fn
+
+const getShippingCost = country => {
+  let price;
+  let message;
+  switch (country) {
+    case 'China':
+      price = 100;
+      break;
+    case 'Chile':
+      price = 250;
+      break;
+    case 'Australia':
+      price = 170;
+      break;
+    case 'Jamaica':
+      price = 120;
+      break;
+
+    default:
+      message = 'Sorry, there is no delivery to your country';
+  }
+  return `Shipping to ${country} will cost ${price} credits`;
+};
+console.log(getShippingCost('Australia'));
+console.log(getShippingCost('Germany'));
+console.log(getShippingCost('China'));
+console.log(getShippingCost('Chile'));
+console.log(getShippingCost('Jamaica'));
+console.log(getShippingCost('Sweden'));
+
 //Задача 30
 //Функция getNameLength(name) принимает имя (параметр name) и возвращает строку, в которой указана его длина. Дополни шаблонную строку в переменной message длиной строки из параметра name.
 
@@ -502,6 +817,15 @@
 // console.log(getNameLength('Harambe'));
 // console.log(getNameLength('Billy'));
 // console.log(getNameLength('Joe'));
+
+//update arrow fn
+
+const getNameLength = name => `Name ${name} is ${name.length} characters long`;
+
+console.log(getNameLength('Poly'));
+console.log(getNameLength('Harambe'));
+console.log(getNameLength('Billy'));
+console.log(getNameLength('Joe'));
 
 //Задача 31
 //Дополни код присвоив объявленным переменным выражения обращения к соответствующим элементам или свойствам строки в переменной course.
@@ -531,6 +855,16 @@
 // console.log(getSubstring('Hello world', 11));
 // console.log(getSubstring('Hello world', 0));
 
+//upadte arrow fn
+
+const getSubstring = (string, length) => string.slice(0, length);
+
+console.log(getSubstring('Hello world', 3));
+console.log(getSubstring('Hello world', 6));
+console.log(getSubstring('Hello world', 8));
+console.log(getSubstring('Hello world', 11));
+console.log(getSubstring('Hello world', 0));
+
 //Задача 33
 //Функция formatMessage(message, maxLength) принимает строку (параметр message) и форматирует её, если длина превышает значение в параметре maxLength.
 //Дополни код функции так, что если длина строки:
@@ -554,6 +888,25 @@
 // console.log(formatMessage('Nunc sed turpis a felis in nunc fringilla', 15));
 // console.log(formatMessage('Nunc sed turpis a felis in nunc fringilla', 41));
 
+//update arrow fn
+
+const formatMessage = (message, maxLength) => {
+  let result;
+  if (message.length <= maxLength) {
+    result = message.slice(0, maxLength);
+  } else if (message.length >= maxLength) {
+    result = message.slice(0, maxLength) + '...';
+  }
+  return result;
+};
+
+console.log(formatMessage('Curabitur ligula sapien', 16));
+console.log(formatMessage('Curabitur ligula sapien', 23));
+console.log(formatMessage('Vestibulum facilisis purus nec', 20));
+console.log(formatMessage('Vestibulum facilisis purus nec', 30));
+console.log(formatMessage('Nunc sed turpis a felis in nunc fringilla', 15));
+console.log(formatMessage('Nunc sed turpis a felis in nunc fringilla', 41));
+
 //Задача 34
 //Функция normalizeInput(input) принимает строку (параметр input) и возвращает такую же строку, но в нижнем регистре. Присвой переменной normalizedInput выражение создания строки в нижнем регистре из параметра input.
 
@@ -564,6 +917,14 @@
 // console.log(normalizeInput('Hello world'));
 // console.log(normalizeInput("This ISN'T SpaM"));
 // console.log(normalizeInput('Big SALE'));
+
+//update arrow fn
+
+const normalizeInput = input => input.toLowerCase();
+
+console.log(normalizeInput('Hello world'));
+console.log(normalizeInput("This ISN'T SpaM"));
+console.log(normalizeInput('Big SALE'));
 
 //Задача 35
 //Функция checkForName(fullname, name) принимает два параметра и возвращает буль true или false - результат проверки вхождения подстроки name в строку fullname.
@@ -580,6 +941,18 @@
 // console.log(checkForName('Vadim Nekrasov', 'Vadim'));
 // console.log(checkForName('Vadim Nekrasov', 'vadim'));
 // console.log(checkForName('Vadim Nekrasov', 'Dima'));
+
+//update arrow fn
+
+const checkForName = (fullname, name) => fullname.includes(name);
+
+console.log(checkForName('Egor Kolbasov', 'Egor'));
+console.log(checkForName('Egor Kolbasov', 'egor'));
+console.log(checkForName('Egor Kolbasov', 'egOr'));
+console.log(checkForName('Egor Kolbasov', 'Zhenya'));
+console.log(checkForName('Vadim Nekrasov', 'Vadim'));
+console.log(checkForName('Vadim Nekrasov', 'vadim'));
+console.log(checkForName('Vadim Nekrasov', 'Dima'));
 
 //Задача 36
 //Функция checkForSpam(message) принимает строку (параметр message), проверяет её на содержание запрещенных слов spam и sale, и возвращает результат проверки. Слова в строке параметра message могут быть в произвольном регистре, например SPAM или sAlE.
@@ -598,8 +971,16 @@
 // console.log(checkForSpam('Amazing SalE, only tonight!'));
 // console.log(checkForSpam('Trust me, this is not a spam message'));
 // console.log(checkForSpam('Get rid of sPaM emails. Our book in on sale!'));
-<<<<<<< Updated upstream
-// console.log(checkForSpam('[SPAM] How to earn fast money?'));
-=======
-// console.log(checkForSpam('[SPAM] How to earn fast money?'));
->>>>>>> Stashed changes
+
+//update arrow fn
+const checkForSpam = message => {
+  let result = message.toLowerCase();
+  return result.includes('spam') || result.includes('sale');
+};
+
+console.log(checkForSpam('Latest technology news'));
+console.log(checkForSpam('JavaScript weekly newsletter'));
+console.log(checkForSpam('Get best sale offers now!'));
+console.log(checkForSpam('Amazing SalE, only tonight!'));
+console.log(checkForSpam('Trust me, this is not a spam message'));
+console.log(checkForSpam('Get rid of sPaM emails. Our book in on sale!'));

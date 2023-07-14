@@ -1,23 +1,4 @@
 // function checkAge(age) {
-//   let message;
-
-//   if (age >= 18) {
-//     message = 'Вы совершеннолетний человек';
-//   } else {
-//     message = 'Вы не совершеннолетний человек';
-//   }
-
-//   return message;
-// }
-// console.log(checkAge(15));
-
-// function checkAge(age) {
-//   return age >= 18 ? 'Вы совершеннолетний' : 'Вы не совершеннолетний';
-// }
-
-// console.log(checkAge(15));
-
-// function checkAge(age) {
 //   let message = 'Вы не совершеннолетний';
 
 //   if (age >= 18) {
@@ -28,10 +9,33 @@
 // }
 // console.log(checkAge(14));
 
+// function checkAge(age) {
+//   let message;
+
+//   if (age >= 18) {
+//     message = 'Вы совершеннолетний человек';
+//   } else {
+//     message = 'Вы не совершеннолетний человек';
+//   }
+//   return message;
+// }
+// console.log(checkAge(15));
+
+// function checkAge(age) {
+//   return age >= 18 ? 'Вы совершеннолетний' : 'Вы не совершеннолетний';
+// }
+// console.log(checkAge(15));
+
+//update arrow fn
+// const checkAge = age =>
+//   age >= 18 ? 'Вы совершеннолетний человек' : 'Вы не совершеннолетний человек';
+
+// console.log(checkAge(15));
+
 //Задача 1
 // Запиши условие в инструкции if так, чтобы функция работала правильно.
 
-// function checkAge(age) {
+// const  checkAge = (age)=> {
 //   if (age >= 18) {
 //     // Change this line
 //     return 'You are an adult';
@@ -42,6 +46,15 @@
 // console.log(checkAge(8));
 // console.log(checkAge(14));
 // console.log(checkAge(38));
+
+//update arrow fn
+
+const checkAge = age => (age >= 18 ? 'You are an adult' : 'You are a minor');
+
+console.log(checkAge(20));
+console.log(checkAge(8));
+console.log(checkAge(14));
+console.log(checkAge(38));
 
 //Задача 2
 // Функция checkPassword получает пароль пользователя в параметр password, проверяет его на совпадение с паролем администратора в переменной ADMIN_PASSWORD и возвращает сообщение о результате сравнения.
@@ -71,6 +84,15 @@
 // console.log(checkPassword('polyhax'));
 // console.log(checkPassword('jqueryismyjam'));
 
+//update arrow fn
+
+const checkPassword = password =>
+  password === 'jqueryismyjam' ? 'Welcome!' : 'Access denied, wrong password!';
+
+console.log(checkPassword('mangohackzor'));
+console.log(checkPassword('polyhax'));
+console.log(checkPassword('jqueryismyjam'));
+
 //Задача 3
 // Функция checkStorage проверяет возможность оформления заказа и возвращает сообщение о результате. Она принимает два параметра, значения которых будут задаваться во время её вызова.
 
@@ -95,6 +117,24 @@
 // console.log(checkStorage(200, 250));
 // console.log(checkStorage(150, 0));
 // console.log(checkStorage(0, 0));
+
+//update arrow fn
+
+const checkStorage = (available, ordered) =>
+  ordered === 0
+    ? 'Your order is empty!'
+    : 'The order is accepted, our manager will contact you' &&
+      ordered > available
+    ? 'Your order is too large, not enough goods in stock!'
+    : 'The order is accepted, our manager will contact you';
+
+console.log(checkStorage(100, 50));
+console.log(checkStorage(100, 130));
+console.log(checkStorage(70, 0));
+console.log(checkStorage(200, 20));
+console.log(checkStorage(200, 250));
+console.log(checkStorage(150, 0));
+console.log(checkStorage(0, 0));
 
 //Задача 4
 // Объяви переменную fruits и присвой ей массив фруктов - строк "apple", "plum", "pear" и "orange".
@@ -144,6 +184,14 @@
 // console.log(getExtremeElements(['Earth', 'Mars', 'Venus']));
 // console.log(getExtremeElements(['apple', 'peach', 'pear', 'banana']));
 
+//update arrow fn
+
+const getExtremeElements = array => [array[0], array[array.length - 1]];
+
+console.log(getExtremeElements([1, 2, 3, 4, 5]));
+console.log(getExtremeElements(['Earth', 'Mars', 'Venus']));
+console.log(getExtremeElements(['apple', 'peach', 'pear', 'banana']));
+
 //Задача 10
 //Дополни код функции splitMessage(message, delimiter) так, чтобы она возвращала в переменной words результат разделения строки message по разделителю delimiter - массив строк.
 
@@ -159,6 +207,16 @@
 // console.log(splitMessage('Mango', ''));
 // console.log(splitMessage('best_for_week', '_'));
 
+//update arrow fn
+
+const splitMessage = (message, delimiter) => message.split(delimiter);
+
+console.log(splitMessage('Mango hurries to the train', ' '));
+console.log(splitMessage('Mango hurries to the train', '-'));
+console.log(splitMessage('Mango hurries to the train', '_'));
+console.log(splitMessage('Mango', ''));
+console.log(splitMessage('best_for_week', '_'));
+
 //Задача 11
 // Сервису гравировки украшений нужна функция, которая бы автоматически считала цену гравировки, в зависимости от количества слов и цены за слово.
 // Объявлена функция calculateEngravingPrice(message, pricePerWord). Эта функция принимает строку, состоящую из слов разделённых только пробелами (параметр message) и цену гравировки одного слова (параметр pricePerWord).
@@ -171,6 +229,15 @@
 // console.log(calculateEngravingPrice('JavaScript is in my blood', 20));
 // console.log(calculateEngravingPrice('Web-development is creative work', 40));
 // console.log(calculateEngravingPrice('Web-development is creative work', 20));
+
+//update arrow fn
+const calculateEngravingPrice = (message, pricePerWord) =>
+  message.split(' ').length * pricePerWord;
+
+console.log(calculateEngravingPrice('JavaScript is in my blood', 10));
+console.log(calculateEngravingPrice('JavaScript is in my blood', 20));
+console.log(calculateEngravingPrice('Web-development is creative work', 40));
+console.log(calculateEngravingPrice('Web-development is creative work', 20));
 
 //Задача 12
 // Дополни код функции makeStringFromArray(array, delimiter) так, чтобы она возвращала в переменной string результат соединения элементов массива array c разделителем delimiter - строку.
@@ -185,6 +252,16 @@
 // console.log(makeStringFromArray(['M', 'a', 'n', 'g', 'o'], ''));
 // console.log(makeStringFromArray(['top', 'picks', 'for', 'you'], '_'));
 
+//update arrow fn
+
+const makeStringFromArray = (array, delimiter) => array.join(delimiter);
+
+console.log(
+  makeStringFromArray(['Mango', 'hurries', 'to', 'the', 'train'], ' ')
+);
+console.log(makeStringFromArray(['M', 'a', 'n', 'g', 'o'], ''));
+console.log(makeStringFromArray(['top', 'picks', 'for', 'you'], '_'));
+
 //Задача 13
 // Напиши функцию slugify(title) которая принимает заголовок статьи, параметр title, и возвращает slug, созданный из этой строки.
 
@@ -197,6 +274,15 @@
 // console.log(slugify('English for developer'));
 // console.log(slugify('Ten secrets of JavaScript'));
 // console.log(slugify('How to become a JUNIOR developer in TWO WEEKS'));
+
+//update arrow fn
+
+const slugify = title => title.toLowerCase().split(' ').join('-');
+
+console.log(slugify('Arrays for begginers'));
+console.log(slugify('English for developer'));
+console.log(slugify('Ten secrets of JavaScript'));
+console.log(slugify('How to become a JUNIOR developer in TWO WEEKS'));
 
 //Задача 14
 // Дополни код так, чтобы переменные содержали частичные копии исходного массива fruits.
@@ -242,6 +328,24 @@
 // console.log(makeArray(['Earth', 'Jupiter'], ['Neptune', 'Uranus'], 2));
 // console.log(makeArray(['Earth', 'Jupiter'], ['Neptune', 'Uranus'], 4));
 // console.log(makeArray(['Earth', 'Jupiter'], ['Neptune', 'Uranus', 'Venus'], 0));
+
+//update arrow fn
+
+const makeArray = (firstArray, secondArray, maxLength) => {
+  let array = firstArray.concat(secondArray);
+  if (array.length > maxLength) {
+    array = array.slice(0, maxLength);
+    return array;
+  }
+  return array;
+};
+
+console.log(makeArray(['Mango', 'Poly'], ['Ajax', 'Chelsea'], 3));
+console.log(makeArray(['Mango', 'Poly', 'Houston'], ['Ajax', 'Chelsea'], 2));
+console.log(makeArray(['Mango'], ['Ajax', 'Chelsea', 'Poly', 'Houston'], 3));
+console.log(makeArray(['Earth', 'Jupiter'], ['Neptune', 'Uranus'], 2));
+console.log(makeArray(['Earth', 'Jupiter'], ['Neptune', 'Uranus'], 4));
+console.log(makeArray(['Earth', 'Jupiter'], ['Neptune', 'Uranus', 'Venus'], 0));
 
 //Задача 17
 // Дополни цикл for так, чтобы он логировал все целые числа в диапазоне от start до end включительно.
@@ -299,9 +403,9 @@
 // Другой широко используемый метод итерации — .reduce(). Метод .reduce() возвращает одно значение после перебора элементов массива, тем самым уменьшая массив. Взгляните на пример ниже:
 // const numbers = [1, 2, 4, 10];
 // const summedNums = numbers.reduce((accumulator, currentValue) => {
-//   return accumulator + currentValue
-// })
-// console.log(summedNums) // Output: 17
+//   return accumulator + currentValue;
+// });
+// console.log(summedNums); // Output: 17
 
 // function findLongestWord(string) {
 //   return string.split(' ').reduce((a, b) => (b.length > a.length ? b : a));
@@ -311,33 +415,42 @@
 // console.log(findLongestWord('Google do a roll'));
 // console.log(findLongestWord('May the force be with you'));
 
+//update arrow fn
+
+const findLongestWord = string =>
+  string.split(' ').reduce((a, b) => (b.length > a.length ? b : a));
+
+console.log(findLongestWord('The quick brown fox jumped over the lazy dog'));
+console.log(findLongestWord('Google do a roll'));
+console.log(findLongestWord('May the force be with you'));
+
 //Задача 22
 // Дополни код функции createArrayOfNumbers(min, max) так, чтобы она возвращала массив всех целых чисел от значения min до max.
 
-// function createArrayOfNumbers(min, max) {
-//   const numbers = [];
-//   for (let i = min; i <= max; i+=1) numbers.push(i);
-//   return numbers;
-// }
+function createArrayOfNumbers(min, max) {
+  const numbers = [];
+  for (let i = min; i <= max; i += 1) numbers.push(i);
+  return numbers;
+}
 
-// console.log(createArrayOfNumbers(1, 3));
-// console.log(createArrayOfNumbers(14, 17));
-// console.log(createArrayOfNumbers(29, 34));
+console.log(createArrayOfNumbers(1, 3));
+console.log(createArrayOfNumbers(14, 17));
+console.log(createArrayOfNumbers(29, 34));
 
 //Задача 23
 // Напиши функцию filterArray(numbers, value), которая принимает массив чисел (параметр numbers) и возвращает новый массив, в котором будут только те элементы массива numbers, которые больше чем значение параметра value (число).
 
-// function filterArray(numbers, value) {
-//   const array = [];
-//   for (const item of numbers) {
-//     if (item > value) {
-//       array.push(item);
-//     }
-//   }
-//   return array;
-// }
+function filterArray(numbers, value) {
+  const array = [];
+  for (const item of numbers) {
+    if (item > value) {
+      array.push(item);
+    }
+  }
+  return array;
+}
 
-// console.log(filterArray([1, 2, 3, 4, 5], 3));
+console.log(filterArray([1, 2, 3, 4, 5], 3));
 
 // function filterArray(numbers, value) {
 //   const newArray = [];
@@ -367,6 +480,20 @@
 // console.log(checkFruit('pear'));
 // console.log(checkFruit('Pear'));
 // console.log(checkFruit('apple'));
+
+//update arrow fn
+
+const checkFruit = fruit => {
+  const fruits = ['apple', 'plum', 'pear', 'orange']
+  return fruits.includes(fruit)
+}
+
+
+console.log(checkFruit('plum'));
+console.log(checkFruit('mandarin'));
+console.log(checkFruit('pear'));
+console.log(checkFruit('Pear'));
+console.log(checkFruit('apple'));
 
 //Задача 25
 // Общими элементами массивов называют те элементы, которые присутствуют во всех массивах.

@@ -81,6 +81,7 @@
   - reduce
   - sort
 - Чейнинг методов
+- [Библиотека Lodash] (https://lodash.com/docs/4.17.15)
 
 # js2023
 

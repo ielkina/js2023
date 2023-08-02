@@ -1,5 +1,5 @@
-//⁡⁣⁣⁢конспект⁡
-//⁡⁣⁣⁢Колбэк функция⁡
+//конспект
+//Колбэк функция
 
 function greet(name) {
   return `Добро пожаловать ${name}`;
@@ -10,7 +10,7 @@ function registerGuest(name, callback) {
   callback(name);
 }
 
-//⁡⁣⁣⁢Инлайн функция⁡
+//Инлайн функция
 
 // Передаём инлайн функцию greet как колбэк
 registerGuest('Манго', function greet(name) {
@@ -30,7 +30,7 @@ console.log(greet('Манго'));
 console.log(greet);
 console.log(registerGuest);
 
-//⁡⁣⁣⁢Несколько колбэков⁡
+//Несколько колбэков
 
 // function processCall(recipient) {
 //   // Имитируем доступность абонента случайным числом
@@ -77,7 +77,7 @@ function leaveHoloMessage(name) {
 processCall('Манго', takeCall, activateAnsweringMachine);
 processCall('Поли', takeCall, leaveHoloMessage);
 
-//⁡⁣⁣⁢Абстрагирование⁡ ⁡⁣⁣⁢повторения
+//Абстрагирование повторения
 
 function repeatLog(n) {
   for (let i = 0; i < n; i += 1) {
@@ -967,3 +967,534 @@ func1(1, 2, 3);
 
 // если есть только один параметр круглые скобки можно не ставить
 // если два параметра будут без скобок это будет ошибка
+
+/*Практика*/
+//есть две функции
+//1 - add - слаживает все числа вмассив
+//2 - result - принимает массив и колбэк, возвращает результат колбэк. В колбэке передаем только числа
+
+const resultt = (array, cb) => {
+  const elements = [];
+  for (const element of array) {
+    if (typeof element === 'number') {
+      elements.push(element);
+    }
+  }
+  return cb(elements);
+};
+
+const addet = array => {
+  let total = 0;
+  for (const item of array) {
+    total += item;
+  }
+  return total;
+};
+
+const getMax = array => Math.max(...array);
+
+const getArrayLength = array => array.length;
+
+console.log(resultt([1, 2, 45, true, 'asada', 45], addet));
+console.log(resultt([1, 2, 45, true, 'asada', 45], getArrayLength));
+console.log(resultt([1, 2, 45, true, 'asada', 45], getMax));
+
+//написать функцию которая принимает марку авто и колбэк функцию для поиска авто, функция возвращает в консоль количество /найденых авто марку авто модель авто и стоимость
+
+//количество найденных авто 2:
+//1 Honda Accord, 20000
+//2 Honda Civic, 12000
+
+//колбэк функция принимает марку авто и ищет в обьекте возвращает массив иде
+
+const cars = {
+  id1: {
+    car: 'Honda',
+    type: 'Civic',
+    price: 12000,
+  },
+  id2: {
+    car: 'Audi',
+    type: 'Q7',
+    price: 10000,
+  },
+  id3: {
+    car: 'BMW',
+    type: '5 series',
+    price: null,
+  },
+  id4: {
+    car: 'Honda',
+    type: 'Accord',
+    price: 20000,
+  },
+};
+
+const findCars = (model, cb) => {
+  const idx = cb(model);
+  let result = `количество найденных авто ${idx.length}: \n`;
+  idx.forEach(function (item, idx) {
+    const { car, type, price } = cars[item];
+    result += `${idx + 1} ${car} ${type} ${price} \n`;
+  });
+  return console.log(result);
+};
+
+const findByModel = model => {
+  const arrayResult = [];
+  // Object.entries(cars).forEach(([id, value]) => {
+  //   if (value.car === model) {
+  //     arrayResult.push(id);
+  //   }
+  // });
+  //или
+  for (const [id, value] of Object.entries(cars)) {
+    if (value.car === model) {
+      arrayResult.push(id);
+    }
+  }
+  return arrayResult;
+};
+
+const findByMaxPrice = price => {
+  const arrayResult = [];
+  Object.entries(cars).forEach(([id, value]) => {
+    if (value.price !== null && value.price <= price) {
+      arrayResult.push(id);
+    }
+  });
+  return arrayResult;
+};
+
+findCars('Honda', findByModel);
+findCars('Ford', findByModel);
+findCars(10000, findByMaxPrice);
+
+/********************************************************************************* */
+
+//Лекция 2
+//кахут
+//чистой функция это та функция которая не меняет входные данные
+//forEach - ничего не возвращает а только перебирает массив
+//
+const values1 = ['a', 'b', 'c'];
+values1.forEach(value => console.log(value));
+//map() мутирует(изменяет) ли массив? - нет (возвращает новый массив той  же длинны)
+//filter() - для поиска нескольких элементов массива
+//filter() - что возвращает - всегда массив
+//filter() - что возвращает если ничего не найдет - пустой массив
+//.find() - для чего используют - дл поиска одного уникального элемента массива
+//.find() - что возвращает если ничего не найдет = undefined
+//.reduce() - результат работы метода = что угодно зависит от логики и начального значения акумулятора
+//.reduce() - какие аргументы и в каком порядке = акумулятор, элемент, индекс, массив
+//.reduce() - зачем нуден второй параметр = начальное значение акумулятора
+//.sort() = сортирует и перебирает, изменяет и возвращает коллекцию (мутирующий метод)
+
+//Грязные и чистые функции
+
+const getSum = (a, b) => a + b;
+getSum(1, 3);
+
+//грязная функция
+//меняет и мутирует массив оригинал. обращается к глобальной переменной
+const numbers1 = [1, 2, 3, 4, 5];
+
+const pushNumbers = (...args) => {
+  numbers1.push(...args);
+};
+pushNumbers(9, 6, 8);
+pushNumbers(9, 6, 8);
+
+console.log(numbers1);
+
+//чистая функция
+//не меняет и не мутирует массив оригинал.  обращается к параметрам функции
+const numbers2 = [1, 2, 3, 4, 56];
+
+const pushNumbersClear = (array, ...args) => {
+  const copidArr = array.slice();
+  copidArr.push(...args);
+  return copidArr;
+};
+
+const changedNumbers = pushNumbersClear(numbers2, 2, 3, '0');
+
+console.log('numbers :', numbers2);
+console.log('copy of numbers: ', changedNumbers);
+
+console.log(pushNumbersClear(numbers2, 2, 3));
+console.log(numbers2);
+
+//
+const numbers3 = [1, 2, 3, 4];
+
+// const doubleMulti = function (arr) {
+//   for (let i = 0; i < arr.length; i += 1) {
+//     arr[i] *= 2;
+//   }
+// };
+const doubleMulti = arr => {
+  // const copiedArr = [...arr]
+  // for (let i = 0; i < arr.length; i += 1) {
+  //   copiedArr[i] *= 2;
+  // }
+  // return copiedArr;
+  //или
+  const copiedArr = [];
+  for (let elem of arr) {
+    copiedArr.push(elem * 2);
+  }
+  return copiedArr;
+};
+
+console.log(numbers3);
+console.log(doubleMulti(numbers3));
+
+//.map(elem, idx, array)
+
+const num = [1, 2, 3, 4];
+num.forEach((num, idx, arr) => {
+  return console.log(idx, num, arr);
+});
+
+const newArr = num.map(elem => elem * 2);
+console.log(newArr);
+console.log(num);
+
+//пeреписать цикл через тар
+
+const wordArr = ['Есть', 'жизнь', 'на', 'Марсе'];
+
+const getElementsLength = function (arrOfStr) {
+  const wordsLengthArr = [];
+  for (const str of arrOfStr) {
+    wordsLengthArr.push(str.length);
+  }
+  return wordsLengthArr;
+};
+//или
+
+const getWordLength = arrOfStr => arrOfStr.map(word => word.length);
+
+console.log(wordArr);
+console.log(getElementsLength(wordArr));
+console.log(getWordLength(wordArr));
+
+//Создание массива значений Фаренгейта из массива значений Цельсия
+//для перевод из цельсия в фаренгейт нужна формула F = C * 1.8 +32
+
+const celsius = [-15, -5, 0, 10, 16, 20, 30];
+
+const farengeit = arr => arr.map(t => t * 1.8 + 32);
+
+console.log(farengeit(celsius));
+
+//пусть функция getModel возвращает массив моделей(поле model) всех автомобилей
+
+const carsModel = [
+  {
+    make: 'Honda',
+    model: 'CR-V',
+    type: 'suv',
+    amount: 14,
+    price: 24045,
+    onSale: true,
+  },
+  {
+    make: 'Honda',
+    model: 'CR-V',
+    type: 'suv',
+    amount: 14,
+    price: 24045,
+    onSale: true,
+  },
+  {
+    make: 'Honda',
+    model: 'CR-V',
+    type: 'suv',
+    amount: 14,
+    price: 24045,
+    onSale: true,
+  },
+  {
+    make: 'Honda',
+    model: 'CR-V',
+    type: 'suv',
+    amount: 14,
+    price: 24045,
+    onSale: true,
+  },
+  {
+    make: 'Honda',
+    model: 'CR-V',
+    type: 'suv',
+    amount: 14,
+    price: 24045,
+    onSale: true,
+  },
+  {
+    make: 'Honda',
+    model: 'CR-V',
+    type: 'suv',
+    amount: 14,
+    price: 24045,
+    onSale: true,
+  },
+  {
+    make: 'Honda',
+    model: 'CR-V',
+    type: 'suv',
+    amount: 14,
+    price: 24045,
+    onSale: true,
+  },
+  {
+    make: 'Honda',
+    model: 'CR-V',
+    type: 'suv',
+    amount: 14,
+    price: 24045,
+    onSale: true,
+  },
+];
+
+//пусть функция makeCarsWithDiscount возвращает новый массив обьектов с измененным свойством price
+//в зависимости от переданной сидки
+const getModel = carsArray => carsArray.map(({ model }) => model);
+
+console.log(getModel(carsModel));
+
+const makeCarsWithDiscount = (cars, discount) =>
+  cars.map(auto => ({ ...auto, price: auto.price - auto.price * discount }));
+
+console.log(carsModel);
+console.log(makeCarsWithDiscount(carsModel, 0.2));
+
+/*Метод filter*/
+
+//массив.filter(element, index, array)=>{тело колбэк фн}
+//не мутирует возвращает новый массив
+//если условие возвращает true элемент записывается в новый массив
+//ели false то пропускаеться
+
+//отфильтруйте массив, что бы остались только четные
+
+const numbers4 = [1, 2, 3, 4, 5, 6];
+
+const evenNumbers = numbers4.filter(element => element % 2 === 0);
+
+console.log(evenNumbers);
+
+//отфильтруйте массив,оставив в нем только положительные числа:
+
+const numbers5 = [-2, 5, 6, -5, -10, 45, 8, 9, 7, -6];
+
+const positiveNumbers = numbers5.filter(number => number >= 0);
+
+console.log(positiveNumbers);
+
+//отфильтруйте массив heroes по свойству обьекта franchise
+
+const heroes = [
+  { name: 'Batman', franchise: 'DC' },
+  { name: 'Batman', franchise: 'DC' },
+  { name: 'Batman', franchise: 'DC' },
+  { name: 'Batman', franchise: 'DC' },
+];
+
+// const dcHeroes = heroes.filter(hero => hero.franchise === 'DC');
+const dcHeroes = heroes.filter(({ franchise }) => franchise === 'DC');
+
+console.log(dcHeroes);
+
+//Пусть функция filterByPrise возвращает массив автомобилей цена которых
+//меньше чм значение параметра threshold
+//показать два примера с деструктуризации
+
+const cars1 = [
+  {
+    make: 'Honda',
+    model: 'CR-V',
+    type: 'suv',
+    amount: 14,
+    price: 24045,
+    onSale: true,
+  },
+  {
+    make: 'Honda',
+    model: 'CR-V',
+    type: 'suv',
+    amount: 14,
+    price: 24045,
+    onSale: true,
+  },
+  {
+    make: 'Honda',
+    model: 'CR-V',
+    type: 'suv',
+    amount: 14,
+    price: 24045,
+    onSale: true,
+  },
+  {
+    make: 'Honda',
+    model: 'CR-V',
+    type: 'suv',
+    amount: 14,
+    price: 24045,
+    onSale: true,
+  },
+  {
+    make: 'Honda',
+    model: 'CR-V',
+    type: 'suv',
+    amount: 14,
+    price: 24045,
+    onSale: true,
+  },
+  {
+    make: 'Honda',
+    model: 'CR-V',
+    type: 'suv',
+    amount: 14,
+    price: 24045,
+    onSale: true,
+  },
+  {
+    make: 'Honda',
+    model: 'CR-V',
+    type: 'suv',
+    amount: 14,
+    price: 20000,
+    onSale: true,
+  },
+  {
+    make: 'Honda',
+    model: '4CR-V',
+    type: 'ttt',
+    amount: 13,
+    price: 30000,
+    onSale: false,
+  },
+];
+
+const filterByPrise = (carsArray, threshold) =>
+  carsArray.filter(({ price }) => price < threshold);
+
+// const filterByPrise = cars1.filter(() => { })
+
+console.log(filterByPrise(cars1, 30000));
+
+//пусть функция getCarsWithDiscount возвращает массив автомобилей свойства onSale которых true
+
+// const getCarsWithDiscount = carsArray =>
+//   carsArray.filter(({ onSale }) => onSale === true);//передача аргументов в момент вызова функции
+const getCarsWithDiscount = cars1.filter(({ onSale }) => onSale); //без передачи аргументов
+
+// console.log(getCarsWithDiscount(cars1));
+console.log(getCarsWithDiscount);
+console.log(cars1);
+
+//Пусть функция getCarWithType возвращает массив автомобилей тип которых совпадает со значением type
+
+const getCarWithType = (carsArray, type) =>
+  carsArray.filter(auto => auto.type === type && auto.onSale);
+
+// console.log(...cars1);
+
+console.log(getCarWithType(cars1, 'suv'));
+console.log(getCarWithType(cars1, 'ttt'));
+
+//уставить только уникальные числа
+const numbers6 = [1, 2, 3, 3, 2, 1, 4, 5, 6, 4];
+
+const filteredNumbers = numbers6.filter(
+  (num, idx, arr) => arr.indexOf(num) === idx
+);
+console.log(filteredNumbers);
+
+/*Метод sort()*/
+
+//сортировка чисел и строк по умолчанию. метод мутирующий
+
+const numbersArr = [30, 94, 60, 97, 5];
+const sortedNumbers = [...numbersArr].sort();
+console.log(numbersArr);
+console.log(sortedNumbers);
+
+const words = ['Gavin', 'Edgar', 'Edith'];
+const sortedWords = [...words].sort();
+console.log(words);
+console.log(sortedWords);
+
+//Сортировка чисел и строк по условию
+
+const num2 = [30, 94, 60, 97, 5];
+const sortedNum = [...num2].sort((a, b) => a - b);
+
+console.log(num2);
+console.log(sortedNum);
+
+const words1 = ['Gavin', 'Edgar', 'Edith'];
+const sortedWords1 = [...words1].sort((a, b) => a.localeCompare(b));
+
+console.log(sortedWords1);
+
+//пусть функция sortByAscendingScore возвращает новый массив автомобилей отсортированных
+//по возрастанию значения свойств amount
+
+const sortByAscendingScore = carsArr =>
+  carsArr
+    .slice() //делаем копию массива
+    .sort((a, b) => a.amount - b.amount);
+
+console.log(sortByAscendingScore(cars1));
+
+//пусть функция sortByDescendingPrice возвращает новый массив авто отсортированных по убыванию значения свойств price
+
+const sortByDescendingPrice = carsArr =>
+  [...carsArr].sort((a, b) => a.price - b.price);
+console.log(sortByDescendingPrice(cars1));
+
+//пусть функция sortByModel возвращает новый массив авто  отсортированных по названию моделей
+//в алфавитном и обратном порядке в зависимости от значения параметра order
+
+const sortByModel = (carsArr, order) => {
+  return [...carsArr].sort((a, b) => {
+    if (order === 'asc') {
+      return a.model.localeCompare(b.model);
+    }
+    return b.model.localeCompare(a.model);
+  });
+};
+
+console.log(sortByModel(cars1, 'asc'));
+console.log(sortByModel(cars1, 'desc'));
+
+/*метод reduce()*/
+
+// массив.reduce((previousValue, element, index, array) => {тело функции}, initialValue)
+//возвращает какое то новое значение или или новую сущность(число, массив, обьект)
+
+//посчитать сумму массива чисел. Показать каждую итерацию
+
+const num3 = [1, 2, 3, 4, 5];
+
+num3.reduce((acc, elem, idx, arr) => {
+  console.log(acc);
+  console.log(idx);
+  console.log(elem);
+}, 0);
+
+const totalSum = num3.reduce((acc, elem) => {
+  return acc + elem;
+}, 0);
+
+console.log(totalSum);
+
+//пусть функция getTotalAmount возвращает общее количество автомобилей
+
+const getTotalAmount = carsArr =>
+  carsArr.reduce((acc, elem) => acc + elem.amount, 0);
+
+console.log(getTotalAmount(cars1));

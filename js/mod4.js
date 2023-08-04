@@ -1498,3 +1498,500 @@ const getTotalAmount = carsArr =>
   carsArr.reduce((acc, elem) => acc + elem.amount, 0);
 
 console.log(getTotalAmount(cars1));
+
+/*Практика*/
+
+//получить строку  из массива клиентов
+const clients = ['mango', 'poly', 'ajax'];
+
+// const resultStr = clients.reduce(
+//   (acc, elem, idx, arr) => acc + `${idx + 1} клиент ${elem} \n`,
+//   `У нас есть ${clients.length} клиента \n`
+// );
+
+// const resultStr = clients.reduce((acc, elem, idx, arr) => {
+//   if (idx === 0) {
+//     acc += `У нас есть ${arr.length} клиента \n`;
+//   }
+
+//   return acc + `${idx + 1} клиент ${elem} \n`;
+// }, '');
+
+const resultStr = clients.map((elem, idx) => `${idx + 1} клиент ${elem} \n`);
+
+console.log(`У нас есть ${clients.length} клиента \n ${resultStr.join(' ')}`);
+
+//
+const num4 = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+
+const calcNum = numbers => {
+  let result = 0;
+  for (const num of numbers) {
+    result += num;
+  }
+  return result;
+};
+console.log(calcNum(num4));
+
+const calcNum2 = numbers => numbers.reduce((result, num) => result + num, 0);
+
+console.log(calcNum2(num4));
+
+//
+// const countLeters = str =>
+//   str.split('').reduce((result, elem) => {
+//     console.log(elem);
+//     if (result[elem]) {
+//       result[elem] += 1;
+//     } else {
+//       result[elem] = 1;
+//     }
+//     return result;
+//   }, {});
+const countLeters = str =>
+  str
+    .split('')
+    .reduce(
+      (result, elem) =>
+        result[elem]
+          ? { ...result, [elem]: result[elem] + 1 }
+          : { ...result, [elem]: 1 },
+      {}
+    );
+
+console.log(countLeters('hello'));
+
+//
+
+//найти юзера
+//сортировка по имени
+//сортировка по фамилии
+//сортировка списка юзеров в котором будет только фио и почта
+//фн которая возвращает обьект с количеством м и ж {male: 0, female:0}
+
+// const users = [
+// {
+//   id: 1,
+//   firstName: 'Daffi',
+//   lastName: 'Rides',
+//   email: 'rides@mail.com',
+//   gender: 'Female',
+// },
+// {
+//   id: 2,
+//   firstName: 'Daffi',
+//   lastName: 'Rides',
+//   email: 'rides@mail.com',
+//   gender: 'Male',
+// },
+// {
+//   id: 3,
+//   firstName: 'Daffi',
+//   lastName: 'Rides',
+//   email: 'rides@mail.com',
+//   gender: 'female',
+// },
+// {
+//   id: 4,
+//   firstName: 'Daffi',
+//   lastName: 'Rides',
+//   email: 'rides@mail.com',
+//   gender: 'female',
+// },
+// {
+//   id: 5,
+//   firstName: 'Daffi',
+//   lastName: 'Rides',
+//   email: 'rides@mail.com',
+//   gender: 'female',
+// },
+// {
+//   id: 6,
+//   firstName: 'Daffi',
+//   lastName: 'Rides',
+//   email: 'rides@mail.com',
+//   gender: 'female',
+// },
+// {
+//   id: 7,
+//   firstName: 'Daffi',
+//   lastName: 'Rides',
+//   email: 'rides@mail.com',
+//   gender: 'female',
+// },
+// {
+//   id: 8,
+//   firstName: 'Daffi',
+//   lastName: 'Rides',
+//   email: 'rides@mail.com',
+//   gender: 'Male',
+// },
+// {
+//   id: 9,
+//   firstName: 'Daffi',
+//   lastName: 'Rides',
+//   email: 'rides@mail.com',
+//   gender: 'Male',
+// },
+// {
+//   id: 10,
+//   firstName: 'Lori',
+//   lastName: 'Jeaves',
+//   email: 'rides@mail.com',
+//   gender: 'Female',
+// },
+// ];
+const users = [
+  {
+    id: 1,
+    firstName: 'Vernice',
+    lastName: 'Swadlinge',
+    email: 'vswadlinge0@qq.com',
+    gender: 'Female',
+  },
+  {
+    id: 2,
+    firstName: 'Yule',
+    lastName: 'Ainsley',
+    email: 'yainsley1@addthis.com',
+    gender: 'Male',
+  },
+  {
+    id: 3,
+    firstName: 'Geraldine',
+    lastName: 'Bevens',
+    email: 'gbevens2@cloudflare.com',
+    gender: 'Female',
+  },
+  {
+    id: 4,
+    firstName: 'Garrot',
+    lastName: 'Coolahan',
+    email: 'gcoolahan3@buzzfeed.com',
+    gender: 'Male',
+  },
+  {
+    id: 5,
+    firstName: 'Etta',
+    lastName: 'McCook',
+    email: 'emccook4@latimes.com',
+    gender: 'Female',
+  },
+  {
+    id: 6,
+    firstName: 'Theda',
+    lastName: 'Leak',
+    email: 'tleak5@msn.com',
+    gender: 'Female',
+  },
+  {
+    id: 7,
+    firstName: 'Dick',
+    lastName: 'Gobell',
+    email: 'dgobell6@hhs.gov',
+    gender: 'Male',
+  },
+  {
+    id: 8,
+    firstName: 'Nathanael',
+    lastName: 'Bowart',
+    email: 'nbowart7@yandex.ru',
+    gender: 'Male',
+  },
+  {
+    id: 9,
+    firstName: 'Felic',
+    lastName: 'MacAless',
+    email: 'fmacaless8@patch.com',
+    gender: 'Male',
+  },
+  {
+    id: 10,
+    firstName: 'Delphine',
+    lastName: 'Rubinovici',
+    email: 'drubinovici9@nymag.com',
+    gender: 'Female',
+  },
+];
+
+const LOCATION = { uk: 'uk', gb: 'gb' };
+
+const getGender = (
+  usersArr //расчет кол женщин и мужчин
+) =>
+  usersArr.reduce(
+    (acc, { gender }) => {
+      if (gender === 'Male') {
+        acc.male += 1;
+      } else {
+        acc.female += 1;
+      }
+      return acc;
+    },
+    { male: 0, female: 0 }
+  );
+console.log(getGender(users));
+
+const generateUserNameOfLocation = ({ firstName, lastName }, location) => {
+  if (!Object.values(LOCATION).includes(location))
+    throw new Error('unknown location');
+  if (location === LOCATION.gb) return `${firstName} ${lastName}`;
+  if (location === LOCATION.uk) return `${lastName} ${firstName}`;
+};
+
+// console.log(
+//   generateUserNameOfLocation(
+//     { firstName: 'Delphine', lastName: 'Rubinovici' },
+//     LOCATION.gb
+//   )
+// );
+// console.log(
+//   generateUserNameOfLocation(
+//     { firstName: 'Delphine', lastName: 'Rubinovici' },
+//     LOCATION.uk
+//   )
+// );
+// console.log(
+//   generateUserNameOfLocation(
+//     { firstName: 'Delphine', lastName: 'Rubinovici' },
+//     'jhghj'
+//   )
+// );
+
+const usersStr = (arr, location) =>
+  arr.reduce((acc, { firstName, lastName, email }, idx) => {
+    return (
+      acc +
+      `${idx + 1} ${generateUserNameOfLocation(
+        { firstName, lastName },
+        location
+      )} - ${email},\n`
+    );
+  }, '');
+
+console.log(usersStr(users, LOCATION.uk));
+
+//
+
+const usersArr = [
+  {
+    id: 1,
+    name: 'tlaughtisse0',
+    age: 2006,
+  },
+  {
+    id: 2,
+    name: 'clawrenceson1',
+    age: 2010,
+  },
+  {
+    id: 3,
+    name: 'obridgestock2',
+    age: 1996,
+  },
+  {
+    id: 4,
+    name: 'amicallef3',
+    age: 2002,
+  },
+  {
+    id: 5,
+    name: 'kalten4',
+    age: 1966,
+  },
+  {
+    id: 6,
+    name: 'fjanse5',
+    age: 2007,
+  },
+  {
+    id: 7,
+    name: 'ohardes6',
+    age: 2003,
+  },
+  {
+    id: 8,
+    name: 'kjordin7',
+    age: 1990,
+  },
+  {
+    id: 9,
+    name: 'jlitton8',
+    age: 2012,
+  },
+  {
+    id: 10,
+    name: 'ptubb9',
+    age: 2003,
+  },
+];
+
+const filterByAge = (arr, minAge, maxAge) =>
+  arr.filter(({ age }) => {
+    const currentYear = new Date().getFullYear();
+    const userAge = currentYear - age;
+    // console.log(age)
+    return userAge >= minAge && userAge <= maxAge;
+  });
+
+console.log(filterByAge(usersArr, 18, 27));
+//
+//вернуть массив объектов в котором появилось свойство name:=> имя. Все остальные поля должны остаться без изменений
+//
+const usersArray = [
+  {
+    id: 1,
+    firstName: 'Cecilia',
+    lastName: 'Kaaskooper',
+    email: 'ckaaskooper0@multiply.com',
+    gender: 'Female',
+    ipAdress: '96.43.50.62',
+  },
+  {
+    id: 2,
+    firstName: 'Deena',
+    lastName: 'Mac',
+    email: 'dmac1@ning.com',
+    gender: 'Female',
+    ipAdress: '229.120.137.140',
+  },
+  {
+    id: 3,
+    firstName: 'Ward',
+    lastName: 'Wiltshaw',
+    email: 'wwiltshaw2@topsy.com',
+    gender: 'Male',
+    ipAdress: '136.51.191.46',
+  },
+  {
+    id: 4,
+    firstName: 'Mathilda',
+    lastName: 'Opfer',
+    email: 'mopfer3@bloglovin.com',
+    gender: 'Female',
+    ipAdress: '24.224.17.127',
+  },
+  {
+    id: 9,
+    firstName: 'Aiola',
+    lastName: 'Bstick',
+    email: 'vbastick8@chicagotribune.com',
+    gender: 'Female',
+    ipAdress: '152.209.45.34',
+  },
+  {
+    id: 5,
+    firstName: 'Katha',
+    lastName: 'Caston',
+    email: 'kcaston4@addtoany.com',
+    gender: 'Female',
+    ipAdress: '236.137.91.44',
+  },
+  {
+    id: 6,
+    firstName: 'Bree',
+    lastName: 'Grayshon',
+    email: 'bgrayshon5@salon.com',
+    gender: 'Female',
+    ipAdress: '78.9.182.218',
+  },
+  {
+    id: 7,
+    firstName: 'Bink',
+    lastName: 'Rosenfeld',
+    email: 'brosenfeld6@va.gov',
+    gender: 'Agender',
+    ipAdress: '40.4.129.145',
+  },
+  {
+    id: 8,
+    firstName: 'Hilary',
+    lastName: 'Salan',
+    email: 'hsalan7@umich.edu',
+    gender: 'Female',
+    ipAdress: '197.172.175.76',
+  },
+  {
+    id: 9,
+    firstName: 'Aiola',
+    lastName: 'Bastick',
+    email: 'vbastick8@chicagotribune.com',
+    gender: 'Female',
+    ipAdress: '152.209.45.34',
+  },
+  {
+    id: 9,
+    firstName: 'Aiola',
+    lastName: 'Bastick',
+    email: 'vbastick8@chicagotribune.com',
+    gender: 'Female',
+    ipAdress: '152.209.45.34',
+  },
+  {
+    id: 10,
+    firstName: 'Raleigh',
+    lastName: 'Van Castele',
+    email: 'rvancastele9@google.it',
+    gender: 'Genderfluid',
+    ipAdress: '10.100.68.97',
+  },
+];
+
+const transformUserName = users =>
+  users.map(user => ({
+    email: user.email,
+    name: `${user.firstName} ${user.lastName}`,
+  }));
+
+// console.log(transformUserName(usersArray));
+
+const findUser = (array, searchQuery) => {
+  if (!searchQuery || searchQuery.length < 2) {
+    return 'Error input';
+  }
+  return array.find(({ firstName, lastName }) =>
+    `${firstName} ${lastName}`
+      .toLocaleLowerCase()
+      .includes(searchQuery.toLocaleLowerCase())
+  );
+};
+
+// console.log(findUser(usersArray, 'se'));
+
+const filterUserByName = (array, searchQuery) => {
+  if (!searchQuery || searchQuery.length < 2) {
+    return 'Error input';
+  }
+  return array.filter(({ firstName, lastName }) =>
+    `${firstName} ${lastName}`
+      .toLocaleLowerCase()
+      .includes(searchQuery.toLocaleLowerCase())
+  );
+};
+
+// console.log(filterUserByName(usersArray, 'ba'));
+
+const sortFromName = array => {
+  return [...array].sort((a, b) =>
+    `${a.firstName} ${a.lastName}`.localeCompare(`${b.firstName} ${b.lastName}`)
+  );
+};
+
+// console.log(sortFromName(usersArray));
+
+const getEmailDomains = array => {
+  return array.reduce((acc, { email }) => {
+    const [, domain] = email.split('@');
+    return acc.includes(domain) ? acc : acc + domain + `\n`;
+
+    // console.log(domain);
+    // const index = email.indexOf('@');
+    // const domain1 = email.slice(index);
+    // console.log(domain1);
+    //не правильный вариант
+    // const [a, b, ...c] = email;
+    //   console.log(a, b, c);
+  }, '');
+};
+
+console.log(getEmailDomains(usersArray));

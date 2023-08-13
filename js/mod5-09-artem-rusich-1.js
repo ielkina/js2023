@@ -303,93 +303,95 @@ result2();
 // Example 1 - Майстерня коштовностей
 // Напишіть метод calcTotalPrice(stoneName), який приймає назву каменю і розраховує та повертає загальну вартість каменів з таким ім'ям, ціною та кількістю з властивості stones.
 
-// const chopShop = {
-//     stones: [{
-//             name: 'Emerald',
-//             price: 1300,
-//             quantity: 4
-//         },
-//         {
-//             name: 'Diamond',
-//             price: 2700,
-//             quantity: 3
-//         },
-//         {
-//             name: 'Sapphire',
-//             price: 1400,
-//             quantity: 7
-//         },
-//         {
-//             name: 'Ruby',
-//             price: 800,
-//             quantity: 2
-//         },
-//     ],
-//     calcTotalPrice(stoneName) {
-//         const {
-//             price,
-//             quantity
-//         } = this.stones.find(({
-//             name
-//         }) => name === stoneName)
-//         return price * quantity;
-//     },
-// };
-// const shop2 = {
-//     stones: [{
-//             name: 'Щебінь',
-//             price: 1300,
-//             quantity: 4
-//         },
-//         {
-//             name: 'Пісок',
-//             price: 2700,
-//             quantity: 3
-//         },
-//     ],
-// }
-// console.log(chopShop.calcTotalPrice.call(shop2, 'Щебінь'));
-// console.log(chopShop.calcTotalPrice('Emerald')); // 5200
-// console.log(chopShop.calcTotalPrice('Diamond')); // 8100
-// console.log(chopShop.calcTotalPrice('Sapphire')); // 9800
-// console.log(chopShop.calcTotalPrice('Ruby')); // 1600
+const chopShop = {
+  stones: [
+    {
+      name: 'Emerald',
+      price: 1300,
+      quantity: 4,
+    },
+    {
+      name: 'Diamond',
+      price: 2700,
+      quantity: 3,
+    },
+    {
+      name: 'Sapphire',
+      price: 1400,
+      quantity: 7,
+    },
+    {
+      name: 'Ruby',
+      price: 800,
+      quantity: 2,
+    },
+  ],
+  calcTotalPrice(stoneName) {
+    const { price, quantity } = this.stones.find(
+      ({ name }) => name === stoneName
+    );
+    return price * quantity;
+  },
+};
+
+const shop2 = {
+  stones: [
+    {
+      name: 'Щебінь',
+      price: 1300,
+      quantity: 4,
+    },
+    {
+      name: 'Пісок',
+      price: 2700,
+      quantity: 3,
+    },
+  ],
+};
+
+console.log(chopShop.calcTotalPrice('Emerald')); // 5200
+console.log(chopShop.calcTotalPrice('Diamond')); // 8100
+console.log(chopShop.calcTotalPrice('Sapphire')); // 9800
+console.log(chopShop.calcTotalPrice('Ruby')); // 1600
+
+console.log(chopShop.calcTotalPrice.call(shop2, 'Щебінь'));
 
 // Example 2 - Телефонна книга
 // Виконайте рефакторинг методів об'єкту phonebook щоб код запрацював.
 
-// const phonebook = {
-//   contacts: [],
-//   add(contact) {
-//     const newContact = {
-//       list: 'default',
-//       ...contact,
-//       id: this.generateId(),
-//       createdAt: this.getDate(),
-//     };
-//     this.contacts.push(newContact);
-//     return this.contacts
-//   },
-//   generateId() {
-//     return '_' + Math.random().toString(36).substr(2, 9);
-//   },
-//   getDate() {
-//     return Date.now();
-//   },
-// };
+const phonebook = {
+  contacts: [],
+  add(contact) {
+    const newContact = {
+      list: 'default',
+      ...contact,
+      id: this.generateId(), //если нам нужен метод обьекта нам необходимо указать какого обьекта
+      createdAt: this.getDate(),
+    };
+    this.contacts.push(newContact);
+    return this.contacts;
+  },
+  generateId() {
+    return '_' + Math.random().toString(36).substr(2, 9);
+  },
+  getDate() {
+    return Date.now();
+  },
+};
 
-// console.log(
-//   phonebook.add({
-//     name: 'Mango',
-//     email: 'mango@mail.com',
-//     list: 'friends',
-//   }),
-// );
-// console.log(
-//   phonebook.add({
-//     name: 'Poly',
-//     email: 'poly@hotmail.com',
-//   }),
-// );
+console.log(
+  phonebook.add({
+    name: 'Mango',
+    email: 'mango@mail.com',
+    list: 'friends',
+  })
+);
+console.log(
+  phonebook.add({
+    name: 'Poly',
+    email: 'poly@hotmail.com',
+  })
+);
 
 // Example 3 - Калькулятор
 // Створіть об'єкт calculator з трьома методами:
@@ -397,20 +399,21 @@ result2();
 // read(a, b)- приймає два значення та зберігає їх як властивості об'єкта.
 // add() - повертає суму збережених значень.
 // mult() - перемножує збережені значення та повертає результат.
-// const calculator = {
-//     read(a, b) {
-//         this.a = a;
-//         this.b = b ?? 0;
-//     },
-//     add() {
-//         return (this.a ?? 0) + (this.b ?? 0);
-//     },
-//     mult() {
-//         return (this.a ?? 1) * (this.b ?? 1);
-//     }
-// };
-// calculator.read(3)
-// console.log(calculator.mult());
-// // console.log(calculator.add());
+const calculator = {
+  read(a, b) {
+    this.a = a;
+    this.b = b ?? 0;//??(оператор нулевого сравнения) оператор присваивает дефолтное значение = 0
+    //схожий с оператором \\ (или) только возвращает только два значение null или undefined 
+  },
+  add() {
+    return (this.a ?? 0) + (this.b ?? 0);//0 заглушка 
+  },
+  mult() {
+    return (this.a ?? 1) * (this.b ?? 1);
+  },
+};
 
-// console.log(calculator);
+calculator.read(2, 3);
+console.log(calculator.add());
+console.log(calculator.mult());
+console.log(calculator);

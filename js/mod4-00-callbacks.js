@@ -24,18 +24,17 @@
 //   const result = callback(a, b);
 //   console.log(result);
 // };
-// const add = function (x, y) {
-//   return x + y;
-// };
-// const sub = function (x, y) {
-//   return x - y;
-// };
+// // const add = function (x, y) {
+// //   return x + y;
+// // };
+// // const sub = function (x, y) {
+// //   return x - y;
+// // };
 
-// doMath(2, 3, add);
-// doMath(10, 8, sub);
-//или
-//инлайн функция
-// doMath(2, 3, function (x, y) {
+// // doMath(2, 3, add);
+// // doMath(10, 8, sub);
+// // или инлайн функция
+// doMath(2, 3, function (x, y) { //анонимная функция (одноразовая)
 //   return x + y;
 // });
 // doMath(10, 8, function (x, y) {
@@ -43,58 +42,80 @@
 // });
 
 /*Отложенные вызовы : регистрация событий*/
-
-// const buttonRef = document.querySelector('.js-button');
-
-// const handleBtnClick = function () {
-//   console.log(`Клик по кнопке  ${Date.now()}`);
-// };
+// //регистрация событий
+// function addEventListener(eventType, callback) {
+//   //если
+//   if (eventType == event) {
+//     callback()
+//   }
+// }
+const buttonRef = document.querySelector('.js-button');
+const handleBtnClick = function () {
+  console.log(`Клик по кнопке  ${Date.now()}`);
+};
 // buttonRef.addEventListener('click', handleBtnClick);
+//или инлайн
+buttonRef.addEventListener('click', function () {
+  console.log(`Клик понопке ${Date.now()}`);
+});
 
-// /*Отложенные вызовы: геолокация*/
-// const onGetPositionSuccess = function (position) {
-//   console.log(position);
-// };
-// const onGetPositionError = function (error) {
-//   console.log(error);
-// };
+/*Отложенные вызовы: геолокация*/
 
-// window.navigator.geolocation.getCurrentPosition(
-//   onGetPositionSuccess,
-//   onGetPositionError
-//   //или
-//   // function (position) {
-//   //   console.log(position);
-//   // },
-//   // function (error) {
-//   //   console.log(error);
-//   // }
-// );
+const onGetPositionSuccess = function (position) {
+  console.log('Это вызов onGetPositionSuccess');
+  console.log(position);
+};
+const onGetPositionError = function (error) {
+  console.log('Это вызов onGetPositionError');
+  console.log(error);
+};
+
+window.navigator.geolocation.getCurrentPosition(
+  onGetPositionSuccess,
+  onGetPositionError
+  //или инлайн
+  // function (position) {
+  //   console.log(position);
+  // },
+  // function (error) {
+  //   console.log(error);
+  // }
+);
 
 /*Отложенные вызовы: интервалы*/
-// const callback = function () {
-//   console.log('Через 2 секунды внутри колбэка в таймауте');
-// };
-// console.log('В коде перед таймаутом');
-// setTimeout(callback, 2000);
-// console.log('Код после таймаута');
+const callback = function () {
+  console.log('Через 2 секунды внутри колбэка в таймауте');
+};
 
-/*отложенные  функции: http-запросов*/
-//API URL: http://pokeapt.co/art/v2/pokemon
+console.log('В коде перед таймаутом');
 
-// const onRequestSuccess = function (response) {
-//   console.log('Вызов функции onRequestSuccess после успешного ответа бекэнда');
-//   console.log(response);
-// };
+setTimeout(callback, 2000);
 
-// fetch('http://pokeapt.co/art/v2/pokemon')
-//   .then(res => res.json())
-//   .then(onRequestSuccess);
+console.log('Код после таймаута');
 
-// console.log('перед fetch');
-// console.log('после fetch');
+/*отложенные  функции: http-запросов 
+API URL: http://pokeapt.co/art/v2/pokemon
+*/
+
+const onRequestSuccess = function (response) {
+  console.log('Вызов функции onRequestSuccess после успешного ответа бекэнда');
+  console.log(response);
+};
+
+console.log('перед fetch');
+
+fetch('http://pokeapt.co/art/v2/pokemon')
+  .then(res => res.json())
+  .then(onRequestSuccess);
+
+console.log('после fetch');
 
 /*фильтр*/
+
+//1 надо передать функцию
+//2 функция получает элемент массива
+//3 если элемент массива удовлетворяет условию от функции вернет true
+//3 если элемент массива не удовлетворяет условию то функция вернет false
 
 const filter = function (array, callback) {
   const filteredArray = [];
@@ -106,31 +127,38 @@ const filter = function (array, callback) {
   }
   return filteredArray;
 };
-//1 надо передать функцию
-//2 функция получает элемент массива
-//3 если элемент массива удовлетворяет условию от функции вернет true
-//3 если элемент массива не удовлетворяет условию то функция вернет false
 
 const callback1 = function (value) {
   return value >= 3;
 };
-const callback2 = function (value) {
-  return value <= 3;
-};
-const getFruitsQuantity = function (fruits) {
-  return fruits.quantity >= 120;
-};
 
 const r1 = filter([1, 2, 3, 4, 5], callback1);
 console.log(r1);
-const r2 = filter([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], callback2);
+
+const callback2 = function (value) {
+  return value <= 3;
+};
+
+const r2 = filter([1, 2, 3, 4, 5], callback2);
 console.log(r2);
 
+const callback3 = function (value) {
+  return value >= 120;
+};
+
+const r3 = filter([1, 2, 3, 4, 5, 120, 121], callback3);
+console.log(r3);
+
+//
 const fruits = [
   { name: '🍎', quantity: 200, isFresh: true },
   { name: '🍍', quantity: 90, isFresh: false },
   { name: '🍌', quantity: 100, isFresh: true },
 ];
 
-const r3 = filter(fruits, getFruitsQuantity);
-console.log(r3);
+const getFruitsQuantity = function (fruits) {
+  return fruits.quantity >= 120;
+};
+
+const r4 = filter(fruits, getFruitsQuantity);
+console.log(r4);

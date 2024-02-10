@@ -18,7 +18,10 @@ const players = [
 ];
 
 const isAllOnline = players.every(player => player.online);
-console.log('isAllOnline', isAllOnline);
+console.log(isAllOnline);
+//деструктуризация
+const isAllOnline1 = players.every(({ online }) => online);
+console.log(isAllOnline1);
 
 /*Array.prototype.some()
 - Поэлементно Перебирает оригинальный массив
@@ -26,6 +29,12 @@ console.log('isAllOnline', isAllOnline);
 */
 const isAnyOnline = players.some(player => player.online);
 console.log(isAnyOnline);
+//деструктуризация
+const isAnyOnline1 = players.some(({ online }) => online);
+console.log(isAnyOnline1);
 
 const anyHardPlayers = players.some(player => player.timePlayed > 400);
 console.log(anyHardPlayers);
+//деструктуризация
+const anyHardPlayers1 = players.some(({ timePlayed }) => timePlayed > 400);
+console.log(anyHardPlayers1);

@@ -8,9 +8,8 @@
 */
 
 const numbers = [5, 10, 15, 20, 25];
-//если вернет true элемент запишеться в новый массив, вернет false не запишется
+//если вернет true элемент запишется в новый массив, вернет false не запишется
 const filterNumbers = numbers.filter(number => number > 15);
-
 console.log(filterNumbers);
 
 const players = [
@@ -26,25 +25,33 @@ const players = [
   { id: 'player-4', name: 'Ajax', timePlayed: 150, points: 71, online: false },
   { id: 'player-5', name: 'Chelsy', timePlayed: 80, points: 92, online: true },
 ];
-
 console.table(players);
 
 //Получаем массив всех онлайн игроков
 
 const onlinePlayers = players.filter(player => player.online);
-
 console.table(onlinePlayers);
+//деструктуризация
+const onlinePlayers1 = players.filter(({ online }) => online);
+console.table(onlinePlayers1);
 
 //Получаем массив всех офлайн игроков
 
-// const offlinePlayers = players.filter(player => !player.online);
+const offlinePlayers = players.filter(player => !player.online);
 //или
-const offlinePlayers = players.filter(player => player.online === false);
+const offlinePlayers1 = players.filter(player => player.online === false);
+//деструктуризация
+const offlinePlayers2 = players.filter(({ online }) => !online);
 
 console.table(offlinePlayers);
+console.table(offlinePlayers1);
+console.table(offlinePlayers2);
 
 //Получить массив хард игроков с временем больше 250
 
 const hardTimePlayer = players.filter(player => player.timePlayed > 250);
+//деструктуризация
+const hardTimePlayer1 = players.filter(({ timePlayed }) => timePlayed > 250);
 
 console.table(hardTimePlayer);
+console.table(hardTimePlayer1);

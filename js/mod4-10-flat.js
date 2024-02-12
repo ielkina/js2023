@@ -17,19 +17,26 @@ const tweets = [
   { id: '004', likes: 5, tags: ['js', 'nodejs'] },
 ];
 
-// const tags = tweets.reduce((acc, tweet) => [...acc, ...tweet.tags], []);
-// console.log(tags);
-
-// const tags = tweets.map(t => t.tags).flat();
-//тоже самое
-const tags = tweets.flatMap(t => t.tags);
+const tags = tweets.reduce((acc, tweet) => [...acc, ...tweet.tags], []);
 console.log(tags);
+const tags1 = tweets.map(t => t.tags).flat();
+console.log(tags1);
+//тоже самое
+const tags2 = tweets.flatMap(t => t.tags);
+console.log(tags2);
 
-const stats = tags.reduce((acc, tag) => {
-  return {
-    ...acc,
-    [tag]: acc[tag] ? acc[tag] + 1 : 1,
-  };
-}, {});
-
+const stats = tags.reduce(
+  (acc, tag) => ({ ...acc, [tag]: acc[tag] ? acc[tag] + 1 : 1 }),
+  {}
+);
 console.log(stats);
+
+const stats1 = tweets
+  .flatMap(t => t.tags)
+  .reduce(
+    (acc, tag) => ({
+      ...acc,
+      [tag]: acc[tag] ? acc[tag] + 1 : 1,
+    }),
+    {}
+  );

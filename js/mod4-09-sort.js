@@ -10,8 +10,8 @@ numbers.sort();
 console.log('numbers', numbers);
 
 const letters = ['b', 'B', 'a', 'A'];
-// letters.sort()
-// console.log('letters', letters);
+letters.sort();
+console.log('letters', letters);
 
 /*compareFunction - функция сравнения (callback)
 Элементы массива сортируются в соответствии с ее возвращаемым значением
@@ -23,21 +23,23 @@ const letters = ['b', 'B', 'a', 'A'];
 numbers.sort((curEl, nextEl) => {
   return curEl - nextEl;
 });
+//синтаксис без return
+numbers.sort((curEl, nextEl) => curEl - nextEl);
 console.log(numbers);
 
-numbers.sort((curEl, nextEl) => {
-  return nextEl - curEl;
-});
+numbers.sort((curEl, nextEl) => nextEl - curEl);
 console.log(numbers);
 
 /* Как сделать копию массива что бы не  сортировать оригинальный 
 - Array.prototype.slice()
 - Операция spread
 */
-// const copy = [...numbers].sort();
-// const copy = [...numbers].sort((a, b) => b - a); //по убыванию
-const copy = [...numbers].sort((a, b) => a - b); //по возрастанию
+const copy = [...numbers].sort();
+const copy1 = [...numbers].sort((a, b) => b - a); //по убыванию
+const copy2 = [...numbers].sort((a, b) => a - b); //по возрастанию
 console.log(copy);
+console.log(copy1);
+console.log(copy2);
 
 //кастомная сортировка сложных типов
 const players = [
@@ -49,37 +51,49 @@ const players = [
 ];
 
 //по игровому времени
-
 const sortedByBestPlayers = [...players].sort((prevPlayer, nextPlayer) => {
   return nextPlayer.timePlayed - prevPlayer.timePlayed;
 });
 console.table(sortedByBestPlayers);
+//синтаксис без return
+const sortedByBestPlayers1 = [...players].sort(
+  (prevPlayer, nextPlayer) => nextPlayer.timePlayed - prevPlayer.timePlayed
+);
+console.table(sortedByBestPlayers1);
 
 const sortedByWorstPlayers = [...players].sort((prevPlayer, nextPlayer) => {
   return prevPlayer.timePlayed - nextPlayer.timePlayed;
 });
-
 console.table(sortedByWorstPlayers);
+//синтаксис без return
+const sortedByWorstPlayers1 = [...players].sort(
+  (prevPlayer, nextPlayer) => prevPlayer.timePlayed - nextPlayer.timePlayed
+);
+console.table(sortedByWorstPlayers1);
 
 const sortByName = [...players].sort((prev, next) => {
-  const result = prev.name[0] > next.name[0];
-  if (result) {
-    return 1;
-  }
-  if (!result) {
-    return -1;
-  }
-  // const result = prev.name[0] < next.name[0];
+  // const result = prev.name[0] > next.name[0];
   // if (result) {
-  //   return -1;
-  // }
-  // if (!result) {
   //   return 1;
   // }
-
-  // return next.name[0] - prev.name[0];
+  // if (!result) {
+  //   return -1;
+  // }
+  // //или
+  const result = prev.name[0] < next.name[0];
+  if (result) {
+    return -1;
+  }
+  if (!result) {
+    return 1;
+  }
+  return next.name[0] - prev.name[0];
 });
-
 console.table(sortByName);
 
-
+//синтаксис с тернарником
+const sortByName1 = [...players].sort((prev, next) => {
+  const result = prev.name[0] > next.name[0];
+  return !result ? result - 1 : 1;
+});
+console.table(sortByName1);

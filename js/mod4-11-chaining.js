@@ -4,26 +4,36 @@
 
 const numbers = [2, 10, 15, 20, 25];
 
-// const greaterThenTwo = numbers.filter(function (num) {
-//   return num > 2;
-// });
-const greaterThenTwo = numbers.filter(num => num > 2);
+/*отфильтровали массив, оставили числа больше 2*/
 
+const greaterThenTwo = numbers.filter(function (num) {
+  return num > 2;
+});
 console.log(greaterThenTwo);
-//
-// const multByThree = greaterThenTwo.map(function (num) {
-//   return num * 3;
-// });
-const multByThree = greaterThenTwo.map(num => num * 3);
+//или
+const greaterThenTwo1 = numbers.filter(num => num > 2);
+console.log(greaterThenTwo1);
 
+/*утроили отфильтрованные числа на три*/
+
+const multByThree = greaterThenTwo.map(function (num) {
+  return num * 3;
+});
 console.log(multByThree);
-//
-// const sorted = multByThree.sort(function (a, b) {
-//   return a - b;
-// });
-const sorted = multByThree.sort((a, b) => b - a);
+//или
+const multByThree1 = greaterThenTwo.map(num => num * 3);
+console.log(multByThree1);
+
+/*отсортировали массив по убыванию*/
+
+const sorted = multByThree.sort(function (a, b) {
+  return a - b;
+});
+//или
+const sorted1 = multByThree.sort((a, b) => b - a);
 console.log(sorted);
-//
+
+/*а теперь из всех действий делаем цепочку */
 const chaining = numbers
   .filter(num => num > 2)
   .map(num => num * 3)
@@ -91,14 +101,13 @@ const element = {
   hovered: false,
   changeClass(cls) {
     this.class = cls;
-    return this
+    return this;
   },
   toggleHovered() {
     this.hovered = !this.hovered;
-    return this
+    return this;
   },
 };
 
-
-element.toggleHovered().changeClass('open')
+element.toggleHovered().changeClass('open');
 console.log(element);

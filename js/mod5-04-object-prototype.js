@@ -6,36 +6,44 @@
  * - Собственные свойства и Object.prototype.hasOwnProperty()
  * - Цепочка прототипов
  * 
- * !! Object.setPrototypeOf() нельзя использовать плохая практика
+ * ❌ Object.setPrototypeOf() нельзя использовать плохая практика
  * Предупреждение: изменение [[Prototype]] объекта в силу того, как современные движки JavaScript оптимизируют доступ к свойствам, в настоящее время является очень медленной операцией в каждом браузере и движке JavaScript. Кроме того, последствия изменения наследования незаметны и широко распространены и не ограничиваются временем, затрачиваемым на оператор Object.setPrototypeOf(...), а могут распространяться на любой код, имеющий доступ к любому объекту, [[ Прототип]] был изменен. Вы можете прочитать больше в статье Основы движка JavaScript: оптимизация прототипов.
 
 Поскольку эта функция является частью языка, производительность (в идеале) реализации этой функции по-прежнему лежит на разработчиках движка. Пока разработчики движка не решат эту проблему, если вас беспокоит производительность, вам следует избегать установки [[Prototype]] объекта. Вместо этого создайте новый объект с желаемым [[Prototype]] с помощью Object.create().
  */
 
+// const objA = {
+//   //Это собственное свойство обьекта
+//   x: 1,
+// };
+// const objB = {
+//   //Это собственное свойство обьекта
+//   y: 2,
+// };
 const objC = {
+  //Это собственное свойство обьекта
   z: 3,
 };
+
 //Это собственное свойство обьекта
 console.log('objC ', objC);
-// console.log(objC.hasOwnProperty('z'));
-
+console.log(objC.hasOwnProperty('z'));
 
 //Это свойство на обьекте-прототипе
 const objB = Object.create(objC);
-// console.log(objB.hasOwnProperty('z')); //в прототипе все ссылки
+console.log(objB.hasOwnProperty('z')); //в прототипе все ссылки
 objB.y = 2;
 console.log('objB ', objB);
-// console.log(objB.y);
-// console.log(objB.z);
-// console.log(objB.hasOwnProperty('y'));
+console.log(objB.y);
+console.log(objB.z);
+console.log(objB.hasOwnProperty('y'));
 
-const objA = Object.create(objB); 
+const objA = Object.create(objB);
 objA.x = 1
 console.log('objA ', objA);
 
 objA.z = 100;
 console.log(objA)
-
 
 /** Алгоритм поиска свойств в цепочке прототипа
  * 1 Поиск начинается в собственных свойствах
@@ -44,3 +52,8 @@ console.log(objA)
  * 4 Возвращает значение свойства
  */
 
+const dummyObj = Object.create({ message: 'Это свойство обьекта прототипа' })
+//⬆
+dummyObj.message = 'Это собственное свойство обьекта'
+console.log('dummyObj', dummyObj);
+console.log(dummyObj.message);

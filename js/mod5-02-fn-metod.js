@@ -1,61 +1,61 @@
 /*call and apply*/
 
 const showThis = function (a, b, c) {
+  console.log(`showThis в контексте`, this);
   console.log(a, b, c);
-  console.log('showThis - this', this);
 };
-
 showThis();
 
 const objA = {
-  a: 5,
-  b: 10,
+  a: 'a',
 };
-
-//метод call
-showThis.call(objA, 10, 220, 30); //через запятую можно передать непроизвольное количество аргументов
-showThis.apply(objA, [1, 2, 3]); //передается массив аргументов
-
 const objB = {
-  a: 1,
-  b: 1,
+  b: 'b',
 };
+// Метод call(аргумент в контексте которого эту фн нужно вызвать, произвольное количество аргументов) вызывает функцию с указанным значением this и индивидуально предоставленными аргументами.
+//call берет фн на которой мы вызвали и принудительно  вызывает в контексте обьекта
+//через запятую можно передать непроизвольное количество аргументов
+showThis.call(objA, 1, 2, 3);
+showThis.call(objB, 4, 5, 6);
 
-showThis.call(objB, 10, 220, 30);
+//apply передается массив аргументов
+showThis.apply(objA, [1, 2, 3]);
+showThis.apply(objB, [3, 4, 5]);
 
-// showThis();
+/***************************************************** */
 
-///***************************************************** */
+const changeColor = function (color) {
+  console.log('changeColor - this', this);
+  this.color = color;
+};
+const hat = {
+  cloth: 'hat',
+  color: 'black',
+};
+const sweater = {
+  cloth: 'sweater',
+  color: 'green',
+};
+changeColor.call(hat, 'red');
+console.log(hat);
+changeColor.call(sweater, 'blue');
+console.log(sweater);
+changeColor.apply(sweater, ['orange']);
+console.log(sweater);
 
-// const changeColor = function (color) {
-//   console.log('changeColor - this', this);
-//   this.color = color;
-// };
+/*bind копия функции в с привязанным контекстом при этом оригинальная функция не изменяется*/
 
-// const hat = {
-//   color: 'black',
-// };
+//(забиндить) всегда будет ссылаться на обьект hat
+const changeHatColor = changeColor.bind(hat);
+const changeSweaterColor = changeColor.bind(sweater);
 
-// changeColor.call(hat, 'orange');
-// console.log(hat);
+changeSweaterColor('violet');
+changeHatColor('yellow');
+console.log(sweater)
+console.log(hat)
+// changeColor();//undefined
 
-// const sweater = {
-//   color: 'green',
-// };
-// changeColor.call(sweater, 'blue');
-// console.log(sweater);
-
-/*bind
-копия функции в спривязанным контекстом
-*/
-
-// const changeHatColor = changeColor.bind(hat); //всегда будет ссылаться на обьект hat
-// const changeSweaterColor = changeColor.bind(sweater);
-
-// changeSweaterColor();
-// changeHatColor('yelow');
-// console.log(hat)
-// changeColor();
+/***************************************************************** */
 
 const counter = {
   value: 0,
@@ -76,5 +76,3 @@ const updateCounter = function (value, operation) {
 updateCounter(10, counter.increment.bind(counter))
 updateCounter(10, counter.decrement.bind(counter))
 console.log(counter)
-
-

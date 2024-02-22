@@ -14,13 +14,13 @@ const number = 50;
 console.log(`Число ${number} попадает в отрезок до ${x1} ?`, number < x1);
 console.log(`Число ${number} попадает в отрезок до ${x2} ?`, number > x2)
 
-// const res = number > x1 && number < x2;
+const res = number > x1 && number < x2;
 //50>10 && 50<30
 //true && false
 //&& запинается на false и возвращает его
 console.log(`Число ${number} попадает в отрезок от ${x1} до ${x2} ?`, number > x1 && number < x2);//false
 
-const res = number < x1 || number > x2
+const res1 = number < x1 || number > x2
 //50<10 || 50>30
 //false || true
 //|| запинается на true и возвращает его

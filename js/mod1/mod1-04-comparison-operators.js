@@ -21,7 +21,9 @@ console.log(true > 5);
 //=== - оператор строгого сравнения
 // !== - оператор неравенства
 
-// const isEqual = 5 == 5;
-// const isEqual ='5' === 5;//false
-const isEqual =5 === 5;//true
+const isEqual = 5 == 5;
+const isEqual1 ='5' === 5;//false
+const isEqual2 =5 === 5;//true
 console.log(isEqual);
+console.log(isEqual1);
+console.log(isEqual2);

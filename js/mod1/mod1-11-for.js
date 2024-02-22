@@ -6,12 +6,12 @@ console.log('for');
 //тело цикла
 // }
 
-// for (let i = 10; i >= 0; i -= 2) {
-//   console.log(i);
-// }
-// for (let i = 0; i <= 10; i += 1) {
-//   console.log(i);
-// }
+for (let i = 10; i >= 0; i -= 2) {
+  console.log(i);
+}
+for (let i = 0; i <= 10; i += 1) {
+  console.log(i);
+}
 //i += 3 - тоже самое что и i = i +3
 console.log('jhgkj');
 
@@ -32,11 +32,13 @@ console.log(b);
 //Зарплата каждого работника это случайное число от 500 до 5000
 //записать сумму в переменную totalSalary и вывести в консоль
 //алгоритм
+
 //1 сделать вары
 const minSalary = 500;
 const maxSalary = 5000;
 const employees = 4;
 let totalSalary = 0;
+
 //2  перебрать работников в цикле
 for (let i = 1; i <= employees; i += 1) {
   //3 сгенерить случайную зп

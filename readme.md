@@ -1,4 +1,5 @@
-# [P]Модуль 1 урок 1 
+# [Модуль 1](https://github.com/ielkina/js2023/tree/main/js/mod1)
+# урок 1 
 # План занятия
 
 # Введение
@@ -32,7 +33,8 @@
   - Мат. операторы
   - Объекты Number и Math
 
-# [P]Модуль 1 урок 2 
+# [Модуль 1](https://github.com/ielkina/js2023/tree/main/js/mod1)
+# урок 2 
 # План занятия
 
 - Switch
@@ -91,7 +93,7 @@
   - reduce
   - sort
 - Чейнинг методов
-- [Библиотека Lodash] (https://lodash.com/docs/4.17.15)
+- [Библиотека Lodash](https://lodash.com/docs/4.17.15)
 
 # [P]Модуль 5 урок 1  
 # План занятия

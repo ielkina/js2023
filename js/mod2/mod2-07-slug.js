@@ -9,25 +9,26 @@ console.log(`slug`);
 
 const title = 'Top 10 benefits of React framework'
 
+//[x]первый вариант решения
 
-//первый вариант решения
 const normalizedTitle = title.toLowerCase();
-// console.log(normalizedTitle);
+console.log(normalizedTitle);
 const words = normalizedTitle.split(' ');
-// console.log(words);
+console.log(words);
 const slug = words.join('-');
-// console.log(slug);
+console.log(slug);
 
 
 
-//второй вариант решения
+//[x]второй вариант решения
 
 //вызовы методов
 //методы работают на результате вызова предыдущего метода
-//1 переводит в нижний регистр 
+//1 переводит в нижний регистр
 //2 разбивает на массив
 //3 соединяет в строку с разделительным знаком
 //1 метод > 2 метод срабатывает на результате метода 1 > 3 метод срабатывает на результате метода 2 
+
 const slug1 = title.toLowerCase().split(' ').join('-');
 console.log(slug1);
 

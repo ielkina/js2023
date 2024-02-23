@@ -33,7 +33,6 @@
   - Мат. операторы
   - Объекты Number и Math
 
-# [Модуль 1](https://github.com/ielkina/js2023/tree/main/js/mod1)
 # урок 2 
 # План занятия
 

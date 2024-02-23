@@ -16,3 +16,8 @@ img {
 .js-value {
   margin: 20px;
 }
+.box {
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+}

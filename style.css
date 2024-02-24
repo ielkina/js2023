@@ -1,6 +1,9 @@
 body {
  background-color: #292929ff;
  color: white;
+ display: flex;
+ /* justify-content: center; */
+
 }
 img {
   width: 200px;
@@ -8,16 +11,13 @@ img {
   color: #8829e0;
 }
 .box {
+  width: 200px;
   display: flex;
-  /* justify-content: center; */
+  flex-direction: column;
+  justify-content:center;
 
   font-size: 24px;
 }
 .js-value {
   margin: 20px;
-}
-.box {
-  width: 200px;
-  display: flex;
-  flex-direction: column;
 }

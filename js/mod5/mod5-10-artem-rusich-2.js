@@ -515,21 +515,18 @@ class Toggle {
 }
 const firstToggle = new Toggle({ isOpen: true });
 
-// console.group('firstToggle');
-// // console.log(firstToggle.on);
-// firstToggle.toggle();
-// // console.log(firstToggle.on);
-// console.groupEnd('firstToggle');
+console.group('firstToggle');
+console.log(firstToggle.on);
+firstToggle.toggle();
+console.log(firstToggle.on);
+console.groupEnd('firstToggle');
 
-
-
-// const secondToggle = new Toggle();
-
-// console.group('secondToggle');
-// console.log(secondToggle.on);
-// secondToggle.toggle();
-// console.log(secondToggle.on);
-// console.groupEnd('secondToggle');
+const secondToggle = new Toggle();
+console.group('secondToggle');
+console.log(secondToggle.on);
+secondToggle.toggle();
+console.log(secondToggle.on);
+console.groupEnd('secondToggle');
 
 /************************************************ */
 // const str = 'Hello world'

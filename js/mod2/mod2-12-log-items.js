@@ -1,4 +1,4 @@
-//Напиши функцию logItems(items) для перебора и логирования массива
+//[P]Напиши функцию logItems(items) для перебора и логирования массива
 
 const logItems = function(items) {
   for (const item of items ){

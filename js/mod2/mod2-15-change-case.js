@@ -2,17 +2,18 @@
 //каждого символа в строке на противоположный
 //Например,если строка "JavaScript", то на выходе быть строка "jAVAsCRIPT"
 
-// const string = "JavaScript";
-// const letters = string.split('');
-// let invertedString = '';
+const string = "JavaScript";
+const letters = string.split('');
+let invertedString = '';
 
-// for (const letter of letters) {
-//   const isEqual = letter === letter.toLowerCase();
-//   invertedString += isEqual ? letter.toUpperCase() : letter.toLowerCase();
-// }
-// console.log('invertedString: ', invertedString);
+for (const letter of letters) {
+  const isEqual = letter === letter.toLowerCase();
+  invertedString += isEqual ? letter.toUpperCase() : letter.toLowerCase();
+}
+console.log('invertedString: ', invertedString);
 
 //Вариант решения
+
 const changeCase = function (string) {
   const letters = string.split('');
   let invertedString = '';

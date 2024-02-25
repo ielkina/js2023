@@ -6,9 +6,9 @@ const fnA = function () {
   //первый метод
   const args = Array.from(arguments); //сделай массив из...
 
-  // for (const arg of arguments) {
-  //   console.log(arg);
-  // }
+  for (const args of arguments) {
+    console.log(args);
+  }
 };
 
 fnA(1, 2, 3, 4, 5, 6, 7);
@@ -26,8 +26,8 @@ const fnB = function (a, b, ...args) {
 };
 
 fnB('hello', 1, 2, 3, 4, 5, 6, 7);
-// fnB(1, 2, 3, 4, 5, 6, 7);
-// fnB(1, 2, 3, 4, 5, 6, 7);
+fnB(1, 2, 3, 4, 5, 6, 7);
+fnB(1, 2, 3, 4, 5, 6, 7);
 
 //Напиши функцию add для сложения произвольного количества аргументов(чисел)
 //Операция ... (rest)

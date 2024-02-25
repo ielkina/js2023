@@ -9,19 +9,19 @@ const slug1 = title.toLowerCase().split(' ').join('-');
 console.log(slug1);
 
 //первый вариант решения
-// const slugify = function (string) {
-//   const normalizedTitle = string.toLowerCase();
-//   const words = normalizedTitle.split(' ');
-//   const slug = words.join('-');
+const slugify = function (string) {
+  const normalizedTitle = string.toLowerCase();
+  const words = normalizedTitle.split(' ');
+  const slug = words.join('-');
 
-//   return slug
-// }
+  return slug
+}
 
 //второй вариант решения
-const slugify = function (string) {
+const slugify1 = function (string) {
   return string.toLowerCase().split(' ').join('-');
 }
 
 console.log(slugify('Top 10 benefits of React framework'));
 console.log(slugify('Azure Static Web Apps Awesome'));
-console.log(slugify('Technical writing tips for non-native English speakers'));
+console.log(slugify1('Technical writing tips for non-native English speakers'));

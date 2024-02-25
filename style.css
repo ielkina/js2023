@@ -1,9 +1,10 @@
 body {
- background-color: #292929ff;
- color: white;
- display: flex;
- /* justify-content: center; */
-
+  background-color: #292929ff;
+  color: white;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
 }
 img {
   width: 200px;
@@ -15,9 +16,21 @@ img {
   display: flex;
   flex-direction: column;
   justify-content:center;
-
   font-size: 24px;
+}
+.box button{
+  margin-bottom: 10px;
 }
 .js-value {
   margin: 20px;
+}
+.back {
+  border: none;
+  background: green;
+  width: 200px;
+  
+}
+.back a {
+  color: aliceblue;
+  text-decoration: none;
 }

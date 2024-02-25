@@ -97,7 +97,7 @@
 - Чейнинг методов
 - [Библиотека Lodash](https://lodash.com/docs/4.17.15)
 
-# Модуль 5 
+# [Модуль 5](https://github.com/ielkina/js2023/tree/main/js/mod5)
 # урок 1  
 # План занятия
 

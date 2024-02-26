@@ -60,3 +60,6 @@ a {
 #counter-2 {
   display: block;
 }
+.js-button {
+  margin-bottom: 20px;
+}

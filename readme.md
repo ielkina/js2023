@@ -60,7 +60,7 @@
 - Практика
 
 
-# Модуль 3 
+# [Модуль 3](https://github.com/ielkina/js2023/tree/main/js/mod3) 
 # урок 1 
 # План занятия
 
@@ -75,7 +75,7 @@
 - Операция spread
 - Реструктуризация и операция rest
 
-# Модуль 4
+# [Модуль 4](https://github.com/ielkina/js2023/tree/main/js/mod4)
 # урок 1 
 # План занятия
 
@@ -110,7 +110,7 @@
 # План занятия
 
 
-# Модуль 6 
+# [Модуль 6](https://github.com/ielkina/js2023/tree/main/js/mod6) 
 # урок 1 
 # План занятия
 

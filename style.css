@@ -6,30 +6,35 @@ body {
   flex-direction: column;
   align-items: center;
 }
+
 img {
   width: 200px;
   height: 200px;
   color: #8829e0;
 }
+
 .box {
   width: 200px;
   display: flex;
   flex-direction: column;
-  justify-content:center;
+  justify-content: center;
   font-size: 24px;
 }
-.box button{
+
+.box button {
   margin-bottom: 10px;
 }
+
 .js-value {
   margin: 20px;
 }
+
 .back {
   border: none;
   background: green;
   width: 200px;
-  
 }
+
 .back a {
   color: aliceblue;
   text-decoration: none;

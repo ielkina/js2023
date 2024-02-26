@@ -5,58 +5,60 @@
 - Функция которая принимает другую функцию как параметр или функцию как результат 
 своей работы называется "функцией высшего порядка" */
 
-// //callback - присвоении ссылки на функцию fnB как параметр
-// const fnA = function (message, callback) {
-//   console.log(message);
-//   console.log(callback);
-//   callback(100); //вызов функции fnB
-// };
+//callback - присвоении ссылки на функцию fnB как параметр
 
-// const fnB = function (number) {
-//   console.log('fnB', number);
-// };
+const fnA = function (message, callback) {
+  console.log(message);
+  console.log(callback);
+  callback(100); //вызов функции fnB
+};
 
-// fnA('fnA', fnB);
+const fnB = function (number) {
+  console.log('fnB', number);
+};
+
+fnA('fnA', fnB);
 
 /*Функция doMath(a,b,callback)*/
 
-// const doMath = function (a, b, callback) {
-//   const result = callback(a, b);
-//   console.log(result);
-// };
-// // const add = function (x, y) {
-// //   return x + y;
-// // };
-// // const sub = function (x, y) {
-// //   return x - y;
-// // };
+const doMath = function (a, b, callback) {
+  const result = callback(a, b);
+  console.log(result);
+};
+const add = function (x, y) {
+  return x + y;
+};
+const sub = function (x, y) {
+  return x - y;
+};
 
-// // doMath(2, 3, add);
-// // doMath(10, 8, sub);
-// // или инлайн функция
-// doMath(2, 3, function (x, y) { //анонимная функция (одноразовая)
-//   return x + y;
-// });
-// doMath(10, 8, function (x, y) {
-//   return x - y;
-// });
+// или инлайн функция
+doMath(2, 3, function (x, y) { //анонимная функция (одноразовая)
+  return x + y;
+});
+doMath(10, 8, function (x, y) {
+  return x - y;
+});
+
+doMath(2, 3, add);
+doMath(10, 8, sub);
 
 /*Отложенные вызовы : регистрация событий*/
-// //регистрация событий
-// function addEventListener(eventType, callback) {
-//   //если
-//   if (eventType == event) {
-//     callback()
-//   }
-// }
+//регистрация событий
+function addEventListener(eventType, callback) {
+  //если
+  if (eventType == event) {
+    callback()
+  }
+}
 const buttonRef = document.querySelector('.js-button');
 const handleBtnClick = function () {
   console.log(`Клик по кнопке  ${Date.now()}`);
 };
-// buttonRef.addEventListener('click', handleBtnClick);
+buttonRef.addEventListener('click', handleBtnClick);
 //или инлайн
 buttonRef.addEventListener('click', function () {
-  console.log(`Клик понопке ${Date.now()}`);
+  console.log(`Клик по кнопке ${Date.now()}`);
 });
 
 /*Отложенные вызовы: геолокация*/
@@ -73,13 +75,13 @@ const onGetPositionError = function (error) {
 window.navigator.geolocation.getCurrentPosition(
   onGetPositionSuccess,
   onGetPositionError
-  //или инлайн
+  // или инлайн
   // function (position) {
-  //   console.log(position);
-  // },
-  // function (error) {
-  //   console.log(error);
-  // }
+  //     console.log(position);
+  //   },
+  //   function (error) {
+  //     console.log(error);
+  //   }
 );
 
 /*Отложенные вызовы: интервалы*/
@@ -93,7 +95,7 @@ setTimeout(callback, 2000);
 
 console.log('Код после таймаута');
 
-/*отложенные  функции: http-запросов 
+/*отложенные  функции: http-запросов
 API URL: http://pokeapt.co/art/v2/pokemon
 */
 
@@ -101,13 +103,10 @@ const onRequestSuccess = function (response) {
   console.log('Вызов функции onRequestSuccess после успешного ответа бекэнда');
   console.log(response);
 };
-
 console.log('перед fetch');
-
-fetch('http://pokeapt.co/art/v2/pokemon')
-  .then(res => res.json())
-  .then(onRequestSuccess);
-
+// fetch('http://pokeapt.co/art/v2/pokemon')
+//   .then(res => res.json())
+//   .then(onRequestSuccess);
 console.log('после fetch');
 
 /*фильтр*/
@@ -149,7 +148,6 @@ const callback3 = function (value) {
 const r3 = filter([1, 2, 3, 4, 5, 120, 121], callback3);
 console.log(r3);
 
-//
 const fruits = [
   { name: '🍎', quantity: 200, isFresh: true },
   { name: '🍍', quantity: 90, isFresh: false },

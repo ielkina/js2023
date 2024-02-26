@@ -1,3 +1,7 @@
+html,
+div {
+  display: grid;
+}
 body {
   background-color: #292929ff;
   color: white;
@@ -12,11 +16,12 @@ img {
   height: 200px;
   color: #8829e0;
 }
-
+a {
+  text-decoration: none;
+  color: #6b6868;
+}
 .box {
   width: 200px;
-  display: flex;
-  flex-direction: column;
   justify-content: center;
   font-size: 24px;
 }
@@ -26,7 +31,9 @@ img {
 }
 
 .js-value {
+  display: flex;
   margin: 20px;
+  justify-content: center;
 }
 
 .back {
@@ -38,4 +45,18 @@ img {
 .back a {
   color: aliceblue;
   text-decoration: none;
+}
+
+.js-decrement button {
+  padding: 0;
+  width: max-content;
+}
+.js-increment {
+  padding: 0;
+  width: max-content;
+}
+
+#counter-1,
+#counter-2 {
+  display: block;
 }

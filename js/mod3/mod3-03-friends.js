@@ -1,4 +1,4 @@
-//Работа с коллекцией массива
+//[P]Работа с коллекцией массива
 
 const friends = [
   { name: 'Mango', online: true },
@@ -55,12 +55,12 @@ const getOnlineFriends = function (allFriends) {
   const onlineFriends = [];
 
   for (const friend of allFriends) {
-    // console.log(friend);
-    // console.log(friend.online);
+    console.log(friend);
+    console.log(friend.online);
     if (friend.online) {  //не сравнивать с true и false плохая практика, online само по себе уже является true или false
-      // onlineFriends.push(friend); //массив с объектом друга
+      onlineFriends.push(friend); //массив с объектом друга
       onlineFriends.push(friend.name); //массив только с именем
-      // onlineFriends.push(friend, friend.name); //массив и с тем и с другим
+      onlineFriends.push(friend, friend.name); //массив и с тем и с другим
     }
   }
 
@@ -90,7 +90,7 @@ const getFriendsByOnlineStatus = function (allFriends) {
     offline: [],
   };
   for (const friend of allFriends) {
-    // console.log(friend);
+    console.log(friend);
     if (friend.online) {
       friendsByStatus.online.push(friend);
       continue;

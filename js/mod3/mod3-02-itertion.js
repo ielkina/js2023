@@ -1,4 +1,4 @@
-//Перебор через for...in и Object.key|values|entries
+//[P]Перебор for...in и Object.key|values|entries
 
 const feedback = {
   good: 5,

@@ -1,4 +1,4 @@
-//Работаем с коллекцией товаров в корзине:
+//[P]Работаем с коллекцией товаров в корзине:
 //getItems()
 //add(product)
 //remove(productName)
@@ -23,26 +23,26 @@ const cart = {
     for (const item of items) {
       if (item.name === product.name) {
         item.quantity += 1;
-        // console.log('Такой продукт уже есть', product.name);
+        console.log('Такой продукт уже есть', product.name);
         return;
       }
     }
     items.push(newProduct);
   },
   //удалить товар из корзины
-  // remove(productName) {
-  //   for (let i = 0; i < this.items.length; i += 1) {
-  //     const item = this.items[i];
-  //     if (productName === item.name) {
-  //       console.log('нашли', productName);
-  //     }
-  //     if (productName === this.name) {
-  //       console.log('нашли', productName);
-  //       console.log('индекс: ', i);
-  //       this.items.splice(i, 1); //на индексе (i) удалить 1 элемент
-  //     }
-  //   }
-  // },
+  remove(productName) {
+    for (let i = 0; i < this.items.length; i += 1) {
+      const item = this.items[i];
+      if (productName === item.name) {
+        console.log('нашли', productName);
+      }
+      if (productName === this.name) {
+        console.log('нашли', productName);
+        console.log('индекс: ', i);
+        this.items.splice(i, 1); //на индексе (i) удалить 1 элемент
+      }
+    }
+  },
   //деструктуризированный вариант
   remove(productName) {
     const { items } = this; //деструктуризация this
@@ -65,9 +65,9 @@ const cart = {
     }
     return total;
   },
-  increaseQuantity(productName) {},
-  decreaseQuantity(productName) {},
-  getProductTotalPrice(product) {},
+  increaseQuantity(productName) { },
+  decreaseQuantity(productName) { },
+  getProductTotalPrice(product) { },
   //очистка корзины
   clear() {
     this.items = []; //перезаписываем на пустой массив
@@ -91,8 +91,8 @@ console.table(cart.getItems());
 
 console.log('Total: ', cart.countTotalPrice());
 
-// cart.increaseQuantity('🍎')
-// console.table(cart.getItems());
+cart.increaseQuantity('🍎')
+console.table(cart.getItems());
 
 const getProductTotalPrice = function ({ price, quantity }) {
   return `Item total price: ${price * quantity}`;

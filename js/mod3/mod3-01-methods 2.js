@@ -1,4 +1,4 @@
-//Методы объекта и this при обращении к свойствам в методах
+//[P]Методы объекта и this при обращении к свойствам в методах
 
 //http://fecore.net.ua/boock/m5ph3r-javascript/module-03/images/context.jpg
 
@@ -27,14 +27,11 @@ const playlist = {
     //this ссылка на тот объект который эту функцию вызвал
     //в данной функции меняем свойства ключа name
     //не использовать имя обьекта внутри метода обьекта, вместо этого нужно использовать ссылку (this) на этот обьект
-    console.log((this.name = newName));
-    // console.log(playlist.name);
+    console.log((this.name = newName));//тоже самое что console.log(playlist.name = newName); 
   },
   addTrack(track) {
     this.tracks.push(track);
     this.trackCount = this.tracks.length;
-   
-    // console.log(playlist.tracks);
   },
   updateRating(newRating) {
     this.rating = newRating;
@@ -42,7 +39,6 @@ const playlist = {
   getTrackCount() {
     //  return this.tracks.length;
     //  return this.trackCount;
-
     return {trackCount: this.tracks.length}
   },
 };

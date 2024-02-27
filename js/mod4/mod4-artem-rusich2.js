@@ -1,4 +1,4 @@
-//callback функция переданная в качестве параметра
+//[P]callback функция переданная в качестве параметра
 function first(y) {
   console.log(1);
   y();
@@ -12,87 +12,88 @@ first(function () {
 });
 
 // map перебирает массив и возвращает массив такой же длинны
-// const arr = [1, 2, 3, 4, 5, 6, 7];
+const arr = [1, 2, 3, 4, 5, 6, 7];
 
-// const result = arr.map((item, idx, arr) => item * 2);
+const result = arr.map((item, idx, arr) => item * 2);
 
-// // const result = arr.map((item, idx, arr) => {
-// //     item * 2
-// // });
-// console.log(result);
-// console.log(arr);
+const result1 = arr.map((item, idx, arr) => {
+  item * 2
+});
+console.log(result);
+console.log(result1);
+console.log(arr);
 
 /**************************************************************** */
 
 // const arr = [1, 2, 3, 4, 5, 6, 7]
 
-// //возвращает парный элемент умноженный на 2
+//возвращает парный элемент умноженный на 2
 
-// // const result = arr.map(item => {
-// //     if (!(item % 2)) {
-// //         return item * 2
-// //     }
-// //     return item
-// // })
+const result2 = arr.map(item => {
+  if (!(item % 2)) {
+    return item * 2
+  }
+  return item
+})
 
-// const result = arr.map(item => !(item % 2) ? item * 2 : item)
+const result3 = arr.map(item => !(item % 2) ? item * 2 : item)
 
-// console.log(result);
+console.log(result3);
 
 /************************************************************************ */
 // const arr = [1, 2, 3, 4, 5, 6, 7];
 
-// function customMap(arr, callback) {
-//     const result = []
-//     for (let i = 0; i < arr.length; i += 1) {
-//         const item = arr[i];
-//         result.push(callback(item, i, arr));
-//     }
-//     return result;
-// }
-// console.log(customMap(arr, foo));
+function customMap(arr, callback) {
+  const result = []
+  for (let i = 0; i < arr.length; i += 1) {
+    const item = arr[i];
+    result.push(callback(item, i, arr));
+  }
+  return result;
+}
+console.log(customMap(arr, foo));
 
-// function foo(item, idx, arr) {
-//     if (!(item % 2)) {
-//         return item * 2
-//     }
-//     return item
-// }
+function foo(item, idx, arr) {
+  if (!(item % 2)) {
+    return item * 2
+  }
+  return item
+}
 /***************************************************************************** */
-// const arr = [
-//   {
-//     name: 'User1',
-//     skills: ['html', 'css'],
-//   },
-//   {
-//     name: 'User2',
-//     skills: ['js', 'react'],
-//   },
-//   {
-//     name: 'User3',
-//     skills: ['node.js', 'express'],
-//   },
-// ];
+const arr1 = [
+  {
+    name: 'User 1',
+    skills: ['html', 'css'],
+  },
+  {
+    name: 'User 2',
+    skills: ['js', 'react'],
+  },
+  {
+    name: 'User 3',
+    skills: ['node.js', 'express'],
+  },
+];
 
-// // const result = arr.map(item => item.skills.map(skill => skill));
+const result4 = arr1.map(item => item.skills.map(skill => skill));
+console.log(result4);
 
-// // console.log(result);
+// flatMap
 
-// // flatMap
-
-// const result = arr.flatMap(item => item.skills)
-// console.log(result);
+const result5 = arr1.flatMap(item => item.skills)
+console.log(result5);
 
 /***************************************************************************** */
 // find
+
 // const arr = [1, 2, 3, 4, 5, 6, 7];
 
-// const result = arr.find(item => item > 5);
-
-// console.log(result);
+const result6 = arr.find(item => item > 5);
+console.log(result6);
 
 //кто знает js
-// const arr = [{
+
+// const arr1 = [{
 //     name: 'User1',
 //     skills: ['html', 'css']
 // }, {
@@ -103,104 +104,107 @@ first(function () {
 //     skills: ['node.js', 'express']
 // }]
 
-// const result = arr.find(item => item.skills.includes('js')).name
+const result7 = arr1.find(item => item.skills.includes('js')).name
+console.log(result7);
 
-// console.log(result);
-
-///
-///
 /************************************************************************************** */
+
 // findIndex
+
 // const arr = [1, 2, 3, 4, 5, 6, 7];
-// const arr = [
+// const arr1 = [
 //   {
-//     name: 'User1',
+//     name: 'User 1',
 //     skills: ['html', 'css'],
 //   },
 //   {
-//     name: 'User2',
+//     name: 'User 2',
 //     skills: ['js', 'react'],
 //   },
 //   {
-//     name: 'User3',
+//     name: 'User 3',
 //     skills: ['node.js', 'express'],
 //   },
 // ];
 
-// const arrSkills = arr.map((item, idx, arr) => item.skills);
-// const result = arr.findIndex(item => item.skills.includes('node.js'));
-// // const result = arr.findIndex(item =>item.skills.includes('avadakedavra'))
+const arrSkills = arr1.map((item, idx, arr) => item.skills);
+const result8 = arr1.findIndex(item => item.skills.includes('node.js'));
+const result9 = arr1.findIndex(item => item.skills.includes('avadakedavra'))
 
-// console.log(arrSkills);
-// console.log(result);
+console.log(arrSkills);
+console.log(result9);
 
 /***************************************************************************************** */
 
 // filter возвращает массив
 
-// const numbers = [1, 2, 3, 4, 5, 6, 7];
+const numbers = [1, 2, 3, 4, 5, 6, 7];
 
-// const result = numbers
-//   .filter(item => !(item % 2))
-//   .map((item, _, arr) => item * 2);
+const result10 = numbers
+  .filter(item => !(item % 2))
+  .map((item, _, arr) => item * 2);
 
-// console.log(result);
+console.log(result10);
 
 /******************************************************************************************* */
 
 // every
-// const numbers = [22, 1, 2, 3, 4, 5, 6, 7];
-// const number2 = [2, 4, 6, 8, 10]
-// const result2 = number2.every(item => !(item % 2))
 
-// console.log(result2);
+// const numbers = [1, 2, 3, 4, 5, 6, 7];
+const number1 = [2, 4, 6, 8, 10]
+const result11 = number1.every(item => !(item % 2))
+console.log(result11);
 
-// const arr = [{
-//     name: 'User1',
+// const arr1 = [{
+//     name: 'User 1',
 //     age: 18
 // }, {
-//     name: 'User2',
+//     name: 'User 2',
 //     age: 12
 // }, {
-//     name: 'User3',
+//     name: 'User 3',
 //     age: 19
 // }]
 
-// const result = arr.every(user => user.age >= 18)
-// console.log(result);
-/***************************************************************** */
-// some
-// const numbers = [1, 3, 4, 5, 6, 7];
-// const numbers2 = [1, 23, 43, 7, 9];
+const result12 = arr1.every(user => user.age >= 18)
+console.log(result12);
 
-// const result = numbers2.some(item => {
-//     console.log(item);
-//     return !(item % 2)
-// })
-// console.log(result);
+/***************************************************************** */
+
+// some
+
+// const numbers = [1, 2, 3, 4, 5, 6, 7];
+// const number1 = [2, 4, 6, 8, 10]
+
+const result13 = number1.some(item => {
+  console.log(item);
+  return !(item % 2)
+})
+console.log(result13);
+
 /********************************************************************* */
+
 // sort
 
-// const numbers = [11, 4, 9, 3, 54, 23, 12];
+// const numbers = [1, 2, 3, 4, 5, 6, 7];
 
-// const result = numbers.sort((a, b) => b - a); //от большего к меньшему
-// console.log('result', result);
+const result14 = numbers.sort((a, b) => b - a); //от большего к меньшему
+console.log('result14', result14);
 
-// const result = [...numbers].sort((a, b) => a - b);
-// console.log('result', result);
-// console.log('numbers', numbers);
+const result15 = [...numbers].sort((a, b) => a - b);
+console.log('result15', result15);
+console.log('numbers', numbers);
 
-// const numbers = [11, 4, 9, 3, 54, 23, 12]
-// numbers.sort()
-// console.log(numbers);
+numbers.sort()
+console.log(numbers);
 
-// const str = ['s', 'a', 'f', 'B', 'A', 'S'];
-// // const result = str.sort((a, b) => a - b)
-// // const result = str.sort()
-// const result = str.sort((a, b) => a.localeCompare(b));
-// console.log(result);
+const str = ['s', 'a', 'f', 'B', 'A', 'S'];
+const result16 = str.sort((a, b) => a - b)
+const result17 = str.sort()
+const result18 = str.sort((a, b) => a.localeCompare(b));
+console.log(result18);
 
-const arr = [
+const arr2 = [
   {
     name: 'Den',
     age: 18,
@@ -215,39 +219,44 @@ const arr = [
   },
 ];
 
-arr.sort((a, b) => a.name.localeCompare(b.name));
-console.table(arr);
+arr2.sort((a, b) => a.name.localeCompare(b.name));
+console.table(arr2);
 
 /************************************************************************** */
-//reduce
-// const numbers = [11, 4, 9, 3, 54, 23, 12];
-// const result = numbers.reduce((acc, item, idx, arr) => {
-//   console.log(acc);
-//   console.log(item);
-//   console.log(idx);
-//   console.log(arr);
-//   console.log('----------------------------------');
-//   return acc+item;
-// }, 0);
-// console.log(result);
 
-const numbers = [11, 4, 9, 3, 54, 23, 12];
-const result = numbers.reduce((acc, item) => {
+//reduce
+
+// const numbers = [1, 2, 3, 4, 5, 6, 7];
+const result19 = numbers.reduce((acc, item, idx, arr) => {
+  console.log(acc);
+  console.log(item);
+  console.log(idx);
+  console.log(arr);
+  console.log('----------------------------------');
+  return acc + item;
+}, 0);
+console.log(result19);
+
+// const numbers = [1, 2, 3, 4, 5, 6, 7];
+
+const result20 = numbers.reduce((acc, item) => {
   console.log('acc', acc);
   console.log('item', item);
   acc.push(item * 2);
   return acc;
 }, []);
-console.log(result);
+console.log(result20);
 
-// const numbers = [11, 4, 9, 3, 54, 23, 12];
-// const result = numbers.reduce((acc, item) => {
+// const numbers = [1, 2, 3, 4, 5, 6, 7];
+
+// const result21 = numbers.reduce((acc, item) => {
 //     console.log('acc', acc);
 //     console.log('item', item);
 //     return acc.push(item * 2)
 // }, [])
 
 // Колекція об'єктів для всіх прикладів з автомобілями
+
 const cars = [
   {
     make: 'Honda',
@@ -331,38 +340,30 @@ const cars = [
   },
 ];
 
-// Example 1 - Метод map
+//[P]Example 1 - Метод map
 // Нехай функція getModels повертає масив моделей (поле model) всіх автомобілів.
 
 const getModels = cars => {
   return cars.map(car => car.model);
 };
-// getModels(cars)
-// console.table(getModels(cars));
-// Example 2 - Метод map
+getModels(cars)
+console.table(getModels(cars));
+
+//[P]Example 2 - Метод map
 // Нехай функція makeCarsWithDiscount повертає новий масив об'єктів із змінним значенням властивості price залежно від переданої знижки.
 
-// const makeCarsWithDiscount = (cars, discount) =>
-//   cars.map(item => ({
-//     ...item,//порядок диструктуризации важен так как изменение будут происходить раньше чем дистуктуризация
-//     //а нам необходимо изменять уже диструктуризированный массив
-//     price: item.price * (1 - discount),
-//   }));
+const makeCarsWithDiscount = (cars, discount) =>
+  cars.map(item => ({
+    ...item,//порядок диструктуризации важен так как изменение будут происходить раньше чем деструктуризация
+    //а нам необходимо изменять уже диструктуризированный массив
+    price: item.price * (1 - discount),
+  }));
 
-// console.log(makeCarsWithDiscount(cars, 0.2));
-// console.log(makeCarsWithDiscount(cars, 0.4));
+console.log(makeCarsWithDiscount(cars, 0.2));
+console.log(makeCarsWithDiscount(cars, 0.4));
 
-// Example 3 - Метод filter
+//[P]Example 3 - Метод filter
 // Нехай функція filterByPrice повертає масив автомобілів ціна яких менша ніж значення параметра threshold.
-
-// {
-//     make: 'Ford',
-//     model: 'Explorer',
-//     type: 'suv',
-//     amount: 6,
-//     price: 31660,
-//     onSale: false
-// }
 
 const filterByPrice = (cars, threshold) =>
   cars.filter(({ price }) => price <= threshold);
@@ -370,57 +371,37 @@ const filterByPrice = (cars, threshold) =>
 console.log(filterByPrice(cars, 30000));
 console.log(filterByPrice(cars, 25000));
 
-// Example 4 - Метод filter
+//[P]Example 4 - Метод filter
 // Нехай функція getCarsWithDiscount повертає масив автомобілів властивість onSale яких true.
-// {
-//     make: 'Ford',
-//     model: 'Explorer',
-//     type: 'suv',
-//     amount: 6,
-//     price: 31660,
-//     onSale: false
-// }
-// const getCarsWithDiscount = cars => {
-//     return cars.filter(({onSale}) => onSale)
-// };
-const getCarsWithDiscount = cars => cars.filter(({ onSale }) => onSale);
+
+const getCarsWithDiscount = cars => {
+  return cars.filter(({ onSale }) => onSale)
+};
+//или
+const getCarsWithDiscount1 = cars => cars.filter(({ onSale }) => onSale);
 
 console.table(getCarsWithDiscount(cars));
 
-// Example 5 - Метод filter
+//[P]Example 5 - Метод filter
 // Нехай функція getCarsWithType повертає масив автомобілів тип яких збігається зі значенням параметра type.
-// {
-//     make: 'Ford',
-//     model: 'Explorer',
-//     type: 'suv',
-//     amount: 6,
-//     price: 31660,
-//     onSale: false
-// }
+
 const getCarsWithType = (cars, type) =>
   cars.filter(({ type: carType }) => carType === type);
 
 console.table(getCarsWithType(cars, 'suv'));
 console.table(getCarsWithType(cars, 'sedan'));
 
-// const getFord = (cars, carPrice) =>
-//   cars
-//     .filter(({ price }) => price < carPrice)
-//     .filter(({ make }) => make === 'Honda');
-
-const getFord = (cars, carPrice, carName) =>
+const getFord = (cars, carPrice) =>
+  cars
+    .filter(({ price }) => price < carPrice)
+    .filter(({ make }) => make === 'Honda');
+//или
+const getFord1 = (cars, carPrice, carName) =>
   cars.filter(({ make, price }) => price < carPrice && make === carName);
+
 console.log(getFord(cars, 25000, 'Ford'));
 
-// Example 6 - Метод find
-// {
-//     make: 'Ford',
-//     model: 'Explorer',
-//     type: 'suv',
-//     amount: 6,
-//     price: 31660,
-//     onSale: false
-// }
+//[P]Example 6 - Метод find
 
 const getCarByModel = (cars, model) =>
   cars.find(({ model: carModel }) => model === carModel);
@@ -428,24 +409,18 @@ const getCarByModel = (cars, model) =>
 console.log(getCarByModel(cars, 'F-150'));
 console.log(getCarByModel(cars, 'CX-9'));
 
-// Example 7 - Метод sort
+//[P]Example 7 - Метод sort
+
 // Нехай функція sortByAscendingAmount повертає новий масив автомобілів відсортований за зростанням значення властивості amount.
-// {
-//     make: 'Ford',
-//     model: 'Explorer',
-//     type: 'suv',
-//     amount: 6,
-//     price: 31660,
-//     onSale: false
-// }
-// const sortByAscendingAmount = cars => cars.sort((a, b) => a.price - b.price);
-const sortByAscendingAmount = cars =>
+
+const sortByAscendingAmount = cars => cars.sort((a, b) => a.price - b.price);
+const sortByAscendingAmount1 = cars =>
   [...cars].sort(({ price: a }, { price: b }) => a - b); //чтоб и мутировать оригинальный массив используем операцию [...cars]-spread
 
 console.log(cars);
 console.table(sortByAscendingAmount(cars));
 
-// Example 8 - Метод sort
+//[P]Example 8 - Метод sort
 // Нехай функція sortByDescendingPrice повертає новий масив автомобілів відсортований за зменшенням значення властивості price.
 
 const sortByDescendingPrice = cars =>
@@ -453,73 +428,50 @@ const sortByDescendingPrice = cars =>
 console.log(cars);
 console.table(sortByDescendingPrice(cars));
 
-// Example 9 - Метод sort
+//[P]Example 9 - Метод sort
 // Нехай функція sortByModel повертає новий масив автомобілів відсортований за назвою моделі в алфавітному та зворотному алфавітному порядку, в залежності від значення параметра order.
-// {
-//     make: 'Ford',
-//     model: 'Explorer',
-//     type: 'suv',
-//     amount: 6,
-//     price: 31660,
-//     onSale: false
-// }
-// const sortByModel = (cars, order) => {
-//     if (order === 'asc') {
-//         return [...cars].sort((a, b) => a.model.localeCompare(b.model))
-//     } else {
-//         return [...cars].sort((a, b) => b.model.localeCompare(a.model))
-//     }
-// };
 
-const sortByModel = (cars, order) =>
+const sortByModel = (cars, order) => {
+  if (order === 'asc') {
+    return [...cars].sort((a, b) => a.model.localeCompare(b.model))
+  } else {
+    return [...cars].sort((a, b) => b.model.localeCompare(a.model))
+  }
+};
+
+const sortByModel1 = (cars, order) =>
   [...cars].sort(({ model: a }, { model: b }) =>
     order === 'asc' ? a.localeCompare(b) : b.localeCompare(a)
   );
 
-// const sortByModel = (cars, order) => [...cars].sort(({model: a},{model: b}) => a.localeCompare(b))
+const sortByModel2 = (cars, order) => [...cars].sort(({ model: a }, { model: b }) => a.localeCompare(b))
 
-// const sortByModel = (cars, order) => [...cars].sort(({model: a},{model: b}) => b.localeCompare(a)))
+const sortByModel3 = (cars, order) => [...cars].sort(({ model: a }, { model: b }) => b.localeCompare(a))
+
 console.table(sortByModel(cars, 'asc')); //asc -алфавитный порядок
 console.table(sortByModel(cars, 'desc')); //desc - обратный порядок
 
-// Example 10 - Метод reduce
+//[P]Example 10 - Метод reduce
 // Нехай функція getTotalAmount повертає загальну кількість автомобілів (значення властивостей amount).
-
-// {
-//     make: 'Ford',
-//     model: 'Explorer',
-//     type: 'suv',
-//     amount: 6,
-//     price: 31660,
-//     onSale: false
-// }
 
 const getTotalAmount = cars =>
   cars.reduce((acc, { amount }) => acc + amount, 0);
 
 console.log(getTotalAmount(cars));
 
-// Example 11 - Ланцюжки методів
+//[P]Example 11 - Ланцюжки методів
 // Нехай функція getAvailableCarNames повертає масив моделей автомобілів, але тільки тих, які зараз на розпродажі.
-// {
-//     make: 'Ford',
-//     model: 'Explorer',
-//     type: 'suv',
-//     amount: 6,
-//     price: 31660,
-//     onSale: false
-// }
 
-// const getModelsOnSale = cars => cars.filter(({onSale}) => onSale).map(({model}) => model);
-
-const getModelsOnSale = cars =>
+const getModelsOnSale = cars => cars.filter(({ onSale }) => onSale).map(({ model }) => model);
+//или
+const getModelsOnSale1 = cars =>
   cars
     .filter(({ onSale }) => onSale)
     .map(({ make, model, price }) => `${make} ${model} ${price}`);
 
 console.log(getModelsOnSale(cars));
 
-// Example 12 - Ланцюжки методів
+//[P]Example 12 - Ланцюжки методів
 // Нехай функція getSortedCarsOnSale повертає масив автомобілів на розпродажі (Властивість onSale), відсортованих за зростанням ціни.
 
 /**
@@ -540,10 +492,11 @@ console.log(getSortedCarsOnSale(cars));
 /************************************************************************************************************* */
 
 //присвоить ключу букву которая есть в строке а в значение указать количество ее повторения
-const str = 'duaguidgasuidgauisdhasudasdfhsgvfakhfugduashc';
+
+const str1 = 'duaguidgasuidgauisdhasudasdfhsgvfakhfugduashc';
 
 // у метода reduce всегда должен быть возврат
-const resulte = str.split('').reduce((acc, item) => {
+const resulte21 = str1.split('').reduce((acc, item) => {
   // acc.hasOwnProperty(item) ? acc[item] += 1 : acc[item] = 1;//1
 
   // item in acc ? (acc[item] += 1) : (acc[item] = 1); //2
@@ -554,10 +507,10 @@ const resulte = str.split('').reduce((acc, item) => {
   return acc;
 }, {}); //какой тип данны вы хотите такой и записываете в конце скобок {} вернет обьект, []-вернет массив
 
-console.log(resulte);
+console.log(resulte21);
 
 /************************************************************************** */
-const arr5 = ['Honda', 'Audi', 'BMW', 'Skoda', 'Ford', 'Renault'];
+// const arr3 = ['Honda', 'Audi', 'BMW', 'Skoda', 'Ford', 'Renault'];
 // Загальна кількість авто 6:
 // 1 Honda - порядковый номер и название
 // 2 Audi
@@ -609,24 +562,23 @@ const count = fruitBasket.reduce((acc, fruit) => {
   return acc;
 }, {});
 
-// count; // { banana: 2, cherry: 3, orange: 3, apple: 2, fig: 1 }
-console.log(count);
-// const user = {};
-// user.age = 1;
-// console.log(user);
+console.log(count);// { banana: 2, cherry: 3, orange: 3, apple: 2, fig: 1 }
+const user = {};
+user.age = 1;
+console.log(user);
 
-const resultt = 2 === 2 ? 'Yes' : 'NO';
-console.log(resultt);
+const result21 = 2 === 2 ? 'Yes' : 'NO';
+console.log(result21);
 
-// const str = 'asdaskfjnaskjfnmaeklsmflasfasdsapoldwa';
-// const obj = abc => [...abc].reduce((acc, item) => {
-//     // console.log(acc);
-//     // acc.hasOwnProperty(item) ? (acc[item] += 1) : (acc[item] = 1);
-//     // acc[item] = (acc[item] || 0) + 1
-//     return acc;
-// }, {});
+// const str1 = 'asdaskfjnaskjfnmaeklsmflasfasdsapoldwa';
+const obj = abc => [...abc].reduce((acc, item) => {
+    console.log(acc);
+    acc.hasOwnProperty(item) ? (acc[item] += 1) : (acc[item] = 1);
+    acc[item] = (acc[item] || 0) + 1
+    return acc;
+}, {});
 
-// console.log(obj(str));
+console.log(obj(str1));
 
 const allCourses = ['html', 'js', "css", 'js']
 const uniqueCourses = allCourses.filter((course, index, array) => array.indexOf(course) === index);

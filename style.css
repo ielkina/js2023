@@ -47,7 +47,7 @@ a {
   text-decoration: none;
 }
 
-.js-decrement button {
+.js-decrement {
   padding: 0;
   width: max-content;
 }

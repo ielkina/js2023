@@ -2,6 +2,7 @@ html,
 div {
   display: grid;
 }
+
 body {
   background-color: #292929ff;
   color: white;
@@ -9,6 +10,7 @@ body {
   justify-content: center;
   flex-direction: column;
   align-items: center;
+  max-width: 1200px;
 }
 
 img {
@@ -16,10 +18,12 @@ img {
   height: 200px;
   color: #8829e0;
 }
+
 a {
   text-decoration: none;
   color: #6b6868;
 }
+
 .box {
   width: 200px;
   justify-content: center;
@@ -51,6 +55,7 @@ a {
   padding: 0;
   width: max-content;
 }
+
 .js-increment {
   padding: 0;
   width: max-content;
@@ -60,6 +65,25 @@ a {
 #counter-2 {
   display: block;
 }
+
 .js-button {
   margin-bottom: 20px;
+}
+
+.js-actions button {
+  margin-bottom: 10px;
+}
+
+.hero__image {
+  width: 150px;
+  /* margin-left: auto; */
+  /* margin-right: auto; */
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+hr {
+  display: block;
+  max-width: 100%;
 }

@@ -114,7 +114,14 @@
 # урок 1 
 # План занятия
 
-
+- ОбЪекты Window и document
+- Поиск DOM-узлов с querySelector и querySelectorAll
+- Свойство TextContext
+- Свойства "навигации" по DOM-узлам
+- Работа с classList и атрибутам 
+- Создание узлов
+- Вставка узлов: appendChild, insertBefore, append, prepend и т.д
+- Парс строки: innerHTML и insertAdjacentHTML
 
 
 https://ielkina.github.io/js2023/

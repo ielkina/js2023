@@ -87,3 +87,7 @@ hr {
   display: block;
   max-width: 100%;
 }
+
+.site-nav__link--current{
+  color: #8829e0;
+}

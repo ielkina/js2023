@@ -72,6 +72,11 @@ a {
 
 .js-actions button {
   margin-bottom: 10px;
+
+}
+.js-actions__option {
+  margin-bottom: 10px;
+
 }
 
 .hero__image {

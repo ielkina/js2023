@@ -130,9 +130,8 @@ console.log(`container`, container);
 
 const markup = cars
   .map(
-    (
-      { id = 'none', model, type, price, img } //id будет приходить не со всех элементов поэтому по дефолту можно поставить 'none', у того кого будет он добавиться у того кого нет будет 'none'
-    ) =>
+    ({ id = 'none', model, type, price, img }) =>
+      //id будет приходить не со всех элементов поэтому по дефолту можно поставить 'none', у того кого будет он добавиться у того кого нет будет 'none'
       //дата атрибут все добавляется на общего родителя карточки (li), это в дальнейшем поможет идентифицировать поведение пользователя
       `<li data-id="${id}">
         <img src="${img}" alt="${model}" class="img" ">
@@ -187,7 +186,7 @@ image.src =
 const dishes = document.querySelectorAll(".dishes > li");
 
 dishes.forEach((dish) => {
-    console.log(dish.dataset.id);
+  console.log(dish.dataset.id);
 });
 //У конспекті "data-атрибути" в прикладі чому ".dishes менше li"(".dishes > li"), чому не дорівнює або просто ".dishes" без "li"?
 
@@ -198,5 +197,5 @@ dishes1.forEach((dish) => {
 
 // const list = document.querySelector('.js-list')
 console.dir(list);
-console.dir(list.firstChild.textContent="hello");
+console.dir(list.firstChild.textContent = "hello");
 console.dir(list.firstElementChild);

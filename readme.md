@@ -1,5 +1,7 @@
 # [Модуль 1](https://github.com/ielkina/js2023/tree/main/js/mod1)
-# урок 1 
+
+# урок 1
+
 # План занятия
 
 # Введение
@@ -33,7 +35,8 @@
   - Мат. операторы
   - Объекты Number и Math
 
-# урок 2 
+# урок 2
+
 # План занятия
 
 - Switch
@@ -42,16 +45,18 @@
 - Codewars
 - DOM
 
-# [Модуль 2](https://github.com/ielkina/js2023/tree/main/js/mod2) 
-# урок 1 
+# [Модуль 2](https://github.com/ielkina/js2023/tree/main/js/mod2)
+
+# урок 1
+
 # План занятия
 
 - Массив знакомство
 - Ссылочный тип
 - Практика
 
+# урок 2
 
-# урок 2 
 # План занятия
 
 - Знакомство с функциями
@@ -59,9 +64,10 @@
 - Поиск ошибок
 - Практика
 
+# [Модуль 3](https://github.com/ielkina/js2023/tree/main/js/mod3)
 
-# [Модуль 3](https://github.com/ielkina/js2023/tree/main/js/mod3) 
-# урок 1 
+# урок 1
+
 # План занятия
 
 - Объекты,создание через литерал
@@ -69,21 +75,25 @@
 - this в методах объекта при обращении к свойствам
 - Перебор объектов for ... in и методы Object.keys|values|entries
 
-# урок 2 
+# урок 2
+
 # План занятия
 
 - Операция spread
 - Реструктуризация и операция rest
 
 # [Модуль 4](https://github.com/ielkina/js2023/tree/main/js/mod4)
-# урок 1 
+
+# урок 1
+
 # План занятия
 
 - Callback функции
 - Замыкание
 - Стрелочные функции
 
-# урок 2 
+# урок 2
+
 # План занятия
 
 - Методы массивов:
@@ -91,14 +101,16 @@
   - map
   - filter
   - find
-  - every and  some 
+  - every and some
   - reduce
   - sort
 - Чейнинг методов
 - [Библиотека Lodash](https://lodash.com/docs/4.17.15)
 
 # [Модуль 5](https://github.com/ielkina/js2023/tree/main/js/mod5)
-# урок 1  
+
+# урок 1
+
 # План занятия
 
 - Прототипное наследование
@@ -106,22 +118,34 @@
 - Создание обьекта через new - функция - конструктор
 - Статические методы и свойства
 
-# урок 2  
+# урок 2
+
 # План занятия
 
+# [Модуль 6](https://github.com/ielkina/js2023/tree/main/js/mod6)
 
-# [Модуль 6](https://github.com/ielkina/js2023/tree/main/js/mod6) 
-# урок 1 
+# урок 1
+
 # План занятия
 
 - ОбЪекты Window и document
 - Поиск DOM-узлов с querySelector и querySelectorAll
 - Свойство TextContext
 - Свойства "навигации" по DOM-узлам
-- Работа с classList и атрибутам 
+- Работа с classList и атрибутам
 - Создание узлов
 - Вставка узлов: appendChild, insertBefore, append, prepend и т.д
 - Парс строки: innerHTML и insertAdjacentHTML
 
+# урок 2
+
+# План занятия
+
+- Событие
+- Создание и удаление слушателей
+- Объект события
+- Поведение по умолчание
+- основные событие мыши, форм, клавиатуры
+- [Список всех доступных Событий](https://developer.mozilla.org/ru/docs/web/Events)
 
 https://ielkina.github.io/js2023/

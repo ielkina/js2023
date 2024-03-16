@@ -130,13 +130,13 @@ hr {
 }
 
 .list__item {
-  /* color: #ff0000; */
+  color: #ff0000;
   /* list-style: '💙'; */
   /* transition: all 2s; */
 }
 
 .list__item:hover {
-  /* color: #ff0000; */
+  color: #ff00;
   /* list-style-type: '💛'; */
 }
 
@@ -250,6 +250,5 @@ button {
 }
 
 .js-register-form {
-  display: flex;
   border: 1px solid red;
 }

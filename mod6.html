@@ -9,6 +9,10 @@
   </head>
 
   <body>
+ 
+
+
+
     <h1>Модуль 6</h1>
     <p>
       Модульное подключения файла скрипта автоматически включает "use strick"
@@ -21,7 +25,16 @@
     <button>
       <a href="index.html">На главную</a>
     </button>
-
+    <button>
+      <a href="#bottom">
+        <img
+          src="arrow-to-down-svgrepo-com.svg"
+          alt=""
+          width="20"
+          height="20"
+        />
+      </a>
+    </button>
     <ul>
       <li>
         <a href>Поиск элементов</a>
@@ -86,7 +99,7 @@
     <p class="hero-img"></p>
     <div class="class class1"></div>
 
-    <input class="js-input" type="text" style="margin-bottom: 20px" />
+    <!-- <input class="js-input" type="text" style="margin-bottom: 20px" /> -->
 
     <div class="js-actions">
       <button type="button" data-action="add">Создать</button>
@@ -105,6 +118,9 @@
       <span>спан</span>
     </h1>
 
+    <img src="anthurium-6482007_1280.webp" alt="">
+  <img src="sunflowers-8351807.min.min.webp" alt="">
+  <img src="sunflowers-8351807.jpg" alt="">
     <table class="transaction-table js-transaction-table">
       <thead>
         <tr>
@@ -320,7 +336,6 @@
         <a href>Мастерская: модальное окно</a>
       </li>
     </ul>
-
     <button type="button" class="js-target-btn">Целевая кнопка</button>
     <button type="button" class="js-add-listener">Добавить слушатель</button>
     <button type="button" class="js-remove-listener">Снять слушатель</button>
@@ -351,13 +366,50 @@
           Pro
         </label>
       </div>
+      <button type="submit" class="js-register-form">Регистрация</button>
     </form>
-    <button type="button" class="js-register-form">Регистрация</button>
+
+    <label for="">
+      Имя
+      <input class="js-input" type="text" />
+    </label>
+    <p>
+      <label for="">
+        <input type="checkbox" class="js-license" name="" id="" />
+        Принимаю лицензионное соглашение
+      </label>
+    </p>
+    <button type="submit" disabled class="js-button">
+      Зарегистрироваться как
+      <span>Аноним</span>
+    </button>
+
+    <button class="js-clear">Очистить</button>
+    <p class="output js-output"></p>
+
+    <div class="js-box">
+      <div class="box"></div>
+    </div>
+    <button class="button" data-action="open-modal">Открыть модалку</button>
+    <div class="backdrop js-backdrop">
+      <div class="modal">
+        <h2>Modal window</h2>
+        <p>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sint autem
+          explicabo ipsam eos molestias aspernatur, possimus eveniet hic vero?
+          Praesentium nisi cupiditate, delectus laudantium magnam odit aliquam
+          impedit nihil commodi!
+        </p>
+        <button type="button" class="button" data-action="close-modal">
+          Закрыть
+        </button>
+      </div>
+    </div>
 
     <button>
       <a href="index.html">На главную</a>
     </button>
-
+    <a id="bottom"></a>
     <!-- <script src = "js/mod6/mod6-00-query-selectors.js" type =
         "module"></script> -->
     <!-- <script src = "js/mod6/mod6-01-properties.js" type = "module"></script> -->
@@ -380,11 +432,12 @@
     <!-- <script src = "js/mod6/mod6-11-practice.js" type = "module"></script> -->
 
     <!-- <script src="js/mod6/mod6-12-event-listener.js" type="module"></script> -->
-    <script src="js/mod6/mod6-13-form.js" type="module"></script>
-    <!-- <script src = "js/mod6/mod6-14-.js"type="module"></script> -->
-    <!-- <script src = "js/mod6/mod6-15-.js"type="module"></script> -->
-    <!-- <script src = "js/mod6/mod6-16-.js"type="module"></script> -->
-    <!-- <script src = "js/mod6/mod6-17-.js"type="module"></script> -->
+    <!-- <script src="js/mod6/mod6-13-form.js" type="module"></script> -->
+    <!-- <script src="js/mod6/mod6-14-input-events.js" type="module"></script> -->
+    <!-- <script src="js/mod6/mod6-15-keyboard-events.js" type="module"></script> -->
+    <!-- <script src = "js/mod6/mod6-16-mouse-events.js"type="module"></script> -->
+    <script src="js/mod6/mod6-17-modal.js" type="module"></script>
+
     <!-- <script src = "js/mod6/mod6-18-.js"type="module"></script> -->
     <!-- <script src = "js/mod6/mod6-19-.js"type="module"></script> -->
     <!-- <script src = "js/mod6/mod6-20-.js"type="module"></script> -->

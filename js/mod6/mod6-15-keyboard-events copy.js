@@ -1,4 +1,4 @@
-console.log('mod6-14-keyboard-events');
+console.log('mod6-15-keyboard-events');
 // console.dir(document.body);
 // console.dir(document.body.children); //покажет все элементы/теги на станице
 // console.dir(document.body.childNodes)//покажет все теги и классы на станице

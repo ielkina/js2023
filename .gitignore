@@ -1,6 +1,6 @@
 #Junk
 .DS_Store
-.vscode/
+# .vscode/
 .idea/
 
 # Logs
@@ -109,3 +109,4 @@ dist
 .tern-port
 
 todo.md
+style.css.map

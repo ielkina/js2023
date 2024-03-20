@@ -39,6 +39,7 @@ function onBackdropClick(event) {
     onCloseModal(); //вызываем функцию закрытия модалки
   }
 }
+
 //Всплытие событий
 //div.backdrop - ловим тут
 //div.modal -

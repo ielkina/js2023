@@ -1,0 +1,159 @@
+{
+  "[data-action decrement]": {
+    "prefix": "data-dec",
+    "scope": "javascript",
+    "body": [
+      "'[data-action=\"decrement\"]'"
+    ],
+    "description": "Атрибут data-action=decrement"
+  },
+  "[data-action increment]": {
+    "prefix": "data-inc",
+    "scope": "javascript",
+    "body": [
+      "'[data-action=\"increment\"]'"
+    ],
+    "description": "Атрибут data-action = increment"
+  },
+  "[data-action close-modal]": {
+    "scope": "javascript",
+    "prefix": "data-clm",
+    "body": [
+      "'[data-action=\"close-modal\"]'"
+    ],
+    "description": "Атрибут data-action=close-modal"
+  },
+  "[data-action open-modal]": {
+    "scope": "javascript",
+    "prefix": "data-opm",
+    "body": [
+      "'[data-action=\"open-modal\"]'"
+    ],
+    "description": "Атрибут data-action=open-modal"
+  },
+  "const": {
+    "prefix": "сщтые",
+    "scope": "javascript",
+    "body": [
+      "const $1"
+    ],
+    "description": "const"
+  },
+  "const": {
+    "prefix": "c",
+    "scope": "javascript",
+    "body": [
+      "const $1"
+    ],
+    "description": "const"
+  },
+  "class": {
+    "prefix": "cls",
+    "scope": "javascript",
+    "body": [
+      "class ${1:Parent} {$2}"
+    ],
+    "description": "class"
+  },
+  "constructor fn": {
+    "prefix": "cfn",
+    "scope": "javascript",
+    "body": [
+      "constructor() {\n$1\n}"
+    ],
+    "description": "constructor function"
+  },
+  "constructor this": {
+    "prefix": "conthis",
+    "scope": "javascript",
+    "body": [
+      " constructor($1) {\r",
+      "  this.${1:text} = $1\r",
+      " }"
+    ],
+    "description": "constructor this"
+  },
+  "fn =>": {
+    "prefix": "fn =>",
+    "scope": "javascript",
+    "body": [
+      "($1)=>{$2}"
+    ],
+    "description": "fn =>"
+  },
+  "(){}": {
+    "prefix": "fn",
+    "scope": "javascript",
+    "body": [
+      "($1){$2}"
+    ],
+    "description": "(){}"
+  },
+  "function 1(){2}": {
+    "prefix": "fnfn",
+    "scope": "javascript",
+    "body": [
+      "function $1(){\r$2\r}"
+    ],
+    "description": "function (){}"
+  },
+  "for...ite": {
+    "prefix": "fori",
+    "scope": "javascript",
+    "body": [
+      "for (let i = 0; i < ${1:array}.length; i += 1) {\r",
+      "  const element = $1[i];\r",
+      "}"
+    ],
+    "description": "for...iter"
+  },
+  "destructuring object": {
+    "prefix": "dest{}",
+    "scope": "javascript",
+    "body": [
+      "const {${1:key}} = ${2:object};"
+    ],
+    "description": "destructuring"
+  },
+  "destructuring array": {
+    "prefix": "dest[]",
+    "scope": "javascript",
+    "body": [
+      "const [${1:index}] = ${2:array};"
+    ],
+    "description": "destructuring"
+  },
+  "quantity слово": {
+    "prefix": "qua",
+    "scope": "javascript",
+    "body": [
+      "quantity"
+    ],
+    "description": "слово quantity"
+  }
+  // ".js-backdrop": {
+  //   "scope": "javascript",
+  //   "prefix": "data",
+  //   "body": [
+  //     "'[data-action=\".js-backdrop\"]'"
+  //   ],
+  //   "description": "data-action .js-backdrop"
+  // },
+  // ,
+  // "html class js-backdrop": {
+  //   "scope": "javascript",
+  //   "prefix": ".js-",
+  //   "body": [
+  //     "'.js-backdrop'"
+  //   ],
+  //   "description": "html class"
+  // },
+  // "html class header": {
+  //   "scope": "javascript",
+  //   "prefix": ".header",
+  //   "body": [
+  //     "'.header'"
+  //   ],
+  //   "description": "html class"
+  // },
+}

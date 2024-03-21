@@ -1,0 +1,25 @@
+{
+  "Блок counter": {
+    "prefix": "counter",
+    "scope": "html",
+    "body": [
+      "",
+      "<div id=\"counter\">",
+      "  <button type=\"button\" data-action=\"decrement\">-1</button>",
+      "  <span id=\"value\"></span>",
+      "  <button type=\"button\" data-action=\"increment\">+1</button>",
+      "</div>"
+    ],
+    "description": "Блок Коунтер"
+  },
+  "svg use": {
+    "scope": "html",
+    "prefix": "g-use",
+    "body": [
+      "<svg class=\"$1\">",
+      "  <use xlink:href=\"img/sprite.svg#$2\"></use>",
+      "</svg>"
+    ],
+    "description": "Snippet for use svg sprites"
+  }
+}

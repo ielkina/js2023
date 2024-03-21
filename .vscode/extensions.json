@@ -1,3 +1,5 @@
 {
+
+	//плагины
 	"recommendations": ["Syler.sass-indented","stylelint.vscode-stylelint","jerryhong.autofilename","EditorConfig.EditorConfig", "htmlhint.vscode-htmlhint", "ritwickdey.LiveServer", "dbaeumer.vscode-eslint", "rebornix.project-snippets"]
 }

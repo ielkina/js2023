@@ -51,3 +51,10 @@ categoryItems.forEach(categoryItem => {
 //   console.log(`Category: ${categoryName}`);
 //   console.log(`Elements: ${categoryElements}`);
 // });
+
+
+const list = document.querySelector('#categories');
+[...list.children].forEach(item=>{
+  console.log(item.firstElementChild);
+  console.log(item.firstElementChild);
+})

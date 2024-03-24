@@ -1,100 +1,117 @@
 {
+  //Классы, Id, Атрибуты
+  "quantity слово": {
+    "prefix": "qua",
+    "scope": "javascript",
+    "body": ["quantity"],
+    "description": "слово quantity"
+  },
+  ".js-input": {
+    "prefix": ".js-",
+    "scope": "javascript",
+    "body": [".js-input"],
+    "description": "Класс html .js-input"
+  },
+  ".js-form": {
+    "prefix": ".js-",
+    "scope": "javascript",
+    "body": [".js-form"],
+    "description": "Класс html .js-form"
+  },
+  ".js-cont": {
+    "prefix": ".js-",
+    "scope": "javascript",
+    "body": ["'.js-container'"],
+    "description": "Класс HTML .js-container"
+  },
+  ".js-click": {
+    "prefix": ".js-",
+    "scope": "javascript",
+    "body": ["'.js-click'"],
+    "description": "Класс HTML .js-click"
+  },
+  ".js-title": {
+    "prefix": ".js-",
+    "scope": "javascript",
+    "body": ["'.js-title'"],
+    "description": "Класс html .js-title"
+  },
+  "id #js-cont": {
+    "prefix": "#js-",
+    "scope": "javascript",
+    "body": ["'#js-container'"],
+    "description": "id html tag"
+  },
   "[data-action decrement]": {
     "prefix": "data-dec",
     "scope": "javascript",
-    "body": [
-      "'[data-action=\"decrement\"]'"
-    ],
+    "body": ["'[data-action=\"decrement\"]'"],
     "description": "Атрибут data-action=decrement"
   },
   "[data-action increment]": {
     "prefix": "data-inc",
     "scope": "javascript",
-    "body": [
-      "'[data-action=\"increment\"]'"
-    ],
+    "body": ["'[data-action=\"increment\"]'"],
     "description": "Атрибут data-action = increment"
   },
   "[data-action close-modal]": {
     "scope": "javascript",
     "prefix": "data-clm",
-    "body": [
-      "'[data-action=\"close-modal\"]'"
-    ],
+    "body": ["'[data-action=\"close-modal\"]'"],
     "description": "Атрибут data-action=close-modal"
   },
   "[data-action open-modal]": {
     "scope": "javascript",
     "prefix": "data-opm",
-    "body": [
-      "'[data-action=\"open-modal\"]'"
-    ],
+    "body": ["'[data-action=\"open-modal\"]'"],
     "description": "Атрибут data-action=open-modal"
   },
   "const": {
     "prefix": "сщтые",
     "scope": "javascript",
-    "body": [
-      "const $1"
-    ],
+    "body": ["const $1"],
     "description": "const"
   },
   "const": {
     "prefix": "c",
     "scope": "javascript",
-    "body": [
-      "const $1"
-    ],
+    "body": ["const $1"],
     "description": "const"
   },
   "class": {
     "prefix": "cls",
     "scope": "javascript",
-    "body": [
-      "class ${1:Parent} {$2}"
-    ],
+    "body": ["class ${1:Parent} {$2}"],
     "description": "class"
   },
   "constructor fn": {
     "prefix": "cfn",
     "scope": "javascript",
-    "body": [
-      "constructor() {\n$1\n}"
-    ],
+    "body": ["constructor() {\n$1\n}"],
     "description": "constructor function"
   },
   "constructor this": {
     "prefix": "conthis",
     "scope": "javascript",
-    "body": [
-      " constructor($1) {\r",
-      "  this.${1:text} = $1\r",
-      " }"
-    ],
+    "body": [" constructor($1) {\r", "  this.${1:text} = $1\r", " }"],
     "description": "constructor this"
   },
   "fn =>": {
     "prefix": "fn =>",
     "scope": "javascript",
-    "body": [
-      "($1)=>{$2}"
-    ],
+    "body": ["($1)=>{$2}"],
     "description": "fn =>"
   },
   "(){}": {
     "prefix": "fn",
     "scope": "javascript",
-    "body": [
-      "($1){$2}"
-    ],
+    "body": ["($1){$2}"],
     "description": "(){}"
   },
   "function 1(){2}": {
     "prefix": "fnfn",
     "scope": "javascript",
-    "body": [
-      "function $1(){\r$2\r}"
-    ],
+    "body": ["function $1(){\r$2\r}"],
     "description": "function (){}"
   },
   "for...ite": {
@@ -110,26 +127,45 @@
   "destructuring object": {
     "prefix": "dest{}",
     "scope": "javascript",
-    "body": [
-      "const {${1:key}} = ${2:object};"
-    ],
+    "body": ["const {${1:key}} = ${2:object};"],
     "description": "destructuring"
   },
   "destructuring array": {
     "prefix": "dest[]",
     "scope": "javascript",
-    "body": [
-      "const [${1:index}] = ${2:array};"
-    ],
+    "body": ["const [${1:index}] = ${2:array};"],
     "description": "destructuring"
   },
-  "quantity слово": {
-    "prefix": "qua",
+  "document.querySelector": {
+    "prefix": "docq",
+    "scope": "javascript",
+    "body": ["document.querySelector($1)"],
+    "description": "document.querySelector"
+  },
+  "document.querySelectorAll": {
+    "prefix": "docqa",
+    "scope": "javascript",
+    "body": ["document.querySelectorAll($1)"],
+    "description": "document.querySelectorAll"
+  },
+  "class extends наследование": {
+    "prefix": "ext",
     "scope": "javascript",
     "body": [
-      "quantity"
+      "class ${1:Child} extends ${2:Parent }{\r",
+      "   constructor({$3, $4}={}) {\r",
+      "    super($4);\r",
+      "    this.$3 = $3\r",
+      "   }\r",
+      "}"
     ],
-    "description": "слово quantity"
+    "description": "class extends"
+  },
+  "document.addEventListener": {
+    "prefix": "docadd",
+    "scope": "javascript",
+    "body": ["document.addEventListener($1)"],
+    "description": "document.addEventListener"
   }
   // ".js-backdrop": {
   //   "scope": "javascript",

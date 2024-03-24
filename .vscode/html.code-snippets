@@ -1,4 +1,12 @@
 {
+  "js-cont": {
+    "prefix": "js-",
+    // "scope": "javascript",
+    "body": [
+      "js-container"
+    ],
+    "description": "Класс HTML js-container"
+  },
   "Блок counter": {
     "prefix": "counter",
     "scope": "html",
@@ -14,7 +22,7 @@
   },
   "svg use": {
     "scope": "html",
-    "prefix": "g-use",
+    "prefix": "svg-use",
     "body": [
       "<svg class=\"$1\">",
       "  <use xlink:href=\"img/sprite.svg#$2\"></use>",

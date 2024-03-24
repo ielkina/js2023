@@ -1,0 +1,10 @@
+{
+  "flex-direction: column": {
+    "prefix": "fdc",
+    "scope": "scss",
+    "body": [
+      "  flex-direction: column;$1"
+    ],
+    "description": "flex-direction: column"
+  }
+}

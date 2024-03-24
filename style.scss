@@ -104,15 +104,15 @@ hr {
   height: auto;
 }
 
-.js-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-}
+// .js-container {
+//   display: flex;
+//   flex-wrap: wrap;
+//   justify-content: space-around;
+// }
 
-.js-container li {
-  margin: 8px;
-}
+// .js-container li {
+//   margin: 8px;
+// }
 
 .description {
   max-width: 400px;
@@ -222,6 +222,29 @@ button {
 }
 
 @import 'modal.scss';
+
+.container {
+  width: 50px;
+  height: 50px;
+  background-color: blue;
+}
+.js-form {
+  display: flex;
+  flex-direction: column;
+}
+.tog {
+  display: none;
+}
+.js-list-cars{
+  margin: auto;
+}
+ul {
+  list-style: none;
+}
+.js-favorite {
+  cursor: pointer;
+}
+
 /*подчеркивание линка*/
 // a {
 //   position: relative;
@@ -272,13 +295,12 @@ button {
 //   transform: translateX(-50%);
 // }
 
-
 //Линки
 
 /* ----- decoration -----  */
 body {
   padding: 20px 0;
-  background: #4A90E2;
+  background: #4a90e2;
   text-align: center;
 }
 
@@ -297,7 +319,7 @@ a:after {
   width: 0;
   height: 2px;
   background: #282c34;
-  transition: .3s;
+  transition: 0.3s;
 }
 
 // a.right:after {
@@ -319,7 +341,7 @@ a:hover:after {
 
 /******************/
 
-/* ----- top -----  */
+//---- top -----  */
 // a.top:after {
 //   left: 0;
 //   width: 100%;

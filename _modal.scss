@@ -1,12 +1,16 @@
+$text-color: chartreuse;
+$title-hero-text-color: aqua;
+$text-color: chartreuse;
+
 .title-hero {
-  color: aqua;
+  color: $title-hero-text-color;
 }
 
 h1 {
-  color: chartreuse;
+  color: $text-color;
 }
 h2 {
-  color: chartreuse;
+  color: $text-color;
 }
 body.show-modal {
   transform: scale(1);
@@ -21,22 +25,27 @@ body.show-modal.backdrop {
   pointer-events: initial;
 }
 //синтаксис вложенности для css
-// div {
-//   background: #fff;
-//   @nest section & {
-//     color: red;
-//   }
-// }
-// div {
-//   flex-direction: column;
+div {
+  background: #fff;
+  @nest section & {
+    color: red;
+  }
+}
+div {
+  flex-direction: column;
 
-//   @media (min-width: 40rem) {
-//     & {
-//       flex-direction: row;
-//     }
-//   }
-// }
-// main :is(h1, h2, h3) {
-//   font-family: fantasy;
-//   font-style: italic;
-// }
+  @media (min-width: 40rem) {
+    & {
+      flex-direction: row;
+    }
+  }
+}
+main :is(h1, h2, h3) {
+  font-family: fantasy;
+  font-style: italic;
+}
+
+
+.mimimi {
+  font-style: italic;
+}

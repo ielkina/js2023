@@ -2,9 +2,17 @@
   "flex-direction: column": {
     "prefix": "fdc",
     "scope": "scss",
-    "body": [
-      "  flex-direction: column;$1"
-    ],
+    "body": ["  flex-direction: column;$1"],
     "description": "flex-direction: column"
+  },
+  "display:flex, center, center": {
+    "prefix": "dfcc",
+    "scope": "scss",
+    "body": [
+      " display: flex;\r",
+      "  align-items: center;\r",
+      "  justify-content: center;"
+    ],
+    "description": "display:flex, center, center"
   }
 }

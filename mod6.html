@@ -2,10 +2,10 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link href="style.css" rel="stylesheet" />
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="./style.css" rel="stylesheet">
   <title>Модуль 6</title>
 </head>
 
@@ -60,12 +60,12 @@
     <img class="hero__image"
       src="https://images.pexels.com/photos/852860/pexels-photo-852860.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
       alt="Its' me" width="150" />
-    <!-- style = "width: 150px; height: 200px" -->
+    <!--       style = "width: 150px; height: 200px" -->
   </selection>
   <hr />
   <p class="hero-img"></p>
   <div class="class class1"></div>
-  <!-- <input class="js-input" type="text" style="margin-bottom: 20px" /> -->
+  <!--    <input class = "js-input" type      = "text" style = "margin-bottom: 20px" /> -->
   <div class="js-actions">
     <button type="button" data-action="add">Создать</button>
     <button type="button" data-action="remove">Удалить</button>
@@ -241,7 +241,7 @@
     <div role="group">
       <label for>
         Почта
-        <!-- <input type="email" name="email" /> -->
+        <!-- <input type = "email" name = "email" /> -->
       </label>
       <label for>
         Пароль
@@ -335,96 +335,82 @@
       </h2>
     </li>
   </ul>
-
   <label for="input">Введите что нибудь</label>
-  <input type="text" name="input" id="input" class="js-input-js" />
-
-  <!-- <form class="js-form-js" action="submit"> -->
-  <form class="js-form-js">
-    <p>
-      <!-- валидный синтаксис -->
-      <label for="userName">
-        Введите Ваше Имя
-        <input type="text" name="userName" placeholder="Введите Ваше имя" id="userName">
-      </label>
-    </p>
-    <p>
-      <label for="userEmail">
-        Ведите ваш адрес электронной почты:
-        <input type="email" name="userEmail" placeholder="Ваш email" id="userEmail">
-      </label>
-    </p>
-    <p>
-      <label for="userPhone">
-        «Введите Ваш номер телефона»
-        <input type="tel" name="userPhone" id="phone" placeholder="Ведите Ваш номер телефона" required>
-        <!-- pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" -->
-      </label>
-    </p>
-    <p>
-      <label for="password">
-        Введите пароль
-        <input type="password" name="password" placeholder="Пароль" required>
-      </label>
-    </p>
-    <p>
-      <label for="number">
-        Введите номер
-        <input type="number" name="number" placeholder="Номер" required />
-      </label>
-    </p>
-    <button type="submit">Submit</button>
+  <input type="text" name="input" id="input" class="js-input-js">
+  <br>
+  <!-- <input type = "text" name = "input" id = "input" class = "js-input-js" contenteditable = "true"/> -->
+  <!-- <form class = "js-form-js" action = "submit"> -->
+  <form class="js-form">
+    <!-- валидный синтаксис -->
+    <label class="js-form-label" for="userName">Введите Ваше Имя
+      <input class="js-username-input" type="text" name="userName" placeholder="Введите Ваше имя" id="userName">
+    </label>
+    <br>
+    <label for="userEmail">Ведите ваш адрес электронной почты:
+      <input type="email" name="userEmail" placeholder="Ваш email" id="userEmail">
+    </label>
+    <br>
+    <label for="userPhone">«Введите Ваш номер телефона»
+      <input type="tel" name="userPhone" id="phone" placeholder="Ведите Ваш номер телефона" required>
+      <!--   pattern = "[0-9]{3}-[0-9]{2}-[0-9]{3}" -->
+    </label>
+    <br>
+    <label for="password">Введите пароль
+      <input type="password" name="password" placeholder="Пароль" required>
+    </label>
+    <br>
+    <label for="number">Введите номер
+      <input type="number" name="number" placeholder="Номер" required>
+    </label>
+    <br>
+    <label for="police-accept">
+      <input type="checkbox" name="police-accept" value="true" class="js-police-checkbox">
+      <span class="js-username-output"></span>
+    </label>
+    <button class="js-form-submit" type="submit" disabled>Submit</button>
   </form>
-
   <ul class="js-list-cars"></ul>
-
   <div>
     <h2>Выбранные авто</h2>
     <div class="js-favorite-list"></div>
   </div>
-  
   <form class="js-search-form" type="submit">
     <input type="text" name="query" id="">
+    <input type="text">
+    <br>
     <select name="select">
-      <option value="model">Модель</option>
+      <option value="model" class="select">Модель</option>
       <option value="type">Тип</option>
     </select>
     <button type="submit">Поиск</button>
   </form>
-
-
-  <button><a href="index.html">На&nbsp;главную</a></button>
-
+  <span class="item">
+    <img class="item__img" src="https://picsum.photos/200/300" alt="pick">
+  </span>
+  <span class="my-input" contenteditable="true" id="myInput"></span>
+  <a href="index.html">На&nbsp;главную</a>
   <a id="bottom"></a>
-
-  <!-- <script src = "js/mod6/mod6-00-query-selectors.js" type = "module"></script> -->
-  <!-- <script src = "js/mod6/mod6-01-properties.js" type = "module"></script> -->
-  <!-- <script src = "js/mod6/mod6-02-classlist.js" type = "module"></script> -->
-  <!-- <script src = "js/mod6/mod6-03-dom-traversal.js" type = "module"></script> -->
+  <!-- <script src = "js/mod6/mod6-00-query-selectors.js" type   = "module"></script> -->
+  <!-- <script src = "js/mod6/mod6-01-properties.js" type        = "module"></script> -->
+  <!-- <script src = "js/mod6/mod6-02-classlist.js" type         = "module"></script> -->
+  <!-- <script src = "js/mod6/mod6-03-dom-traversal.js" type     = "module"></script> -->
   <!-- <script src = "js/mod6/mod6-04-creating-elements.js" type = "module"></script> -->
-  <!-- <script src = "js/mod6/mod6-05-collections.js" type = "module"></script> -->
-  <!-- <script src = "js/mod6/mod6-06-products.js" type = "module"></script> -->
-  <!-- <script src = "js/mod6/mod6-07-templating.js" type = "module"></script> -->
-  <!-- <script src = "js/mod6/mod6-08-transactions.js" type = "module"></script> -->
+  <!-- <script src = "js/mod6/mod6-05-collections.js" type       = "module"></script> -->
+  <!-- <script src = "js/mod6/mod6-06-products.js" type          = "module"></script> -->
+  <!-- <script src = "js/mod6/mod6-07-templating.js" type        = "module"></script> -->
+  <!-- <script src = "js/mod6/mod6-08-transactions.js" type      = "module"></script> -->
   <!-- <script src = "js/mod6/mod6-09-artem-rusich-1.js" type = "module"></script> -->
   <!-- <script src = "js/mod6/mod6-10-lesson-1.js" type = "module"></script> -->
   <!-- <script src = "js/mod6/mod6-11-practice.js" type = "module"></script> -->
-  <!-- <script src="js/mod6/mod6-12-event-listener.js" type="module"></script> -->
-  <!-- <script src="js/mod6/mod6-13-form.js" type="module"></script> -->
-  <!-- <script src="js/mod6/mod6-14-input-events.js" type="module"></script> -->
-  <!-- <script src="js/mod6/mod6-15-keyboard-events.js" type="module"></script> -->
-  <!-- <script src = "js/mod6/mod6-16-mouse-events.js"type="module"></script> -->
-  <!-- <script src="js/mod6/mod6-17-modal.js" type="module"></script> -->
-
-  <script src="js/mod6/mod6-18-artem-rusich-2.js" type="module"></script>
-
-  <!-- <script src = "js/mod6/mod6-19-.js"type="module"></script> -->
-  <!-- <script src = "js/mod6/mod6-20-.js"type="module"></script> -->
-  <!-- <script src = "js/mod6/mod6-21-.js"type="module"></script> -->
-  <!-- <script src = "js/mod6/mod6--artem-rusich-2.js" type = "module"></script>-->
-  <!-- <script src = "js/mod6/mod6--lesson-2.js" type = "module"></script> -->
-  <!-- <script src = "js/mod6/mod6--practice.js" type = "module"></script> -->
-  <!-- <script src = "js/mod7/mod7--.js" type = "module"></script> -->
+  <!-- <script src = "js/mod6/mod6-12-event-listener.js" type  = "module"></script> -->
+  <!-- <script src = "js/mod6/mod6-13-form.js" type            = "module"></script> -->
+  <!-- <script src = "js/mod6/mod6-14-input-events.js" type    = "module"></script> -->
+  <!-- <script src = "js/mod6/mod6-15-keyboard-events.js" type = "module"></script> -->
+  <!-- <script src = "js/mod6/mod6-16-mouse-events.js"type     = "module"></script> -->
+  <!-- <script src = "js/mod6/mod6-17-modal.js" type           = "module"></script> -->
+  <!-- <script src = "js/mod6/mod6-18-artem-rusich-2.js" type = "module"></script> -->
+  <script src="js/mod6/mod6-19-lesson-2.js" type="module"></script>
+  <!-- <script src = "js/mod6/mod6-20-practice.js"type = "module"></script> -->
 </body>
 
 </html>

@@ -1,368 +1,85 @@
-html {
-  color: #00ffff;
+@import 'base';
+
+input {
+  // caret-color: rgb(238, 228, 228);
+  // caret-style: block;
+  border-right: 1px solid transparent;
 }
 
-html {
-  display: grid;
+input:focus {
+  animation: PulseAttention 1.5s cubic-bezier(0.215, 0.61, 0.355, 1) forwards infinite;
 }
 
-body {
-  max-width: 1200px;
-  background-color: #292929ff;
-  color: white;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
-  display: grid;
+@keyframes PulseAttention {
+  50% {
+    border-color: #ff0000;
+  }
 }
 
-a {
-  text-decoration: none;
-  color: #6b6868;
+input:not([value=''])~.fb-Search_Label {
+  justify-content: flex-end;
 }
 
-.box {
-  width: 200px;
-  justify-content: center;
-  font-size: 24px;
+input:not([value=''])~.fb-Search_Label {
+  justify-content: flex-end;
 }
 
-.box button {
-  margin-bottom: 10px;
+.my-Input {
+  border-right: 1px solid transparent;
 }
 
-.js-value {
-  display: flex;
-  margin: 20px;
-  justify-content: center;
+.my-Input:focus {
+  animation: PulseAttention 1.5s cubic-bezier(0.215, 0.61, 0.355, 1) forwards infinite;
 }
 
-.back {
-  border: none;
-  background: green;
-  width: 200px;
+@keyframes PulseAttention {
+  50% {
+    border-color: #ff0000;
+  }
 }
 
-.back a {
-  color: aliceblue;
-  text-decoration: none;
+.my-Input {
+  color: #ffffff;
+  /*Means both the text and caret will be white*/
+  background-color: #ffffff;
+  text-shadow: 0 0 2px #888;
 }
 
-.js-decrement {
-  padding: 0;
-  width: max-content;
+.fb-Search_Input:not([value=''])~.fb-Search_Label {
+  justify-content: flex-end;
 }
 
-.js-increment {
-  padding: 0;
-  width: max-content;
+@mixin img-mask($clip-path, $scale, $s) {
+  clip-path: $clip-path;
+
+  &__img {
+    transition: transform #{$s}s ease-in-out;
+
+    &:hover {
+      transform: scale($scale);
+    }
+  }
 }
 
-#counter-1,
-#counter-2 {
-  display: block;
-}
+//что бы картинка увеличивалась не выходя за рамки размеров нужно накладывать дополнительный
+//html элемент и накладывать маску
 
-.js-button {
-  margin-bottom: 20px;
-}
-
-.js-actions button {
-  margin-bottom: 10px;
-}
-
-.js-actions__option {
-  margin-bottom: 10px;
-}
-
-.hero__image {
-  width: 150px;
-  /* margin-left: auto; */
-  /* margin-right: auto; */
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-hr {
-  display: block;
-  max-width: 100%;
-}
-
-.site-nav__link--current {
-  color: #8829e0;
-}
-
-.title-color {
-  color: #00ffff;
-}
-
-.img {
-  display: block;
-  width: 300px;
-  height: auto;
-}
-
-// .js-container {
-//   display: flex;
-//   flex-wrap: wrap;
-//   justify-content: space-around;
-// }
-
-// .js-container li {
-//   margin: 8px;
-// }
-
-.description {
-  max-width: 400px;
-}
-
-.list__item {
+.item {
+  @include img-mask(polygon(0 0, 100% 0, 100% 100%, 0% 100%), 1.5, 1);
   color: #ff0000;
-  /* list-style: '💙'; */
-  /* transition: all 2s; */
 }
 
-.list__item:hover {
-  color: #ff00;
-  /* list-style-type: '💛'; */
-}
 
-.some-img {
-  display: block;
-  width: 600px;
-  height: auto;
-  margin-bottom: 20px;
-}
 
-.swap-image-btn {
-  margin-bottom: 20px;
-}
+// .js-img-container {
+//   clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
 
-.backdrop {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(0, 0, 0, 0.75);
-  opacity: 0;
-  visibility: hidden;
-  pointer-events: none;
-}
-
-.modal {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  min-width: 500px;
-  min-height: 360px;
-  /* padding: 10px 20px; */
-  background-color: #fff;
-}
-
-.is-backdrop-open {
-  opacity: 1;
-  /*v:v*/
-  visibility: visible;
-  pointer-events: auto;
-  /*snippet poi:au*/
-  /*pointer-events: none; на события не будет реагировать*/
-}
-
-.modal-btn {
-  margin-top: 10px;
-  padding: 10px 15px;
-  /*emmet*/
-  /* p10-15>padding: 10px 15px; */
-  border: none;
-  border: none;
-  border-radius: 4px;
-
-  border-radius: 4px;
-  cursor: pointer;
-  background-color: #fff;
-  /* color: #fff; */
-  transition: background-color 250ms lines;
-}
-
-.modal-btn:hover,
-.modal-btn:focus {
-  background-color: #7f8c8d;
-}
-
-.modal-img {
-  width: 100%;
-  height: 100%;
-  margin: 0;
-  padding: 0;
-  border: 0;
-}
-
-button {
-  margin-bottom: 10px;
-  padding: 0;
-}
-
-.js-register-form {
-  border: 1px solid red;
-}
-
-button {
-  background-color: #4440408d;
-  color: #ffffff70;
-  margin-bottom: 10px;
-  padding: 0;
-}
-
-.js-register-form {
-  border: 1px solid red;
-}
-
-@import 'modal.scss';
-
-.container {
-  width: 50px;
-  height: 50px;
-  background-color: blue;
-}
-.js-form {
-  display: flex;
-  flex-direction: column;
-}
-.tog {
-  display: none;
-}
-.js-list-cars{
-  margin: auto;
-}
-ul {
-  list-style: none;
-}
-.js-favorite {
-  cursor: pointer;
-}
-
-/*подчеркивание линка*/
-// a {
-//   position: relative;
-//   color: #484848;
-//   font-size: 1.25rem;
-//   text-decoration: none;
 // }
-
-//с лева
-// a::before {
-// 	content: '';
-// 	position: absolute;
-// 	left: 0; bottom: -5px;
-// 	width: 0;
-// 	height: 1.5px;
-// 	background-color: red;
-// }
-
-//с права
-// a::before {
-// 	content: '';
-// 	position: absolute;
-// 	right: 0; bottom: -5px;
-// 	width: 0;
-// 	height: 1.5px;
-// 	background-color: red;
-// }
-
-// a::before {
-//   content: '';
-//   position: absolute;
-//   // right: 0; bottom: -5px;
-//   bottom: -5px;
-//   width: 0;
-//   height: 1.5px;
-//   background-color: red;
-// }
-
-// a:hover:before {
-//   width: 100%;
-// }
-
-// a::before {
-//   transition: width 0.35s;
-// }
-// a::after {
-//   left: 50%;
-//   transform: translateX(-50%);
-// }
-
-//Линки
-
-/* ----- decoration -----  */
-body {
-  padding: 20px 0;
-  background: #4a90e2;
-  text-align: center;
-}
-
-a {
-  position: relative;
-  text-decoration: none;
-  color: #282c34;
-  font-size: 24px;
-}
-
-a:after {
-  position: absolute;
-  content: '';
-  bottom: 0;
-  display: block;
-  width: 0;
-  height: 2px;
-  background: #282c34;
-  transition: 0.3s;
-}
-
-// a.right:after {
-//   right: 0;
-// }
-// a.left:after {
-//   left: 0;
-// }
-/*******************/
-//center
-a:after {
-  left: 50%;
-  transform: translate(-50%);
-}
-
-a:hover:after {
-  width: 100%;
-}
-
-/******************/
-
-//---- top -----  */
-// a.top:after {
-//   left: 0;
-//   width: 100%;
-//   bottom: 5px;
-//   opacity: 0;
-// }
-
-// a.top:hover:after {
-//   opacity: 1;
-//   bottom: 0
-// }
-
-/* ----- bottom -----  */
-// a.bottom:after {
-//   left: 0;
-//   width: 100%;
-//   bottom: -5px;
-//   opacity: 0;
-// }
-
-// a.bottom:hover:after {
-//   opacity: 1;
-//   bottom: 0
+// .js-img {
+//   filter: none;
+//   transition: all 0.5s ease-in-out;
+//   &:hover {
+//     // clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+//     transform: scale(1.3);
+//   }
 // }

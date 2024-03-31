@@ -44,7 +44,7 @@ a {
 }
 .back {
   border: 0;
-  background: green;
+  background: #008000;
   width: 200px;
 }
 .back a {
@@ -97,7 +97,7 @@ hr {
   max-width: 400px;
 }
 .list__item {
-  color: red;
+  color: #ff0000;
 }
 .list__item:hover {
   color: #ff00;
@@ -117,7 +117,7 @@ hr {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(0, 0, 0, 0.75);
+  background-color: #000000bf;
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
@@ -163,7 +163,7 @@ button {
   padding: 0;
 }
 .js-register-form {
-  border: 1px solid red;
+  border: 1px solid #ff0000;
 }
 button {
   background-color: #4440408d;
@@ -172,7 +172,7 @@ button {
   padding: 0;
 }
 .js-register-form {
-  border: 1px solid red;
+  border: 1px solid #ff0000;
 }
 .container {
   width: 50px;
@@ -274,7 +274,7 @@ div::nth-child(even) {
   background-color: #0ff;
 }
 div::nth-child(odd) {
-  background-color: rgb(28, 77, 77);
+  background-color: #1c4d4d;
 }
 
 //
@@ -301,13 +301,13 @@ body {
 .container {
   width: 200px;
   height: 200px;
-  border: 1px solid blue;
+  border: 1px solid #0000ff;
   perspective: 200px;
 }
 .container > div {
   width: 200px;
   height: 200px;
-  border-color: red;
+  border-color: #ff0000;
   transform: rotateY(45deg);
 }
 //filter
@@ -318,24 +318,20 @@ img{
 }
 h2 {
   filter: blur(10px);
-  filter: blur(10px);
+
 }
 h2:active {
   filter: blur(0);
-  filter: blur(0);
-  filter: blur(0);
+
 }
 h2:hover {
   filter: blur(0);
-  filter: blur(0);
-  filter: blur(0);
+
 }
 
 h2:hover {
   filter: blur(0);
-  filter: blur(0);
-  filter: blur(0);
-  filter: blur(0);
+
 }
 
 // @import url('modal');

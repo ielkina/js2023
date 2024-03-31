@@ -1,5 +1,21 @@
-{
-
-	//плагины
-	"recommendations": ["Syler.sass-indented","stylelint.vscode-stylelint","jerryhong.autofilename","EditorConfig.EditorConfig", "htmlhint.vscode-htmlhint", "ritwickdey.LiveServer", "dbaeumer.vscode-eslint", "rebornix.project-snippets"]
+{ //плагины
+	"recommendations": [
+		"ritwickdey.LiveServer",
+		"rebornix.project-snippets",
+		"formulahendry.auto-close-tag",
+		"formulahendry.auto-complete-tag",
+		"formulahendry.auto-rename-tag",
+		"streetsidesoftware.code-spell-checker",
+		"pkief.material-icon-theme",
+		"monokai.theme-monokai-pro-vscode",
+		"alefragnani.project-manager",
+		"streetsidesoftware.code-spell-checker-russian",
+		"ms-ceintl.vscode-language-pack-ru",
+		"gruntfuggly.todo-tree",
+		"glenn2223.live-sass",
+		"streetsidesoftware.code-spell-checker-ukrainian",
+		"esbenp.prettier-vscode",
+		"diz.ecsstractor-port",
+		"atishay-jain.all-autocomplete"
+	]
 }

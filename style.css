@@ -1,6 +1,10 @@
-@charset "UTF-8";
+:root {
+  --font-size: clamp(1rem, calc(0.83rem + 0.83vw), 1.5rem);
+  --max-width: 1200px;
+}
+
 html {
-  color: #00ffff;
+  color: #0ff;
 }
 
 html {
@@ -8,9 +12,9 @@ html {
 }
 
 body {
-  max-width: 1200px;
+  max-width: --max-width;
   background-color: #292929;
-  color: white;
+  color: #fff;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -40,13 +44,13 @@ a {
 }
 
 .back {
-  border: none;
-  background: green;
+  border: 0;
+  background: #008000;
   width: 200px;
 }
 
 .back a {
-  color: aliceblue;
+  color: #f0f8ff;
   text-decoration: none;
 }
 
@@ -81,8 +85,6 @@ a {
 
 .hero__image {
   width: 150px;
-  /* margin-left: auto; */
-  /* margin-right: auto; */
   display: block;
   margin-left: auto;
   margin-right: auto;
@@ -98,7 +100,7 @@ hr {
 }
 
 .title-color {
-  color: #00ffff;
+  color: #0ff;
 }
 
 .img {
@@ -113,13 +115,10 @@ hr {
 
 .list__item {
   color: #ff0000;
-  /* list-style: '💙'; */
-  /* transition: all 2s; */
 }
 
 .list__item:hover {
   color: rgba(255, 255, 0, 0);
-  /* list-style-type: '💛'; */
 }
 
 .some-img {
@@ -139,7 +138,7 @@ hr {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(0, 0, 0, 0.75);
+  background-color: rgba(0, 0, 0, 0.7490196078);
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
@@ -152,31 +151,24 @@ hr {
   transform: translate(-50%, -50%);
   min-width: 500px;
   min-height: 360px;
-  /* padding: 10px 20px; */
   background-color: #fff;
 }
 
 .is-backdrop-open {
   opacity: 1;
-  /*v:v*/
   visibility: visible;
   pointer-events: auto;
-  /*snippet poi:au*/
-  /*pointer-events: none; на события не будет реагировать*/
 }
 
 .modal-btn {
   margin-top: 10px;
   padding: 10px 15px;
-  /*emmet*/
-  /* p10-15>padding: 10px 15px; */
-  border: none;
-  border: none;
+  border: 0;
+  border: 0;
   border-radius: 4px;
   border-radius: 4px;
   cursor: pointer;
   background-color: #fff;
-  /* color: #fff; */
   transition: background-color 250ms lines;
 }
 
@@ -199,7 +191,7 @@ button {
 }
 
 .js-register-form {
-  border: 1px solid red;
+  border: 1px solid #ff0000;
 }
 
 button {
@@ -210,39 +202,13 @@ button {
 }
 
 .js-register-form {
-  border: 1px solid red;
-}
-
-.title-hero {
-  color: aqua;
-}
-
-h1 {
-  color: chartreuse;
-}
-
-h2 {
-  color: chartreuse;
-}
-
-body.show-modal {
-  transform: scale(1);
-  -webkit-transform: scale(1);
-  -moz-transform: scale(1);
-  -ms-transform: scale(1);
-  -o-transform: scale(1);
-}
-
-body.show-modal.backdrop {
-  opacity: 1;
-  visibility: visible;
-  pointer-events: initial;
+  border: 1px solid #ff0000;
 }
 
 .container {
   width: 50px;
   height: 50px;
-  background-color: blue;
+  background-color: #00f;
 }
 
 .js-form {
@@ -266,41 +232,204 @@ ul {
   cursor: pointer;
 }
 
-/*подчеркивание линка*/
-/* ----- decoration -----  */
-body {
-  padding: 20px 0;
-  background: #4a90e2;
-  text-align: center;
-}
-
-a {
-  position: relative;
-  text-decoration: none;
-  color: #282c34;
-  font-size: 24px;
-}
-
-a:after {
-  position: absolute;
-  content: "";
-  bottom: 0;
-  display: block;
-  width: 0;
-  height: 2px;
-  background: #282c34;
-  transition: 0.3s;
-}
-
-/*******************/
-a:after {
-  left: 50%;
-  transform: translate(-50%);
-}
-
 a:hover:after {
   width: 100%;
 }
 
-/******************/
-/* ----- bottom -----  *//*# sourceMappingURL=style.css.map */
+h2 {
+  color: #0ff;
+  color: #0ff;
+  font-size: var(--font-size);
+}
+
+.div {
+  width: 100%;
+  aspect-ratio: 16/9;
+}
+
+.div {
+  font-size: clamp(16px, 5vw, 24px);
+}
+
+body {
+  counter-reset: my-counter;
+}
+
+h2::before {
+  counter-increment: my-counter;
+  content: counter(my-counter) ": ";
+}
+
+.grid {
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+}
+
+h2::nth-child(1) {
+  orphans: 1;
+}
+
+h2::nth-child(2) {
+  orphans: 2;
+}
+
+h2::nth-child(3) {
+  orphans: 4;
+}
+
+h2::nth-child(4) {
+  orphans: 5;
+}
+
+h2::nth-child(5) {
+  orphans: 4;
+}
+
+h2::nth-child(6) {
+  orphans: 6;
+}
+
+.grid {
+  width: 100%;
+  height: 100vh;
+  overflow: scroll;
+  scroll-snap-type: y mandatory;
+  scroll-snap-type: y proximity;
+}
+
+.grid>div {
+  width: 100%;
+  height: 50vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  scroll-snap-align: center;
+}
+
+div::nth-child(even) {
+  background-color: #0ff;
+}
+
+div::nth-child(odd) {
+  background-color: #1c4d4d;
+}
+
+.rec {
+  width: 400px;
+  height: 400px;
+  -webkit-clip-path: circle(100% at 0 0);
+  clip-path: circle(100% at 0 0);
+  transition: all 300ms ease-in-out;
+}
+
+.rec:hover {
+  -webkit-clip-path: circle(50%);
+  clip-path: circle(50%);
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.container {
+  width: 200px;
+  height: 200px;
+  border: 1px solid #0000ff;
+  perspective: 200px;
+}
+
+.container>div {
+  width: 200px;
+  height: 200px;
+  border-color: #ff0000;
+  transform: rotateY(45deg);
+}
+
+img {
+  min-width: 100%;
+  height: auto;
+  filter: grayscale(70%);
+}
+
+h2 {
+  filter: blur(10px);
+}
+
+h2:active {
+  filter: blur(0);
+}
+
+h2:hover {
+  filter: blur(0);
+}
+
+h2:hover {
+  filter: blur(0);
+}
+
+input {
+  border-right: 1px solid transparent;
+}
+
+input:focus {
+  animation: PulseAttention 1.5s cubic-bezier(0.215, 0.61, 0.355, 1) forwards infinite;
+}
+
+@keyframes PulseAttention {
+  50% {
+    border-color: #ff0000;
+  }
+}
+
+input:not([value=""])~.fb-Search_Label {
+  justify-content: flex-end;
+}
+
+input:not([value=""])~.fb-Search_Label {
+  justify-content: flex-end;
+}
+
+.my-Input {
+  border-right: 1px solid transparent;
+}
+
+.my-Input:focus {
+  animation: PulseAttention 1.5s cubic-bezier(0.215, 0.61, 0.355, 1) forwards infinite;
+}
+
+@keyframes PulseAttention {
+  50% {
+    border-color: #ff0000;
+  }
+}
+
+.my-Input {
+  color: #ffffff;
+  /*Means both the text and caret will be white*/
+  background-color: #ffffff;
+  text-shadow: 0 0 2px #888;
+}
+
+.fb-Search_Input:not([value=""])~.fb-Search_Label {
+  justify-content: flex-end;
+}
+
+.item {
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+  color: #ff0000;
+}
+
+.item__img {
+  transition: transform 1s ease-in-out;
+}
+
+.item__img:hover {
+  transform: scale(1.5);
+}
+
+/*# sourceMappingURL=style.css.map */

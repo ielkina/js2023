@@ -1,27 +1,11 @@
-.box, body {
-  justify-content: center
-}
-.back, .box {
-  width: 200px
-}
-.back a, a {
-  text-decoration: none
-}
-.box button, .js-actions button, .js-actions__option, button {
-  margin-bottom: 10px
-}
-.js-favorite, .modal-btn {
-  cursor: pointer
-}
-.img, .some-img, img {
-  height: auto
-}
 :root {
   --font-size: clamp(1rem, calc(0.83rem + 0.83vw), 1.5rem);
   --max-width: 1200px
 }
 html {
-  color: #0ff;
+  color: aqua
+}
+html {
   display: grid
 }
 body {
@@ -29,55 +13,80 @@ body {
   background-color: #292929;
   color: #fff;
   display: flex;
+  justify-content: center;
   flex-direction: column;
   align-items: center;
   display: grid
 }
 a {
+  text-decoration: none;
   color: #6b6868
 }
 .box {
+  width: 200px;
+  justify-content: center;
   font-size: 24px
 }
-.js-button, .some-img, .swap-image-btn {
-  margin-bottom: 20px
+.box button {
+  margin-bottom: 10px
 }
 .js-value {
   display: flex;
   margin: 20px;
   justify-content: center
 }
-#counter-1, #counter-2, .hero__image, .img, .some-img, hr {
-  display: block
-}
 .back {
   border: 0;
-  background: green
+  background: green;
+  width: 200px
 }
 .back a {
-  color: #f0f8ff
+  color: #f0f8ff;
+  text-decoration: none
 }
-.js-decrement, .js-increment {
+.js-decrement {
   padding: 0;
   width: -moz-max-content;
   width: max-content
 }
+.js-increment {
+  padding: 0;
+  width: -moz-max-content;
+  width: max-content
+}
+#counter-1,
+#counter-2 {
+  display: block
+}
+.js-button {
+  margin-bottom: 20px
+}
+.js-actions button {
+  margin-bottom: 10px
+}
+.js-actions__option {
+  margin-bottom: 10px
+}
 .hero__image {
   width: 150px;
+  display: block;
   margin-left: auto;
   margin-right: auto
 }
 hr {
+  display: block;
   max-width: 100%
 }
 .site-nav__link--current {
   color: #8829e0
 }
-.title-color, h2 {
-  color: #0ff
+.title-color {
+  color: aqua
 }
 .img {
-  width: 300px
+  display: block;
+  width: 300px;
+  height: auto
 }
 .description {
   max-width: 400px
@@ -89,10 +98,13 @@ hr {
   color: rgba(255, 255, 0, 0)
 }
 .some-img {
-  width: 600px
+  display: block;
+  width: 600px;
+  height: auto;
+  margin-bottom: 20px
 }
-.div, .grid, .grid>div, .modal-img, a:hover:after {
-  width: 100%
+.swap-image-btn {
+  margin-bottom: 20px
 }
 .backdrop {
   position: fixed;
@@ -105,16 +117,14 @@ hr {
   visibility: hidden;
   pointer-events: none
 }
-.modal, .modal-btn {
-  background-color: #fff
-}
 .modal {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   min-width: 500px;
-  min-height: 360px
+  min-height: 360px;
+  background-color: #fff
 }
 .is-backdrop-open {
   opacity: 1;
@@ -125,27 +135,44 @@ hr {
   margin-top: 10px;
   padding: 10px 15px;
   border: 0;
-  border-radius: 4px
+  border: 0;
+  border-radius: 4px;
+  border-radius: 4px;
+  cursor: pointer;
+  background-color: #fff;
+  transition: background-color 250ms lines
 }
-.modal-btn:focus, .modal-btn:hover {
+.modal-btn:hover,
+.modal-btn:focus {
   background-color: #7f8c8d
 }
 .modal-img {
+  width: 100%;
   height: 100%;
   margin: 0;
   padding: 0;
   border: 0
 }
-.grid, body {
-  height: 100vh
-}
 button {
-  background-color: rgba(68, 64, 64, .5529411765);
-  color: rgba(255, 255, 255, .4392156863);
+  margin-bottom: 10px;
   padding: 0
 }
 .js-register-form {
   border: 1px solid red
+}
+button {
+  background-color: rgba(68, 64, 64, .5529411765);
+  color: rgba(255, 255, 255, .4392156863);
+  margin-bottom: 10px;
+  padding: 0
+}
+.js-register-form {
+  border: 1px solid red
+}
+.container {
+  width: 50px;
+  height: 50px;
+  background-color: blue
 }
 .js-form {
   display: flex;
@@ -154,119 +181,53 @@ button {
 .tog {
   display: none
 }
-.grid, .grid>div, body {
-  display: flex
-}
 .js-list-cars {
   margin: auto
 }
 ul {
   list-style: none
 }
-h2 {
-  font-size: var(--font-size);
-  filter: blur(10px)
+.js-favorite {
+  cursor: pointer
 }
-.div {
-  aspect-ratio: 16/9;
-  font-size: clamp(16px, 5vw, 24px)
-}
-h2::before {
-  counter-increment: my-counter;
-  content: counter(my-counter) ": "
-}
-.grid {
-  gap: 10px;
-  flex-direction: column;
-  overflow: scroll;
-  scroll-snap-type: y mandatory;
-  scroll-snap-type: y proximity
-}
-h2::first-child {
-  orphans: 1
-}
-h2::nth-child(2) {
-  orphans: 2
-}
-h2::nth-child(3) {
-  orphans: 4
-}
-h2::nth-child(4) {
-  orphans: 5
-}
-h2::nth-child(5) {
-  orphans: 4
-}
-h2::nth-child(6) {
-  orphans: 6
-}
-.grid>div {
-  height: 50vh;
-  align-items: center;
-  justify-content: center;
-  scroll-snap-align: center
-}
-div::nth-child(2n) {
-  background-color: #0ff
-}
-div::nth-child(odd) {
-  background-color: #1c4d4d
-}
-.rec {
-  width: 400px;
-  height: 400px;
-  -webkit-clip-path: circle(100% at 0 0);
-  clip-path: circle(100% at 0 0);
-  transition: .3s ease-in-out
-}
-.rec:hover {
-  -webkit-clip-path: circle(50%);
-  clip-path: circle(50%)
-}
-body {
-  counter-reset: my-counter;
-  align-items: center;
-  justify-content: center
-}
-.container {
-  background-color: #00f;
-  width: 200px;
-  height: 200px;
-  border: 1px solid #00f;
-  perspective: 200px
-}
-.container>div {
-  width: 200px;
-  height: 200px;
-  border-color: red;
-  transform: rotateY(45deg)
-}
-img {
-  min-width: 100%;
-  filter: grayscale(70%)
-}
-h2:active, h2:hover {
-  filter: blur(0)
+a:hover:after {
+  width: 100%
 }
 input {
-  border-right: 1px solid transparent
+  border-right: 1px solid rgba(0, 0, 0, 0)
 }
-.my-Input:focus, input:focus {
-  animation: 1.5s cubic-bezier(.215, .61, .355, 1) infinite forwards PulseAttention
-}
-.fb-Search_Input:not([value=""])~.fb-Search_Label, input:not([value=""])~.fb-Search_Label {
-  justify-content: flex-end
-}
-.my-Input {
-  border-right: 1px solid transparent;
-  color: #fff;
-  background-color: #fff;
-  text-shadow: 0 0 2px #888
+input:focus {
+  animation: PulseAttention 1.5s cubic-bezier(0.215, 0.61, 0.355, 1) forwards infinite
 }
 @keyframes PulseAttention {
   50% {
     border-color: red
   }
+}
+input:not([value=""])~.fb-Search_Label {
+  justify-content: flex-end
+}
+input:not([value=""])~.fb-Search_Label {
+  justify-content: flex-end
+}
+.my-Input {
+  border-right: 1px solid rgba(0, 0, 0, 0)
+}
+.my-Input:focus {
+  animation: PulseAttention 1.5s cubic-bezier(0.215, 0.61, 0.355, 1) forwards infinite
+}
+@keyframes PulseAttention {
+  50% {
+    border-color: red
+  }
+}
+.my-Input {
+  color: #fff;
+  background-color: #fff;
+  text-shadow: 0 0 2px #888
+}
+.fb-Search_Input:not([value=""])~.fb-Search_Label {
+  justify-content: flex-end
 }
 .item {
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
@@ -279,3 +240,16 @@ input {
 .item__img:hover {
   transform: scale(1.5)
 }
+.item-user {
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+  color: red;
+  display: flex
+}
+.item-user__img {
+  transition: transform 1s ease-in-out
+}
+.item-user__img:hover {
+  transform: scale(1.5)
+}
+/*# sourceMappingURL=style.min.css.map */

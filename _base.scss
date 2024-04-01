@@ -199,139 +199,139 @@ a:hover:after {
   width: 100%;
 }
 
-h2 {
-  color: #0ff;
-  color: #0ff;
-  font-size: var(--font-size);
-}
+// h2 {
+//   color: #0ff;
+//   color: #0ff;
+//   font-size: var(--font-size);
+// }
 
 //полезные свойства селекторов
-.div {
-  width: 100%;
-  aspect-ratio: 16/9; //пропорциональное уменьшение блоков
-}
+// .div {
+//   width: 100%;
+//   aspect-ratio: 16/9; //пропорциональное уменьшение блоков
+// }
 
-.div {
-  //минимальное окно, желаемое, максимальное
-  font-size: clamp(16px, 5vw, 24px); //адаптивный шрифт
-}
+// .div {
+//   //минимальное окно, желаемое, максимальное
+//   font-size: clamp(16px, 5vw, 24px); //адаптивный шрифт
+// }
 
-input {
-  // caret-color: $caret-color; //покраска курсора
-}
+// input {
+//   // caret-color: $caret-color; //покраска курсора
+// }
 
 //вешаем на элементы свой каунтер
-body {
-  counter-reset: my-counter;
-}
+// body {
+//   counter-reset: my-counter;
+// }
 
-h2::before {
-  counter-increment: my-counter;
-  content: counter(my-counter) ': ';
-}
+// h2::before {
+//   counter-increment: my-counter;
+//   content: counter(my-counter) ': ';
+// }
 //меняем местами секции
-.grid {
-  display: flex;
-  gap: 10px;
-  flex-direction: column;
-}
-h2::nth-child(1) {
-  orphans: 1;
-}
-h2::nth-child(2) {
-  orphans: 2;
-}
-h2::nth-child(3) {
-  orphans: 4;
-}
-h2::nth-child(4) {
-  orphans: 5;
-}
-h2::nth-child(5) {
-  orphans: 4;
-}
-h2::nth-child(6) {
-  orphans: 6;
-}
+// .grid {
+//   display: flex;
+//   gap: 10px;
+//   flex-direction: column;
+// }
+// h2::nth-child(1) {
+//   orphans: 1;
+// }
+// h2::nth-child(2) {
+//   orphans: 2;
+// }
+// h2::nth-child(3) {
+//   orphans: 4;
+// }
+// h2::nth-child(4) {
+//   orphans: 5;
+// }
+// h2::nth-child(5) {
+//   orphans: 4;
+// }
+// h2::nth-child(6) {
+//   orphans: 6;
+// }
 
 //скрол
-.grid {
-  width: 100%;
-  height: 100vh;
-  overflow: scroll;
-  scroll-snap-type: y mandatory;
-  scroll-snap-type: y proximity;
-}
-.grid > div {
-  width: 100%;
-  height: 50vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  scroll-snap-align: center;
-}
-div::nth-child(even) {
-  background-color: #0ff;
-}
-div::nth-child(odd) {
-  background-color: #1c4d4d;
-}
+// .grid {
+//   width: 100%;
+//   height: 100vh;
+//   overflow: scroll;
+//   scroll-snap-type: y mandatory;
+//   scroll-snap-type: y proximity;
+// }
+// .grid > div {
+//   width: 100%;
+//   height: 50vh;
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+//   scroll-snap-align: center;
+// }
+// div::nth-child(even) {
+//   background-color: #0ff;
+// }
+// div::nth-child(odd) {
+//   background-color: #1c4d4d;
+// }
 
 //
-.rec {
-  width: 400px;
-  height: 400px;
-  clip-path: circle(
-    100% at 0 0
-  ); //накладываем маску на контейнер, в скобках радиус
-  //100% это квадрат/ 0 0 координаты
-  transition: all 300ms ease-in-out;
-}
-.rec:hover {
-  clip-path: circle(50%);
-}
+// .rec {
+//   width: 400px;
+//   height: 400px;
+//   clip-path: circle(
+//     100% at 0 0
+//   ); //накладываем маску на контейнер, в скобках радиус
+//   //100% это квадрат/ 0 0 координаты
+//   transition: all 300ms ease-in-out;
+// }
+// .rec:hover {
+//   clip-path: circle(50%);
+// }
 
 //perspective
-body {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
-}
-.container {
-  width: 200px;
-  height: 200px;
-  border: 1px solid #0000ff;
-  perspective: 200px;
-}
-.container > div {
-  width: 200px;
-  height: 200px;
-  border-color: #ff0000;
-  transform: rotateY(45deg);
-}
+// body {
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+//   height: 100vh;
+// }
+// .container {
+//   width: 200px;
+//   height: 200px;
+//   border: 1px solid #0000ff;
+//   perspective: 200px;
+// }
+// .container > div {
+//   width: 200px;
+//   height: 200px;
+//   border-color: #ff0000;
+//   transform: rotateY(45deg);
+// }
 //filter
-img{
-  min-width: 100%;
-  height: auto;
-  filter: grayscale(70%);
-}
-h2 {
-  filter: blur(10px);
+// img{
+//   min-width: 100%;
+//   height: auto;
+//   filter: grayscale(70%);
+// }
+// h2 {
+//   filter: blur(10px);
 
-}
-h2:active {
-  filter: blur(0);
+// }
+// h2:active {
+//   filter: blur(0);
 
-}
-h2:hover {
-  filter: blur(0);
+// }
+// h2:hover {
+//   filter: blur(0);
 
-}
+// }
 
-h2:hover {
-  filter: blur(0);
+// h2:hover {
+//   filter: blur(0);
 
-}
+// }
 
 // @import url('modal');

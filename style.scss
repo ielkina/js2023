@@ -69,6 +69,11 @@ input:not([value=''])~.fb-Search_Label {
   color: #ff0000;
 }
 
+.item-user {
+  @include img-mask(polygon(0 0, 100% 0, 100% 100%, 0% 100%), 1.5, 1);
+  color: #ff0000;
+  display: flex;
+}
 
 
 // .js-img-container {

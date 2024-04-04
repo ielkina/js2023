@@ -1,21 +1,29 @@
-{ //плагины
-	"recommendations": [
-		"ritwickdey.LiveServer",
-		"rebornix.project-snippets",
-		"formulahendry.auto-close-tag",
-		"formulahendry.auto-complete-tag",
-		"formulahendry.auto-rename-tag",
-		"streetsidesoftware.code-spell-checker",
-		"pkief.material-icon-theme",
-		"monokai.theme-monokai-pro-vscode",
-		"alefragnani.project-manager",
-		"streetsidesoftware.code-spell-checker-russian",
-		"ms-ceintl.vscode-language-pack-ru",
-		"gruntfuggly.todo-tree",
-		"glenn2223.live-sass",
-		"streetsidesoftware.code-spell-checker-ukrainian",
-		"esbenp.prettier-vscode",
-		"diz.ecsstractor-port",
-		"atishay-jain.all-autocomplete"
-	]
+{
+    "recommendations": [
+        "formulahendry.auto-close-tag",
+        "formulahendry.auto-complete-tag",
+        "formulahendry.auto-rename-tag",
+        "streetsidesoftware.code-spell-checker",
+        "htmlhint.vscode-htmlhint",
+        "vincaslt.highlight-matching-tag",
+        "kisstkondoros.vscode-gutter-preview",
+        "oderwat.indent-rainbow",
+        "zignd.html-css-class-completion",
+        "glenn2223.live-sass",
+        "ritwickdey.liveserver",
+        "pkief.material-icon-theme",
+        "fallenmax.mithril-emmet",
+        "monokai.theme-monokai-pro-vscode",
+        "ionutvmi.path-autocomplete",
+        "christian-kohler.path-intellisense",
+        "esbenp.prettier-vscode",
+        "alefragnani.project-manager",
+        "streetsidesoftware.code-spell-checker-russian",
+        "ms-ceintl.vscode-language-pack-ru",
+        "artydeveloperduck.save-as-snippet",
+        "diasbakahbay.selector-js",
+        "streetsidesoftware.code-spell-checker-ukrainian",
+        "atishay-jain.all-autocomplete",
+        "steoates.autoimport"
+    ]
 }

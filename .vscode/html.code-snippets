@@ -1,4 +1,369 @@
 {
+  "use strict": {
+    "prefix": "use",
+    "scope": "javascript",
+    "body": [
+      "\"use strict\";"
+    ],
+    "description": "use strict"
+  },
+  "script:module": {
+    "prefix": "script:module",
+    "scope": "html",
+    "body": [
+      "<script type=\"module\" src=\"$1.js\"></script>\r",
+    ],
+    "description": "script type module"
+  },
+  "font-family": {
+    "prefix": "fff",
+    "scope": "scss",
+    "body": [
+      "  font-family: \"$1\", sans-serif;\r",
+      "$2"
+    ],
+    "description": "font-family"
+  },
+  "for..of": {
+    "prefix": "for",
+    "scope": "javascript",
+    "body": [
+      "for (const $1 of $2) {\r",
+      "  console.log($3);\r",
+      "}"
+    ],
+    "description": "for...of"
+  },
+  "border-radius": {
+    "prefix": "br",
+    "scope": "scss",
+    "body": [
+      " border-radius: $1;"
+    ],
+    "description": "border-radius"
+  },
+  "display: flex": {
+    "prefix": "dfcc",
+    "scope": "scss",
+    "body": [
+      "  display: flex;\r",
+      "    justify-content: center;\r",
+      "    align-items: center;"
+    ],
+    "description": "display: flex"
+  },
+
+  "console.table": {
+    "prefix": "tab",
+    "scope": "javascript",
+    "body": ["console.table($1);"],
+    "description": "console.table"
+  },
+
+  "for...iter": {
+    "prefix": "fori",
+    "scope": "javascript",
+    "body": [
+      "for (let i = 0; i < array$1.length; i += 1) {\r",
+      "  const element = array$2[i];\r",
+      "}"
+    ],
+    "description": "for...iter"
+  },
+    "const": {
+      "prefix": "c",
+      "scope": "javascript",
+      "body": [
+        "const $1"
+      ],
+      "description": "const"
+    },
+    "console.log();": {
+      "prefix": "lg",
+      "scope": "javascript",
+      "body": [
+        "console.log($1);"
+      ],
+      "description": "console.log();"
+    },
+      "quantity word": {
+        "prefix": "qua",
+        "scope": "javascript",
+        "body": [
+          "quantity"
+        ],
+        "description": "quantity word"
+      },
+      "(callback)": {
+        "prefix": "cal",
+        "scope": "javascript",
+        "body": [
+          "($1)=>{$2}"
+        ],
+        "description": "(callback)"
+      },
+      "console.log()": {
+        "prefix": "log",
+        "scope": "javascript",
+        "body": [
+          "console.log($1)"
+        ],
+        "description": "console.log()"
+      },
+    "function declaration": {
+      "prefix": "fn",
+      "scope": "javascript",
+      "body": [
+        "function $1($3) {$4}\r",
+      ],
+      "description": "function declaration"
+    },
+    "function": {
+      "prefix": "fnn",
+      "scope": "javascript",
+      "body": [
+        "function ($1) {$2}\r",
+      ],
+      "description": "function"
+    },
+  "destructuring object": {
+    "prefix": "dest{}",
+    "scope": "javascript",
+    "body": ["const { key$1 } = object$2;"],
+    "description": "destructuring"
+  },
+  "destructuring array": {
+    "prefix": "dest[]",
+    "scope": "javascript",
+    "body": ["const [index$1] = array$2;"],
+    "description": "destructuring"
+  },
+  "const": {
+    "prefix": "сщтые",
+    "scope": "javascript",
+    "body": [
+      "const $1"
+    ],
+    "description": "const"
+  },
+  "button type: button": {
+    "prefix": "btnb",
+    "scope": "html",
+    "body": ["  <button type=\"button\">$1</button>"],
+    "description": "button type: button"
+  },
+  "console.log": {
+    "prefix": "дщп",
+    "scope": "javascript",
+    "body": ["console.log($1);"],
+    "description": "console.log"
+  },
+  "for...of": {
+    "prefix": "forof",
+    "scope": "javascript",
+    "body": [
+      "for (const item$1 of items$2) {\r",
+      "  console.log(item$1);\r",
+      "}"
+    ],
+    "description": "for...of"
+  },
+  "pictures": {
+    "prefix": "pict",
+    "body": [
+      "<picture>",
+      "        <source",
+      "          srcset=\"",
+      "            ./images/img@m1x.jpg 1x,",
+      "            ./images/img@m2x.jpg 2x",
+      "          \"",
+      "          media=\"(min-width: 480px)\"",
+      "        />",
+      "        <source",
+      "          srcset=\"",
+      "            ./images/img@t1x.jpg 1x,",
+      "            ./images/img@t2x.jpg 2x",
+      "          \"",
+      "          media=\"(min-width: 768px)\"",
+      "        />",
+      "        <source",
+      "          srcset=\"",
+      "            ./images/img@d1x.jpg 1x,",
+      "            ./images/img@d2x.jpg 2x",
+      "          \"",
+      "          media=\"(min-width: 1200px)\"",
+      "        />",
+      "        <img class=\"\" src=\"./images/img@m1x.jpg\" alt=\"\" />",
+      "</picture>"
+    ],
+    "description": "pictures"
+  },
+  "console.table()": {
+    "prefix": "table",
+    "scope": "javascript",
+    "body": [
+      "console.table($1);"
+    ],
+    "description": "console.table()"
+  },
+  "for": {
+    "prefix": "for",
+    "scope": "javascript",
+    "body": [
+      "for (let i = 0; i < cart.length; i++) {\r",
+      "}\r",
+      "console.log(cart);"
+    ],
+    "description": "for"
+  },
+  "console.log ''": {
+    "prefix": "log",
+    "scope": "javascript",
+    "body": [
+      "console.log('$1');"
+    ],
+    "description": "console.log ''"
+  },
+  "console.log ``": {
+    "prefix": "log",
+    "scope": "javascript",
+    "body": [
+      "console.log(`$1`);"
+    ],
+    "description": "console.log ``"
+  },
+  "picture source": {
+    "prefix": "pics",
+    "scope": "html",
+    "body": [
+      "<picture>\r",
+      "  <source srcset=\"\r",
+      "                ./images/img@m1x.jpg 1x,\r",
+      "                ./images/img@m2x.jpg 2x\r",
+      "              \" media=\"(min-width: 480px)\" />\r",
+      "  <source srcset=\"\r",
+      "                ./images/img@t1x.jpg 1x,\r",
+      "                ./images/img@t2x.jpg 2x\r",
+      "              \" media=\"(min-width: 768px)\" />\r",
+      "  <source srcset=\"\r",
+      "                ./images/img@d1x.jpg 1x,\r",
+      "                ./images/img@d2x.jpg 2x\r",
+      "              \" media=\"(min-width: 1200px)\" />\r",
+      "  <img class=\"\" src=\"./images/img@m1x.jpg\" alt=\"\" />\r",
+      "</picture>"
+    ],
+    "description": "picture source"
+  },
+  "background-color: transparent": {
+    "prefix": "bgct",
+    "scope": "scss",
+    "body": [
+      "background-color: transparent;"
+    ],
+    "description": "background-color: transparent"
+  },
+  "flex-wrap: wrap": {
+    "prefix": "flww",
+    "scope": "scss",
+    "body": [
+      "flex-wrap: wrap;"
+    ],
+    "description": "flex-wrap: wrap"
+  },
+  "@include r(1200){}": {
+    "prefix": "m1200",
+    "scope": "scss",
+    "body": [
+      "@include r(1200){$1}"
+    ],
+    "description": "@include r(1200){}"
+  },
+  "@include r(620){}": {
+    "prefix": "m620",
+    "scope": "scss",
+    "body": [
+      "@include r(620){$1}"
+    ],
+    "description": "@include r(620){}"
+  },
+  "@include r(500){}": {
+    "prefix": "m500",
+    "scope": "scss",
+    "body": [
+      "@include r(500){$1}"
+    ],
+    "description": "@include r(500){}"
+  },
+  "@include r(476){}": {
+    "prefix": "m476",
+    "scope": "scss",
+    "body": [
+      "@include r(476){$1}"
+    ],
+    "description": "@include r(476){}"
+  },
+  "max-width": {
+    "prefix": "maxw",
+    "isFileTemplate": true,
+    "scope": "scss",
+    "body": [
+      "max-width: $1px;"
+    ],
+    "description": "max-width"
+  },
+  "flex-direction: column": {
+    "prefix": "fldc",
+    "scope": "scss",
+    "body": [
+      "flex-direction: column;"
+    ],
+    "description": "flex-direction: column"
+  },
+  "font-size": {
+    "prefix": "fos",
+    "scope": "scss",
+    "body": [
+      "font-size: $1px;$2"
+    ],
+    "description": "font-size"
+  },
+  "@include media": {
+    "prefix": "@r",
+    "scope": "scss",
+    "body": [
+      "    @include r($1){\r",
+      "      \r",
+      "    }"
+    ],
+    "description": "@include media"
+  },
+  "background-image": {
+    "prefix": "bgi",
+    "scope": "scss",
+    "body": [
+      "background-image: url(../img/$1);\r",
+      "background-repeat: no-repeat;\r",
+      "background-position: $2 $3;\r",
+      "background-size: $4;"
+    ],
+    "description": "background-image"
+  },
+  "@include r(1050){}": {
+    "prefix": "m1050",
+    "scope": "scss",
+    "body": [
+      "@include r(1050){$1}"
+    ],
+    "description": "@include r(1050){}"
+  },
+  "@include r(860){}": {
+    "prefix": "m860",
+    "scope": "scss",
+    "body": [
+      "@include r(860){$1}"
+    ],
+    "description": "@include r(860){}"
+  },
   "js-cont": {
     "prefix": "js-",
     // "scope": "javascript",
@@ -29,5 +394,676 @@
       "</svg>"
     ],
     "description": "Snippet for use svg sprites"
+  },
+  "reduce": {
+    "prefix": ".red",
+    "scope": "javascript",
+    "body": [
+      ".reduce(($1)=>{$2}, 0)"
+    ],
+    "description": "reduce 0"
+  },
+  //JS
+  "console.table": {
+    "prefix": "tab",
+    "scope": "javascript",
+    "body": [
+      "console.table($1);$2"
+    ],
+    "description": "console.table"
+  },
+  "console.dir": {
+    "prefix": "dir",
+    "scope": "javascript",
+    "body": [
+      "console.dir($1)$2"
+    ],
+    "description": "console.dir"
+  },
+  "console.log();": {
+    "prefix": "дщп",
+    "scope": "javascript",
+    "body": [
+      "console.log($1)$2"
+    ],
+    "description": "console.log();"
+  },
+  "for...of": {
+    "prefix": "forof",
+    "scope": "javascript",
+    "body": [
+      "for (const item$1 of items$2) {\r",
+      "  console.log(item$1);\r",
+      "}"
+    ],
+    "description": "for...of"
+  },
+  "console.log": {
+    "prefix": "lg",
+    "scope": "javascript",
+    "body": [
+      "console.log($1);"
+    ],
+    "description": "console.log"
+  },
+  "js arrow reduce, 0": {
+    "prefix": "arr",
+    "scope": "javascript",
+    "body": [
+      "((${1:item}, ${2:item})=>{$3},0)"
+    ],
+    "description": "js arrow reduce, 0"
+  },
+  "constructor": {
+    "prefix": "constr",
+    "scope": "javascript",
+    "body": [
+      "constructor({$1}={}){$2}"
+    ],
+    "description": "constructor"
+  },
+  "constructor super": {
+    "prefix": "super",
+    "scope": "javascript",
+    "body": [
+      "  constructor({ $1, ...restProps } = {}) {\r",
+      "    super(restProps);\r",
+      "    this.$1 = $1;\r",
+      "  }"
+    ],
+    "description": "constructor super"
+  },
+  "const": {
+    "prefix": "сщты",
+    "scope": "javascript",
+    "body": [
+      "const $1"
+    ],
+    "description": "const"
+  },
+  "addEventListener 'click'": {
+    "prefix": "click",
+    "scope": "javascript",
+    "body": [
+      "addEventListener('click',()=>{$1})"
+    ],
+    "description": "addEventListener 'click'"
+  },
+  "document.createElement": {
+    "prefix": "docre",
+    "scope": "javascript",
+    "body": [
+      "document.createElement('$1');"
+    ],
+    "description": "document.createElement"
+  },
+  "import": {
+    "prefix": "import",
+    "scope": "javascript",
+    "body": [
+      "import $1 from \"../$2\";"
+    ],
+    "description": "import"
+  },
+  "pointer-events: auto;": {
+    "prefix": "poi:au",
+    "scope": "css",
+    "body": [
+      "pointer-events: auto;"
+    ],
+    "description": "pointer-events: auto;"
+  },
+  "burger": {
+    "scope": "html",
+    "prefix": "g-burger",
+    "body": [
+      "<button class=\"btn-reset burger\" aria-label=\"Открыть меню\" aria-expanded=\"false\" data-burger>",
+      "  <span class=\"burger__line\"></span>",
+      "</button>"
+    ],
+    "description": "Snippet for burger btn"
+  },
+  "checkbox": {
+    "scope": "html",
+    "prefix": "g-checkbox",
+    "body": [
+      "<label class=\"custom-checkbox\">",
+      "  <input type=\"checkbox\" class=\"custom-checkbox__field\">",
+      "  <span class=\"custom-checkbox__content\">$1</span>",
+      "</label>"
+    ],
+    "description": "Snippet for custom checkbox"
+  },
+  "navigation": {
+    "scope": "html",
+    "prefix": "g-nav",
+    "body": [
+      "<nav class=\"nav\" title=\"$1\">",
+      "  <ul class=\"list-reset nav__list\">",
+      "    <li class=\"nav__item\"><a href=\"#\" class=\"nav__link\"></a></li>",
+      "    <li class=\"nav__item\"><a href=\"#\" class=\"nav__link\"></a></li>",
+      "    <li class=\"nav__item\"><a href=\"#\" class=\"nav__link\"></a></li>",
+      "  </ul>",
+      "</nav>"
+    ],
+    "description": "Snippet for navigation"
+  },
+  "social": {
+    "scope": "html",
+    "prefix": "g-social",
+    "body": [
+      "<ul class=\"list-reset social\" title=\"$1\">",
+      "  <li class=\"social__item\"><a href=\"#\" target=\"_blank\" class=\"social__link social__link--fb\" aria-label=\"Наша страничка в Фейсбуке\"></a></li>",
+      "  <li class=\"social__item\"><a href=\"#\" target=\"_blank\" class=\"social__link social__link--vk\" aria-label=\"Наша страничка во Вконтакте\"></a></li>",
+      "  <li class=\"social__item\"><a href=\"#\" target=\"_blank\" class=\"social__link social__link--tw\" aria-label=\"Наша страничка в Твиттере\"></a></li>",
+      "</ul>"
+    ],
+    "description": "Snippet for social links"
+  },
+  "basicform": {
+    "prefix": "g-form",
+    "body": [
+      "<form action=\"#\" class=\"form\">",
+      "  <label class=\"form__label\">",
+      "    <input type=\"text\" name=\"Имя\" class=\"input-reset form__input\" placeholder=\"Имя\">",
+      "  </label>",
+      "  <button class=\"btn-reset form__btn\">Отправить</button>",
+      "</form>"
+    ],
+    "description": "Snippet for basic form"
+  },
+  "basicswiper": {
+    "prefix": "g-swiper",
+    "body": [
+      "<div class=\"swiper $1\">",
+      "  <div class=\"swiper-wrapper\">",
+      "    <div class=\"swiper-slide\">",
+      "    </div>",
+      "  </div>",
+      "</div>"
+    ],
+    "description": "Snippet for basic swiper structure"
+  },
+  "graph modal Btn": {
+    "prefix": "g-graph-btn",
+    "body": [
+      "<button class=\"btn-reset $1\" data-graph-path=\"$2\">$3</button>"
+    ],
+    "description": "Snippet for graph-modal btn"
+  },
+  "graph modal Structure": {
+    "prefix": "g-graph-modal",
+    "body": [
+      "<div class=\"graph-modal\">",
+      "  <div class=\"graph-modal__container\" role=\"dialog\" aria-modal=\"true\" data-graph-target=\"$1\">",
+      "    <button class=\"btn-reset js-modal-close graph-modal__close\" aria-label=\"Закрыть модальное окно\"></button>",
+      "    <div class=\"graph-modal__content\">$2</div>",
+      "  </div>",
+      "</div>"
+    ],
+    "description": "Snippet for graph-modal basic structure"
+  },
+  "picture": {
+    "prefix": "g-picture",
+    "body": [
+      "<picture>",
+      "  <source srcset=\"$1.webp\" type=\"image/webp\">",
+      "  <img loading=\"lazy\" src=\"$1.$2\" class=\"image\" width=\"$4\" height=\"$5\" alt=\"$3\">",
+      "</picture>"
+    ],
+    "description": "Snippet for basic logo structure"
+  },
+  "svgimg": {
+    "scope": "html",
+    "prefix": "g-svgimg",
+    "body": [
+      "<img loading=\"lazy\" src=\"$1.$2\" class=\"image\" width=\"$4\" height=\"$5\" alt=\"$3\">"
+    ],
+    "description": "Snippet for simple html svg images"
+  },
+  "tooltip": {
+    "prefix": "g-tooltip",
+    "body": [
+      "<span class=\"tooltip\">",
+      "  <button class=\"btn-reset tooltip__btn\" aria-describedby=\"$1\">$2</button>",
+      "  <span class=\"tooltip__txt\" role=\"tooltip\" id=\"$1\">",
+      "    <span class=\"visually-hidden\">Тултип: </span>",
+      "    $3",
+      "  </span>",
+      "</span>"
+    ],
+    "description": "Snippet for tooltip"
+  },
+  "tabs html sctructure": {
+    "prefix": "g-tabs",
+    "body": [
+      "<div class=\"tabs\" data-tabs=\"$1\">",
+      "  <ul class=\"list-reset tabs__nav\">",
+      "    <li class=\"tabs__nav-item\"><button class=\"btn-reset tabs__nav-btn\" type=\"button\">$2</button></li>",
+      "    <li class=\"tabs__nav-item\"><button class=\"btn-reset tabs__nav-btn\" type=\"button\">$3</button></li>",
+      "    <li class=\"tabs__nav-item\"><button class=\"btn-reset tabs__nav-btn\" type=\"button\">$4</button></li>",
+      "  </ul>",
+      "  <div class=\"tabs__content\">",
+      "    <div class=\"tabs__panel\">$5</div>",
+      "    <div class=\"tabs__panel\">$6</div>",
+      "    <div class=\"tabs__panel\">$7</div>",
+      "  </div>",
+      "</div>"
+    ],
+    "description": "Snippet for basic tabs structure"
+  },
+  "html class header": {
+    "prefix": "header",
+    "scope": "html",
+    "body": [
+      "header"
+    ],
+    "description": "html class"
+  },
+  "html class header__inner": {
+    "prefix": "he_i",
+    "scope": "html",
+    "body": [
+      "header__inner"
+    ],
+    "description": "html class"
+  },
+  "burger": {
+    "scope": "html",
+    "prefix": "g-burger",
+    "body": [
+      "<button class=\"btn-reset burger\" aria-label=\"Открыть меню\" aria-expanded=\"false\" data-burger>",
+      "  <span class=\"burger__line\"></span>",
+      "</button>"
+    ],
+    "description": "Snippet for burger btn"
+  },
+  "checkbox": {
+    "scope": "html",
+    "prefix": "g-checkbox",
+    "body": [
+      "<label class=\"custom-checkbox\">",
+      "  <input type=\"checkbox\" class=\"custom-checkbox__field\">",
+      "  <span class=\"custom-checkbox__content\">$1</span>",
+      "</label>"
+    ],
+    "description": "Snippet for custom checkbox"
+  },
+  "navigation": {
+    "scope": "html",
+    "prefix": "g-nav",
+    "body": [
+      "<nav class=\"nav\" title=\"$1\">",
+      "  <ul class=\"list-reset nav__list\">",
+      "    <li class=\"nav__item\"><a href=\"#\" class=\"nav__link\"></a></li>",
+      "    <li class=\"nav__item\"><a href=\"#\" class=\"nav__link\"></a></li>",
+      "    <li class=\"nav__item\"><a href=\"#\" class=\"nav__link\"></a></li>",
+      "  </ul>",
+      "</nav>"
+    ],
+    "description": "Snippet for navigation"
+  },
+  "social": {
+    "scope": "html",
+    "prefix": "g-social",
+    "body": [
+      "<ul class=\"list-reset social\" title=\"$1\">",
+      "  <li class=\"social__item\"><a href=\"#\" target=\"_blank\" class=\"social__link social__link--fb\" aria-label=\"Наша страничка в Фейсбуке\"></a></li>",
+      "  <li class=\"social__item\"><a href=\"#\" target=\"_blank\" class=\"social__link social__link--vk\" aria-label=\"Наша страничка во Вконтакте\"></a></li>",
+      "  <li class=\"social__item\"><a href=\"#\" target=\"_blank\" class=\"social__link social__link--tw\" aria-label=\"Наша страничка в Твиттере\"></a></li>",
+      "</ul>"
+    ],
+    "description": "Snippet for social links"
+  },
+  "basicform": {
+    "prefix": "g-form",
+    "body": [
+      "<form action=\"#\" class=\"form\">",
+      "  <label class=\"form__label\">",
+      "    <input type=\"text\" name=\"Имя\" class=\"input-reset form__input\" placeholder=\"Имя\">",
+      "  </label>",
+      "  <button class=\"btn-reset form__btn\">Отправить</button>",
+      "</form>"
+    ],
+    "description": "Snippet for basic form"
+  },
+  "basicswiper": {
+    "prefix": "g-swiper",
+    "body": [
+      "<div class=\"swiper $1\">",
+      "  <div class=\"swiper-wrapper\">",
+      "    <div class=\"swiper-slide\">",
+      "    </div>",
+      "  </div>",
+      "</div>"
+    ],
+    "description": "Snippet for basic swiper structure"
+  },
+  "graph modal Btn": {
+    "prefix": "g-graph-btn",
+    "body": [
+      "<button class=\"btn-reset $1\" data-graph-path=\"$2\">$3</button>"
+    ],
+    "description": "Snippet for graph-modal btn"
+  },
+  "graph modal Structure": {
+    "prefix": "g-graph-modal",
+    "body": [
+      "<div class=\"graph-modal\">",
+      "  <div class=\"graph-modal__container\" role=\"dialog\" aria-modal=\"true\" data-graph-target=\"$1\">",
+      "    <button class=\"btn-reset js-modal-close graph-modal__close\" aria-label=\"Закрыть модальное окно\"></button>",
+      "    <div class=\"graph-modal__content\">$2</div>",
+      "  </div>",
+      "</div>"
+    ],
+    "description": "Snippet for graph-modal basic structure"
+  },
+  "picture": {
+    "prefix": "g-picture",
+    "body": [
+      "<picture>",
+      "  <source srcset=\"$1.webp\" type=\"image/webp\">",
+      "  <img loading=\"lazy\" src=\"$1.$2\" class=\"image\" width=\"$4\" height=\"$5\" alt=\"$3\">",
+      "</picture>"
+    ],
+    "description": "Snippet for basic logo structure"
+  },
+  "svgimg": {
+    "scope": "html",
+    "prefix": "g-svgimg",
+    "body": [
+      "<img loading=\"lazy\" src=\"$1.$2\" class=\"image\" width=\"$4\" height=\"$5\" alt=\"$3\">"
+    ],
+    "description": "Snippet for simple html svg images"
+  },
+  "tooltip": {
+    "prefix": "g-tooltip",
+    "body": [
+      "<span class=\"tooltip\">",
+      "  <button class=\"btn-reset tooltip__btn\" aria-describedby=\"$1\">$2</button>",
+      "  <span class=\"tooltip__txt\" role=\"tooltip\" id=\"$1\">",
+      "    <span class=\"visually-hidden\">Тултип: </span>",
+      "    $3",
+      "  </span>",
+      "</span>"
+    ],
+    "description": "Snippet for tooltip"
+  },
+  "tabs html sctructure": {
+    "prefix": "g-tabs",
+    "body": [
+      "<div class=\"tabs\" data-tabs=\"$1\">",
+      "  <ul class=\"list-reset tabs__nav\">",
+      "    <li class=\"tabs__nav-item\"><button class=\"btn-reset tabs__nav-btn\" type=\"button\">$2</button></li>",
+      "    <li class=\"tabs__nav-item\"><button class=\"btn-reset tabs__nav-btn\" type=\"button\">$3</button></li>",
+      "    <li class=\"tabs__nav-item\"><button class=\"btn-reset tabs__nav-btn\" type=\"button\">$4</button></li>",
+      "  </ul>",
+      "  <div class=\"tabs__content\">",
+      "    <div class=\"tabs__panel\">$5</div>",
+      "    <div class=\"tabs__panel\">$6</div>",
+      "    <div class=\"tabs__panel\">$7</div>",
+      "  </div>",
+      "</div>"
+    ],
+    "description": "Snippet for basic tabs structure"
+  },
+  "svguse": {
+    "scope": "html",
+    "prefix": "g-use",
+    "body": [
+      "<svg class=\"$1\">",
+      "  <use xlink:href=\"img/sprite.svg#$2\"></use>",
+      "</svg>"
+    ],
+    "description": "Snippet for use svg sprites"
+  },
+  "burger": {
+    "scope": "html",
+    "prefix": "g-burger",
+    "body": [
+      "<button class=\"btn-reset burger\" aria-label=\"Открыть меню\" aria-expanded=\"false\" data-burger>",
+      "  <span class=\"burger__line\"></span>",
+      "</button>"
+    ],
+    "description": "Snippet for burger btn"
+  },
+  "checkbox": {
+    "scope": "html",
+    "prefix": "g-checkbox",
+    "body": [
+      "<label class=\"custom-checkbox\">",
+      "  <input type=\"checkbox\" class=\"custom-checkbox__field\">",
+      "  <span class=\"custom-checkbox__content\">$1</span>",
+      "</label>"
+    ],
+    "description": "Snippet for custom checkbox"
+  },
+  "navigation": {
+    "scope": "html",
+    "prefix": "g-nav",
+    "body": [
+      "<nav class=\"nav\" title=\"$1\">",
+      "  <ul class=\"list-reset nav__list\">",
+      "    <li class=\"nav__item\"><a href=\"#\" class=\"nav__link\"></a></li>",
+      "    <li class=\"nav__item\"><a href=\"#\" class=\"nav__link\"></a></li>",
+      "    <li class=\"nav__item\"><a href=\"#\" class=\"nav__link\"></a></li>",
+      "  </ul>",
+      "</nav>"
+    ],
+    "description": "Snippet for navigation"
+  },
+  "social": {
+    "scope": "html",
+    "prefix": "g-social",
+    "body": [
+      "<ul class=\"list-reset social\" title=\"$1\">",
+      "  <li class=\"social__item\"><a href=\"#\" target=\"_blank\" class=\"social__link social__link--fb\" aria-label=\"Наша страничка в Фейсбуке\"></a></li>",
+      "  <li class=\"social__item\"><a href=\"#\" target=\"_blank\" class=\"social__link social__link--vk\" aria-label=\"Наша страничка во Вконтакте\"></a></li>",
+      "  <li class=\"social__item\"><a href=\"#\" target=\"_blank\" class=\"social__link social__link--tw\" aria-label=\"Наша страничка в Твиттере\"></a></li>",
+      "</ul>"
+    ],
+    "description": "Snippet for social links"
+  },
+  "basicform": {
+    "prefix": "g-form",
+    "body": [
+      "<form action=\"#\" class=\"form\">",
+      "  <label class=\"form__label\">",
+      "    <input type=\"text\" name=\"Имя\" class=\"input-reset form__input\" placeholder=\"Имя\">",
+      "  </label>",
+      "  <button class=\"btn-reset form__btn\">Отправить</button>",
+      "</form>"
+    ],
+    "description": "Snippet for basic form"
+  },
+  "basicswiper": {
+    "prefix": "g-swiper",
+    "body": [
+      "<div class=\"swiper $1\">",
+      "  <div class=\"swiper-wrapper\">",
+      "    <div class=\"swiper-slide\">",
+      "    </div>",
+      "  </div>",
+      "</div>"
+    ],
+    "description": "Snippet for basic swiper structure"
+  },
+  "graph modal Btn": {
+    "prefix": "g-graph-btn",
+    "body": [
+      "<button class=\"btn-reset $1\" data-graph-path=\"$2\">$3</button>"
+    ],
+    "description": "Snippet for graph-modal btn"
+  },
+  "graph modal Structure": {
+    "prefix": "g-graph-modal",
+    "body": [
+      "<div class=\"graph-modal\">",
+      "  <div class=\"graph-modal__container\" role=\"dialog\" aria-modal=\"true\" data-graph-target=\"$1\">",
+      "    <button class=\"btn-reset js-modal-close graph-modal__close\" aria-label=\"Закрыть модальное окно\"></button>",
+      "    <div class=\"graph-modal__content\">$2</div>",
+      "  </div>",
+      "</div>"
+    ],
+    "description": "Snippet for graph-modal basic structure"
+  },
+  "picture": {
+    "prefix": "g-picture",
+    "body": [
+      "<picture>",
+      "  <source srcset=\"$1.webp\" type=\"image/webp\">",
+      "  <img loading=\"lazy\" src=\"$1.$2\" class=\"image\" width=\"$4\" height=\"$5\" alt=\"$3\">",
+      "</picture>"
+    ],
+    "description": "Snippet for basic logo structure"
+  },
+  "svgimg": {
+    "scope": "html",
+    "prefix": "g-svgimg",
+    "body": [
+      "<img loading=\"lazy\" src=\"$1.$2\" class=\"image\" width=\"$4\" height=\"$5\" alt=\"$3\">"
+    ],
+    "description": "Snippet for simple html svg images"
+  },
+  "tooltip": {
+    "prefix": "g-tooltip",
+    "body": [
+      "<span class=\"tooltip\">",
+      "  <button class=\"btn-reset tooltip__btn\" aria-describedby=\"$1\">$2</button>",
+      "  <span class=\"tooltip__txt\" role=\"tooltip\" id=\"$1\">",
+      "    <span class=\"visually-hidden\">Тултип: </span>",
+      "    $3",
+      "  </span>",
+      "</span>"
+    ],
+    "description": "Snippet for tooltip"
+  },
+  "tabs html sctructure": {
+    "prefix": "g-tabs",
+    "body": [
+      "<div class=\"tabs\" data-tabs=\"$1\">",
+      "  <ul class=\"list-reset tabs__nav\">",
+      "    <li class=\"tabs__nav-item\"><button class=\"btn-reset tabs__nav-btn\" type=\"button\">$2</button></li>",
+      "    <li class=\"tabs__nav-item\"><button class=\"btn-reset tabs__nav-btn\" type=\"button\">$3</button></li>",
+      "    <li class=\"tabs__nav-item\"><button class=\"btn-reset tabs__nav-btn\" type=\"button\">$4</button></li>",
+      "  </ul>",
+      "  <div class=\"tabs__content\">",
+      "    <div class=\"tabs__panel\">$5</div>",
+      "    <div class=\"tabs__panel\">$6</div>",
+      "    <div class=\"tabs__panel\">$7</div>",
+      "  </div>",
+      "</div>"
+    ],
+    "description": "Snippet for basic tabs structure"
+  },
+  "console.table": {
+    "prefix": "tab",
+    "scope": "javascript",
+    "body": [
+      "console.table($1);"
+    ],
+    "description": "console.table"
+  },
+  "button type: button": {
+    "prefix": "btnb",
+    "scope": "html",
+    "body": [
+      "  <button type=\"button\">$1</button>"
+    ],
+    "description": "button type: button"
+  },
+  "console.log": {
+    "prefix": "дщп",
+    "scope": "javascript",
+    "body": [
+      "console.log($1);"
+    ],
+    "description": "console.log"
+  },
+  "for...of": {
+    "prefix": "forof",
+    "scope": "javascript",
+    "body": [
+      "for (const item$1 of items$2) {\r",
+      "  console.log(item$1);\r",
+      "}"
+    ],
+    "description": "for...of"
+  },
+  "for...iter": {
+    "prefix": "fori",
+    "scope": "javascript",
+    "body": [
+      "for (let i = 0; i < array$1.length; i += 1) {\r",
+      "  const element = array$2[i];\r",
+      "}"
+    ],
+    "description": "for...iter"
+  },
+  "destructuring object": {
+    "prefix": "dest{}",
+    "scope": "javascript",
+    "body": [
+      "const { key$1 } = object$2;"
+    ],
+    "description": "destructuring"
+  },
+  "destructuring array": {
+    "prefix": "dest[]",
+    "scope": "javascript",
+    "body": [
+      "const [index$1] = array$2;"
+    ],
+    "description": "destructuring"
+  },
+  "const": {
+    "prefix": "сщтые",
+    "scope": "javascript",
+    "body": [
+      "const $1"
+    ],
+    "description": "const"
+  },
+  "const": {
+    "prefix": "c",
+    "scope": "javascript",
+    "body": [
+      "const $1"
+    ],
+    "description": "const"
+  },
+  "console.log();": {
+    "prefix": "lg",
+    "scope": "javascript",
+    "body": [
+      "console.log($1);"
+    ],
+    "description": "console.log();"
+  },
+  "function declaration": {
+    "prefix": "fn",
+    "scope": "javascript",
+    "body": [
+      "function $1($3) {$4}\r",
+      "\r",
+      "$1($2);"
+    ],
+    "description": "function declaration"
+  },
+  "function": {
+    "prefix": "fnn",
+    "scope": "javascript",
+    "body": [
+      "function ($1) {$2}\r",
+    ],
+    "description": "function"
+  },
+  "quantity word": {
+    "prefix": "qua",
+    "scope": "javascript",
+    "body": [
+      "quantity"
+    ],
+    "description": "quantity word"
   }
 }

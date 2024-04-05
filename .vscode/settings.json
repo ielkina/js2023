@@ -1,7 +1,7 @@
-{
+// {
 
   
-  "workbench.colorCustomizations": {
+  // "workbench.colorCustomizations": {
     // "actionBar.toggledBackground": "#ff0000",
     // "activityBar.activeBorder": "#ff0000",
     // "activityBar.background": "#ff0000",
@@ -62,5 +62,6 @@
   // ]
 // }
 
-  },
-}
+//   },
+//   "remote.forwardOnOpen": true,
+// }

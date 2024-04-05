@@ -155,9 +155,71 @@ const handleKeyPress = event => {
     return;
   }
   handleCloseModel();
+  backdropEl.classList.remove('is-open');
 };
 document.addEventListener('keydown', handleKeyPress);
 openModalBtnEl.addEventListener('click', handleOpenModal);
 jsModalClose.addEventListener('click', handleCloseModel);
 //2.50
 
+const btnEls = document.querySelectorAll('.btn');
+
+const handleToggleModal = event => {
+  console.log(123);
+  backdropEl.classList.toggle('is-open');
+  if (event.target.classList.contains('js-modal-open')) {
+    document.addEventListener('keydown', handleKeyPress);
+  } else {
+    document.removeEventListener('keydown', handleKeyPress);
+  }
+};
+
+//вешаем событие на каждый элемент кнопки
+btnEls.forEach(btnEl => {
+  btnEl.addEventListener('click', handleToggleModal);
+});
+
+//accordion
+
+const accordionRefs = {
+  openPanelBtnEls: document.querySelectorAll('.js-accordion-btn'),
+  // accordion: document.querySelector('.accordion'),
+  // accordionList: document.querySelector('.accordion-list'),
+  // accordionListItem: document.querySelector('.accordion-list-item'),
+  // accordionBtn: document.querySelector('.accordion-btn'),
+  // accordionPanel: document.querySelector('.accordion-panel'),
+  // btn: document.querySelector('button'),
+  // p: document.querySelector('p'),
+};
+
+const {
+  openPanelBtnEls,
+  accordion,
+  accordionBtn,
+  accordionList,
+  accordionListItem,
+  accordionPanel,
+  btn,
+  p,
+} = accordionRefs;
+
+console.log(openPanelBtnEls);
+
+const handleOpenPanel = event => {
+  const targetEl = event.target;//находим елемент
+  const currentPanel = targetEl.nextElementSibling; //находим сестринский елемент
+  currentPanel.classList.toggle('active');//добавляем на сестринский элемент клас 
+  // console.log(event.target);
+};
+
+//плохой метод потому как через этот метод навешивается слишком много слушателей и перегружает браузер
+//через метод переберем все элементы кнопок и повесим обработчик события
+openPanelBtnEls.forEach(btn => {
+  btn.addEventListener('click', handleOpenPanel);
+});
+
+
+//! метод поиска от дочернего элемента родительского 
+const childEl = document.querySelector('.js-child-el');
+const parentEl =  childEl.closest('.accordion');
+console.log(parentEl);

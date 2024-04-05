@@ -1,108 +1,333 @@
 {
-  //! HTML
-  "Класс hero__img": {
-    "prefix": "hero__img",
-    "scope": "html",
-    "body": [
-      "hero-img"
-    ],
-    "description": "Класс"
+  "Класс is-open": {
+    "prefix": "is-open",
+    "body": ["is-open"],
+    "description": "Класс is-open"
   },
+  "Класс .is-open": {
+    "prefix": ".is-open",
+    "body": [".is-open"],
+    "description": "Класс .is-open"
+  },
+  "id #is-open": {
+    "prefix": "#is-open",
+    "body": ["#is-open"],
+    "description": "id .is-open"
+  },
+  "Класс js-accordion-btn": {
+    "prefix": "js-accordion-btn",
+    "body": ["js-accordion-btn"],
+    "description": "Класс js-accordion-btn"
+  },
+  "Класс .js-accordion-btn": {
+    "prefix": ".js-accordion-btn",
+    "body": [".js-accordion-btn"],
+    "description": "Класс .js-accordion-btn"
+  },
+  "id #js-accordion-btn": {
+    "prefix": "#js-accordion-btn",
+    "body": ["#js-accordion-btn"],
+    "description": "id #js-accordion-btn"
+  },
+  "Класс accordion": {
+    "prefix": "accordion",
+    "body": ["accordion"],
+    "description": "Класс accordion"
+  },
+  "Класс .accordion": {
+    "prefix": ".accordion",
+    "body": [".accordion"],
+    "description": "Класс .accordion"
+  },
+  "id #accordion": {
+    "prefix": "#accordion",
+    "body": ["#accordion"],
+    "description": "id #accordion"
+  },
+  "Класс accordion-panel": {
+    "prefix": "accordion-panel",
+    "body": ["accordion-panel"],
+    "description": "Класс accordion-panel"
+  },
+  "Класс .accordion-panel": {
+    "prefix": ".accordion-panel",
+    "body": [".accordion-panel"],
+    "description": "Класс .accordion-panel"
+  },
+  "id #accordion-panel": {
+    "prefix": "#accordion-panel",
+    "body": ["#accordion-panel"],
+    "description": "id #accordion-panel"
+  },
+  "Класс accordion-list": {
+    "prefix": "accordion-list",
+    "body": ["accordion-list"],
+    "description": "Класс accordion-list"
+  },
+  "Класс .accordion-list": {
+    "prefix": ".accordion-list",
+    "body": [".accordion-list"],
+    "description": "Класс .accordion-list"
+  },
+  "id #accordion-list": {
+    "prefix": "#accordion-list",
+    "body": ["#accordion-list"],
+    "description": "id #accordion-list"
+  },
+  "Класс accordion-btn": {
+    "prefix": "accordion-btn",
+    "body": ["accordion-btn"],
+    "description": "Класс accordion-btn"
+  },
+  "Класс .accordion-btn": {
+    "prefix": ".accordion-btn",
+    "body": [".accordion-btn"],
+    "description": "Класс .accordion-btn"
+  },
+  "id #accordion-btn": {
+    "prefix": "#accordion-btn",
+    "body": ["#accordion-btn"],
+    "description": "id #accordion-btn"
+  },
+  "Класс accordion-list-item": {
+    "prefix": "accordion-list-item",
+    "body": ["accordion-list-item"],
+    "description": "Класс accordion-list-item"
+  },
+  "Класс .accordion-list-item": {
+    "prefix": ".accordion-list-item",
+    "body": [".accordion-list-item"],
+    "description": "Класс .accordion-list-item"
+  },
+  "id #accordion-list-item": {
+    "prefix": "#accordion-list-item",
+    "body": ["#accordion-list-item"],
+    "description": "id #accordion-list-item"
+  },
+  "Класс list": {
+    "prefix": "list",
+    "body": ["list"],
+    "description": "Класс list"
+  },
+  "Класс .list": {
+    "prefix": ".list",
+    "body": [".list"],
+    "description": "Класс .list"
+  },
+  "id #list": {
+    "prefix": "#list",
+    "body": ["#list"],
+    "description": "id #list"
+  },
+  "Класс item": {
+    "prefix": "item",
+    "body": ["item"],
+    "description": "Класс item"
+  },
+  "Класс .item": {
+    "prefix": ".item",
+    "body": [".item"],
+    "description": "Класс .item"
+  },
+  "id #item": {
+    "prefix": "#item",
+    "body": ["#item"],
+    "description": "id #item"
+  },
+  "Класс panel": {
+    "prefix": "panel",
+    "body": ["panel"],
+    "description": "Класс panel"
+  },
+  "Класс .panel": {
+    "prefix": ".panel",
+    "body": [".panel"],
+    "description": "Класс .panel"
+  },
+  "id #panel": {
+    "prefix": "#panel",
+    "body": ["#panel"],
+    "description": "id #panel"
+  },
+  "Класс js-panel": {
+    "prefix": "js-panel",
+    "body": ["js-panel"],
+    "description": "Класс js-panel"
+  },
+  "Класс .js-panel": {
+    "prefix": ".js-panel",
+    "body": [".js-panel"],
+    "description": "Класс .js-panel"
+  },
+  "id #js-panel": {
+    "prefix": "#js-panel",
+    "body": ["#js-panel"],
+    "description": "id #js-panel"
+  },
+  "Класс btn": {
+    "prefix": "btn",
+    "body": ["btn"],
+    "description": "Класс btn"
+  },
+  "Класс .btn": {
+    "prefix": ".btn",
+    "body": [".btn"],
+    "description": "Класс .btn"
+  },
+  "id #btn": {
+    "prefix": "#btn",
+    "body": ["#btn"],
+    "description": "id #btn"
+  }
+
+  // "Класс header": {
+  //   "prefix": "header",
+  //   "body": ["header"],
+  //   "description": "Класс header"
+  // },
+  // "Класс .header": {
+  //   "prefix": ".header",
+  //   "body": [".header"],
+  //   "description": "Класс .header"
+  // }
+  // "Класс hero__img": {
+  //   "prefix": "hero__img",
+  //   "scope": "html",
+  //   "body": ["hero-img"],
+  //   "description": "Класс"
+  // },
+  // "слово quantity": {
+  //   "prefix": "qua",
+  //   "scope": "javascript",
+  //   "body": ["quantity"],
+  //   "description": "слово quantity"
+  // },
   //! JS
-  "Класс hero__img": {
-    "prefix": ".hero__img",
-    "scope": "javascript",
-    "body": [
-      "hero-img"
-    ],
-    "description": "html класс"
-  },
-  "класс .js-backdrop": {
-    "prefix": ".js-backdrop",
-    "scope": "javascript",
-    "body": [
-      ".js-backdrop"
-    ],
-    "description": "Класс html .js-backdrop"
-  },
-  "класс .modal": {
-    "prefix": ".modal",
-    "scope": "javascript",
-    "body": [
-      ".modal"
-    ],
-    "description": "Класс html .modal"
-  },
-  "класс .close-btn": {
-    "prefix": ".close-btn",
-    "scope": "javascript",
-    "body": [
-      ".close-btn"
-    ],
-    "description": "Класс html .close-btn"
-  },
-  "класс .js-modal-close": {
-    "prefix": ".js-modal-close",
-    "scope": "javascript",
-    "body": [
-      ".js-modal-close"
-    ],
-    "description": "Класс html .js-modal-close"
-  },
-  "класс .js-input": {
-    "prefix": ".js-",
-    "scope": "javascript",
-    "body": [
-      ".js-input"
-    ],
-    "description": "Класс html .js-input"
-  },
-  "класс .js-form": {
-    "prefix": ".js-",
-    "scope": "javascript",
-    "body": [
-      ".js-form"
-    ],
-    "description": "Класс html .js-form"
-  },
-  "класс .js-cont": {
-    "prefix": ".js-",
-    "scope": "javascript",
-    "body": [
-      ".js-container"
-    ],
-    "description": "Класс HTML .js-container"
-  },
-  "класс .js-click": {
-    "prefix": ".js-",
-    "scope": "javascript",
-    "body": [
-      ".js-click"
-    ],
-    "description": "Класс HTML .js-click"
-  },
-  "класс .js-title": {
-    "prefix": ".js-",
-    "scope": "javascript",
-    "body": [
-      ".js-title"
-    ],
-    "description": "Класс html .js-title"
-  },
-  "класс .js-modal-open": {
-    "prefix": ".js-",
-    "scope": "javascript",
-    "body": [
-      ".js-modal-open"
-    ],
-    "description": "Класс html .js-modal-open"
-  },
-  "класс .backdrop": {
-    "prefix": ".backdrop",
-    "scope": "javascript",
-    "body": [
-      ".backdrop"
-    ],
-    "description": "Класс html .backdrop"
-  },
+  // "Класс hero__img": {
+  //   "prefix": ".hero__img",
+  //   "scope": "javascript",
+  //   "body": ["hero-img"],
+  //   "description": "html класс"
+  // },
+  // "класс .js-backdrop": {
+  //   "prefix": ".js-backdrop",
+  //   "scope": "javascript",
+  //   "body": [".js-backdrop"],
+  //   "description": "Класс html .js-backdrop"
+  // },
+  // ".js-backdrop": {
+  //   "scope": "javascript",
+  //   "prefix": "data",
+  //   "body": ["'[data-action=\".js-backdrop\"]'"],
+  //   "description": "data-action .js-backdrop"
+  // },
+  // "класс .modal": {
+  //   "prefix": ".modal",
+  //   "scope": "javascript",
+  //   "body": [".modal"],
+  //   "description": "Класс html .modal"
+  // },
+  // "js-cont": {
+  //   "prefix": "js-",
+  //   // "scope": "javascript",
+  //   "body": ["js-container"],
+  //   "description": "Класс HTML js-container"
+  // },
+  // "класс .close-btn": {
+  //   "prefix": ".close-btn",
+  //   "scope": "javascript",
+  //   "body": [".close-btn"],
+  //   "description": "Класс html .close-btn"
+  // },
+  // "html class js-backdrop": {
+  //   "scope": "javascript",
+  //   "prefix": ".js-",
+  //   "body": ["'.js-backdrop'"],
+  //   "description": "html class"
+  // },
+  // "html class header": {
+  //   "scope": "javascript",
+  //   "prefix": ".header",
+  //   "body": ["'.header'"],
+  //   "description": "html class"
+  // },
+  // "класс .js-modal-close": {
+  //   "prefix": ".js-modal-close",
+  //   "scope": "javascript",
+  //   "body": [".js-modal-close"],
+  //   "description": "Класс html .js-modal-close"
+  // },
+  // "класс .js-input": {
+  //   "prefix": ".js-",
+  //   "scope": "javascript",
+  //   "body": [".js-input"],
+  //   "description": "Класс html .js-input"
+  // },
+  // "класс .js-form": {
+  //   "prefix": ".js-",
+  //   "scope": "javascript",
+  //   "body": [".js-form"],
+  //   "description": "Класс html .js-form"
+  // },
+  // "класс .js-cont": {
+  //   "prefix": ".js-",
+  //   "scope": "javascript",
+  //   "body": [".js-container"],
+  //   "description": "Класс HTML .js-container"
+  // },
+  // "класс .js-click": {
+  //   "prefix": ".js-",
+  //   "scope": "javascript",
+  //   "body": [".js-click"],
+  //   "description": "Класс HTML .js-click"
+  // },
+  // "класс .js-title": {
+  //   "prefix": ".js-",
+  //   "scope": "javascript",
+  //   "body": [".js-title"],
+  //   "description": "Класс html .js-title"
+  // },
+  // "класс .js-modal-open": {
+  //   "prefix": ".js-",
+  //   "scope": "javascript",
+  //   "body": [".js-modal-open"],
+  //   "description": "Класс html .js-modal-open"
+  // },
+  // "класс .backdrop": {
+  //   "prefix": ".backdrop",
+  //   "scope": "javascript",
+  //   "body": [".backdrop"],
+  //   "description": "Класс html .backdrop"
+  // },
+  //id
+  // "id #js-cont": {
+  //   "prefix": "#js-",
+  //   "scope": "javascript",
+  //   "body": ["'#js-container'"],
+  //   "description": "id html tag"
+  // },
+  // "[data-action decrement]": {
+  //   "prefix": "data-dec",
+  //   "scope": "javascript",
+  //   "body": ["'[data-action=\"decrement\"]'"],
+  //   "description": "Атрибут data-action=decrement"
+  // },
+  // "[data-action increment]": {
+  //   "prefix": "data-inc",
+  //   "scope": "javascript",
+  //   "body": ["'[data-action=\"increment\"]'"],
+  //   "description": "Атрибут data-action = increment"
+  // },
+  // "[data-action close-modal]": {
+  //   "scope": "javascript",
+  //   "prefix": "data-clm",
+  //   "body": ["'[data-action=\"close-modal\"]'"],
+  //   "description": "Атрибут data-action=close-modal"
+  // },
+  // "[data-action open-modal]": {
+  //   "scope": "javascript",
+  //   "prefix": "data-opm",
+  //   "body": ["'[data-action=\"open-modal\"]'"],
+  //   "description": "Атрибут data-action=open-modal"
+  // }
 }

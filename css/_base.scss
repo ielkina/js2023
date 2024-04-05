@@ -1,451 +1,451 @@
-$text-color: #0ff;
-$display: grid;
-$flex-direction: column;
-$box-justify-content: center;
-$caret-color: #00f;
+// $text-color: #0ff;
+// $display: grid;
+// $flex-direction: column;
+// $box-justify-content: center;
+// $caret-color: #00f;
 
-:root {
-  //можно применять ко всем элементам у которого есть ширина
-  --font-size: clamp(1rem, calc(0.83rem + 0.83vw), 1.5rem);
-  --max-width: 1200px;
-}
-
-html {
-  color: $text-color;
-}
-
-html {
-  display: $display;
-}
-
-body {
-  max-width: --max-width;
-  background-color: #292929ff;
-  color: #fff;
-  display: flex;
-  justify-content: center;
-  flex-direction: $flex-direction;
-  align-items: center;
-  display: grid;
-}
-
-a {
-  text-decoration: none;
-  color: #6b6868;
-}
-
-.box {
-  width: 200px;
-  justify-content: $box-justify-content;
-  font-size: 24px;
-}
-
-.box button {
-  margin-bottom: 10px;
-}
-
-.js-value {
-  display: flex;
-  margin: 20px;
-  justify-content: center;
-}
-
-.back {
-  border: 0;
-  background: #008000;
-  width: 200px;
-}
-
-.back a {
-  color: #f0f8ff;
-  text-decoration: none;
-}
-
-.js-decrement {
-  padding: 0;
-  width: max-content;
-}
-
-.js-increment {
-  padding: 0;
-  width: max-content;
-}
-
-#counter-1,
-#counter-2 {
-  display: block;
-}
-
-.js-button {
-  margin-bottom: 20px;
-}
-
-.js-actions button {
-  margin-bottom: 10px;
-}
-
-.js-actions__option {
-  margin-bottom: 10px;
-}
-
-.hero__image {
-  width: 150px;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-hr {
-  display: block;
-  max-width: 100%;
-}
-
-.site-nav__link--current {
-  color: #8829e0;
-}
-
-.title-color {
-  color: #0ff;
-}
-
-.img {
-  display: block;
-  width: 300px;
-  height: auto;
-}
-
-.description {
-  max-width: 400px;
-}
-
-.list__item {
-  color: #ff0000;
-}
-
-.list__item:hover {
-  color: #ff00;
-}
-
-.some-img {
-  display: block;
-  width: 600px;
-  height: auto;
-  margin-bottom: 20px;
-}
-
-.swap-image-btn {
-  margin-bottom: 20px;
-}
-
-.backdrop {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: #000000bf;
-  opacity: 0;
-  visibility: hidden;
-  pointer-events: none;
-}
-
-.modal {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  min-width: 500px;
-  min-height: 360px;
-  background-color: #fff;
-}
-
-.is-backdrop-open {
-  opacity: 1;
-  visibility: visible;
-  pointer-events: auto;
-}
-
-.modal-btn {
-  margin-top: 10px;
-  padding: 10px 15px;
-  border: 0;
-  border: 0;
-  border-radius: 4px;
-  border-radius: 4px;
-  cursor: pointer;
-  background-color: #fff;
-  transition: background-color 250ms lines;
-}
-
-.modal-btn:hover,
-.modal-btn:focus {
-  background-color: #7f8c8d;
-}
-
-.modal-img {
-  width: 100%;
-  height: 100%;
-  margin: 0;
-  padding: 0;
-  border: 0;
-}
-
-button {
-  margin-bottom: 10px;
-  padding: 0;
-}
-
-.js-register-form {
-  border: 1px solid #ff0000;
-}
-
-button {
-  background-color: #4440408d;
-  color: #ffffff70;
-  margin-bottom: 10px;
-  padding: 0;
-}
-
-.js-register-form {
-  border: 1px solid #ff0000;
-}
-
-.container {
-  width: 50px;
-  height: 50px;
-  background-color: #00f;
-}
-
-.js-form {
-  display: flex;
-  flex-direction: column;
-}
-
-.tog {
-  display: none;
-}
-
-.js-list-cars {
-  margin: auto;
-}
-
-ul {
-  list-style: none;
-}
-
-.js-favorite {
-  cursor: pointer;
-}
-
-a:hover:after {
-  width: 100%;
-}
-
-input {
-  // caret-color: rgb(238, 228, 228);
-  // caret-style: block;
-  border-right: 1px solid transparent;
-}
-
-input:focus {
-  animation: PulseAttention 1.5s cubic-bezier(0.215, 0.61, 0.355, 1) forwards
-    infinite;
-}
-
-@keyframes PulseAttention {
-  50% {
-    border-color: #ff0000;
-  }
-}
-
-input:not([value='']) ~ .fb-Search_Label {
-  justify-content: flex-end;
-}
-
-input:not([value='']) ~ .fb-Search_Label {
-  justify-content: flex-end;
-}
-
-.my-Input {
-  border-right: 1px solid transparent;
-}
-
-.my-Input:focus {
-  animation: PulseAttention 1.5s cubic-bezier(0.215, 0.61, 0.355, 1) forwards
-    infinite;
-}
-
-@keyframes PulseAttention {
-  50% {
-    border-color: #ff0000;
-  }
-}
-
-.my-Input {
-  color: #ffffff;
-  /*Means both the text and caret will be white*/
-  background-color: #ffffff;
-  text-shadow: 0 0 2px #888;
-}
-
-.fb-Search_Input:not([value='']) ~ .fb-Search_Label {
-  justify-content: flex-end;
-}
-
-@mixin img-mask($clip-path, $scale, $s) {
-  clip-path: $clip-path;
-
-  &__img {
-    transition: transform #{$s}s ease-in-out;
-
-    &:hover {
-      transform: scale($scale);
-    }
-  }
-}
-
-//что бы картинка увеличивалась не выходя за рамки размеров нужно накладывать дополнительный
-//html элемент и накладывать маску
-
-.item {
-  max-width: 200px;
-  @include img-mask(polygon(0 0, 100% 0, 100% 100%, 0% 100%), 1.5, 1);
-  color: rgb(255, 174, 0);
-}
-
-// h2 {
-//   color: #0ff;
-//   color: #0ff;
-//   font-size: var(--font-size);
+// :root {
+//   //можно применять ко всем элементам у которого есть ширина
+//   --font-size: clamp(1rem, calc(0.83rem + 0.83vw), 1.5rem);
+//   --max-width: 1200px;
 // }
 
-//полезные свойства селекторов
-// .div {
+// html {
+//   color: $text-color;
+// }
+
+// html {
+//   display: $display;
+// }
+
+// body {
+//   // max-width: --max-width;
+//   background-color: #292929ff;
+//   color: #fff;
+//   // display: flex;
+//   // justify-content: center;
+//   // flex-direction: $flex-direction;
+//   // align-items: center;
+//   // display: grid;
+// }
+
+// a {
+//   text-decoration: none;
+//   color: #6b6868;
+// }
+
+// .box {
+//   width: 200px;
+//   justify-content: $box-justify-content;
+//   font-size: 24px;
+// }
+
+// .box button {
+//   margin-bottom: 10px;
+// }
+
+// .js-value {
+//   display: flex;
+//   margin: 20px;
+//   justify-content: center;
+// }
+
+// .back {
+//   border: 0;
+//   background: #008000;
+//   width: 200px;
+// }
+
+// .back a {
+//   color: #f0f8ff;
+//   text-decoration: none;
+// }
+
+// .js-decrement {
+//   padding: 0;
+//   width: max-content;
+// }
+
+// .js-increment {
+//   padding: 0;
+//   width: max-content;
+// }
+
+// #counter-1,
+// #counter-2 {
+//   display: block;
+// }
+
+// .js-button {
+//   margin-bottom: 20px;
+// }
+
+// .js-actions button {
+//   margin-bottom: 10px;
+// }
+
+// .js-actions__option {
+//   margin-bottom: 10px;
+// }
+
+// .hero__image {
+//   width: 150px;
+//   display: block;
+//   margin-left: auto;
+//   margin-right: auto;
+// }
+
+// hr {
+//   display: block;
+//   max-width: 100%;
+// }
+
+// .site-nav__link--current {
+//   color: #8829e0;
+// }
+
+// .title-color {
+//   color: #0ff;
+// }
+
+// .img {
+//   display: block;
+//   width: 300px;
+//   height: auto;
+// }
+
+// .description {
+//   max-width: 400px;
+// }
+
+// .list__item {
+//   color: #ff0000;
+// }
+
+// .list__item:hover {
+//   color: #ff00;
+// }
+
+// .some-img {
+//   display: block;
+//   width: 600px;
+//   height: auto;
+//   margin-bottom: 20px;
+// }
+
+// .swap-image-btn {
+//   margin-bottom: 20px;
+// }
+
+// .backdrop {
+//   position: fixed;
+//   top: 0;
+//   left: 0;
+//   right: 0;
+//   bottom: 0;
+//   background-color: #000000bf;
+//   opacity: 0;
+//   visibility: hidden;
+//   pointer-events: none;
+// }
+
+// .modal {
+//   position: absolute;
+//   top: 50%;
+//   left: 50%;
+//   transform: translate(-50%, -50%);
+//   min-width: 500px;
+//   min-height: 360px;
+//   background-color: #fff;
+// }
+
+// .is-backdrop-open {
+//   opacity: 1;
+//   visibility: visible;
+//   pointer-events: auto;
+// }
+
+// .modal-btn {
+//   margin-top: 10px;
+//   padding: 10px 15px;
+//   border: 0;
+//   border: 0;
+//   border-radius: 4px;
+//   border-radius: 4px;
+//   cursor: pointer;
+//   background-color: #fff;
+//   transition: background-color 250ms lines;
+// }
+
+// .modal-btn:hover,
+// .modal-btn:focus {
+//   background-color: #7f8c8d;
+// }
+
+// .modal-img {
 //   width: 100%;
-//   aspect-ratio: 16/9; //пропорциональное уменьшение блоков
+//   height: 100%;
+//   margin: 0;
+//   padding: 0;
+//   border: 0;
 // }
 
-// .div {
-//   //минимальное окно, желаемое, максимальное
-//   font-size: clamp(16px, 5vw, 24px); //адаптивный шрифт
+// button {
+//   margin-bottom: 10px;
+//   padding: 0;
+// }
+
+// .js-register-form {
+//   border: 1px solid #ff0000;
+// }
+
+// button {
+//   background-color: #4440408d;
+//   color: #ffffff70;
+//   margin-bottom: 10px;
+//   padding: 0;
+// }
+
+// .js-register-form {
+//   border: 1px solid #ff0000;
+// }
+
+// .container {
+//   width: 50px;
+//   height: 50px;
+//   background-color: #00f;
+// }
+
+// .js-form {
+//   display: flex;
+//   flex-direction: column;
+// }
+
+// .tog {
+//   display: none;
+// }
+
+// .js-list-cars {
+//   margin: auto;
+// }
+
+// ul {
+//   list-style: none;
+// }
+
+// .js-favorite {
+//   cursor: pointer;
+// }
+
+// a:hover:after {
+//   width: 100%;
 // }
 
 // input {
-//   // caret-color: $caret-color; //покраска курсора
+//   // caret-color: rgb(238, 228, 228);
+//   // caret-style: block;
+//   border-right: 1px solid transparent;
 // }
 
-//вешаем на элементы свой каунтер
-// body {
-//   counter-reset: my-counter;
+// input:focus {
+//   animation: PulseAttention 1.5s cubic-bezier(0.215, 0.61, 0.355, 1) forwards
+//     infinite;
 // }
 
-// h2::before {
-//   counter-increment: my-counter;
-//   content: counter(my-counter) ': ';
-// }
-//меняем местами секции
-// .grid {
-//   display: flex;
-//   gap: 10px;
-//   flex-direction: column;
-// }
-// h2::nth-child(1) {
-//   orphans: 1;
-// }
-// h2::nth-child(2) {
-//   orphans: 2;
-// }
-// h2::nth-child(3) {
-//   orphans: 4;
-// }
-// h2::nth-child(4) {
-//   orphans: 5;
-// }
-// h2::nth-child(5) {
-//   orphans: 4;
-// }
-// h2::nth-child(6) {
-//   orphans: 6;
+// @keyframes PulseAttention {
+//   50% {
+//     border-color: #ff0000;
+//   }
 // }
 
-//скрол
-// .grid {
-//   width: 100%;
-//   height: 100vh;
-//   overflow: scroll;
-//   scroll-snap-type: y mandatory;
-//   scroll-snap-type: y proximity;
-// }
-// .grid > div {
-//   width: 100%;
-//   height: 50vh;
-//   display: flex;
-//   align-items: center;
-//   justify-content: center;
-//   scroll-snap-align: center;
-// }
-// div::nth-child(even) {
-//   background-color: #0ff;
-// }
-// div::nth-child(odd) {
-//   background-color: #1c4d4d;
+// input:not([value='']) ~ .fb-Search_Label {
+//   justify-content: flex-end;
 // }
 
-//
-// .rec {
-//   width: 400px;
-//   height: 400px;
-//   clip-path: circle(
-//     100% at 0 0
-//   ); //накладываем маску на контейнер, в скобках радиус
-//   //100% это квадрат/ 0 0 координаты
-//   transition: all 300ms ease-in-out;
-// }
-// .rec:hover {
-//   clip-path: circle(50%);
+// input:not([value='']) ~ .fb-Search_Label {
+//   justify-content: flex-end;
 // }
 
-//perspective
-// body {
-//   display: flex;
-//   align-items: center;
-//   justify-content: center;
-//   height: 100vh;
-// }
-// .container {
-//   width: 200px;
-//   height: 200px;
-//   border: 1px solid #0000ff;
-//   perspective: 200px;
-// }
-// .container > div {
-//   width: 200px;
-//   height: 200px;
-//   border-color: #ff0000;
-//   transform: rotateY(45deg);
-// }
-//filter
-// img{
-//   min-width: 100%;
-//   height: auto;
-//   filter: grayscale(70%);
-// }
-// h2 {
-//   filter: blur(10px);
-
-// }
-// h2:active {
-//   filter: blur(0);
-
-// }
-// h2:hover {
-//   filter: blur(0);
-
+// .my-Input {
+//   border-right: 1px solid transparent;
 // }
 
-// h2:hover {
-//   filter: blur(0);
-
+// .my-Input:focus {
+//   animation: PulseAttention 1.5s cubic-bezier(0.215, 0.61, 0.355, 1) forwards
+//     infinite;
 // }
 
-// @import url('modal');
+// @keyframes PulseAttention {
+//   50% {
+//     border-color: #ff0000;
+//   }
+// }
+
+// .my-Input {
+//   color: #ffffff;
+//   /*Means both the text and caret will be white*/
+//   background-color: #ffffff;
+//   text-shadow: 0 0 2px #888;
+// }
+
+// .fb-Search_Input:not([value='']) ~ .fb-Search_Label {
+//   justify-content: flex-end;
+// }
+
+// @mixin img-mask($clip-path, $scale, $s) {
+//   clip-path: $clip-path;
+
+//   &__img {
+//     transition: transform #{$s}s ease-in-out;
+
+//     &:hover {
+//       transform: scale($scale);
+//     }
+//   }
+// }
+
+// //что бы картинка увеличивалась не выходя за рамки размеров нужно накладывать дополнительный
+// //html элемент и накладывать маску
+
+// .item {
+//   max-width: 200px;
+//   @include img-mask(polygon(0 0, 100% 0, 100% 100%, 0% 100%), 1.5, 1);
+//   color: rgb(255, 174, 0);
+// }
+
+// // h2 {
+// //   color: #0ff;
+// //   color: #0ff;
+// //   font-size: var(--font-size);
+// // }
+
+// //полезные свойства селекторов
+// // .div {
+// //   width: 100%;
+// //   aspect-ratio: 16/9; //пропорциональное уменьшение блоков
+// // }
+
+// // .div {
+// //   //минимальное окно, желаемое, максимальное
+// //   font-size: clamp(16px, 5vw, 24px); //адаптивный шрифт
+// // }
+
+// // input {
+// //   // caret-color: $caret-color; //покраска курсора
+// // }
+
+// //вешаем на элементы свой каунтер
+// // body {
+// //   counter-reset: my-counter;
+// // }
+
+// // h2::before {
+// //   counter-increment: my-counter;
+// //   content: counter(my-counter) ': ';
+// // }
+// //меняем местами секции
+// // .grid {
+// //   display: flex;
+// //   gap: 10px;
+// //   flex-direction: column;
+// // }
+// // h2::nth-child(1) {
+// //   orphans: 1;
+// // }
+// // h2::nth-child(2) {
+// //   orphans: 2;
+// // }
+// // h2::nth-child(3) {
+// //   orphans: 4;
+// // }
+// // h2::nth-child(4) {
+// //   orphans: 5;
+// // }
+// // h2::nth-child(5) {
+// //   orphans: 4;
+// // }
+// // h2::nth-child(6) {
+// //   orphans: 6;
+// // }
+
+// //скрол
+// // .grid {
+// //   width: 100%;
+// //   height: 100vh;
+// //   overflow: scroll;
+// //   scroll-snap-type: y mandatory;
+// //   scroll-snap-type: y proximity;
+// // }
+// // .grid > div {
+// //   width: 100%;
+// //   height: 50vh;
+// //   display: flex;
+// //   align-items: center;
+// //   justify-content: center;
+// //   scroll-snap-align: center;
+// // }
+// // div::nth-child(even) {
+// //   background-color: #0ff;
+// // }
+// // div::nth-child(odd) {
+// //   background-color: #1c4d4d;
+// // }
+
+// //
+// // .rec {
+// //   width: 400px;
+// //   height: 400px;
+// //   clip-path: circle(
+// //     100% at 0 0
+// //   ); //накладываем маску на контейнер, в скобках радиус
+// //   //100% это квадрат/ 0 0 координаты
+// //   transition: all 300ms ease-in-out;
+// // }
+// // .rec:hover {
+// //   clip-path: circle(50%);
+// // }
+
+// //perspective
+// // body {
+// //   display: flex;
+// //   align-items: center;
+// //   justify-content: center;
+// //   height: 100vh;
+// // }
+// // .container {
+// //   width: 200px;
+// //   height: 200px;
+// //   border: 1px solid #0000ff;
+// //   perspective: 200px;
+// // }
+// // .container > div {
+// //   width: 200px;
+// //   height: 200px;
+// //   border-color: #ff0000;
+// //   transform: rotateY(45deg);
+// // }
+// //filter
+// // img{
+// //   min-width: 100%;
+// //   height: auto;
+// //   filter: grayscale(70%);
+// // }
+// // h2 {
+// //   filter: blur(10px);
+
+// // }
+// // h2:active {
+// //   filter: blur(0);
+
+// // }
+// // h2:hover {
+// //   filter: blur(0);
+
+// // }
+
+// // h2:hover {
+// //   filter: blur(0);
+
+// // }
+
+// // @import url('modal');

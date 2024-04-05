@@ -1,0 +1,438 @@
+{
+	"class": {
+		"prefix": "cls",
+		"scope": "javascript",
+		"body": [
+			"class ${1:Parent} {$2}"
+		],
+		"description": "class"
+	},
+	"reduce": {
+		"prefix": ".red",
+		"scope": "javascript",
+		"body": [
+			".reduce(($1)=>{$2}, 0)"
+		],
+		"description": "reduce 0"
+	},
+	"for...of": {
+		"prefix": "forof",
+		"scope": "javascript",
+		"body": [
+			"for (const item$1 of items$2) {\r",
+			"  console.log(item$1);\r",
+			"}"
+		],
+		"description": "for...of"
+	},
+	"console.log": {
+		"prefix": "lg",
+		"scope": "javascript",
+		"body": [
+			"console.log($1);"
+		],
+		"description": "console.log"
+	},
+	"js arrow reduce, 0": {
+		"prefix": "arr",
+		"scope": "javascript",
+		"body": [
+			"((${1:item}, ${2:item})=>{$3},0)"
+		],
+		"description": "js arrow reduce, 0"
+	},
+	"console.log": {
+		"prefix": "дщп",
+		"scope": "javascript",
+		"body": [
+			"console.log($1);"
+		],
+		"description": "console.log"
+	},
+	"for...of": {
+		"prefix": "forof",
+		"scope": "javascript",
+		"body": [
+			"for (const item$1 of items$2) {\r",
+			"  console.log(item$1);\r",
+			"}"
+		],
+		"description": "for...of"
+	},
+	"for...iter": {
+		"prefix": "fori",
+		"scope": "javascript",
+		"body": [
+			"for (let i = 0; i < array$1.length; i += 1) {\r",
+			"  const element = array$2[i];\r",
+			"}"
+		],
+		"description": "for...iter"
+	},
+	"destructuring object": {
+		"prefix": "dest{}",
+		"scope": "javascript",
+		"body": [
+			"const { key$1 } = object$2;"
+		],
+		"description": "destructuring"
+	},
+	"destructuring array": {
+		"prefix": "dest[]",
+		"scope": "javascript",
+		"body": [
+			"const [index$1] = array$2;"
+		],
+		"description": "destructuring"
+	},
+	"function": {
+		"prefix": "fnn",
+		"scope": "javascript",
+		"body": [
+			"function ($1) {$2}\r",
+		],
+		"description": "function"
+	},
+	"quantity word": {
+		"prefix": "qua",
+		"scope": "javascript",
+		"body": [
+			"quantity"
+		],
+		"description": "quantity word"
+	},
+	"console.log();": {
+		"prefix": "lg",
+		"scope": "javascript",
+		"body": [
+			"console.log($1);"
+		],
+		"description": "console.log();"
+	},
+	"function declaration": {
+		"prefix": "fn",
+		"scope": "javascript",
+		"body": [
+			"function $1($3) {$4}\r",
+			"\r",
+			"$1($2);"
+		],
+		"description": "function declaration"
+	},
+	"console.table": {
+		"prefix": "tab",
+		"scope": "javascript",
+		"body": [
+			"console.table($1);"
+		],
+		"description": "console.table"
+	},
+	"document.createElement": {
+		"prefix": "docre",
+		"scope": "javascript",
+		"body": [
+			"document.createElement('$1');"
+		],
+		"description": "document.createElement"
+	},
+	"import": {
+		"prefix": "import",
+		"scope": "javascript",
+		"body": [
+			"import $1 from \"../$2\";"
+		],
+		"description": "import"
+	},
+	"constructor": {
+		"prefix": "constr",
+		"scope": "javascript",
+		"body": [
+			"constructor({$1}={}){$2}"
+		],
+		"description": "constructor"
+	},
+	"constructor super": {
+		"prefix": "super",
+		"scope": "javascript",
+		"body": [
+			"  constructor({ $1, ...restProps } = {}) {\r",
+			"    super(restProps);\r",
+			"    this.$1 = $1;\r",
+			"  }"
+		],
+		"description": "constructor super"
+	},
+	"console.table": {
+		"prefix": "tab",
+		"scope": "javascript",
+		"body": [
+			"console.table($1);$2"
+		],
+		"description": "console.table"
+	},
+	"console.dir": {
+		"prefix": "dir",
+		"scope": "javascript",
+		"body": [
+			"console.dir($1)$2"
+		],
+		"description": "console.dir"
+	},
+	"console.log();": {
+		"prefix": "дщп",
+		"scope": "javascript",
+		"body": [
+			"console.log($1)$2"
+		],
+		"description": "console.log();"
+	},
+	"for": {
+		"prefix": "for",
+		"scope": "javascript",
+		"body": [
+			"for (let i = 0; i < cart.length; i++) {\r",
+			"}\r",
+			"console.log(cart);"
+		],
+		"description": "for"
+	},
+	"console.log ''": {
+		"prefix": "log",
+		"scope": "javascript",
+		"body": [
+			"console.log('$1');"
+		],
+		"description": "console.log ''"
+	},
+	"console.log ``": {
+		"prefix": "log",
+		"scope": "javascript",
+		"body": [
+			"console.log(`$1`);"
+		],
+		"description": "console.log ``"
+	},
+	"console.table()": {
+		"prefix": "table",
+		"scope": "javascript",
+		"body": [
+			"console.table($1);"
+		],
+		"description": "console.table()"
+	},
+	"console.log": {
+		"prefix": "дщп",
+		"scope": "javascript",
+		"body": [
+			"console.log($1);"
+		],
+		"description": "console.log"
+	},
+	"for...of": {
+		"prefix": "forof",
+		"scope": "javascript",
+		"body": [
+			"for (const item$1 of items$2) {\r",
+			"  console.log(item$1);\r",
+			"}"
+		],
+		"description": "for...of"
+	},
+	"function": {
+		"prefix": "fnn",
+		"scope": "javascript",
+		"body": [
+			"function ($1) {$2}\r",
+		],
+		"description": "function"
+	},
+	"destructuring object": {
+		"prefix": "dest{}",
+		"scope": "javascript",
+		"body": [
+			"const { key$1 } = object$2;"
+		],
+		"description": "destructuring"
+	},
+	"destructuring array": {
+		"prefix": "dest[]",
+		"scope": "javascript",
+		"body": [
+			"const [index$1] = array$2;"
+		],
+		"description": "destructuring"
+	},
+	"(callback)": {
+		"prefix": "cal",
+		"scope": "javascript",
+		"body": [
+			"($1)=>{$2}"
+		],
+		"description": "(callback)"
+	},
+	"console.log()": {
+		"prefix": "log",
+		"scope": "javascript",
+		"body": [
+			"console.log($1)"
+		],
+		"description": "console.log()"
+	},
+	"function declaration": {
+		"prefix": "fn",
+		"scope": "javascript",
+		"body": [
+			"function $1($3) {$4}\r",
+		],
+		"description": "function declaration"
+	},
+	"console.log();": {
+		"prefix": "lg",
+		"scope": "javascript",
+		"body": [
+			"console.log($1);"
+		],
+		"description": "console.log();"
+	},
+	"quantity word": {
+		"prefix": "qua",
+		"scope": "javascript",
+		"body": [
+			"quantity"
+		],
+		"description": "quantity word"
+	},
+	"console.table": {
+		"prefix": "tab",
+		"scope": "javascript",
+		"body": [
+			"console.table($1);"
+		],
+		"description": "console.table"
+	},
+	"for...iter": {
+		"prefix": "fori",
+		"scope": "javascript",
+		"body": [
+			"for (let i = 0; i < array$1.length; i += 1) {\r",
+			"  const element = array$2[i];\r",
+			"}"
+		],
+		"description": "for...iter"
+	},
+	"for..of": {
+		"prefix": "for",
+		"scope": "javascript",
+		"body": [
+			"for (const $1 of $2) {\r",
+			"  console.log($3);\r",
+			"}"
+		],
+		"description": "for...of"
+	},
+	"constructor fn": {
+		"prefix": "cfn",
+		"scope": "javascript",
+		"body": [
+			"constructor() {\n$1\n}"
+		],
+		"description": "constructor function"
+	},
+	"constructor this": {
+		"prefix": "conthis",
+		"scope": "javascript",
+		"body": [
+			" constructor($1) {\r",
+			"  this.${1:text} = $1\r",
+			" }"
+		],
+		"description": "constructor this"
+	},
+	"fn =>": {
+		"prefix": "fn =>",
+		"scope": "javascript",
+		"body": [
+			"($1)=>{$2}"
+		],
+		"description": "fn =>"
+	},
+	"(){}": {
+		"prefix": "fn",
+		"scope": "javascript",
+		"body": [
+			"($1){$2}"
+		],
+		"description": "(){}"
+	},
+	"function 1(){2}": {
+		"prefix": "fnfn",
+		"scope": "javascript",
+		"body": [
+			"function $1(){\r$2\r}"
+		],
+		"description": "function (){}"
+	},
+	"for...ite": {
+		"prefix": "fori",
+		"scope": "javascript",
+		"body": [
+			"for (let i = 0; i < ${1:array}.length; i += 1) {\r",
+			"  const element = $1[i];\r",
+			"}"
+		],
+		"description": "for...iter"
+	},
+	"destructuring object": {
+		"prefix": "dest{}",
+		"scope": "javascript",
+		"body": [
+			"const {${1:key}} = ${2:object};"
+		],
+		"description": "destructuring"
+	},
+	"destructuring array": {
+		"prefix": "dest[]",
+		"scope": "javascript",
+		"body": [
+			"const [${1:index}] = ${2:array};"
+		],
+		"description": "destructuring"
+	},
+	"class extends наследование": {
+		"prefix": "ext",
+		"scope": "javascript",
+		"body": [
+			"class ${1:Child} extends ${2:Parent }{\r",
+			"   constructor({$3, $4}={}) {\r",
+			"    super($4);\r",
+			"    this.$3 = $3\r",
+			"   }\r",
+			"}"
+		],
+		"description": "class extends"
+	},
+	"document.querySelector": {
+		"prefix": "docq",
+		"scope": "javascript",
+		"body": [
+			"document.querySelector($1)"
+		],
+		"description": "document.querySelector"
+	},
+	"document.querySelectorAll": {
+		"prefix": "docqa",
+		"scope": "javascript",
+		"body": [
+			"document.querySelectorAll($1)"
+		],
+		"description": "document.querySelectorAll"
+	},
+	"document.addEventListener": {
+		"prefix": "docadd",
+		"scope": "javascript",
+		"body": [
+			"document.addEventListener($1)"
+		],
+		"description": "document.addEventListener"
+	}
+}

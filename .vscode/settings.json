@@ -1,66 +1,66 @@
 {
-  "workbench.iconTheme": "material-icon-theme", //тема иконок
-  "workbench.colorTheme": "Monokai Pro", //тема
-  "files.autoSave": "afterDelay", //автосохранение
-  "editor.tabSize": 2, //размер табуляции
-  "editor.wordWrap": "on", //перенос строки по ширине окна
-  "diffEditor.wordWrap": "inherit", //перенос слов
-  "editor.lineNumbers": "on", //вкл/выкл номера строки слева
-  "editor.renderWhitespace": "all", //отображение пробелов
-  "editor.folding": true, //сворачивает/разворачивает все теги
-  "workbench.editor.tabSizing": "shrink",
-  "workbench.list.smoothScrolling": true,
-  "html.format.maxPreserveNewLines": 0, //удаляет пустые строки
-  "html.format.extraLiners": "head, body, /html, section, !DOCTYPE, html", //теги которым будут добавляться строки до/после
-  "emmet.preferences": {
-    "bem.elementSeparator": "__",
-    "output.reverseAttributes": true,
-    "profile.allowCompactBoolean": true
-  },
-  "workbench.colorCustomizations": {
-    "activityBar.background": "#83838327",
-    "button.background": "#ff0000",
-    "editor.foreground": "#c70707",
-    "selectionBackground": "#0088ff",
-    "selectionForeground": "#ffffff",
-    "accentColor": "#ff0000"
-  },
 
-  "cSpell.language": "en,en-GB,en-US,lorem,ru-RU,ru,uk", //язык проверки на ошибки
-  "cSpell.userWords": [
-    "автосохранение",
-    "втоматически",
-    "инпутов",
-    "модалку",
-    "сабмит",
-    "esbenp",
-    "Monokai",
-    "Rozetka"
-  ],
-  "[html]": {
-    "editor.defaultFormatter": "vscode.html-language-features"
+  
+  "workbench.colorCustomizations": {
+    // "actionBar.toggledBackground": "#ff0000",
+    // "activityBar.activeBorder": "#ff0000",
+    // "activityBar.background": "#ff0000",
+    // "activityBar.activeBackground": "#ff0000",
+    // "activityBar.activeFocusBorder": "#ff0000",
+    // "activityBar.border": "#ff0000",
+    // "activityBar.dropBorder": "#ff0000",
+    // "activityBar.foreground": "#ff0000",
+    // "activityBar.inactiveForeground": "#ff0000",
+    // "activityBarBadge.background": "#ff0000",
+    // "activityBarBadge.foreground": "#ff0000",
+    // "activityBarTop.activeBorder": "#ff0000",
+    // "activityBarTop.dropBorder": "#ff0000",
+    // "activityBarTop.foreground": "#ff0000",
+    // "activityBarTop.inactiveForeground": "#ff0000",
+    // "badge.background": "#ff0000",
+    // "badge.foreground": "#ff0000",
+    // "banner.background": "#ff0000",
+    // "banner.foreground": "#ff0000",
+    // "banner.iconForeground": "#ff0000",
+    // "breadcrumb.activeSelectionForeground": "#ff0000",
+    // "breadcrumb.background": "#ff0000",
+    // "breadcrumb.focusForeground": "#ff0000",
+    // "breadcrumb.foreground": "#ff0000",
+    // "breadcrumbPicker.background": "#ff0000",
+    // "button.background": "#ff0000",
+    // "button.border": "#ff0000",
+    // "button.foreground": "#ff0000",
+    // "button.secondaryBackground": "#ff0000",
+    // "button.hoverBackground": "#ff0000",
+    // "button.secondaryForeground": "#ff0000",
+    // "button.secondaryHoverBackground": "#ff0000",
+    // "button.separator": "#ff0000",
+    // "[Monokai Pro]": {
+    //   "actionBar.toggledBackground": "#ff0000"
+    // }
+
+    // {
+      //prittier
+//   "printWidth": 80,
+//   "useTabs": false,
+//   "semi": true,
+//   "singleQuote": true,
+//   "trailingComma": "es5",
+//   "bracketSpacing": true,
+//   "arrowParens": "avoid",
+//   "proseWrap": "always",
+////////////////////////////////
+// "htmlWhitespaceSensitivity": "ignore",
+  // "overrides": [
+  //   {
+  //     "files": "*.html",
+  //     "options": {
+  //       "parser": "html",
+  //       "htmlWhitespaceSensitivity": "ignore"
+  //     }
+  //   }
+  // ]
+// }
+
   },
-  "[jsonc]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "liveServer.settings.donotShowInfoMsg": true,
-  "[javascript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "htmltagwrap.tag": "div",
-  "html-css-class-completion.HTMLLanguages": [
-    "html",
-    "vue",
-    "razor",
-    "blade",
-    "handlebars",
-    "twig",
-    "django-html",
-    "php",
-    "markdown",
-    "erb",
-    "ejs",
-    "svelte",
-    "javascript"
-  ]
 }

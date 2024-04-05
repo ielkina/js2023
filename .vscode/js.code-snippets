@@ -1,72 +1,8 @@
 {
   //Классы, Id, Атрибуты
-  //классы
-  "класс .js-input": {
-    "prefix": ".js-",
-    "scope": "javascript",
-    "body": [".js-input"],
-    "description": "Класс html .js-input"
-  },
-  "класс .js-form": {
-    "prefix": ".js-",
-    "scope": "javascript",
-    "body": [".js-form"],
-    "description": "Класс html .js-form"
-  },
-  "класс .js-cont": {
-    "prefix": ".js-",
-    "scope": "javascript",
-    "body": [".js-container"],
-    "description": "Класс HTML .js-container"
-  },
-  "класс .js-click": {
-    "prefix": ".js-",
-    "scope": "javascript",
-    "body": [".js-click"],
-    "description": "Класс HTML .js-click"
-  },
-  "класс .js-title": {
-    "prefix": ".js-",
-    "scope": "javascript",
-    "body": [".js-title"],
-    "description": "Класс html .js-title"
-  },
-  "класс .js-modal-open": {
-    "prefix": ".js-",
-    "scope": "javascript",
-    "body": [".js-modal-open"],
-    "description": "Класс html .js-modal-open"
-  },
-  "класс .backdrop": {
-    "prefix": ".backdrop",
-    "scope": "javascript",
-    "body": [".backdrop"],
-    "description": "Класс html .backdrop"
-  },
-  "класс .js-backdrop": {
-    "prefix": ".js-backdrop",
-    "scope": "javascript",
-    "body": [".js-backdrop"],
-    "description": "Класс html .js-backdrop"
-  },
-  "класс .modal": {
-    "prefix": ".modal",
-    "scope": "javascript",
-    "body": [".modal"],
-    "description": "Класс html .modal"
-  },
-  "класс .close-btn": {
-    "prefix": ".close-btn",
-    "scope": "javascript",
-    "body": [".close-btn"],
-    "description": "Класс html .close-btn"
-  },
-  "класс .js-modal-close": {
-    "prefix": ".js-modal-close",
-    "scope": "javascript",
-    "body": [".js-modal-close"],
-    "description": "Класс html .js-modal-close"
-  },
+
+
+
   //id
   "id #js-cont": {
     "prefix": "#js-",

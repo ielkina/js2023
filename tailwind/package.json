@@ -1,0 +1,11 @@
+{
+  "devDependencies": {
+    "tailwindcss": "^3.4.3"
+  },
+  "json-comments": {
+    "tips": "Установите плагин JsonComments, чтобы активировать возможность комментирования для файлов JSON. См.: https://github.com/zhangfisher/json_comments_extension",
+    ".prettierrc": {
+      "htmlWhitespaceSensitivity": "Настройки добавленные позже"
+    }
+  }
+}

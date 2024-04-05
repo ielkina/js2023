@@ -1,6 +1,10 @@
+// no-mdn
+// import * as style from '/style.css';
 console.log('mod6-19-lessons-2');
 /**
-* Основы событий. Создание и удаление слушателей. Обьект события */
+ * Основы событий. Создание и удаление слушателей. Обьект события
+ */
+
 const imgEl = document.querySelector('.js-img');
 const swapBtnEl = document.querySelector('.js-img');
 const removeBtnEl = document.querySelector('.js-img');
@@ -38,22 +42,21 @@ removeBtnEl.addEventListener('click', () => {
 removeBtnEl.onclick = handleSwapBtnClick;
 
 /**
-* Именование колбэков
-* - handle*: handleSubjectEvent - приставка handle(обработать) хорошая практика
-* - *Handle: subjectEventHandler
-* - on*    : onSubjectEvent
-*/
+ * Именование колбэков
+ * - handle*: handleSubjectEvent - приставка handle(обработать) хорошая практика
+ * - *Handle: subjectEventHandler
+ * - on*    : onSubjectEvent
+ */
 
 /**
-* Подии элементов формы. focus blur change input submit
-*/
+ * Подии элементов формы. focus blur change input submit
+ */
 const formInputEl = document.querySelector('.js-username-input'),
   formEl = document.querySelector('.js-form'),
   formTextareaEl = document.querySelector('.js-textarea'),
   submitBtnEl = document.querySelector('.js-form-submit'),
   formCheckboxEl = document.querySelector('.js-police-checkbox'),
   userNameOutputEl = document.querySelector('.js-username-output');
-
 
 formInputEl.addEventListener('blur', event => {
   console.log(event);
@@ -73,8 +76,8 @@ formInputEl.addEventListener('change', event => {
 formCheckboxEl.addEventListener('change', event => {
   console.log(event);
   if (event.target.checked && formInputEl.value) {
-    submitBtnEl.disabled = false
-    return
+    submitBtnEl.disabled = false;
+    return;
   }
   //в других случаях кнопка остается disabled
   submitBtnEl.disabled = true;
@@ -83,16 +86,15 @@ formCheckboxEl.addEventListener('change', event => {
 formEl.addEventListener('submit', event => {
   //убираем дефолтное поведение элементов браузера
   event.preventDefault();
+  console.dir(event.target.elements.userName.value);
   //очищаем span
-  userNameOutputEl.textContent = ''
+  userNameOutputEl.textContent = '';
   //очищаем форму
   event.target.reset();
   //делаем кнопку снова disable
   submitBtnEl.disabled = true;
-  console.log(formInputEl.value);
-})
-
-
+  // console.log(formInputEl.value);
+});
 
 //рефакторинг
 
@@ -100,11 +102,62 @@ const formInputsEls = {
   username: document.querySelector('.js-username-input'),
   submitBtn: document.querySelector('button[type="submit"]'),
   checkbox: document.querySelector('.js-checkbox'),
-}
+};
 const { username, submitBtn, checkbox } = formInputsEls;
 
 username.addEventListener('focus', event => {
   console.log(event.target);
   event.target.style.outline = '5px solid teal';
 });
+
+// СОБЫТИЕ клавиатуры keypress keydown, keyup
+
+const outputEl = document.querySelector('.js-output');
+document.addEventListener('keyup', event => {
+  // console.log(event);
+  // outputEl.insertAdjacentHTML('beforeend', `code: ${event.code} <br> key: ${event.key} <br> <hr>`);
+  // outputEl.insertAdjacentHTML('beforeend', console.log(`code: ${event.code}`));
+  // outputEl.insertAdjacentHTML('beforeend', console.log(`key: ${event.key}`));
+  console.log(`code: ${event.code}`);
+  console.log(`key: ${event.key}`);
+});
+
+document.addEventListener('keydown', event => {
+  event.preventDefault();
+  //кроссбраузерность
+  if ((event.ctrlKey || event.metaKey) && event.code === 'KeyS') {
+    console.log('Ctrl + S');
+  }
+});
+
+// modal = document.querySelector();
+
+const modalRefs = {
+  backdropEl: document.querySelector('.backdrop'),
+  openModalBtnEl: document.querySelector('.js-modal-open'),
+  jsModalClose: document.querySelector('.js-modal-close'),
+};
+const { openModalBtnEl, backdropEl, jsModalClose } = modalRefs;
+
+const handleOpenModal = () => {
+  backdropEl.classList.add('is-open');
+  console.log(backdropEl);
+};
+
+const handleCloseModel = () => {
+  backdropEl.classList.remove('is-open');
+  console.log(backdropEl);
+  document.removeEventListener('keydown', handleKeyPress);
+};
+
+const handleKeyPress = event => {
+  if (event.code !== 'Escape' && event.code !== 'Enter') {
+    return;
+  }
+  handleCloseModel();
+};
+document.addEventListener('keydown', handleKeyPress);
+openModalBtnEl.addEventListener('click', handleOpenModal);
+jsModalClose.addEventListener('click', handleCloseModel);
+//2.50
 

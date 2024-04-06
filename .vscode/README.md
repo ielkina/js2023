@@ -1,24 +1,21 @@
-СОЧЕТАНИЯ КЛАВИШ
+# <font color="red" font-famaly ="Poppins">СОЧЕТАНИЯ КЛАВИШ</font>
+Ctrl+[ - Свернуть все<br>
+Ctrl+] - Развернуть все<br>
+Ctrl+w - Обернуть слово в тег (выделенное
+слово)<br>
+Ctrl+w - Обернуть строку/тег в тег (курсор на строке/теге без выделени)<br>
 
-Свернуть все Ctrl+[ Развернуть все Ctrl+]
+---
 
-/**********\***********/
+# <span style="color: blue; font-family: Open-Sans, serif;  font-style: italic;">ПЛАГИНЫ</span>
 
-/********\*\*\*\*********/ /********\*\*\*\*********/
-
-Обернуть слово в тег Выделить слово Ctrl+w Обернуть строку/тег в тег Курсор на строке/теге без
-выделени Ctrl+w
-
-/**********\***********/
-
-ПЛАГИНЫ
-
-BEM Helper Сочетание клавиш Atl+b e - добавить элемент Atl+b m - добавить модификатор
-
-/********\*\*\*\*********/ Live Server
-
-Ctrl+p - Запустить
-
-Live Sass
-
-Ctrl+o - Запустить Watch
+#### **BEM Helper**<br>
+Atl+b e - добавить элемент<br>
+Atl+b m - добавить модификатор<br>
+#### **Live Server**<br>
+Ctrl+p - Запустить проект в браузере<br>
+Live Sass<br>
+Ctrl+o - Запустить Watch<br>
+Better Align<br>
+Ctrl+a Alt+a<br>
+Selector Js - shift+q - querySelector<br>

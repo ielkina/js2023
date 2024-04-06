@@ -223,3 +223,5 @@ openPanelBtnEls.forEach(btn => {
 const childEl = document.querySelector('.js-child-el');
 const parentEl =  childEl.closest('.accordion');
 console.log(parentEl);
+
+document.querySelector()

@@ -1,4 +1,5 @@
-// {
+{
+
 //   "flex-direction: column": {
 //     "prefix": "fdc",
 //     "scope": "scss",
@@ -160,4 +161,4 @@
 //     ],
 //     "description": "font-family"
 //   },
-// }
+}

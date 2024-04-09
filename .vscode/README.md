@@ -1,66 +1,69 @@
 # <font color="red" font-famaly ="Poppins">СОЧЕТАНИЯ КЛАВИШ</font>
 
-`Ctrl+[` - Свернуть все<br> `Ctrl+]` - Развернуть все<br>`Ctrl+w` - Обернуть слово в тег&nbsp;(выделенное&nbsp;слово)<br> `Ctrl+w` - Обернуть строку/тег в тег (курсор на строке/теге&nbsp;без&nbsp;выделени)<br>
+`\t` - пробел<br>`\r`- новая строка<br>`Ctrl+[` - Свернуть все<br> `Ctrl+]` - Развернуть&nbsp;все<br>`Ctrl+w` - Обернуть слово в&nbsp;тег (выделенное слово)<br> `Ctrl+w` - Обернуть строку/тегв&nbsp;тег (курсор на&nbsp;строке/теге без выделени)<br> `Shift+UpArrow` - Верхнийй&nbsp;регистр<br>`Shift+DownArrow` - Нижний&nbsp;регистр<br>`F11` - Выход из&nbsp;Zen&nbsp;режима
 
 ---
 
-# <span style="color: blue; font-family: Open-Sans, serif;  font-style: italic;">ПЛАГИНЫ</span>
+# <span style="color: blue; font-family: Open-Sans, serif;  font-style: italic;">ПЛАГИНЫ</span><br>
 
 ### **BEM Helper**<br>
 
-`Atl+b e` - добавить элемент<br> `Atl+b m` - добавить модификатор<br>
+`Atl+B E` - добавить элемент<br> `Atl+B M` - добавить модификатор<br>
 
 ### **Live Server**<br>
 
-`Ctrl+p` - Запустить проект в браузере<br>
+`Ctrl+P` - Запустить проект в браузере<br>
 
 ### **Live Sass**<br>
 
-`Ctrl+o` - Запустить Watch<br>
+`Ctrl+O` - Запустить Watch<br>
 
 ### **Better Align**<br>
 
-`Ctrl+a Alt+a` - выравнивание = в коде и сам код<br>
+`Ctrl+A Alt+A` - выравнивание = в коде и сам код<br>
 
 ### **Selector Js**<br>
 
-!!! notice `Shift+q` - querySelector(.class)<br>
+`Shift+Q` - querySelector(.class)<br>
 
 ### **CSS Peek**<br>
 
-!!! danger `Ctrl+ клик по классу в html документе`
+`Ctrl+ клик по классу в html документе`
 
 ### **Multiline Wrap**<br>
 
-!!!important <code>Ctrl+Shift+'</code> обернуть строки в двойные кавычки с запятой в конце"
+<code>Ctrl+Shift+'</code> обернуть строки в двойные кавычки с запятой в конце"
 
-<pre style="background-color: rgba(0, 0, 0, 0.7); color: #fff;">
-"esbenp.prettier-vscode",<br>"alefragnani.project-manager",<br></pre>
+```
+"esbenp.prettier-vscode",
+"alefragnani.project-manager",
+```
 
 ### **Sort Lines**<br>
 
 <code>F9</code> - выделеный фрагмент сортировка строк по алфавиту
+
+<pre id="code" style="color: white; background-color: black;">
+<button onclick="copyCodeToClipboard()" style="position: relative;float: inline-end;">Copy</button>
+"alefragnani.project-manager",
+"esbenp.prettier-vscode",
+</pre>
+<script>
+function copyCodeToClipboard() {
+  var code = document.getElementById('code').innerText;
+  navigator.clipboard.writeText(code)
+    .then(() => alert('Code copied to clipboard!'))
+    .catch(() => alert('Failed to copy code to clipboard!'));
+}
+</script>
+
+/////////////////////
 
 <pre style=" background-color: rgba(0, 0, 0, 0.7); color: #fff;">
 "alefragnani.project-manager",
 "esbenp.prettier-vscode",
 </pre>
 
-:smile:
+!!!important !!! notice !!! danger
 
-<pre style="color: #fff; background-color: red;"><code id="code">
-"alefragnani.project-manager",
-"esbenp.prettier-vscode",
-</code></pre>
-<div>
-    <button class="btn-copy" data-clipboard-target="#code">Copy</button>
-</div>
-<script>
-    var clipboard = new ClipboardJS('.btn-copy');
-    clipboard.on('success', function(e) {
-        alert('Code copied to clipboard!');
-    });
-    clipboard.on('error', function(e) {
-        alert('Failed to copy code to clipboard!');
-    });
-</script>
+:smile:

@@ -1,38 +1,92 @@
 <!doctype html>
 
 <html lang="ru">
-  
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Task 10 (optional)</title>
-    <link rel="stylesheet" href="css/common.css" />
-  </head>
 
-  <body>
-    <p><a href="index.html">Go back</a></p>
-    <div id="controls">
-      <input type="number" min="1" max="100" step="1" />
-      <button type="button" data-create>Create</button>
-      <button type="button" data-destroy>Destroy</button>
-    </div>
-    <div id="boxes"></div>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Task 10 (optional)</title>
+  <link rel="stylesheet" href="css/common.css">
+  <style>
+    #boxes {
+      display: flex;
+      flex-wrap: wrap;
+    }
 
-    <script>
-      // Напиши скрипт создания и очистки коллекции элементов. Пользователь вводит количество элементов в input и нажимает кнопку Создать, после чего рендерится коллекция. При нажатии на кнопку Очистить, коллекция элементов очищается.
-      //     Создай функцию createBoxes(amount), которая принимает один параметр - число. Функция создает столько <div>, сколько указано в amount и добавляет их в div#boxes.
+    .box {
+      width: 30px;
+      height: 30px;
+      margin: 5px;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- <p><a href="index.html">Go back</a></p>
+  <div id="controls">
+    <input type="number" min="1" max="100" step="1" id="inputAmount">
+    <button type="button" data-create>Create</button>
+    <button type="button" data-destroy>Destroy</button>
+  </div>
+  <div id="boxes"></div>-->
+  <label for="amountInput">Enter the number of boxes:</label>
+  <input type="number" id="amountInput">
+  <button onclick="createBoxes()">Create</button>
+  <button onclick="destroyBoxes()">Clear</button>
+  <div id="boxes"></div>
+
+  <script>
+    function getRandomHexColor() {
+      return '#' + Math.floor(Math.random() * 16777215).toString(16);
+    }
+
+    function createBoxes() {
+      const amount = parseInt(document.getElementById('amountInput').value);
+      const boxesContainer = document.getElementById('boxes');
+      boxesContainer.innerHTML = '';
+
+      let width = 30;
+      let height = 30;
+
+      for (let i = 0; i < amount; i++) {
+        const box = document.createElement('div');
+        box.classList.add('box');
+        box.style.width = width + 'px';
+        box.style.height = height + 'px';
+        box.style.backgroundColor = getRandomHexColor();
+        boxesContainer.appendChild(box);
+        // Increase size for the next box
+        width += 10;
+        height += 10;
+      }
+    }
+
+    function destroyBoxes() {
+      const boxesContainer = document.getElementById('boxes');
+      boxesContainer.innerHTML = '';
+    }
+  </script>
+
+  <!-- <script> -- > -->
+      <!-- /* Напиши скрипт создания и очистки коллекции элементов. */
+
+      // Пользователь вводит количество элементов в input и нажимает кнопку Создать, 
+
+      // после чего рендерится коллекция. 
+
+      // При нажатии на кнопку Очистить, коллекция элементов очищается.
+
+      // Создай функцию createBoxes(amount), которая принимает один параметр - число. 
+      // Функция создает столько <div>, сколько указано в amount и добавляет их в div#boxes.
 
       // Размеры самого первого <div> - 30px на 30px.
       // Каждый элемент после первого, должен быть шире и выше предыдущего на 10px.
       // Все элементы должны иметь случайный цвет фона в формате HEX. Используй готовую функцию getRandomHexColor для получения цвета.
-      // Создай функцию destroyBoxes(), которая очищает содержимое div#boxes, тем самым удаляя все созданные элементы.
-      function getRandomHexColor() {
-        return `#${Math.floor(Math.random() * 16777215)
-          .toString(16)
-          .padStart(6, 0)}`;
-      }
-    </script>
-  </body>
+      // Создай функцию destroyBoxes(), которая очищает содержимое div#boxes, тем самым удаляя все созданные элементы. -->
+      <!-- < !-- </script> -->
+</body>
+
+<script type="module" src="task-10.js"></script>
 
 </html>

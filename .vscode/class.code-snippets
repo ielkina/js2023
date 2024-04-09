@@ -1,4 +1,16 @@
 {
+  // "html class header": {
+  //   "prefix": "header",
+  //   "scope": "html",
+  //   "body": ["header"],
+  //   "description": "html class"
+  // },
+  // "html class header__inner": {
+  //   "prefix": "he_i",
+  //   "scope": "html",
+  //   "body": ["header__inner"],
+  //   "description": "html class"
+  // },
   // "Класс is-open": {
   //   "prefix": "is-open",
   //   "body": ["is-open"],

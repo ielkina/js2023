@@ -1,1 +1,28 @@
-/*# sourceMappingURL=style.css.map */
+body {
+  color: rgba(255, 243, 78, 0.2470588235);
+}
+
+.wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.move-btn {
+  padding: 5px 15px;
+  display: block;
+  border: none;
+  border-radius: 4px;
+  background-color: firebrick;
+  color: snow;
+}
+
+.moving-box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 70px;
+  height: 70px;
+  margin-top: 50px;
+  border-radius: 50%;
+  background-color: lightgreen;
+}/*# sourceMappingURL=style.css.map */

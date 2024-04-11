@@ -1377,7 +1377,7 @@
 
 {
   "files.autoSave": "afterDelay",
-  "workbench.colorTheme": "Monokai Pro",
+  "workbench.colorTheme": "Monokai Classic",
   "workbench.iconTheme": "material-icon-theme",
   "editor.tabSize": 2,
   "editor.wordWrap": "on",

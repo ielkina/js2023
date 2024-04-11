@@ -1,164 +1,171 @@
 {
-
-//   "flex-direction: column": {
-//     "prefix": "fdc",
-//     "scope": "scss",
-//     "body": ["  flex-direction: column;$1"],
-//     "description": "flex-direction: column"
-//   },
-//   "flex-direction: column": {
-//     "prefix": "fldc",
-//     "scope": "scss",
-//     "body": [
-//       "flex-direction: column;"
-//     ],
-//     "description": "flex-direction: column"
-//   },
-//   "pointer-events: auto;": {
-//     "prefix": "poi:au",
-//     "scope": "css",
-//     "body": [
-//       "pointer-events: auto;"
-//     ],
-//     "description": "pointer-events: auto;"
-//   },
-//   "background-image": {
-//     "prefix": "bgi",
-//     "scope": "scss",
-//     "body": [
-//       "background-image: url(../img/$1);\r",
-//       "background-repeat: no-repeat;\r",
-//       "background-position: $2 $3;\r",
-//       "background-size: $4;"
-//     ],
-//     "description": "background-image"
-//   },
-//   "@include r(1050){}": {
-//     "prefix": "m1050",
-//     "scope": "scss",
-//     "body": [
-//       "@include r(1050){$1}"
-//     ],
-//     "description": "@include r(1050){}"
-//   },
-//   "@include r(860){}": {
-//     "prefix": "m860",
-//     "scope": "scss",
-//     "body": [
-//       "@include r(860){$1}"
-//     ],
-//     "description": "@include r(860){}"
-//   },
-//   "font-size": {
-//     "prefix": "fos",
-//     "scope": "scss",
-//     "body": [
-//       "font-size: $1px;$2"
-//     ],
-//     "description": "font-size"
-//   },
-//   "@include media": {
-//     "prefix": "@r",
-//     "scope": "scss",
-//     "body": [
-//       "    @include r($1){\r",
-//       "      \r",
-//       "    }"
-//     ],
-//     "description": "@include media"
-//   },
-//   "@include r(500){}": {
-//     "prefix": "m500",
-//     "scope": "scss",
-//     "body": [
-//       "@include r(500){$1}"
-//     ],
-//     "description": "@include r(500){}"
-//   },
-//   "@include r(476){}": {
-//     "prefix": "m476",
-//     "scope": "scss",
-//     "body": [
-//       "@include r(476){$1}"
-//     ],
-//     "description": "@include r(476){}"
-//   },
-//   "max-width": {
-//     "prefix": "maxw",
-//     "isFileTemplate": true,
-//     "scope": "scss",
-//     "body": [
-//       "max-width: $1px;"
-//     ],
-//     "description": "max-width"
-//   },
-//   "@include r(1200){}": {
-//     "prefix": "m1200",
-//     "scope": "scss",
-//     "body": [
-//       "@include r(1200){$1}"
-//     ],
-//     "description": "@include r(1200){}"
-//   },
-//   "@include r(620){}": {
-//     "prefix": "m620",
-//     "scope": "scss",
-//     "body": [
-//       "@include r(620){$1}"
-//     ],
-//     "description": "@include r(620){}"
-//   },
-//   "border-radius": {
-//     "prefix": "br",
-//     "scope": "scss",
-//     "body": [
-//       " border-radius: $1;"
-//     ],
-//     "description": "border-radius"
-//   },
-//   "background-color: transparent": {
-//     "prefix": "bgct",
-//     "scope": "scss",
-//     "body": [
-//       "background-color: transparent;"
-//     ],
-//     "description": "background-color: transparent"
-//   },
-//   "flex-wrap: wrap": {
-//     "prefix": "flww",
-//     "scope": "scss",
-//     "body": [
-//       "flex-wrap: wrap;"
-//     ],
-//     "description": "flex-wrap: wrap"
-//   },
-//   "display: flex": {
-//     "prefix": "dfcc",
-//     "scope": "scss",
-//     "body": [
-//       "  display: flex;\r",
-//       "    justify-content: center;\r",
-//       "    align-items: center;"
-//     ],
-//     "description": "display: flex"
-//   },
-//   "display:flex, center, center": {
-//     "prefix": "dfcc",
-//     "scope": "scss",
-//     "body": [
-//       " display: flex;\r",
-//       "  align-items: center;\r",
-//       "  justify-content: center;"
-//     ],
-//     "description": "display:flex, center, center"
-//   },
-//   "font-family": {
-//     "prefix": "fff",
-//     "scope": "scss",
-//     "body": [
-//       "  font-family: \"$1\", sans-serif;\r",
-//       "$2"
-//     ],
-//     "description": "font-family"
-//   },
+  "box-sizing: border-box;": {
+    "prefix": "bsbb",
+    "scope": "scss",
+    "body": [
+      "box-sizing: border-box;"
+    ],
+    "description": "box-sizing: border-box;"
+  }
+  //   "flex-direction: column": {
+  //     "prefix": "fdc",
+  //     "scope": "scss",
+  //     "body": ["  flex-direction: column;$1"],
+  //     "description": "flex-direction: column"
+  //   },
+  //   "flex-direction: column": {
+  //     "prefix": "fldc",
+  //     "scope": "scss",
+  //     "body": [
+  //       "flex-direction: column;"
+  //     ],
+  //     "description": "flex-direction: column"
+  //   },
+  //   "pointer-events: auto;": {
+  //     "prefix": "poi:au",
+  //     "scope": "css",
+  //     "body": [
+  //       "pointer-events: auto;"
+  //     ],
+  //     "description": "pointer-events: auto;"
+  //   },
+  //   "background-image": {
+  //     "prefix": "bgi",
+  //     "scope": "scss",
+  //     "body": [
+  //       "background-image: url(../img/$1);\r",
+  //       "background-repeat: no-repeat;\r",
+  //       "background-position: $2 $3;\r",
+  //       "background-size: $4;"
+  //     ],
+  //     "description": "background-image"
+  //   },
+  //   "@include r(1050){}": {
+  //     "prefix": "m1050",
+  //     "scope": "scss",
+  //     "body": [
+  //       "@include r(1050){$1}"
+  //     ],
+  //     "description": "@include r(1050){}"
+  //   },
+  //   "@include r(860){}": {
+  //     "prefix": "m860",
+  //     "scope": "scss",
+  //     "body": [
+  //       "@include r(860){$1}"
+  //     ],
+  //     "description": "@include r(860){}"
+  //   },
+  //   "font-size": {
+  //     "prefix": "fos",
+  //     "scope": "scss",
+  //     "body": [
+  //       "font-size: $1px;$2"
+  //     ],
+  //     "description": "font-size"
+  //   },
+  //   "@include media": {
+  //     "prefix": "@r",
+  //     "scope": "scss",
+  //     "body": [
+  //       "    @include r($1){\r",
+  //       "      \r",
+  //       "    }"
+  //     ],
+  //     "description": "@include media"
+  //   },
+  //   "@include r(500){}": {
+  //     "prefix": "m500",
+  //     "scope": "scss",
+  //     "body": [
+  //       "@include r(500){$1}"
+  //     ],
+  //     "description": "@include r(500){}"
+  //   },
+  //   "@include r(476){}": {
+  //     "prefix": "m476",
+  //     "scope": "scss",
+  //     "body": [
+  //       "@include r(476){$1}"
+  //     ],
+  //     "description": "@include r(476){}"
+  //   },
+  //   "max-width": {
+  //     "prefix": "maxw",
+  //     "isFileTemplate": true,
+  //     "scope": "scss",
+  //     "body": [
+  //       "max-width: $1px;"
+  //     ],
+  //     "description": "max-width"
+  //   },
+  //   "@include r(1200){}": {
+  //     "prefix": "m1200",
+  //     "scope": "scss",
+  //     "body": [
+  //       "@include r(1200){$1}"
+  //     ],
+  //     "description": "@include r(1200){}"
+  //   },
+  //   "@include r(620){}": {
+  //     "prefix": "m620",
+  //     "scope": "scss",
+  //     "body": [
+  //       "@include r(620){$1}"
+  //     ],
+  //     "description": "@include r(620){}"
+  //   },
+  //   "border-radius": {
+  //     "prefix": "br",
+  //     "scope": "scss",
+  //     "body": [
+  //       " border-radius: $1;"
+  //     ],
+  //     "description": "border-radius"
+  //   },
+  //   "background-color: transparent": {
+  //     "prefix": "bgct",
+  //     "scope": "scss",
+  //     "body": [
+  //       "background-color: transparent;"
+  //     ],
+  //     "description": "background-color: transparent"
+  //   },
+  //   "flex-wrap: wrap": {
+  //     "prefix": "flww",
+  //     "scope": "scss",
+  //     "body": [
+  //       "flex-wrap: wrap;"
+  //     ],
+  //     "description": "flex-wrap: wrap"
+  //   },
+  //   "display: flex": {
+  //     "prefix": "dfcc",
+  //     "scope": "scss",
+  //     "body": [
+  //       "  display: flex;\r",
+  //       "    justify-content: center;\r",
+  //       "    align-items: center;"
+  //     ],
+  //     "description": "display: flex"
+  //   },
+  //   "display:flex, center, center": {
+  //     "prefix": "dfcc",
+  //     "scope": "scss",
+  //     "body": [
+  //       " display: flex;\r",
+  //       "  align-items: center;\r",
+  //       "  justify-content: center;"
+  //     ],
+  //     "description": "display:flex, center, center"
+  //   },
+  //   "font-family": {
+  //     "prefix": "fff",
+  //     "scope": "scss",
+  //     "body": [
+  //       "  font-family: \"$1\", sans-serif;\r",
+  //       "$2"
+  //     ],
+  //     "description": "font-family"
+  //   },
 }

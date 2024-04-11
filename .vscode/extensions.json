@@ -66,8 +66,6 @@
         "dannymcgee.vscode-scss-lang",
         "dbaeumer.vscode-eslint",
         "debens.sort-js-object",
-        "diasbakahbay.selector-js",
-        "diz.ecsstractor-port",
         "donjayamanne.githistory",
         "donjayamanne.jquerysnippets",
         "dsznajder.es7-react-js-snippets",
@@ -202,5 +200,11 @@
         "yutengjing.ytj-snippets",
         "zengxingxin.sort-js-object-keys",
         "zignd.html-css-class-completion",
+        "ms-vscode.js-debug-nightly",
+        "kamikillerto.vscode-colorize",
+        "krembolabs.comment-styler",
+        "zhuangtongfa.material-theme",
+        "bilal-shaikh.css-on-line",
+        "adamwalzer.scss-lint",
     ]
 }

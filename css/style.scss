@@ -1,26 +1,52 @@
-@import 'base';
+// $wrapper-padding:
+// $padding: #{$e};
+
+@mixin padding($e) {
+  padding: 0 #{$e}px;
+}
+
+// @import 'base';
+//Прижимаем футер к низу
+html,
+body {
+  height: 100%;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  flex-direction: column;
+}
+
+main {
+  flex-grow: 1;
+}
 
 .wrapper {
   max-width: 1200px;
   margin: 0 auto;
+  @include padding(15);
 }
-
-.move-btn {
-  padding: 5px 15px;
-  display: block;
-  border: none;
-  border-radius: 4px;
-  background-color: firebrick;
-  color: snow;
+.tags__btn--active {
+  background-color: aqua;
 }
-
-.moving-box {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 70px;
-  height: 70px;
-  margin-top: 50px;
-  border-radius: 50%;
-  background-color: lightgreen;
-}
+// .move-btn {
+//   padding: 5px 15px;
+//   display: block;
+//   border: none;
+//   border-radius: 4px;
+//   background-color: firebrick;
+//   color: snow;
+// }
+// .moving-box {
+//   position: absolute;
+//   top: 0;
+//   left: 0;
+//   width: 70px;
+//   height: 70px;
+//   margin-top: 50px;
+//   border-radius: 50%;
+//   background-color: lightgreen;
+// }
+@import "bubbling";

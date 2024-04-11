@@ -148,4 +148,17 @@
 - основные событие мыши, форм, клавиатуры
 - [Список всех доступных Событий](https://developer.mozilla.org/ru/docs/web/Events)
 
+# [Модуль 7](https://github.com/ielkina/js2023/tree/main/js/mod7)
+
+# урок 1
+
+# План занятия
+
+- Распространение событий
+- Делегирование событий
+
+# урок 2
+
+# План занятия
+
 https://ielkina.github.io/js2023/

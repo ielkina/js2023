@@ -1,80 +1,80 @@
-// // {
-//   // "editor.lineNumbers": "off", //вкл/выкл номера строки слева
-//   // "editor.hover.enabled": false, //вкл/выкл всплывающих подсказок
-//   // "html.format.indentInnerHtml": true, //отступы для внутреннего тегов внутри других тегов
-//   // "html.autoClosingTags": false, //убирает косой флеш в конце одинарного тега
-//   // "css.format.newlineBetweenRules": false,
-//   // "editor.scrollbar.verticalScrollbarSize": 2, //
-//   // "editor.mouseWheelZoom": false,
-//   // "editor.scrollbar.horizontal": "hidden",
-//   // "editor.scrollbar.vertical": "hidden",
-//   // "editor.overviewRulerBorder": false,
-//   // "workbench.activityBar.visible": false,
-//   // "editor.renderFinalNewline": "dimmed",
-//   // "editor.renderLineHighlightOnlyWhenFocus": true,
-//   // "editor.renderControlCharacters": true,
-//   // "editor.renderLineHighlight": "none",
-//   // "editor.stickyScroll.maxLineCount": 1,
-//   // "editor.scrollBeyondLastLine": false,
-//   // "editor.columnSelection": false,
-//   // "editor.glyphMargin": false,
-//   // "editor.scrollbar.scrollByPage": false,
-//   // "editor.scrollBeyondLastColumn": 1,
-//   // "editor.smoothScrolling": false,
-//   // "editor.mouseWheelScrollSensitivity": 1,
-//   // "editor.scrollbar.vertical": "hidden",
-//   // "editor.minimap.size": "proportional",
-//   // "editor.minimap.side": "left",
-//   // "workbench.sideBar.location": "right",
-//   // "editorStickyScroll.border": "#ff0000",
-//   // "editor.lineDecorationsWidth": 16, // Ширина столбца с нумерацией строк
-//   // "editor.minimap.enabled": false, // Отключение миникарты, если требуется
-//   // "editor.scrollBeyondLastLine": false, // Запретить прокрутку за последнюю строку
-//   // "editor.scrollbar.vertical": "visible", // Показывать вертикальный скроллбар
-//   // "editor.scrollbar.horizontal": "visible", // Показывать горизонтальный скроллбар
+// {
+  // "editor.lineNumbers": "off", //вкл/выкл номера строки слева
+  // "editor.hover.enabled": false, //вкл/выкл всплывающих подсказок
+  // "html.format.indentInnerHtml": true, //отступы для внутреннего тегов внутри других тегов
+  // "html.autoClosingTags": false, //убирает косой флеш в конце одинарного тега
+  // "css.format.newlineBetweenRules": false,
+  // "editor.scrollbar.verticalScrollbarSize": 2, //
+  // "editor.mouseWheelZoom": false,
+  // "editor.scrollbar.horizontal": "hidden",
+  // "editor.scrollbar.vertical": "hidden",
+  // "editor.overviewRulerBorder": false,
+  // "workbench.activityBar.visible": false,
+  // "editor.renderFinalNewline": "dimmed",
+  // "editor.renderLineHighlightOnlyWhenFocus": true,
+  // "editor.renderControlCharacters": true,
+  // "editor.renderLineHighlight": "none",
+  // "editor.stickyScroll.maxLineCount": 1,
+  // "editor.scrollBeyondLastLine": false,
+  // "editor.columnSelection": false,
+  // "editor.glyphMargin": false,
+  // "editor.scrollbar.scrollByPage": false,
+  // "editor.scrollBeyondLastColumn": 1,
+  // "editor.smoothScrolling": false,
+  // "editor.mouseWheelScrollSensitivity": 1,
+  // "editor.scrollbar.vertical": "hidden",
+  // "editor.minimap.size": "proportional",
+  // "editor.minimap.side": "left",
+  // "workbench.sideBar.location": "right",
+  // "editorStickyScroll.border": "#ff0000",
+  // "editor.lineDecorationsWidth": 16, // Ширина столбца с нумерацией строк
+  // "editor.minimap.enabled": false, // Отключение миникарты, если требуется
+  // "editor.scrollBeyondLastLine": false, // Запретить прокрутку за последнюю строку
+  // "editor.scrollbar.vertical": "visible", // Показывать вертикальный скроллбар
+  // "editor.scrollbar.horizontal": "visible", // Показывать горизонтальный скроллбар
 
-//   // "workbench.colorCustomizations": {
-//   //   // "settings.headerForeground": "#0000FF", // Цвет текста заголовка
-//   //   "settings.modifiedItemIndicator": "#FFFF00", // Цвет индикатора модификации элемента
-//   //   "settings.dropdownBackground": "#FFFFFF", // Цвет фона выпадающего списка
-//   //   "activityBar.activeBackground": "#ffffff28", // Цвет активной кнопки
-//   //   "activityBar.inactiveBackground": "#fff", // Цвет неактивной кнопки
-//   //   "editorCursor.foreground": "#fcec0f", // Цвет курсора
-//   //   "editor.lineHighlightBackground": "#f7ed6623", // Цвет выделения текущей строки
-//   //   "activityBar.inactiveForeground": "#ffffff8f",
-//   //   "statusBar.foreground": "#FFFFFF8f", // Замените этот цвет на нужный вам
-//   //   "titleBar.activeForeground": "#FFFFFF8f" // Замените этот цвет на нужный вам
-//   //   // "scrollbarSlider.background": "#A9A9A9", // Цвет фона ползунка скроллбара
-//   //   // "scrollbarSlider.hoverBackground": "#7F7F7F", // Цвет фона ползунка скроллбара при наведении
-//   //   // "scrollbarSlider.activeBackground": "#808080", // Цвет фона активного ползунка скроллбара
-//   //   // "scrollbar.shadow": "#FF0000", // Цвет тени скроллбара (если поддерживается темой)
-//   //   // "scrollbarSlider.border": "#A9A9A9", // Цвет границы ползунка скроллбара
-//   //   // "scrollbarSlider.borderWidth": "1px", // Ширина границы ползунка скроллбара
-//   //   // "scrollbar.width": "1px", // Ширина скроллбара
-//   //   // "scrollbarSlider.background": "#A9A9A9", // Цвет фона ползунка скроллбара
-//   //   // "scrollbarSlider.hoverBackground": "#7F7F7F", // Цвет фона ползунка скроллбара при наведении
-//   //   // "scrollbarSlider.activeBackground": "#808080", // Цвет фона активного ползунка скроллбара
-//   //   // "scrollbarSlider.border": "#A9A9A9", // Цвет границы ползунка скроллбара
-//   //   // "scrollbarSlider.borderWidth": "1px", // Ширина границы ползунка скроллбара
-//   //   // "editor.scrollbar.verticalScrollbarSize": 10, // Высота вертикального скроллбара в пикселях
-//   //   // "editor.scrollbar.verticalSliderSize": 10, // Высота ползунка вертикального скроллбара в пикселях
-//   //   // "editor.scrollbar.verticalScrollbarSize": 14, // Ширина вертикального скроллбара в пикселях
-//   //   // "editor.scrollbar.verticalSliderSize": 14, // Ширина ползунка вертикального скроллбара в пикселях
-//   //   // "scrollbarSlider.background": "#A9A9A9", // Цвет фона ползунка скроллбара
-//   //   // "scrollbarSlider.hoverBackground": "#7F7F7F", // Цвет фона ползунка скроллбара при наведении
-//   //   // "scrollbarSlider.activeBackground": "#808080", // Цвет фона активного ползунка скроллбара
-//   //   // "scrollbarSlider.border": "#A9A9A9", // Цвет границы ползунка скроллбара
-//   //   // "scrollbarSlider.borderWidth": 1, // Ширина границы ползунка скроллбара
-//   //   // "scrollbarSlider.background": "#ff0000",
-//   //   // "scrollbar.width": 1, // Ширина скроллбара
-//   //   // "editorStickyScroll.border": "#ff0000",
-//   //   // "notebookScrollbarSlider.activeBackground": "#ff0000",
-//   //   // "notebookScrollbarSlider.hoverBackground": "#ff0000",
-//   //   // "scrollbar.vertical": "#00000000", // Сделать вертикальный скроллбар прозрачным
-//   //   // "scrollbar.horizontal": "#00000000", // Сделать горизонтальный скроллбар прозрачным
-//   //   // "editorHoverWidget.scrollbar.horizontal": "#00000000", // Сделать горизонтальный скроллбар прозрачным
-//   //   // "editorHoverWidget.scrollbar.vertical": "#ff000000", // Сделать вертикальный скроллбар прозрачным
-//   //   // "[Monokai Pro]": {}
+  // "workbench.colorCustomizations": {
+  //   // "settings.headerForeground": "#0000FF", // Цвет текста заголовка
+  //   "settings.modifiedItemIndicator": "#FFFF00", // Цвет индикатора модификации элемента
+  //   "settings.dropdownBackground": "#FFFFFF", // Цвет фона выпадающего списка
+  //   "activityBar.activeBackground": "#ffffff28", // Цвет активной кнопки
+  //   "activityBar.inactiveBackground": "#fff", // Цвет неактивной кнопки
+  //   "editorCursor.foreground": "#fcec0f", // Цвет курсора
+  //   "editor.lineHighlightBackground": "#f7ed6623", // Цвет выделения текущей строки
+  //   "activityBar.inactiveForeground": "#ffffff8f",
+  //   "statusBar.foreground": "#FFFFFF8f", // Замените этот цвет на нужный вам
+  //   "titleBar.activeForeground": "#FFFFFF8f" // Замените этот цвет на нужный вам
+  //   // "scrollbarSlider.background": "#A9A9A9", // Цвет фона ползунка скроллбара
+  //   // "scrollbarSlider.hoverBackground": "#7F7F7F", // Цвет фона ползунка скроллбара при наведении
+  //   // "scrollbarSlider.activeBackground": "#808080", // Цвет фона активного ползунка скроллбара
+  //   // "scrollbar.shadow": "#FF0000", // Цвет тени скроллбара (если поддерживается темой)
+  //   // "scrollbarSlider.border": "#A9A9A9", // Цвет границы ползунка скроллбара
+  //   // "scrollbarSlider.borderWidth": "1px", // Ширина границы ползунка скроллбара
+  //   // "scrollbar.width": "1px", // Ширина скроллбара
+  //   // "scrollbarSlider.background": "#A9A9A9", // Цвет фона ползунка скроллбара
+  //   // "scrollbarSlider.hoverBackground": "#7F7F7F", // Цвет фона ползунка скроллбара при наведении
+  //   // "scrollbarSlider.activeBackground": "#808080", // Цвет фона активного ползунка скроллбара
+  //   // "scrollbarSlider.border": "#A9A9A9", // Цвет границы ползунка скроллбара
+  //   // "scrollbarSlider.borderWidth": "1px", // Ширина границы ползунка скроллбара
+  //   // "editor.scrollbar.verticalScrollbarSize": 10, // Высота вертикального скроллбара в пикселях
+  //   // "editor.scrollbar.verticalSliderSize": 10, // Высота ползунка вертикального скроллбара в пикселях
+  //   // "editor.scrollbar.verticalScrollbarSize": 14, // Ширина вертикального скроллбара в пикселях
+  //   // "editor.scrollbar.verticalSliderSize": 14, // Ширина ползунка вертикального скроллбара в пикселях
+  //   // "scrollbarSlider.background": "#A9A9A9", // Цвет фона ползунка скроллбара
+  //   // "scrollbarSlider.hoverBackground": "#7F7F7F", // Цвет фона ползунка скроллбара при наведении
+  //   // "scrollbarSlider.activeBackground": "#808080", // Цвет фона активного ползунка скроллбара
+  //   // "scrollbarSlider.border": "#A9A9A9", // Цвет границы ползунка скроллбара
+  //   // "scrollbarSlider.borderWidth": 1, // Ширина границы ползунка скроллбара
+  //   // "scrollbarSlider.background": "#ff0000",
+  //   // "scrollbar.width": 1, // Ширина скроллбара
+  //   // "editorStickyScroll.border": "#ff0000",
+  //   // "notebookScrollbarSlider.activeBackground": "#ff0000",
+  //   // "notebookScrollbarSlider.hoverBackground": "#ff0000",
+  //   // "scrollbar.vertical": "#00000000", // Сделать вертикальный скроллбар прозрачным
+  //   // "scrollbar.horizontal": "#00000000", // Сделать горизонтальный скроллбар прозрачным
+  //   // "editorHoverWidget.scrollbar.horizontal": "#00000000", // Сделать горизонтальный скроллбар прозрачным
+  //   // "editorHoverWidget.scrollbar.vertical": "#ff000000", // Сделать вертикальный скроллбар прозрачным
+  //   // "[Monokai Pro]": {}
 //   // },
 //   // "editor.tokenColorCustomizations": {
 //   //   "[Monokai Pro]": {
@@ -1376,264 +1376,56 @@
 // }
 
 {
-  "files.autoSave": "afterDelay",
-  "workbench.colorTheme": "Monokai Classic",
-  "workbench.iconTheme": "material-icon-theme",
-  "editor.tabSize": 2,
-  "editor.wordWrap": "on",
-  "prettier.singleQuote": true,
-  "prettier.trailingComma": "es5",
-  "prettier.jsxSingleQuote": true,
-  "editor.bracketPairColorization.independentColorPoolPerBracketType": true,
-  "editor.defaultColorDecorators": true,
-  "editor.definitionLinkOpensInPeek": true,
-  "editor.experimentalInlineEdit.backgroundColoring": true,
-  "editor.wordBasedSuggestions": "allDocuments",
-  "editor.quickSuggestions": {
-    "other": true,
-    "comments": false,
-    "strings": false
-  },
-  "terminal.integrated.defaultProfile.windows": "Git Bash", //терминал по дефолту
-  "[javascript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[jsonc]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[html]": {
-    "editor.defaultFormatter": "vscode.html-language-features"
-  },
-  "liveServer.settings.donotShowInfoMsg": true,
-  "cSpell.language": "en,en-GB,en-US,lorem,ru-RU,ru,uk", //языки проверки на ошибки
-  "emmet.preferences": {
-    "output.reverseAttributes": true //класс в начале тега
-  },
-  "cSpell.userWords": [
-    "автодополнение",
-    "автосохранение",
-    "втоматически",
-    "инлайново",
-    "инпут",
-    "инпутов",
-    "каунтер",
-    "колбэков",
-    "колорпикер",
-    "минимап",
-    "модалку",
-    "Обьект",
-    "обьектов",
-    "рендерится",
-    "сабмит",
-    "скрол",
-    "спан",
-    "adamraichu",
-    "aeschli",
-    "ajithgopi",
-    "akamud",
-    "akram",
-    "alefragnani",
-    "alexbabichev",
-    "alexmunteanu",
-    "allman",
-    "amandeepmittal",
-    "anteprimorac",
-    "antiantisepticeye",
-    "artydeveloperduck",
-    "atishay",
-    "autofetch",
-    "autofilename",
-    "autoimport",
-    "autopreviewer",
-    "bemhelper",
-    "bierner",
-    "bito",
-    "bmewburn",
-    "bradgashler",
-    "bradlc",
-    "btns",
-    "budiadiono",
-    "burkeholland",
-    "bysabi",
-    "caniuse",
-    "carbonid",
-    "ceintl",
-    "chakrounanas",
-    "chamla",
-    "cheatsheet",
-    "chouzz",
-    "cipchk",
-    "clinyong",
-    "closetag",
-    "colorpicker",
-    "compulim",
-    "cschlosser",
-    "csspreview",
-    "cssrem",
-    "ctcuff",
-    "dannymcgee",
-    "dbaeumer",
-    "debens",
-    "diasbakahbay",
-    "donjayamanne",
-    "donot",
-    "dont",
-    "doxdocgen",
-    "dsznajder",
-    "dzhavat",
-    "eamodio",
-    "easysass",
-    "ecmel",
-    "ecsstractor",
-    "edgedevtools",
-    "esbenp",
-    "fallenmax",
-    "flexbox",
-    "formulahendry",
-    "funkyremi",
-    "ginie",
-    "githistory",
-    "gitpatch",
-    "grantbartlett",
-    "gruntfuggly",
-    "halpe",
-    "hancel",
-    "heberalmeida",
-    "henoc",
-    "hookyqr",
-    "howardzuo",
-    "htmlhint",
-    "htmltagwrap",
-    "humao",
-    "humy",
-    "intelephense",
-    "intellicode",
-    "ionutvmi",
-    "jaheenafsarsyed",
-    "javascriptsnippets",
-    "jawei",
-    "jerryhong",
-    "josee",
-    "jquerysnippets",
-    "jshtml",
-    "jsxtools",
-    "kaangokdemir",
-    "kisstkondoros",
-    "kostasx",
-    "lacroixdavid",
-    "lior",
-    "liveserver",
-    "lonefy",
-    "lucaslpsan",
-    "lukazakrajsek",
-    "mccarter",
-    "mgmcdermott",
-    "mhutchie",
-    "michelemelluso",
-    "minifyall",
-    "minko",
-    "mithril",
-    "mohammadmd",
-    "mohd",
-    "Monokai",
-    "moppitz",
-    "mrcrowl",
-    "mrezechi",
-    "mrmlnc",
-    "msjsdiag",
-    "multiclip",
-    "nucllear",
-    "octref",
-    "oderwat",
-    "paragdiwan",
-    "paulmolluzzo",
-    "pkief",
-    "pranaygp",
-    "prasadbobby",
-    "pucelle",
-    "pugbeautify",
-    "pugvuebeautify",
-    "pushqrdx",
-    "qiuqiu",
-    "queryselector",
-    "quokka",
-    "Raindow",
-    "rcore",
-    "reactsnippets",
-    "readwrite",
-    "rebornix",
-    "rifi",
-    "ritwickdey",
-    "rodrigovallades",
-    "Rozetka",
-    "rvest",
-    "sandorengholm",
-    "sasa",
-    "sassc",
-    "searking",
-    "sibiraj",
-    "sidthesloth",
-    "simonsiefke",
-    "slevesque",
-    "smatdnepr",
-    "solnurkarim",
-    "sporiley",
-    "sraaaamxthelordwolf",
-    "steoates",
-    "stylelint",
-    "svetlanakost",
-    "svgeditor",
-    "svipas",
-    "swashata",
-    "syler",
-    "tailwindcss",
-    "thekalinga",
-    "tombonnike",
-    "tomoki",
-    "Triss",
-    "tuwrraphael",
-    "typograf",
-    "urbantrout",
-    "vetur",
-    "vincaslt",
-    "visualstudioexptteam",
-    "vscodeintellicode",
-    "vsicons",
-    "vsintellicode",
-    "vuetify",
-    "vunguyentuan",
-    "wallabyjs",
-    "wilsonwong",
-    "wscats",
-    "wxzhang",
-    "wycliffepepela",
-    "xabikos",
-    "ysemeniuk",
-    "yutengjing",
-    "zengxingxin",
-    "zignd"
-  ],
-  "liveSassCompile.settings.showOutputWindowOn": "None", //не открывает терминал с информацией при компиляции
-  "html.format.preserveNewLines": false,
-  "[scss]": {
-    "editor.defaultFormatter": "sibiraj-s.vscode-scss-formatter"
-  },
-  "[snippets]": {
-    "editor.defaultFormatter": "vscode.json-language-features"
-  },
-  "liveSassCompile.settings.formats": [
-    {
-      "format": "expanded",
-      "extensionName": ".css",
-      "savePath": null
-    }
-    // {
-    //   "format": "compressed",
-    //   "extensionName": ".min.css",
-    //   "savePath": null
-    // }
-  ],
-  "[css]": {
-    "editor.defaultFormatter": "vscode.css-language-features"
-  }
+  // "files.autoSave": "afterDelay",
+  // "workbench.colorTheme": "Monokai Classic",
+  // "workbench.iconTheme": "material-icon-theme",
+  // "editor.tabSize": 2,
+  // "editor.wordWrap": "on",
+  // "prettier.singleQuote": true,
+  // "prettier.trailingComma": "es5",
+  // "prettier.jsxSingleQuote": true,
+  // "editor.bracketPairColorization.independentColorPoolPerBracketType": true,
+  // "editor.defaultColorDecorators": true,
+  // "editor.definitionLinkOpensInPeek": true,
+  // "editor.experimentalInlineEdit.backgroundColoring": true,
+  // "editor.wordBasedSuggestions": "allDocuments",
+  // "editor.quickSuggestions": {
+  //   "other": true,
+  //   "comments": false,
+  //   "strings": false
+  // },
+  // "[javascript]": {
+  //   "editor.defaultFormatter": "vscode.typescript-language-features"
+  // },
+  // "[jsonc]": {
+  //   "editor.defaultFormatter": "vscode.json-language-features"
+  // },
+  // "[html]": {
+  //   "editor.defaultFormatter": "vscode.html-language-features"
+  // },
+ 
+ 
+  // "liveSassCompile.settings.showOutputWindowOn": "None", //не открывает терминал с информацией при компиляции
+  // "html.format.preserveNewLines": false,
+  // "[scss]": {
+  //   "editor.defaultFormatter": "vscode.css-language-features"
+  // },
+  // "[snippets]": {
+  //   "editor.defaultFormatter": "vscode.json-language-features"
+  // },
+  // "liveSassCompile.settings.formats": [
+  //   {
+  //     "format": "expanded",
+  //     "extensionName": ".css",
+  //     "savePath": null
+  //   }
+  //   // {
+  //   //   "format": "compressed",
+  //   //   "extensionName": ".min.css",
+  //   //   "savePath": null
+  //   // }
+  // ],
+  // "[css]": {
+  //   "editor.defaultFormatter": "vscode.css-language-features"
+  // }
 }

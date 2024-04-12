@@ -79,14 +79,14 @@
     "body": ["function($1){$2};\r"],
     "description": "function"
   },
-  "символы ()=>{};": {
-    "prefix": ".(",
+  "()=>{};": {
+    "prefix": "fn()=>{}",
     "scope": "javascript",
     "body": ["($1)=>{$2}"],
     "description": "function (callback)=>{}"
   },
-  "символы (){};": {
-    "prefix": "fn",
+  "(){};": {
+    "prefix": "fn(){}",
     "scope": "javascript",
     "body": ["($1){$2};"],
     "description": "(){}"
@@ -266,11 +266,11 @@
     ],
     "description": "class extends"
   },
-  "target PointerEvent": {
+  "nodeName": {
     "prefix": "nodeName",
     "scope": "javascript",
     "body": ["nodeName"],
-    "description": "PointerEvent"
+    "description": "nodeName"
   },
   "classList": {
     "prefix": "classList",
@@ -283,5 +283,11 @@
     "scope": "javascript",
     "body": ["parentNode"],
     "description": "parentNode"
+  },
+  "currentTarget": {
+    "prefix": "currentTarget",
+    "scope": "javascript",
+    "body": ["currentTarget"],
+    "description": "currentTarget"
   }
 }

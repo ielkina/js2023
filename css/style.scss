@@ -16,7 +16,6 @@ body {
 body {
   display: flex;
   flex-direction: column;
-  flex-direction: column;
 }
 
 main {
@@ -52,3 +51,50 @@ main {
 //   background-color: lightgreen;
 // }
 @import "bubbling";
+
+.js-container {
+  display: flex;
+}
+
+.box {
+  width: 50px;
+  height: 50px;
+  margin-right: 20px;
+}
+
+.item-red {
+  background-color: red;
+}
+
+.item-green {
+  background-color: green;
+}
+
+.item-black {
+  background-color: black;
+}
+
+.container {
+  display: flex;
+  margin: 100px 50px 50px 50px;
+
+}
+
+.content {
+  width: 158px;
+  margin: 0 auto;
+  border: 1px solid black
+}
+
+.item {
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  display: inline-block;
+  font-size: 25px;
+  border: 1px solid black;
+  cursor: pointer;
+  vertical-align: middle;
+  transition: background .1s;
+}

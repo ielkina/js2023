@@ -71,7 +71,7 @@ main {
 
 .container {
   display: flex;
-  margin: 100px 50px 50px 50px;
+  margin: 100px 50px 50px;
 }
 
 .content {
@@ -91,4 +91,10 @@ main {
   cursor: pointer;
   vertical-align: middle;
   transition: background 0.1s;
+}
+
+ul {
+  display: inline-flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }/*# sourceMappingURL=style.css.map */

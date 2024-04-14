@@ -8,11 +8,9 @@
         "alefragnani.bookmarks",
         "alefragnani.project-manager",
         "alexbabichev.formatter-pug",
-        "formulahendry.auto-close-tag",
         "formulahendry.auto-complete-tag",
         "formulahendry.auto-rename-tag",
         "chouzz.vscode-better-align",
-        "formulahendry.code-runner",
         "streetsidesoftware.code-spell-checker",
         "diz.ecsstractor-port",
         "glenn2223.live-sass",
@@ -204,5 +202,6 @@
         "bilal-shaikh.css-on-line",
         "adamwalzer.scss-lint",
         "yandeu.five-server",
+        "html-validate.vscode-html-validate",
     ]
 }

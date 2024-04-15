@@ -2,34 +2,34 @@
 // $padding: #{$e};
 
 @mixin padding($e) {
-	padding: 0 #{$e}px;
+  padding: 0 #{$e}px;
 }
 
 // @import 'base';
 // Прижимаем футер к низу
 html,
 body {
-	height: 100%;
-	box-sizing: border-box;
+  height: 100%;
+  box-sizing: border-box;
 }
 
 body {
-	display: flex;
-	flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 main {
-	flex-grow: 1;
+  flex-grow: 1;
 }
 
 .wrapper {
-	max-width: 1200px;
-	margin: 0 auto;
-	@include padding(15);
+  max-width: 1200px;
+  margin: 0 auto;
+  @include padding(15);
 }
 
 .tags__btn--active {
-	background-color: aqua;
+  background-color: aqua;
 }
 
 // .move-btn {
@@ -53,58 +53,57 @@ main {
 @import "bubbling";
 
 .js-container {
-	display: flex;
+  display: flex;
 }
 
 .box {
-	width: 50px;
-	height: 50px;
-	margin-right: 20px;
+  width: 50px;
+  height: 50px;
+  margin-right: 20px;
 }
 
 .item-red {
-	background-color: red;
+  background-color: red;
 }
 
 .item-green {
-	background-color: green;
+  background-color: green;
 }
 
 .item-black {
-	background-color: black;
+  background-color: black;
 }
 
 .container {
-	display: flex;
-	margin: 100px 50px 50px;
+  display: flex;
+  margin: 100px 50px 50px;
 }
 
 .content {
-	width: 158px;
-	margin: 0 auto;
-	border: 1px solid black;
+  width: 158px;
+  margin: 0 auto;
+  border: 1px solid black;
 }
 
 .item {
-	width: 50px;
-	height: 50px;
-	line-height: 50px;
-	text-align: center;
-	display: inline-block;
-	font-size: 25px;
-	border: 1px solid black;
-	cursor: pointer;
-	vertical-align: middle;
-	transition: background 0.1s;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  display: inline-block;
+  font-size: 25px;
+  border: 1px solid black;
+  cursor: pointer;
+  vertical-align: middle;
+  transition: background 0.1s;
 }
 
 ul {
-	
-	display: inline-flex;
-	flex-wrap: wrap;
-	justify-content: space-between;
-	// align-items: flex-start;
-	// flex-grow: 1;
-	// align-self: flex-start;
-	// flex-grow: 1;
+  display: inline-flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  // align-items: flex-start;
+  // flex-grow: 1;
+  // align-self: flex-start;
+  // flex-grow: 1;
 }

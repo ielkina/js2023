@@ -107,6 +107,7 @@ const markup = cars.map(
 `
 );
 container.insertAdjacentHTML("beforeend", markup.join(""));
+
 container.addEventListener("click", onClick);
 
 function onClick(e) {
@@ -121,18 +122,19 @@ function onClick(e) {
   // console.log(target);
   //dataset съедает пробел и переводит в кэмэлкасе
   //?? оператор нулевого сравнения - работает только на null undefined
-  const carId = target.dataset.carId ?? target.closest('.js-card').dataset.carId
+  const carId =
+    target.dataset.carId ?? target.closest(".js-card").dataset.carId;
   // console.log(carId);
   // console.log(e);
   const currentItem = cars.find(({ id }) => id === Number(carId));
   console.log(currentItem);
-  const instance = basicLightbox.create(/*html*/`
+  const instance = basicLightbox.create(/*html*/ `
   <div style="background-color: #fff;">
     <img loading="lazy" src="${currentItem.img}" class="image" width="300" height="" alt="${currentItem.model}">
     <h2>${currentItem.model}</h2>
     <h3>${currentItem.type}</h3>
     <p>${currentItem.price}</p>
   </div>
-`)
+`);
   instance.show();
 }

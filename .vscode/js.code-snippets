@@ -401,5 +401,263 @@
       ".closest"
     ],
     "description": "Метод поиска искомого эл у найближайшего(родительского) элемента. К примеру closest из вложенности до родительского элемента ищет ближайший элемент с классом .color-card."
-  }
+  },
+  // module
+  // "Require to Const": {
+  //   "prefix": "rqr",
+  //   "body": "const ${2:module} = require('${1:package}');$0",
+  //   "description": "Require a package to const"
+  // },
+  // "module.exports": {
+  //   "prefix": "mde",
+  //   "body": "module.exports = $0;\n",
+  //   "description": "Module exports from Common JS"
+  // },
+  // "import default": {
+  //   "prefix": "imp",
+  //   "body": "import ${2:module} from '${1:package}';$0",
+  //   "description": "Import default from module"
+  // },
+  // "import module from 'node:package'": {
+  //   "prefix": "imb",
+  //   "body": "import ${2:module} from 'node:${1:package}';$0",
+  //   "description": "Import default from node builtin module"
+  // },
+  // "import ''": {
+  //   "prefix": "imn",
+  //   "body": "import '${1:module}';$0",
+  //   "description": "Import default from module without module name"
+  // },
+  // "import { }": {
+  //   "prefix": "imd",
+  //   "body": "import { $2 } from '${1:module}';$0",
+  //   "description": "Import only a portion of the module"
+  // },
+  // "import json": {
+  //   "prefix": "imj",
+  //   "body": "import ${2:obj} from '${1:path}' assert { type: 'json' };$0",
+  //   "description": "Import object from a json module"
+  // },
+  // "import type { }": {
+  //   "prefix": "imt",
+  //   "body": "import type { $2 } from '${1:module}';$0",
+  //   "description": "Import type from the module"
+  // },
+  // "import *": {
+  //   "prefix": "ime",
+  //   "body": "import * as ${2:alias} from '${1:module}';$0",
+  //   "description": "Import everything as alias from the module"
+  // },
+  // "import alias": {
+  //   "prefix": "ima",
+  //   "body": "import { ${2:originalName} as ${3:alias} } from '${1:module}';$0",
+  //   "description": "Import a specific portion of the module by assigning a local alias"
+  // },
+  // "Export Default Variable": {
+  //   "prefix": "edv",
+  //   "body": "export default ${1:${TM_FILENAME_BASE}};\n",
+  //   "description": "Export default variable in ES6 syntax"
+  // },
+  // "Export Part": {
+  //   "prefix": "ept",
+  //   "body": "export { $0 };\n",
+  //   "description": "Export part in ES6 syntax"
+  // },
+  // "Export Default Function": {
+  //   "prefix": "edf",
+  //   "body": "export default function ${1:${TM_FILENAME_BASE}}($2) {\n\t$0\n}\n",
+  //   "description": "Export default function in ES6 syntax"
+  // },
+  // "Export Class": {
+  //   "prefix": "ecl",
+  //   "body": "export default class ${1:className} {\n\t$0\n};\n",
+  //   "description": "Export default class in ES6 syntax"
+  // },
+  // // functions
+  // "function": {
+  //   "prefix": "fn",
+  //   "body": "function ${1:name}($2) {\n\t$0\n}\n",
+  //   "description": "Define a function"
+  // },
+  // "async function": {
+  //   "prefix": "afn",
+  //   "body": "async function ${1:name}($2) {\n\t$0\n}\n",
+  //   "description": "Define an async function"
+  // },
+  // "Const Named Function": {
+  //   "prefix": "nfn",
+  //   "body": "const ${1:name} = (${2:params}) => {\n\t${3}\n}",
+  //   "description": "Creates a named function in ES6 syntax"
+  // },
+  // "Immediately Invoked Function Expression": {
+  //   "prefix": "iife",
+  //   "body": "(function () {\n\t$0\n})();\n",
+  //   "description": "Create immediately invoked function expression"
+  // },
+  // "Async Main Function": {
+  //   "prefix": "main",
+  //   "body": "async function main() {\n\t$0\n}\n\nmain();",
+  //   "description": "Async main function"
+  // },
+  // comments
+  // "Type Doc Comment": {
+  //   "prefix": "@type",
+  //   "body": [
+  //     "/** @type {$1} */$0"
+  //   ],
+  //   "description": "Type doc comment"
+  // },
+  // "Ignore Prettier Comment": {
+  //   "prefix": "prettier-ignore",
+  //   "body": "// prettier-ignore$0",
+  //   "description": "Ignore prettier comment"
+  // },
+  // "Eslint Disable Comment": {
+  //   "prefix": "eslint-disable",
+  //   "body": "/* eslint-disable$0 */",
+  //   "description": "Eslint disable comment"
+  // },
+  // "constructor": {
+  //   "prefix": "con",
+  //   "body": "constructor(${1:params}) {\n\t${0}\n}",
+  //   "description": "Add default constructor in a class in ES6 syntax"
+  // },
+  // "Destructing Object": {
+  //   "prefix": "dob",
+  //   "body": "const { ${2:propertyName} } = ${1:objectToDestruct};",
+  //   "description": "Creates and assigns a local variable using object destructing"
+  // },
+  // "Destructing Array": {
+  //   "prefix": "dar",
+  //   "body": "const [ ${2:propertyName} ] = ${1:arrayToDestruct};",
+  //   "description": "Creates and assigns a local variable using array destructing"
+  // },
+  // "Use Strict": {
+  //   "prefix": "ust",
+  //   "body": [
+  //     "'use strict';$0"
+  //   ],
+  //   "description": "Use strict mode"
+  // },
+  // // React
+  // "Create react function component and default export": {
+  //   "scope": "typescriptreact",
+  //   "prefix": "rfce",
+  //   // prettier-ignore
+  //   "body": [
+  //     "interface ${1:ComponentName}Props {",
+  //     "\t$2",
+  //     "}",
+  //     "",
+  //     "export default function ${1:ComponentName}({ $3 }: ${1:ComponentName}Props) {",
+  //     "\treturn <div className=\"$4\">$0</div>",
+  //     "}\n"
+  //   ],
+  //   "description": "Create react function component and default export"
+  // },
+  // "Create react function component": {
+  //   "scope": "typescriptreact",
+  //   "prefix": "rfc",
+  //   // prettier-ignore
+  //   "body": [
+  //     "interface ${1:ComponentName}Props {",
+  //     "\t$2",
+  //     "}",
+  //     "",
+  //     "function ${1:ComponentName}({ $3 }: ${1:ComponentName}Props) {",
+  //     "\treturn <div className=\"$4\">$0</div>",
+  //     "}\n"
+  //   ],
+  //   "description": "Create react function component"
+  // },
+  // // log
+  // "consoleAssert": {
+  //   "prefix": "cas",
+  //   "body": "console.assert(${1:expression}, '$0');",
+  //   "description": "If the specified expression is false, the message is written to the console along with a stack trace"
+  // },
+  // "consoleClear": {
+  //   "prefix": "ccl",
+  //   "body": "console.clear();",
+  //   "description": "Clears the console"
+  // },
+  // "consoleCount": {
+  //   "prefix": "cco",
+  //   "body": "console.count(${1:label});",
+  //   "description": "Writes the the number of times that count() has been invoked at the same line and with the same label"
+  // },
+  // "consoleDebug": {
+  //   "prefix": "cdb",
+  //   "body": "console.debug($0);",
+  //   "description": "Displays a message in the console. Also display a blue right arrow icon along with the logged message in Safari"
+  // },
+  // "consoleDir": {
+  //   "prefix": "cdi",
+  //   "body": "console.dir(${1:object});",
+  //   "description": "Prints a JavaScript representation of the specified object"
+  // },
+  // "consoleError": {
+  //   "prefix": "cer",
+  //   "body": "console.error(${1:error});",
+  //   "description": "Displays a message in the console and also includes a stack trace from where the method was called"
+  // },
+  // "consoleGroup": {
+  //   "prefix": "cgr",
+  //   "body": "console.group('${1:label}');",
+  //   "description": "Groups and indents all following output by an additional level, until console.groupEnd() is called."
+  // },
+  // "consoleGroupEnd": {
+  //   "prefix": "cge",
+  //   "body": "console.groupEnd();",
+  //   "description": "Closes out the corresponding console.group()."
+  // },
+  // "consoleLog": {
+  //   "prefix": "clg",
+  //   "body": "console.log($0);",
+  //   "description": "Displays a message in the console"
+  // },
+  // "consoleLogProperty": {
+  //   "prefix": "clp",
+  //   "body": "console.log({ ${1:variable} });",
+  //   "description": "Console log a variable using object property shorthand syntax"
+  // },
+  // "consoleTrace": {
+  //   "prefix": "ctr",
+  //   "body": "console.trace('$0');",
+  //   "description": "Prints a stack trace from the point where the method was called"
+  // },
+  // "consoleWarn": {
+  //   "prefix": "cwa",
+  //   "body": "console.warn('$0');",
+  //   "description": "Displays a message in the console but also displays a yellow warning icon along with the logged message"
+  // },
+  // "consoleInfo": {
+  //   "prefix": "cin",
+  //   "body": "console.info('$0');",
+  //   "description": "Displays a message in the console but also displays a blue information icon along with the logged message"
+  // },
+  // "consoleTable": {
+  //   "prefix": "ctb",
+  //   "body": "console.table(${1:object});",
+  //   "description": "Displays tabular data as a table."
+  // },
+  // "consoleTime": {
+  //   "prefix": "cti",
+  //   "body": "console.time('${1:label}');",
+  //   "description": "Sets starting point for execution time measurement"
+  // },
+  // "consoleTimeEnd": {
+  //   "prefix": "cte",
+  //   "body": "console.timeEnd('${1:label}');",
+  //   "description": "Sets end point for execution time measurement"
+  // },
+  // "console time": {
+  //   "prefix": "time",
+  //   "body": [
+  //     "console.time('${1:label}');",
+  //     "$TM_SELECTED_TEXT",
+  //     "console.timeEnd('${1:label}');"
+  //   ],
+  //   "description": "console.time/console.timeEnd to test wrapped code cost"
+  // }
 }

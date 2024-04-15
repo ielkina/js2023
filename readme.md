@@ -162,3 +162,8 @@
 # План занятия
 
 https://ielkina.github.io/js2023/
+
+![EditorConfig](https://github.com/pepelsbey/pepelsbey.dev/actions/workflows/editorconfig.yml/badge.svg)
+![HTML](https://github.com/pepelsbey/pepelsbey.dev/actions/workflows/html.yml/badge.svg)
+![CSS](https://github.com/pepelsbey/pepelsbey.dev/actions/workflows/css.yml/badge.svg)
+![JavaScript](https://github.com/pepelsbey/pepelsbey.dev/actions/workflows/javascript.yml/badge.svg)

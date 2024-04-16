@@ -7,7 +7,7 @@
     ],
     "description": "use strict строгий режим"
   },
-  //! const, log, table, dir
+  //* const, log, table, dir, group
   "const ru": {
     "prefix": "сщтые",
     "scope": "javascript",
@@ -80,7 +80,15 @@
     ],
     "description": "console.dir();"
   },
-  //! Функции
+  "console.group/End()": {
+    "prefix": "group",
+    "scope": "javascript",
+    "body": [
+      "console.group$1();$2"
+    ],
+    "description": "console.group();"
+  },
+  //* Функции
   "function name(params){}; name();": {
     "prefix": "fn",
     "scope": "javascript",
@@ -91,7 +99,7 @@
       "\r",
       "${1:name}();"
     ],
-    "description": "function declaration"
+    "description": "function name(params){}; name();"
   },
   "function name(){};": {
     "prefix": "fn",
@@ -101,7 +109,7 @@
       "$4",
       "};\r"
     ],
-    "description": "function declaration"
+    "description": "function name(){};"
   },
   "function(){};": {
     "prefix": "fn",
@@ -109,7 +117,7 @@
     "body": [
       "function($1){$2};\r"
     ],
-    "description": "function"
+    "description": "function(){};"
   },
   "()=>{};": {
     "prefix": "fn()=>{}",
@@ -127,7 +135,7 @@
     ],
     "description": "(){}"
   },
-  //! addEventListener
+  //* addEventListener/remove
   "addEventListener('event',);": {
     "prefix": ".add",
     "scope": "javascript",
@@ -160,7 +168,7 @@
     ],
     "description": "document.addEventListener();"
   },
-  //! querySelector
+  //* querySelector
   "document.querySelector();": {
     "prefix": "docq",
     "scope": "javascript",
@@ -177,7 +185,7 @@
     ],
     "description": "document.querySelectorAll();"
   },
-  //! createElement
+  //* createElement
   "document.createElement('');": {
     "prefix": "docre",
     "scope": "javascript",
@@ -186,32 +194,70 @@
     ],
     "description": "document.createElement('');"
   },
-  //! методы
-  "reduce": {
+  //* методы
+  "Метод Math.floor(num)": {
+    "prefix": "Mathf",
+    "scope": "javascript",
+    "body": [
+      "Math.floor($1);$2"
+    ],
+    "description": "Возвращает наибольшее целое число,меньшее. либо равное указанному"
+  },
+  "Метод Math.round(num)": {
+    "prefix": "Mathr",
+    "scope": "javascript",
+    "body": [
+      "Math.round($1);$2"
+    ],
+    "description": "Возвращает значение числа, округлённое до ближайшего целого"
+  },
+  "Метод reduce": {
     "prefix": ".red",
     "scope": "javascript",
     "body": [
-      ".reduce(($1)=>{$2}, 0)"
+      "reduce(($1)=>{$2}, 0)"
     ],
-    "description": "reduce 0"
+    "description": "Принимает два значения. acc и currentValue, и возвращает значение заданных действий"
   },
-  //!
-  "import": {
+  "Метод contains": {
+    "prefix": ".contains",
+    "scope": "javascript",
+    "body": [
+      ".contains"
+    ],
+    "description": "Метод  проверки наличия определенного значения в строке или массиве. Возвращает true или false"
+  },
+  "Метод closest": {
+    "prefix": ".closest",
+    "scope": "javascript",
+    "body": [
+      ".closest"
+    ],
+    "description": "Метод поиска искомого эл у найближайшего(родительского) элемента. К примеру closest из вложенности до родительского элемента ищет ближайший элемент с классом .color-card."
+  },
+  //* import
+  "import var from \"../\";": {
     "prefix": "import",
     "scope": "javascript",
     "body": [
-      "import $1 from \"../$2\";\r$3"
+      "import ${1:var} from \"../$2\";\r$3"
     ],
-    "description": "import"
+    "description": "import var from \"../\";"
   },
-  "import * as": {
+  "import {var} from module": {
+    "prefix": "import",
+    "body": "import ${2:moduleName} from '${1:module}'$0",
+    "description": "import {var} from module"
+  },
+  "import * as from \"../\";": {
     "prefix": "import",
     "scope": "javascript",
     "body": [
       "import * as from \"../$1\";\r$2"
     ],
-    "description": "import"
+    "description": "import * as from \"../'\";"
   },
+  //*
   "class": {
     "prefix": "clas",
     "scope": "javascript",
@@ -352,7 +398,7 @@
     ],
     "description": "class extends"
   },
-  //! Поис элементов из обьекта PointerEvent 
+  //* Поис элементов из обьекта PointerEvent 
   "nodeName": {
     "prefix": "nodeName",
     "scope": "javascript",
@@ -386,26 +432,6 @@
     "description": "currentTarget"
   },
   //! Методы
-  "Метод contains": {
-    "prefix": ".contains",
-    "scope": "javascript",
-    "body": [
-      ".contains"
-    ],
-    "description": "Метод  проверки наличия определенного значения в строке или массиве. Возвращает true или false"
-  },
-  "Метод closest": {
-    "prefix": ".closest",
-    "scope": "javascript",
-    "body": [
-      ".closest"
-    ],
-    "description": "Метод поиска искомого эл у найближайшего(родительского) элемента. К примеру closest из вложенности до родительского элемента ищет ближайший элемент с классом .color-card."
-  },
-  // "import": {
-  //   "prefix": "imp",
-  //   "body": "import ${2:moduleName} from '${1:module}'$0"
-  // },
   // "importNoModuleName": {
   //   "prefix": "imn",
   //   "body": "import '${1:module}'$0"

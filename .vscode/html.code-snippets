@@ -104,6 +104,81 @@
     ],
     "description": "code"
   },
+  "!DOCTYPE html": {
+    "prefix": "!!",
+    "scope": "html",
+    "body": [
+      "<!DOCTYPE html>",
+      "<html lang=\"${1|language, ru, en, ua|}\">",
+      "  ${2:<head></head>}",
+      "  <body>",
+      "    ${3:<header></header>}",
+      "    <main class=\"main\">$0</main>",
+      "    ${5:<footer></footer>}",
+      "    <script src=\"${6:js/main.min.js}\"></script>",
+      "  </body>",
+      "</html>"
+    ],
+    "description": "!DOCTYPE html"
+  },
+  "head favicon": {
+    "prefix": "head",
+    "scope": "html",
+    "body": [
+      "  <head>",
+      "    <meta charset=\"UTF-8\">",
+      "    <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">",
+      "    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">",
+      "    <link rel=\"apple-touch-icon\" sizes=\"180x180\" href=\"img/favicon/apple-touch-icon.png\">",
+      "    <link rel=\"icon\" type=\"image/png\" sizes=\"32x32\" href=\"img/favicon/favicon-32x32.png\">",
+      "    <link rel=\"icon\" type=\"image/png\" sizes=\"16x16\" href=\"img/favicon/favicon-16x16.png\">",
+      "    <link rel=\"manifest\" href=\"${1:img/favicon/site.webmanifest}\">",
+      "    <link rel=\"stylesheet\" href=\"${2:css/main.min.css}\">",
+      "    <title>${3:My site} | ${4:Главная</title>}",
+      "  </head>$0"
+    ],
+    "description": "head favicon"
+  },
+  "Кекс lorem ru": {
+    "prefix": "lorem",
+    "scope": "html",
+    "body": [
+      "Лакричная глазурь, шоколадный торт. Бисквит из медвежьих когтей, тирамису, халва, мармелад, жевательные конфеты. Терпкий желейный торт с круассаном. Овсяный пирог с кунжутом, чупа-чупс. Датский овсяный пирог с лакрицей. Бисквитный мармелад с кислым бисквитом на основе мороженого. Чизкейк, леденец, марципановая выпечка."
+    ],
+    "description": "keks lorem ru"
+  },
+  "Zombie lorem en": {
+    "prefix": "lorem",
+    "scope": "html",
+    "body": [
+      "Zombie ipsum brains reversus ab cerebellum virus inferno, brein nam rick mend grimes malum cerveau cerebro. De carne cerebro громоздкая анимата cervello corpora quaeritis."
+    ],
+    "description": "Zombie lorem en"
+  },
+  "Сыр lorem ru": {
+    "prefix": "lorem",
+    "scope": "html",
+    "body": [
+      "«Я люблю сыр, особенно сырные треугольники чеддер. Сыр и печенье бри дольчелатте блю кастелло боккончини, когда выходит сыр, все довольны сыром на тосте панир. Чизкейк нарезать сыр фета бри чизбургер бэбибель швейцарское фондю. Большой сыр на тостовой тарелке»."
+    ],
+    "description": "Сыр lorem ru"
+  },
+  "Юридический lorem ru": {
+    "prefix": "lorem",
+    "scope": "html",
+    "body": [
+      "«Выбор этой лицензии не влечет за собой прекращение действия их лицензий, если этот срок определяется голландским законодательством об авторском праве. Это лицензионное соглашение, за исключением того, что вы создаете или какой-либо формат LaTeX, а также оба «Правообладатель» и «Текущий сопровождающий» относятся к свободе, а не к цене»."
+    ],
+    "description": "Юридический lorem ru"
+  },
+  "Кошачий lorem ru": {
+    "prefix": "lorem",
+    "scope": "html",
+    "body": [
+      "«Пейте воду из крана, жуйте ногу, всегда ложитесь так, чтобы хвост мог слегка касаться носа человека, но спите на клавиатуре, взламывайте пушистые комочки, атакуйте, как злобный монстр, мяукающий в пустых комнатах»."
+    ],
+    "description": "Кошачий lorem ru"
+  },
   //!
   //   "Блок counter": {
   //     "prefix": "counter",

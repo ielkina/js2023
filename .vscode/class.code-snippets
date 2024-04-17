@@ -1,16 +1,28 @@
 {
-  // "html class header": {
-  //   "prefix": "header",
-  //   "scope": "html",
-  //   "body": ["header"],
-  //   "description": "html class"
-  // },
-  // "html class header__inner": {
-  //   "prefix": "he_i",
-  //   "scope": "html",
-  //   "body": ["header__inner"],
-  //   "description": "html class"
-  // },
+  "Класс header": {
+    "prefix": "header",
+    "scope": "html",
+    "body": [
+      "header"
+    ],
+    "description": "HTML классс header"
+  },
+  "Класс header__inner": {
+    "prefix": "header__inner",
+    "scope": "html",
+    "body": [
+      "header__inner"
+    ],
+    "description": "HTML классс header__inner"
+  },
+  "Класс header__wrapper": {
+    "prefix": "header__wrapper",
+    "scope": "html",
+    "body": [
+      "header__wrapper"
+    ],
+    "description": "HTML классс header__wrapper"
+  },
   // "Класс is-open": {
   //   "prefix": "is-open",
   //   "body": ["is-open"],

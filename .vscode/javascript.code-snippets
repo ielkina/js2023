@@ -12,7 +12,7 @@
     "prefix": "сщтые",
     "scope": "javascript",
     "body": [
-      "const $1"
+      "const ${1:variable} = $0"
     ],
     "description": "const"
   },
@@ -20,15 +20,31 @@
     "prefix": "c",
     "scope": "javascript",
     "body": [
-      "const $1"
+      "const ${1:variable} = $0"
     ],
     "description": "const"
+  },
+  "const {var} = object;": {
+    "prefix": "dest{}",
+    "scope": "javascript",
+    "body": [
+      "const {${1:variables}} = ${2:object};$0"
+    ],
+    "description": "Деструктуризация обьекта const {var} = object;"
+  },
+  "const [var] = array;": {
+    "prefix": "dest[]",
+    "scope": "javascript",
+    "body": [
+      "const [${1:variables}] = ${2:array};$0"
+    ],
+    "description": "Деструктуризация массива const [var] = array;"
   },
   "console.log();": {
     "prefix": "log",
     "scope": "javascript",
     "body": [
-      "console.log($1);\r$2"
+      "console.log($1);$0"
     ],
     "description": "console.log();"
   },
@@ -36,31 +52,31 @@
     "prefix": "дщп",
     "scope": "javascript",
     "body": [
-      "console.log($1);\r$2"
+      "console.log($1);$0"
     ],
     "description": "console.log();"
   },
-  "console.log('');": {
+  "console.log('text');": {
     "prefix": "log",
     "scope": "javascript",
     "body": [
-      "console.log('$1');\r$2"
+      "console.log('${1: text}');$0"
     ],
-    "description": "console.log('');"
+    "description": "console.log('text');"
   },
-  "console.log(``);": {
+  "console.log(`text, code`);": {
     "prefix": "log",
     "scope": "javascript",
     "body": [
-      "console.log(`$1`);\r$2"
+      "console.log(`${1:text}`);$0"
     ],
-    "description": "console.log(``);"
+    "description": "console.log(`text, code`);"
   },
   "console.log(\"\");": {
     "prefix": "log",
     "scope": "javascript",
     "body": [
-      "console.log(\"$1\");\r$2"
+      "console.log(\"${1:text}\");$0"
     ],
     "description": "console.log(\"\");"
   },
@@ -68,7 +84,7 @@
     "prefix": "tab",
     "scope": "javascript",
     "body": [
-      "console.table($1);\r$2"
+      "console.table($1);$0"
     ],
     "description": "console.table();"
   },
@@ -76,7 +92,7 @@
     "prefix": "dir",
     "scope": "javascript",
     "body": [
-      "console.dir($1);\r$2"
+      "console.dir($1);$0"
     ],
     "description": "console.dir();"
   },
@@ -84,48 +100,51 @@
     "prefix": "group",
     "scope": "javascript",
     "body": [
-      "console.group$1();$2"
+      "console.group$1();$0"
     ],
     "description": "console.group();"
   },
   //* Функции
-  "function name(params){}; name();": {
+  "function name(params){code}; name();": {
     "prefix": "fn",
     "scope": "javascript",
     "body": [
-      "function ${1:name}(${2:params}){\r",
-      "$3",
-      "};\r",
-      "\r",
+      "function ${1:name}(${2:params}){$0};",
       "${1:name}();"
     ],
-    "description": "function name(params){}; name();"
+    "description": "function name(params){code}; name();"
   },
-  "function name(){};": {
+  "function name(){code};": {
     "prefix": "fn",
     "scope": "javascript",
     "body": [
-      "function ${1:name}($3){\r",
-      "$4",
-      "};\r"
+      "function ${1:name}(){${2:code}};"
     ],
-    "description": "function name(){};"
+    "description": "function name(){code};"
   },
-  "function(){};": {
+  "function(params){code};": {
     "prefix": "fn",
     "scope": "javascript",
     "body": [
-      "function($1){$2};\r"
+      "function(${1:params}){${2:code}};"
     ],
-    "description": "function(){};"
+    "description": "function(params){code};"
   },
-  "()=>{};": {
+  "(callback)=>{};": {
     "prefix": "fn()=>{}",
     "scope": "javascript",
     "body": [
-      "($1)=>{$2}"
+      "(${1:callback})=>{${2:code}}"
     ],
-    "description": "function (callback)=>{}"
+    "description": "(callback)=>{}"
+  },
+  "= event =>{};": {
+    "prefix": "fn",
+    "scope": "javascript",
+    "body": [
+      "${1:event} =>{$0}"
+    ],
+    "description": "= event =>{}"
   },
   "(){};": {
     "prefix": "fn(){}",
@@ -140,7 +159,7 @@
     "prefix": ".add",
     "scope": "javascript",
     "body": [
-      ".addEventListener('${1:event}', $2);\r$3"
+      ".addEventListener('${1:event}', $2);$0"
     ],
     "description": "addEventListener ('event',)"
   },
@@ -148,7 +167,7 @@
     "prefix": ".remov",
     "scope": "javascript",
     "body": [
-      ".removeEventListener('${1:event}', $2);\r$3"
+      ".removeEventListener('${1:event}', $2);$0"
     ],
     "description": "removeEventListener('event',)"
   },
@@ -156,7 +175,7 @@
     "prefix": ".add",
     "scope": "javascript",
     "body": [
-      ".addEventListener('${1:event}',($2)=>{$3});"
+      ".addEventListener('${1:event}',($2)=>{$3});$0"
     ],
     "description": "addEventListener ('event',()=>{})"
   },
@@ -164,7 +183,7 @@
     "prefix": "docadd",
     "scope": "javascript",
     "body": [
-      "document.addEventListener($1);\r$2"
+      "document.addEventListener($1);$0"
     ],
     "description": "document.addEventListener();"
   },
@@ -173,7 +192,7 @@
     "prefix": "docq",
     "scope": "javascript",
     "body": [
-      "document.querySelector($1);\r$2"
+      "document.querySelector($1);$0"
     ],
     "description": "document.querySelector();"
   },
@@ -181,7 +200,7 @@
     "prefix": "docq",
     "scope": "javascript",
     "body": [
-      "document.querySelectorAll($1);\r$2"
+      "document.querySelectorAll($1);$0"
     ],
     "description": "document.querySelectorAll();"
   },
@@ -190,7 +209,7 @@
     "prefix": "docre",
     "scope": "javascript",
     "body": [
-      "document.createElement('$1');\r$2"
+      "document.createElement('$1');$0"
     ],
     "description": "document.createElement('');"
   },
@@ -199,7 +218,7 @@
     "prefix": "Mathf",
     "scope": "javascript",
     "body": [
-      "Math.floor($1);$2"
+      "Math.floor($1)$0"
     ],
     "description": "Возвращает наибольшее целое число,меньшее. либо равное указанному"
   },
@@ -207,247 +226,82 @@
     "prefix": "Mathr",
     "scope": "javascript",
     "body": [
-      "Math.round($1);$2"
+      "Math.round($1)$0"
     ],
     "description": "Возвращает значение числа, округлённое до ближайшего целого"
   },
-  "Метод reduce": {
+  "Метод reduce(()=>{}, 0)": {
     "prefix": ".red",
     "scope": "javascript",
     "body": [
-      "reduce(($1)=>{$2}, 0)"
+      ".reduce((${1:accumulator, currentValue})=>{${2:выражение - accumulator + currentValue}, ${3:initialValue(0 к примеру)})$0"
     ],
-    "description": "Принимает два значения. acc и currentValue, и возвращает значение заданных действий"
+    "description": "Метод reduce() применяет функцию reducer к каждому элементу массива (слева-направо), возвращая одно результирующее значение."
   },
-  "Метод contains": {
-    "prefix": ".contains",
+  "Метод contains('')": {
+    "prefix": ".con",
     "scope": "javascript",
     "body": [
-      ".contains"
+      ".contains('${1:class||selector||text}')$0"
     ],
     "description": "Метод  проверки наличия определенного значения в строке или массиве. Возвращает true или false"
   },
-  "Метод closest": {
+  "Метод closest('')": {
     "prefix": ".closest",
     "scope": "javascript",
     "body": [
-      ".closest"
+      ".closest('${1:selector}')$0"
     ],
     "description": "Метод поиска искомого эл у найближайшего(родительского) элемента. К примеру closest из вложенности до родительского элемента ищет ближайший элемент с классом .color-card."
   },
-  //* import
-  "import var from \"../\";": {
-    "prefix": "import",
-    "scope": "javascript",
+  "Метод forEach(element => {});": {
+    "prefix": "forEach",
     "body": [
-      "import ${1:var} from \"../$2\";\r$3"
+      "${1:array}.forEach(${2|element, item|} => {${0}});"
     ],
-    "description": "import var from \"../\";"
+    "description": "Создает A для каждого утверждения в синтаксисе ES7"
   },
-  "import {var} from module": {
-    "prefix": "import",
-    "body": "import ${2:moduleName} from '${1:module}'$0",
-    "description": "import {var} from module"
-  },
-  "import * as from \"../\";": {
+  //* import/export
+  "import var from '../ ';": {
     "prefix": "import",
     "scope": "javascript",
     "body": [
-      "import * as from \"../$1\";\r$2"
+      "import ${1:var} from '../$2';$0"
+    ],
+    "description": "import var from '../';"
+  },
+  "import {var} from 'module'": {
+    "prefix": "import",
+    "scope": "javascript",
+    "body": "import {${1:var}} from '${2:module}';$0",
+    "description": "Деструкторизованное import {var} from module"
+  },
+  "import * as from '../ ';": {
+    "prefix": "import",
+    "scope": "javascript",
+    "body": [
+      "import * as from \"../$1\";$0"
     ],
     "description": "import * as from \"../'\";"
   },
-  //*
-  "class": {
-    "prefix": "clas",
+  "import * as var from 'module'": {
+    "prefix": "ime",
     "scope": "javascript",
-    "body": [
-      "class ${1:Parent} {$2}"
-    ],
-    "description": "class"
+    "body": "import * as ${1:var} from '${2:module}';$0",
+    "description": "import * as var from 'module';"
   },
-  "constructor(){};": {
-    "prefix": "const",
+  "import 'module'": {
+    "prefix": "imn",
     "scope": "javascript",
-    "body": [
-      "constructor(){\n$1\n};"
-    ],
-    "description": "constructor function"
+    "body": "import '${1:module}';$0",
+    "description": "import 'module';"
   },
-  "js arrow reduce, 0": {
-    "prefix": "arr",
+  "import {name as alias} from 'module'": {
+    "prefix": "ima",
     "scope": "javascript",
-    "body": [
-      "((${1:item}, ${2:item})=>{$3},0)"
-    ],
-    "description": "js arrow reduce, 0"
+    "body": "import { ${1:originalName} as ${2:alias} } from '${3:module}';$0",
+    "description": "import {name as alias} from 'module';"
   },
-  "destructuring object": {
-    "prefix": "dest{}",
-    "scope": "javascript",
-    "body": [
-      "const { key$1 } = object$2;"
-    ],
-    "description": "destructuring"
-  },
-  "destructuring array": {
-    "prefix": "dest[]",
-    "scope": "javascript",
-    "body": [
-      "const [index$1] = array$2;"
-    ],
-    "description": "destructuring"
-  },
-  "quantity word": {
-    "prefix": "qua",
-    "scope": "javascript",
-    "body": [
-      "quantity"
-    ],
-    "description": "quantity word"
-  },
-  "constructor": {
-    "prefix": "constr",
-    "scope": "javascript",
-    "body": [
-      "constructor({$1}={}){$2}"
-    ],
-    "description": "constructor"
-  },
-  "constructor super": {
-    "prefix": "super",
-    "scope": "javascript",
-    "body": [
-      "  constructor({ $1, ...restProps } = {}) {\r",
-      "    super(restProps);\r",
-      "    this.$1 = $1;\r",
-      "  }"
-    ],
-    "description": "constructor super"
-  },
-  "for": {
-    "prefix": "for",
-    "scope": "javascript",
-    "body": [
-      "for (let i = 0; i < cart.length; i++) {\r",
-      "}\r",
-      "console.log(cart);"
-    ],
-    "description": "for"
-  },
-  "for...of": {
-    "prefix": "forof",
-    "scope": "javascript",
-    "body": [
-      "for (const item$1 of items$2) {\r",
-      "  console.log(item$1);\r",
-      "}"
-    ],
-    "description": "for...of"
-  },
-  "for..of": {
-    "prefix": "for",
-    "scope": "javascript",
-    "body": [
-      "for (const $1 of $2) {\r",
-      "  console.log($3);\r",
-      "}"
-    ],
-    "description": "for...of"
-  },
-  "constructor this": {
-    "prefix": "conthis",
-    "scope": "javascript",
-    "body": [
-      " constructor($1) {\r",
-      "  this.${1:text} = $1\r",
-      " }"
-    ],
-    "description": "constructor this"
-  },
-  "for...ite": {
-    "prefix": "fori",
-    "scope": "javascript",
-    "body": [
-      "for (let i = 0; i < ${1:array}.length; i += 1) {\r",
-      "  const element = $1[i];\r",
-      "}"
-    ],
-    "description": "for...iter"
-  },
-  "for...iter": {
-    "prefix": "fori",
-    "scope": "javascript",
-    "body": [
-      "for (let i = 0; i < array$1.length; i += 1) {\r",
-      "  const element = array$2[i];\r",
-      "}"
-    ],
-    "description": "for...iter"
-  },
-  "class extends наследование": {
-    "prefix": "ext",
-    "scope": "javascript",
-    "body": [
-      "class ${1:Child} extends ${2:Parent }{\r",
-      "   constructor({$3, $4}={}) {\r",
-      "    super($4);\r",
-      "    this.$3 = $3\r",
-      "   }\r",
-      "}"
-    ],
-    "description": "class extends"
-  },
-  //* Поис элементов из обьекта PointerEvent 
-  "nodeName": {
-    "prefix": "nodeName",
-    "scope": "javascript",
-    "body": [
-      "nodeName"
-    ],
-    "description": "nodeName"
-  },
-  "classList": {
-    "prefix": "classList",
-    "scope": "javascript",
-    "body": [
-      "classList"
-    ],
-    "description": "classList"
-  },
-  "parentNode": {
-    "prefix": "parentNode",
-    "scope": "javascript",
-    "body": [
-      "parentNode"
-    ],
-    "description": "parentNode"
-  },
-  "currentTarget": {
-    "prefix": "currentTarget",
-    "scope": "javascript",
-    "body": [
-      "currentTarget"
-    ],
-    "description": "currentTarget"
-  },
-  //! Методы
-  // "importNoModuleName": {
-  //   "prefix": "imn",
-  //   "body": "import '${1:module}'$0"
-  // },
-  // "importDestructing": {
-  //   "prefix": "imd",
-  //   "body": "import { $2 } from '${1:module}'$0"
-  // },
-  // "importEverything": {
-  //   "prefix": "ime",
-  //   "body": "import * as ${2:alias} from '${1:module}'$0"
-  // },
-  // "importAs": {
-  //   "prefix": "ima",
-  //   "body": "import { ${2:originalName} as ${3:alias} } from '${1:module}'$0"
-  // },
   // "exportDefault": {
   //   "prefix": "exp",
   //   "body": "export default $1$0"
@@ -480,6 +334,186 @@
   //   ],
   //   "description": "Export default function in ES7 syntax"
   // },
+  //************************************//
+  // *For/Of/Each/Iteration
+  "for": {
+    "prefix": "for",
+    "scope": "javascript",
+    "body": [
+      "for (let i = 0; i < cart.length; i++) {\r",
+      "}\r",
+      "console.log(cart);"
+    ],
+    "description": "for"
+  },
+  "for...of": {
+    "prefix": "forof",
+    "scope": "javascript",
+    "body": [
+      "for (const item$1 of items$2) {\r",
+      "  console.log(item$1);\r",
+      "}"
+    ],
+    "description": "for...of"
+  },
+  "for..of": {
+    "prefix": "for",
+    "scope": "javascript",
+    "body": [
+      "for (const $1 of $2) {\r",
+      "  console.log($3);\r",
+      "}"
+    ],
+    "description": "for...of"
+  },
+  "for...ite": {
+    "prefix": "fori",
+    "scope": "javascript",
+    "body": [
+      "for (let i = 0; i < ${1:array}.length; i += 1) {\r",
+      "  const element = $1[i];\r",
+      "}"
+    ],
+    "description": "for...iter"
+  },
+  "for...iter": {
+    "prefix": "fori",
+    "scope": "javascript",
+    "body": [
+      "for (let i = 0; i < array$1.length; i += 1) {\r",
+      "  const element = array$2[i];\r",
+      "}"
+    ],
+    "description": "for...iter"
+  },
+  "forOf": {
+    "prefix": "for",
+    "body": [
+      "for(let ${1:item} of ${2:object}) {",
+      "  ${0}",
+      "}",
+      ""
+    ],
+    "description": "Iterating over property names of iterable objects"
+  },
+  "forIn": {
+    "prefix": "for",
+    "body": [
+      "for(let ${1:item} in ${2:object}) {",
+      "  ${0}",
+      "}",
+      ""
+    ],
+    "description": "Iterating over property values of iterable objects"
+  },
+  //*********************************************************************************//
+  "class": {
+    "prefix": "cla",
+    "scope": "javascript",
+    "body": [
+      "class ${1:Parent} {$0}"
+    ],
+    "description": "Класс"
+  },
+  "constructor(){};": {
+    "prefix": "const",
+    "scope": "javascript",
+    "body": [
+      "constructor(){\n$1\n};"
+    ],
+    "description": "constructor function"
+  },
+  "js arrow reduce, 0": {
+    "prefix": "arr",
+    "scope": "javascript",
+    "body": [
+      "((${1:item}, ${2:item})=>{$3},0)"
+    ],
+    "description": "js arrow reduce, 0"
+  },
+  "quantity word": {
+    "prefix": "qua",
+    "scope": "javascript",
+    "body": [
+      "quantity"
+    ],
+    "description": "quantity word"
+  },
+  "constructor": {
+    "prefix": "constr",
+    "scope": "javascript",
+    "body": [
+      "constructor({$1}={}){$2}"
+    ],
+    "description": "constructor"
+  },
+  "constructor super": {
+    "prefix": "super",
+    "scope": "javascript",
+    "body": [
+      "  constructor({ $1, ...restProps } = {}) {\r",
+      "    super(restProps);\r",
+      "    this.$1 = $1;\r",
+      "  }"
+    ],
+    "description": "constructor super"
+  },
+  "constructor this": {
+    "prefix": "conthis",
+    "scope": "javascript",
+    "body": [
+      " constructor($1) {\r",
+      "  this.${1:text} = $1\r",
+      " }"
+    ],
+    "description": "constructor this"
+  },
+  "class extends наследование": {
+    "prefix": "ext",
+    "scope": "javascript",
+    "body": [
+      "class ${1:Child} extends ${2:Parent }{\r",
+      "   constructor({$3, $4}={}) {\r",
+      "    super($4);\r",
+      "    this.$3 = $3\r",
+      "   }\r",
+      "}"
+    ],
+    "description": "class extends"
+  },
+  //* Поис элементов из обьекта PointerEvent
+  "nodeName": {
+    "prefix": ".nod",
+    "scope": "javascript",
+    "body": [
+      ".nodeName"
+    ],
+    "description": "nodeName"
+  },
+  "classList": {
+    "prefix": ".cll",
+    "scope": "javascript",
+    "body": [
+      ".classList"
+    ],
+    "description": "classList"
+  },
+  "parentNode": {
+    "prefix": ".par",
+    "scope": "javascript",
+    "body": [
+      ".parentNode"
+    ],
+    "description": "parentNode"
+  },
+  "currentTarget": {
+    "prefix": ".cur",
+    "scope": "javascript",
+    "body": [
+      ".currentTarget"
+    ],
+    "description": "currentTarget"
+  }
   // "method": {
   //   "prefix": "met",
   //   "body": [
@@ -509,36 +543,6 @@
   //     ""
   //   ],
   //   "description": "Creates a setter property inside a class in ES7 syntax"
-  // },
-  // "forEach": {
-  //   "prefix": "fre",
-  //   "body": [
-  //     "${1:array}.forEach(${2:currentItem} => {",
-  //     "  ${0}",
-  //     "})",
-  //     ""
-  //   ],
-  //   "description": "Creates a forEach statement in ES7 syntax"
-  // },
-  // "forOf": {
-  //   "prefix": "fof",
-  //   "body": [
-  //     "for(let ${1:item} of ${2:object}) {",
-  //     "  ${0}",
-  //     "}",
-  //     ""
-  //   ],
-  //   "description": "Iterating over property names of iterable objects"
-  // },
-  // "forIn": {
-  //   "prefix": "fin",
-  //   "body": [
-  //     "for(let ${1:item} in ${2:object}) {",
-  //     "  ${0}",
-  //     "}",
-  //     ""
-  //   ],
-  //   "description": "Iterating over property values of iterable objects"
   // },
   // "anonymousFunction": {
   //   "prefix": "anfn",

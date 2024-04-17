@@ -118,4 +118,17 @@ ul {
   margin-bottom: 20px;
   text-align: justify;
   word-spacing: inherit;
+}
+
+.list {
+  list-style: none;
+}
+
+.pallet__item {
+  width: 100px;
+  height: 100px;
+  border: 1px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
 }/*# sourceMappingURL=style.css.map */

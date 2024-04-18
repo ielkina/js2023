@@ -155,21 +155,21 @@
     "description": "(){}"
   },
   //* addEventListener/remove
-  "addEventListener('event',);": {
+  "addEventListener('event', fnName);": {
     "prefix": ".add",
     "scope": "javascript",
     "body": [
-      ".addEventListener('${1:event}', $2);$0"
+      ".addEventListener('${1:event}', ${2:fnName});$0"
     ],
-    "description": "addEventListener ('event',)"
+    "description": "addEventListener ('event', fnName)"
   },
-  "removeEventListener('event',);": {
+  "removeEventListener('event', fnName);": {
     "prefix": ".remov",
     "scope": "javascript",
     "body": [
-      ".removeEventListener('${1:event}', $2);$0"
+      ".removeEventListener('${1:event}', ${2:fnName});$0"
     ],
-    "description": "removeEventListener('event',)"
+    "description": "removeEventListener('event', fnName);"
   },
   "addEventListener('event',()=>{});": {
     "prefix": ".add",
@@ -179,13 +179,21 @@
     ],
     "description": "addEventListener ('event',()=>{})"
   },
-  "document.addEventListener();": {
+  "document.addEventListener('event', fnName);": {
     "prefix": "docadd",
     "scope": "javascript",
     "body": [
-      "document.addEventListener($1);$0"
+      "document.addEventListener('${1:event}', ${2:fnName});$0"
     ],
-    "description": "document.addEventListener();"
+    "description": "document.addEventListener('event', fnName);"
+  },
+  "document.removeEventListener('event', fnName);": {
+    "prefix": "docrem",
+    "scope": "javascript",
+    "body": [
+      "document.removeEventListener('${1:event}', ${2:fnName});$0"
+    ],
+    "description": "document.removeEventListener('event', fnName);"
   },
   //* querySelector
   "document.querySelector();": {

@@ -38,7 +38,15 @@
       "}$0"
     ],
     "description": "Скрываем html элементы"
-  }
+  },
+  "visibility: visible;": {
+    "prefix": "viv",
+    "scope": "scss",
+    "body": [
+      "visibility: visible;"
+    ],
+    "description": "visibility: visible;"
+  },
   //   "Small Devices and Larger": {
   //     "prefix": "small-devices-and-up-media-query",
   //     "body": [

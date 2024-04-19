@@ -131,4 +131,20 @@ ul {
   display: flex;
   justify-content: center;
   align-items: flex-end;
+}
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.3568627451);
+  display: none;
+}
+
+.backdrop.is-open {
+  opacity: 1;
+  display: initial;
+  pointer-events: auto;
 }/*# sourceMappingURL=style.css.map */

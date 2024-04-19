@@ -154,6 +154,8 @@ ul {
 	align-items: flex-end;
 }
 
+
+
 .pallet__item-color {
 	// width: 50px;
 	// height: 50px;
@@ -161,4 +163,23 @@ ul {
 	// background-color: #fff;
 	// color: #000;
 	// background-color: rgb(16, 216, 149);
+}
+
+// модалка
+.backdrop {
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 100;
+	width: 100%;
+	background-color: #0000005b;
+	// visibility: hidden;
+	display: none;
+}
+
+.backdrop.is-open {
+	opacity: 1;
+	display: initial;
+	// visibility: visible;
+	pointer-events: auto;
 }

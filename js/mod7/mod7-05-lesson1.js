@@ -161,19 +161,51 @@ messagesWrapper.addEventListener('click', handleMessagesClick);
 //modal
 
 const modalRefs = {
-  container: document.querySelector('.container'),
   jsModalOpen: document.querySelector('.js-modal-open'),
-  backdrop: document.querySelector('.backdrop'),
-  modal: document.querySelector('.modal'),
-  closeBtn: document.querySelector('.close-btn'),
+  backdrop: document.querySelector('.js-backdrop'),
+  closeBtn: document.querySelector('.js-modal-close'),
 };
 
-const { jsModalOpen, backdrop, modal, closeBtn } = modalRefs;
+const { jsModalOpen, backdrop, closeBtn } = modalRefs;
 
-const handleModalClick = event => {
-  if (!event.target.classList.contains('.js-modal-open')) {
+const handleOpenModalBtnClick = function () {
+  backdrop.classList.add('is-open');
+  // // document.addEventListener('keydown', onEscBtnPush);
+  // console.log(backdrop.classList);
+  // document.addEventListener('keydown', handleCloseModal);
+  //при желании что б функция отработала один раз
+  document.addEventListener('keydown', handleCloseModal, { once: true });
+};
+
+const handleCloseModal = ({ target, code }) => {
+  //отсеиваем элементы которые нам не нужны
+  // if (!target.classList.contains('backdrop') && !target.classList.contains('close-btn')) {
+  //   return;
+  // }
+  //или
+  if (target !== backdrop && target !== closeBtn && code !== 'Escape') {
     return;
   }
-  console.log(event);
+  backdrop.classList.remove('is-open');
+  console.log(target);
+  // document.removeEventListener('keydown', handleCloseModal);
 };
-//42.59
+
+// const closeModal = function () {
+//   backdrop.classList.remove('is-open');
+//   document.removeEventListener('keydown', onEscBtnPush);
+//   console.log(backdrop.classList);
+// };
+
+// const onEscBtnPush = function (event) {
+//   if (event.code !== 'Escape') {
+//     return;
+//   }
+//   closeModal();
+// };
+
+backdrop.addEventListener('click', handleCloseModal);
+
+jsModalOpen.addEventListener('click', handleOpenModalBtnClick);
+// closeBtn.addEventListener('click', closeModal);
+//1.13

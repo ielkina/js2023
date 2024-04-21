@@ -225,5 +225,10 @@
     "key": "oem_3",
     "command": "-wrapSelection.backtick",
     "when": "config.multilineWrap.keybindings.backtick && editorHasSelection && editorTextFocus"
+  },
+  {
+    "key": ".",
+    "command": "",
+    "when": "textInputFocus"
   }
 ]

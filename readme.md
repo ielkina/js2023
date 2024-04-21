@@ -161,6 +161,12 @@
 
 # План занятия
 
+- Chatty events (болтливые события)
+- Приемы throttle и debounce с lodash
+- [Ленивая загрузка изображения](https://web.dev/articles/lazy-loading-images?hl=ru)
+  - Нативная с атрибутом loading
+  - Библиотека [lazysizes]()
+
 https://ielkina.github.io/js2023/
 
 ![EditorConfig](https://github.com/pepelsbey/pepelsbey.dev/actions/workflows/editorconfig.yml/badge.svg)

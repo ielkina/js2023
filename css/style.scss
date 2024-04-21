@@ -135,7 +135,9 @@ ul {
 	// white-space: pre-wrap;
 }
 
-.container {}
+.container {
+	flex-direction: column;
+}
 
 .pallet {}
 
@@ -182,4 +184,8 @@ ul {
 	display: initial;
 	// visibility: visible;
 	pointer-events: auto;
+}
+
+.js-list {
+	flex-direction: column;
 }

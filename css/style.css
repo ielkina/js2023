@@ -120,6 +120,10 @@ ul {
   word-spacing: inherit;
 }
 
+.container {
+  flex-direction: column;
+}
+
 .list {
   list-style: none;
 }
@@ -147,4 +151,8 @@ ul {
   opacity: 1;
   display: initial;
   pointer-events: auto;
+}
+
+.js-list {
+  flex-direction: column;
 }/*# sourceMappingURL=style.css.map */

@@ -250,42 +250,35 @@
     "description": "button type:button disabled"
   },
   //! Картинок
-  "pictures full": {
-    "prefix": "picfull",
+  "pictires media": {
+    "prefix": "pic",
     "scope": "html",
     "body": [
-      "      <source srcset=\"",
-      "              ./images/img@m1x.jpg 1x,",
-      "              ./images/img@m2x.jpg 2x",
-      "            \" media=\"(min-width: 480px)\">",
-      "      <source srcset=\"",
-      "              ./images/img@t1x.jpg 1x,",
-      "              ./images/img@t2x.jpg 2x",
-      "            \" media=\"(min-width: 768px)\">",
-      "      <source srcset=\"",
-      "              ./images/img@d1x.jpg 1x,",
-      "              ./images/img@d2x.jpg 2x",
-      "            \" media=\"(min-width: 1200px)\">",
-      "      <img class=\"\" src=\"./images/img@m1x.jpg\" alt=\"\">",
-      "    </picture>"
+      "<picture>",
+      "  <source srcset=\"./images/img@m1x.jpg 1x,./images/img@m2x.jpg 2x\" media=\"(min-width: 480px)\">",
+      "  <source srcset=\"./images/img@t1x.jpg 1x,./images/img@t2x.jpg 2x\" media=\"(min-width: 768px)\">",
+      "  <source srcset=\"./images/img@d1x.jpg 1x,./images/img@d2x.jpg 2x\" media=\"(min-width: 1200px)\">",
+      "  <img class=\"$1\" src=\"./images/img@m1x.jpg\" alt=\"$2\">",
+      "</picture>$0"
     ],
-    "description": "pictures"
+    "description": "pictures media"
   },
   "picture webp": {
     "prefix": "pic",
+    "scope": "html",
     "body": [
       "<picture>",
       "  <source srcset=\"$1.webp\" type=\"image/webp\">",
-      "  <img class=\"${3:image}\" loading=\"lazy\" src=\"$1.$2\"  width=\"$4\" height=\"$5\" alt=\"$6\">",
+      "  <img class=\"${2:image}\" loading=\"lazy\" width=\"$3\" height=\"$4\" alt=\"$5\"src=\"${6:src/}\">",
       "</picture>$0"
     ],
-    "description": "Snippet for basic logo structure"
+    "description": "pictures webp"
   },
   "<img>": {
     "scope": "html",
     "prefix": "img",
     "body": [
-      "<img class=\"${1:image}\" loading=\"lazy\" src=\"$2.$3\"  width=\"$4\" height=\"$5\" alt=\"$6\">$0"
+      "<img class=\"${1:__image}\" loading=\"lazy\" width=\"$2\" height=\"$3\" alt=\"${4:image}\" src=\"$5\">$0"
     ],
     "description": "Snippet for simple html svg images"
   },

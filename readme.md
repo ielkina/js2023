@@ -163,7 +163,7 @@
 
 - Chatty events (болтливые события)
 - Приемы throttle и debounce с lodash
-- [Ленивая загрузка изображения](https://web.dev/articles/lazy-loading-images?hl=ru)
+- [Ленивая загрузка изображения](https://web.dev/native-lazy-loading)
   - Нативная с атрибутом loading
   - Библиотека [lazysizes]()
 

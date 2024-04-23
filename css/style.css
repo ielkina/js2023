@@ -107,15 +107,13 @@ ul {
 .div {
   width: 80%;
   border: 1px solid black;
-  margin: auto;
-  margin-bottom: 20px;
+  margin: auto auto 20px;
 }
 
 .text {
   width: 60%;
   border: 1px solid black;
-  margin: auto;
-  margin-bottom: 20px;
+  margin: auto auto 20px;
   text-align: justify;
   word-spacing: inherit;
 }
@@ -155,4 +153,19 @@ ul {
 
 .js-list {
   flex-direction: column;
+}
+
+.feed img {
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: all 500ms linear;
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 640px;
+  height: 480px;
+}
+
+.feed img.appear {
+  transform: translateX(0);
+  opacity: 1;
 }/*# sourceMappingURL=style.css.map */

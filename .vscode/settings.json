@@ -14,7 +14,77 @@
   "editor.formatOnSave": true, //автоматическое форматирование кода при сохранении
   "editor.cursorBlinking": "expand", //плавное мигание курсора
   "editor.wordBasedSuggestions": "allDocuments", //автодополнение на основе слов будет предлагаться из всех открытых документов
+  //todo HTML
+  // "html.format.wrapAttributes": "aligned-multiple", //нужно ли переносить атрибуты на новую строку в зависимости от длины строки
+  // "html.format.preserveNewLines": false, //сохранить существующие переносы строк и отступы
+  // "html.format.wrapLineLength": 120, //отключено автоматическое перенос строк
+  // "html.autoClosingTags": false, //убирает косой флеш в конце одинарного тега
+  // "html.format.indentInnerHtml": true, //отступы для вложенных тегов
+  // "html.format.maxPreserveNewLines": 0, //удаляет пустые строки
+  // "html.format.indentHandlebars": true, //добавление отступов в зависимости от  вложенности модуля файлов шаблонов
+  // "html.validate.styles": true, //валидность кода(инлайново) стилей в html
+  // "html.trace.server": "messages", //сообщения об ошибках
+  // "html.validate.scripts": true, //проверка кода(инлайново) js на валидность
+  // "html.suggest.html5": true, //предлагать автодополнение стандартных элементов и атрибутов HTML5
+  // "html.format.enable": true, //автоматически форматировать
+  // "html.format.templating": false, //форматирование не будет применяться к шаблонным конструкциям.
+  // "html.format.extraLiners": "!DOCTYPE, html,/html, head, body, main,/main,section,header,script, footer", //теги которым будут будут оборачиваться пустыми строками
+  //todo Подсветка кода
+  "editor.tokenColorCustomizations": {
+    //! подсветка кода
+    "[Monokai Classic]": {
+      // "comments": "#00b7ffe8"
+    },
+    "textMateRules": [
+      {
+        "scope": [
+          "punctuation.definition.comment"
+        ],
+        "settings": {
+          // "foreground": "#FF0000"
+        }
+      },
+      {
+        "scope": [
+          "variable.other.readwrite.js",
+          "source.js",
+        ],
+        "settings": {
+          "foreground": "#ffe600"
+        }
+      },
+      {
+        "scope": [
+          "source.js",
+          "variable.other.readwrite",
+          "variable.other",
+          "variable.other.property.js",
+          "meta.property.object.js",
+        ],
+        "settings": {
+          "foreground": "#ffb491"
+        }
+      },
+      {
+        "scope": [
+          "source.json.comments",
+          "comment.block.documentation.json.comments",
+          "meta.structure.dictionary.json.comments",
+          "comment.line.double-slash.js",
+          "meta.structure.dictionary.json.comments",
+          "source.json.comments"
+        ],
+        "settings": {
+          // "foreground": "#0099ff5d"
+        }
+      }
+    ]
+  },
+  "workbench.colorCustomizations": {
+    "editor.renderIndentGuides": true, // Включение отображения табуляций (стрелок)
+    "editor.lineHighlightBackground": "#f5edc417",
+    "editor.lineHighlightBorder": "#9e9c9c38"
+  },
 }
-
-  // "editor.lineHeight": 22, //высота шрифта
-  // "editor.fontLigatures": true,//Включение лигатуры шрифта
+// "editor.lineHeight": 22, //высота шрифта
+// "editor.fontLigatures": true,//Включение лигатуры шрифта

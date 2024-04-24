@@ -13,11 +13,13 @@
 <body class="wrapper">
   <header>
     <h1>Модуль 7</h1>
-    <p>Модульное подключения файла скрипта автоматически включает "use strick"
+    <p>
+      Модульное подключения файла скрипта автоматически включает "use strick"
       <br>
       Преимущества модульного
       подключения файлов скрипта.
-      <br>В разных файлах могут писаться переменные с одинаковым название.
+      <br>
+      В разных файлах могут писаться переменные с одинаковым название.
       <br>
     </p>
     <a href="../index.html">На&nbsp;главную</a>
@@ -39,8 +41,10 @@
           <a href="#">Мастерская: колорпикер</a>
         </li>
       </ul>
-      <div class id="parent">parent
-        <div class id="child">child
+      <div class id="parent">
+        parent
+        <div class id="child">
+          child
           <div class id="inner-child">inner-child</div>
         </div>
       </div>
@@ -251,7 +255,29 @@
       </div>
     </section>
     <section class="practice">
-      <div class="container"></div>
+      <div class="container">
+        <div class="flex-colum flex-center">
+          <div class="buttons flex-center">
+            <button data-action="left" type="button">left</button>
+            <div class="group flex-centr flex-colum">
+              <button data-action="up" type="button">up</button>
+              <button data-action="down" type="button">down</button>
+            </div>
+            <button data-action="right" type="button">right</button>
+          </div>
+          <div class="field">
+            <div class="item"></div>
+          </div>
+        </div>
+        <div class="form">
+          <div class="form__block">
+            <input type="text" class="" data-type="firstName">
+            <input data-type="lastName" type="text" name="" id="#">
+            <button data-action="add" type="button">Add</button>
+            <ul class="list__name"></ul>
+          </div>
+        </div>
+      </div>
     </section>
     <section class="lesson two repena">
       <div class="container">
@@ -265,7 +291,8 @@
         </div>
         <div class="filter">
           <hr>
-          <label>Что ищем?&nbsp;
+          <label>
+            Что ищем?&nbsp;
             <input id="filter" type="text">
           </label>
           <ul class="js-list"></ul>
@@ -470,6 +497,9 @@
         </div>
       </div>
     </section>
+    <section class="lesson two rusich"></section>
+    <section class="lesson two"></section>
+    <section class="practice"></section>
   </main>
   <footer>
     <a href="../index.html">На&nbsp;главную</a>
@@ -484,11 +514,11 @@
   <!-- <script type="module" src="../js/mod7/mod7-03-colorpicker.js"></script> -->
   <!-- <script type="module" src="../js/mod7/mod7-04-rusich-one.js"></script> -->
   <!-- <script type="module" src="/js/mod7/mod7-05-lesson1.js"></script> -->
-  <!-- <script type="module" src="/js/mod7/mod7-06-practice.js"></script> -->
+  <script type="module" src="/js/mod7/mod7-06-practice.js"></script>
   <!-- <script type="module" src="../js/mod7/mod7-07-chatty-evenbts.js"></script> -->
   <!-- <script type="module" src="../js/mod7/mod7-07-filter.js"></script> -->
   <!-- <script type="module" src="../js/mod7/mod7-08-lazy-load.js"></script> -->
-  <script type="module" src="../js/mod7/mod7-09-lazysizes.js"></script>
+  <!-- <script type="module" src="../js/mod7/mod7-09-lazysizes.js"></script> -->
 </body>
 
 </html>

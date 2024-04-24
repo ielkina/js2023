@@ -222,6 +222,7 @@
   },
   "basicform": {
     "prefix": "form",
+    "scope": "html",
     "body": [
       "<form action=\"#\" class=\"form\">",
       "  <label class=\"form__label\">",

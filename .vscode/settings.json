@@ -1,12 +1,13 @@
 {
   //Todo Work Bench Colors/Theme
-  "workbench.colorTheme": "Monokai Pro",
+  "workbench.colorTheme": "Monokai",
   "workbench.iconTheme": "material-icon-theme",
   //Todo Work Bench Text Settings
-  "files.autoSave": "onFocusChange", //автосохранение
-  "diffEditor.wordWrap": "inherit", //перенос слов
+  "files.autoSave": "onFocusChange", //автосохранение  после переноса фокуса
+  "diffEditor.wordWrap": "on", //перенос слов по ширине окна
   "editor.tabSize": 2, //размер табуляции
   "editor.fontSize": 14, //размер шрифта
+  //"editor.lineHeight": 22, //высота шрифта
   "editor.wordWrap": "on", //перенос строки по ширине окна
   "editor.lineNumbers": "on", //вкл/выкл номера строки слева
   "editor.renderWhitespace": "all", //отображение пробелов
@@ -14,6 +15,7 @@
   "editor.formatOnSave": true, //автоматическое форматирование кода при сохранении
   "editor.cursorBlinking": "expand", //плавное мигание курсора
   "editor.wordBasedSuggestions": "allDocuments", //автодополнение на основе слов будет предлагаться из всех открытых документов
+  "workbench.editor.tabSizing": "shrink", //уменьшает разме вкладок
   //todo HTML
   // "html.format.wrapAttributes": "aligned-multiple", //нужно ли переносить атрибуты на новую строку в зависимости от длины строки
   // "html.format.preserveNewLines": false, //сохранить существующие переносы строк и отступы
@@ -28,7 +30,7 @@
   // "html.suggest.html5": true, //предлагать автодополнение стандартных элементов и атрибутов HTML5
   // "html.format.enable": true, //автоматически форматировать
   // "html.format.templating": false, //форматирование не будет применяться к шаблонным конструкциям.
-  // "html.format.extraLiners": "!DOCTYPE, html,/html, head, body, main,/main,section,header,script, footer", //теги которым будут будут оборачиваться пустыми строками
+  "html.format.extraLiners": "!DOCTYPE, html,/html, head, body, main,/main,section,header,script, footer", //теги которым будут разделяться пустыми строками
   //todo Подсветка кода
   "editor.tokenColorCustomizations": {
     //! подсветка кода
@@ -41,21 +43,28 @@
           "punctuation.definition.comment"
         ],
         "settings": {
-          // "foreground": "#FF0000"
+          "foreground": "#60c560"
+        }
+      },
+      {
+        "scope": [
+          "comment.line.double-slash.js"
+        ],
+        "settings": {
+          "fontStyle": "italic",
+          "foreground": "#60c560"
         }
       },
       {
         "scope": [
           "variable.other.readwrite.js",
-          "source.js",
         ],
         "settings": {
-          "foreground": "#ffe600"
+          "foreground": "#ff9100"
         }
       },
       {
         "scope": [
-          "source.js",
           "variable.other.readwrite",
           "variable.other",
           "variable.other.property.js",
@@ -67,15 +76,13 @@
       },
       {
         "scope": [
-          "source.json.comments",
-          "comment.block.documentation.json.comments",
-          "meta.structure.dictionary.json.comments",
-          "comment.line.double-slash.js",
-          "meta.structure.dictionary.json.comments",
-          "source.json.comments"
+          // "comment.block.documentation.json.comments",
+          // "meta.structure.dictionary.json.comments",
+          // "comment.line.double-slash.js",
+          // "source.json.comments" //запятая json
         ],
         "settings": {
-          // "foreground": "#0099ff5d"
+          "foreground": "#0099ff5d"
         }
       }
     ]
@@ -85,6 +92,29 @@
     "editor.lineHighlightBackground": "#f5edc417",
     "editor.lineHighlightBorder": "#9e9c9c38"
   },
+  "beautify.language": {
+    "js": {
+      "type": [
+        "javascript",
+        "json",
+        "jsonc"
+      ],
+      "filename": [
+        ".jshintrc",
+        ".jsbeautifyrc"
+      ]
+    },
+    "css": [
+      "css",
+      "less",
+      "scss"
+    ],
+    "html": [
+      "htm",
+      "html",
+      "php",
+      "blade.php"
+    ]
+  },
+  "beautify.config": null,
 }
-// "editor.lineHeight": 22, //высота шрифта
-// "editor.fontLigatures": true,//Включение лигатуры шрифта

@@ -344,76 +344,76 @@
   // },
   //************************************//
   // *For/Of/Each/Iteration
-  "for": {
-    "prefix": "for",
-    "scope": "javascript",
-    "body": [
-      "for (let i = 0; i < cart.length; i++) {\r",
-      "}\r",
-      "console.log(cart);"
-    ],
-    "description": "for"
-  },
-  "for...of": {
-    "prefix": "forof",
-    "scope": "javascript",
-    "body": [
-      "for (const item$1 of items$2) {\r",
-      "  console.log(item$1);\r",
-      "}"
-    ],
-    "description": "for...of"
-  },
-  "for..of": {
-    "prefix": "for",
-    "scope": "javascript",
-    "body": [
-      "for (const $1 of $2) {\r",
-      "  console.log($3);\r",
-      "}"
-    ],
-    "description": "for...of"
-  },
-  "for...ite": {
-    "prefix": "fori",
-    "scope": "javascript",
-    "body": [
-      "for (let i = 0; i < ${1:array}.length; i += 1) {\r",
-      "  const element = $1[i];\r",
-      "}"
-    ],
-    "description": "for...iter"
-  },
-  "for...iter": {
-    "prefix": "fori",
-    "scope": "javascript",
-    "body": [
-      "for (let i = 0; i < array$1.length; i += 1) {\r",
-      "  const element = array$2[i];\r",
-      "}"
-    ],
-    "description": "for...iter"
-  },
-  "forOf": {
-    "prefix": "for",
-    "body": [
-      "for(let ${1:item} of ${2:object}) {",
-      "  ${0}",
-      "}",
-      ""
-    ],
-    "description": "Iterating over property names of iterable objects"
-  },
-  "forIn": {
-    "prefix": "for",
-    "body": [
-      "for(let ${1:item} in ${2:object}) {",
-      "  ${0}",
-      "}",
-      ""
-    ],
-    "description": "Iterating over property values of iterable objects"
-  },
+  // "for": {
+  //   "prefix": "for",
+  //   "scope": "javascript",
+  //   "body": [
+  //     "for (let i = 0; i < cart.length; i++) {\r",
+  //     "}\r",
+  //     "console.log(cart);"
+  //   ],
+  //   "description": "for"
+  // },
+  // "for...of": {
+  //   "prefix": "forof",
+  //   "scope": "javascript",
+  //   "body": [
+  //     "for (const ${1:item} of ${2:items}) {\r",
+  //     "  console.log(${1:item});\r",
+  //     "}"
+  //   ],
+  //   "description": "for...of"
+  // },
+  // "for..of": {
+  //   "prefix": "for",
+  //   "scope": "javascript",
+  //   "body": [
+  //     "for (const $1 of $2) {\r",
+  //     "  console.log($3);\r",
+  //     "}"
+  //   ],
+  //   "description": "for...of"
+  // },
+  // "for...ite": {
+  //   "prefix": "fori",
+  //   "scope": "javascript",
+  //   "body": [
+  //     "for (let i = 0; i < ${1:array}.length; i += 1) {\r",
+  //     "  const element = $1[i];\r",
+  //     "}"
+  //   ],
+  //   "description": "for...iter"
+  // },
+  // "for...iter": {
+  //   "prefix": "fori",
+  //   "scope": "javascript",
+  //   "body": [
+  //     "for (let i = 0; i < array$1.length; i += 1) {\r",
+  //     "  const element = array$2[i];\r",
+  //     "}"
+  //   ],
+  //   "description": "for...iter"
+  // },
+  // "forOf": {
+  //   "prefix": "for",
+  //   "body": [
+  //     "for(let ${1:item} of ${2:object}) {",
+  //     "  ${0}",
+  //     "}",
+  //     ""
+  //   ],
+  //   "description": "Iterating over property names of iterable objects"
+  // },
+  // "forIn": {
+  //   "prefix": "for",
+  //   "body": [
+  //     "for(let ${1:item} in ${2:object}) {",
+  //     "  ${0}",
+  //     "}",
+  //     ""
+  //   ],
+  //   "description": "Iterating over property values of iterable objects"
+  // },
   //*********************************************************************************//
   "class": {
     "prefix": "cla",

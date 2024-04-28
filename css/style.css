@@ -141,7 +141,7 @@ ul {
   left: 0;
   z-index: 100;
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.3568627451);
+  background-color: #da532c;
   display: none;
 }
 
@@ -168,4 +168,16 @@ ul {
 .feed img.appear {
   transform: translateX(0);
   opacity: 1;
+}
+
+.valid {
+  border-color: green;
+}
+
+.invalid {
+  border-color: red;
+}
+
+input {
+  outline: none;
 }/*# sourceMappingURL=style.css.map */

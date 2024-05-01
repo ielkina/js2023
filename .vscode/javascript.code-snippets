@@ -343,7 +343,17 @@
   //   "description": "Export default function in ES7 syntax"
   // },
   //************************************//
-  // *For/Of/Each/Iteration
+  //! For/Of/Each/Iteration
+  "for ite": {
+    "prefix": "fori",
+    "scope": "javascript",
+    "body": [
+      "for (let ${1:i} = 0; ${1:i} < ${2:array}.length; ${1:i} += 1) {\r",
+      "  const element = ${2:array}[i];$0\r",
+      "}"
+    ],
+    "description": "for iteration"
+  },
   // "for": {
   //   "prefix": "for",
   //   "scope": "javascript",
@@ -380,16 +390,6 @@
   //   "body": [
   //     "for (let i = 0; i < ${1:array}.length; i += 1) {\r",
   //     "  const element = $1[i];\r",
-  //     "}"
-  //   ],
-  //   "description": "for...iter"
-  // },
-  // "for...iter": {
-  //   "prefix": "fori",
-  //   "scope": "javascript",
-  //   "body": [
-  //     "for (let i = 0; i < array$1.length; i += 1) {\r",
-  //     "  const element = array$2[i];\r",
   //     "}"
   //   ],
   //   "description": "for...iter"

@@ -55,7 +55,7 @@
 
   <main>
 
-    <section class="lesson one repeta">
+    <section class="section lesson one repeta">
       <ul class>
         <li>
           <a href="#">Всплытие события</a>
@@ -111,7 +111,7 @@
       <div class="palette js-palette"></div>
     </section>
 
-    <section class="lesson one rusich">
+    <section class="section lesson one rusich">
       <div class="container js-container">
         <div class="box js-box item-red" data-color="red"></div>
         <div class="box js-box item-green" data-color="green"></div>
@@ -126,7 +126,7 @@
       <ul class="js-container"></ul>
     </section>
 
-    <section class="lesson one">
+    <section class="section lesson one">
       <div class="section">
         <code>&lt;section&gt;</code>
         <div class="div">
@@ -286,7 +286,7 @@
       </div>
     </section>
 
-    <section class="practice">
+    <section class="section practice">
       <div class="container">
         <div class="flex-colum flex-center">
           <div class="buttons flex-center">
@@ -312,7 +312,7 @@
       </div>
     </section>
 
-    <section class="lesson two repena">
+    <section class="section lesson two repena">
       <div class="container">
         <div class="chatty-evenbts">
           <!-- Событие mousemove -->
@@ -531,7 +531,7 @@
       </div>
     </section>
 
-    <section class="lesson two rusich">
+    <section class="section lesson two rusich">
       <div class="container">
         <a href="https://bundlephobia.com/">Bandlehobia</a>
         <ul class="js-list"></ul>
@@ -539,9 +539,48 @@
       </div>
     </section>
 
-    <section class="lesson two"></section>
+    <section class="section lesson two">
+      <div class="container">
+        <input class="search-input" type="search" name="search-input" placeholder="Введите страну для поиска">
+        <p class="output-error"></p>
+        <ul class="country-card list"></ul>
+        <div class="banner">
+          <!-- картинка большого размера  -->
+          <img class="banner__img lazyload" src="../img/pexels-szymon-shields-17332275.jpg" alt="banner" loading="lazy"
+            width="600" height="300">
+        </div>
+        <ul class="gallery list">
+          <li class="gallery__item">
+            <!-- data-banner-url - ссылка на картинку большого размера  -->
+            <!-- в списке картинки preview маленького размера  -->
+            <a class="gallery__link" href="#">
+              <img class="gallery__img lazy" loading="lazy" src="../img/pexels-szymon-shields-17332275.jpg" alt="img"
+                data-banner-url="../img/pexels-szymon-shields-17332275.jpg" width="300" height="150">
+            </a>
+          </li>
+          <li class="gallery__item">
+            <a class="gallery__link" href="#">
+              <img class="gallery__img lazy" loading="lazy" src="../img/pexels-szymon-shields-17332275.jpg" alt="img"
+                data-banner-url="../img/pexels-szymon-shields-17332275.jpg" width="300" height="150">
+            </a>
+          </li>
+          <li class="gallery__item">
+            <a class="gallery__link" href="#">
+              <img class="gallery__img lazy" loading="lazy" src="../img/pexels-szymon-shields-17332275.jpg" alt="img"
+                data-banner-url="../img/pexels-szymon-shields-17332275.jpg" width="300" height="150">
+            </a>
+          </li>
+          <li class="gallery__item">
+            <a class="gallery__link" href="#">
+              <img class="gallery__img lazy" loading="lazy" src="/img/pexels-kangangaphoto243-12534708.jpg" alt="img"
+                data-banner-url="/img/pexels-kangangaphoto243-12534708.jpg" width="300" height="150">
+            </a>
+          </li>
+        </ul>
+      </div>
+    </section>
 
-    <section class="practice"></section>
+    <section class="section practice"></section>
 
   </main>
 
@@ -567,8 +606,9 @@
   <!-- <script type="module" src="../js/mod7/mod7-08-lazy-load.js"></script> -->
   <!-- <script type="module" src="../js/mod7/mod7-09-lazysizes.js"></script> -->
 
-  <script type="module" src="/js/mod7/mod7-10-rusich-two.js"></script>
-  <!-- <script type="module" src="/js/mod7/mod7-11-lesson2.js"></script> -->
+  <!-- <script type="module" src="/js/mod7/mod7-10-rusich-two.js"></script> -->
+
+  <script type="module" src="/js/mod7/mod7-11-lesson2.js"></script>
   <!-- <script type="module" src=""></script> -->
 </body>
 

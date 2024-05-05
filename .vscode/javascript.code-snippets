@@ -262,8 +262,24 @@
     ],
     "description": "Метод поиска искомого эл у найближайшего(родительского) элемента. К примеру closest из вложенности до родительского элемента ищет ближайший элемент с классом .color-card."
   },
+  "Метод trim()": {
+    "prefix": ".trim",
+    "scope": "javascript",
+    "body": [
+      ".trim()$0"
+    ],
+    "description": "Метод который убирает пробелы в введеных данных"
+  },
+  "Метод find()": {
+    "prefix": ".find",
+    "scope": "javascript",
+    "body": [
+      ".find($1)$0"
+    ],
+    "description": "Метод поиска элементов в массиве"
+  },
   "Метод forEach(element => {});": {
-    "prefix": "forEach",
+    "prefix": ".forEach",
     "body": [
       "${1:array}.forEach(${2|element, item|} => {${0}});"
     ],
@@ -515,12 +531,44 @@
     "description": "parentNode"
   },
   "currentTarget": {
-    "prefix": ".cur",
+    "prefix": ".curr",
     "scope": "javascript",
     "body": [
       ".currentTarget"
     ],
     "description": "currentTarget"
+  },
+  "js background-color": {
+    "prefix": "back",
+    "scope": "javascript",
+    "body": [
+      "backgroundColor"
+    ],
+    "description": "js-background-color"
+  },
+  "throttle Lodash": {
+    "prefix": "_.t",
+    "scope": "javascript",
+    "body": [
+      "_.throttle($1)$0"
+    ],
+    "description": "Lodash throttle"
+  },
+  "debounce Lodash": {
+    "prefix": "_.d",
+    "scope": "javascript",
+    "body": [
+      "_.debounce($1)$0"
+    ],
+    "description": "Lodash debounce"
+  },
+  ".preventDefault()": {
+    "prefix": ".preventDefault()",
+    "scope": "javascript",
+    "body": [
+      ".preventDefault()$0"
+    ],
+    "description": ".preventDefault()"
   }
   // "method": {
   //   "prefix": "met",

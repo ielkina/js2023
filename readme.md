@@ -173,3 +173,48 @@ https://ielkina.github.io/js2023/
 ![HTML](https://github.com/pepelsbey/pepelsbey.dev/actions/workflows/html.yml/badge.svg)
 ![CSS](https://github.com/pepelsbey/pepelsbey.dev/actions/workflows/css.yml/badge.svg)
 ![JavaScript](https://github.com/pepelsbey/pepelsbey.dev/actions/workflows/javascript.yml/badge.svg)
+
+# [Модуль 8](https://github.com/ielkina/js2023/tree/main/js/mod8)
+
+# урок 1
+
+# План занятия
+
+- Терминал
+  - [Шпаргалка 1](https://tproger.ru/translations/bash-cheatsheet)
+  - [Шпаргалка 2](https://habr.com/ru/company/ruvds/blog/445270/)
+  - Открыть
+    - `option + ~`
+    - `view > terminal`
+    - через палитру `command + shift + p`
+  - Основные полезные команды
+    - путь (pwd)
+    - лист (ls)
+    - навигация (cd)
+    - очистка `clear` или `control + l`
+    - создание (touch)
+    - переименование/перемещение (mv)
+    - удаление (rm)
+- Node.js и npm
+  - установка
+  - инициализация и package.json
+  - [npmjs.com](https://www.npmjs.com/)
+  - работа с пакетами
+    - установка
+    - удаление
+  - CommonJS модули
+  - npm-скрипты
+    - pre и post
+- Таблица кода
+  - [Babel](https://babeljs.io/)
+  - CLI и npm-скрипты
+  - Пресеты
+  - [Browserslist](https://github.com/browserslist/browserslist)
+- [сборщик Parcel](https://parceljs.org/)
+- [ECMAScript модули](https://exploringjs.com/impatient-js/ch_modules.html)
+
+# урок 2
+
+# План занятия
+
+https://ielkina.github.io/js2023/

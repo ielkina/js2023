@@ -167,8 +167,6 @@
   - Нативная с атрибутом loading
   - Библиотека [lazysizes]()
 
-https://ielkina.github.io/js2023/
-
 ![EditorConfig](https://github.com/pepelsbey/pepelsbey.dev/actions/workflows/editorconfig.yml/badge.svg)
 ![HTML](https://github.com/pepelsbey/pepelsbey.dev/actions/workflows/html.yml/badge.svg)
 ![CSS](https://github.com/pepelsbey/pepelsbey.dev/actions/workflows/css.yml/badge.svg)
@@ -192,19 +190,23 @@ https://ielkina.github.io/js2023/
     - лист (ls)
     - навигация (cd)
     - очистка `clear` или `control + l`
-    - создание (touch)
+    - создание файлов(touch)
+    - создание папок(mkdir)
     - переименование/перемещение (mv)
     - удаление (rm)
 - Node.js и npm
   - установка
   - инициализация и package.json
   - [npmjs.com](https://www.npmjs.com/)
+  - [Шпаргалка](https://habr.com/ru/companies/ruvds/articles/458504/)(https://habr.com/ru/articles/133363/)
   - работа с пакетами
     - установка
     - удаление
   - CommonJS модули
   - npm-скрипты
-    - pre и post
+    - команды для терминала npm run dev(команда юзера прописанная в package.json)
+    - команды npm start и npm test прописываются без run
+    - pre(prestart, pretest) запуск скрипта перед основным файлом команды start и post тоже самое только после.
 - Таблица кода
   - [Babel](https://babeljs.io/)
   - CLI и npm-скрипты

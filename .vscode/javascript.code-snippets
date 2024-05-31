@@ -138,6 +138,14 @@
     ],
     "description": "(callback)=>{}"
   },
+  "=()=>{};": {
+    "prefix": "fn=",
+    "scope": "javascript",
+    "body": [
+      "= (${1:event}) =>{$0}"
+    ],
+    "description": "=()=>{}"
+  },
   "= event =>{};": {
     "prefix": "fn",
     "scope": "javascript",

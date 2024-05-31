@@ -3,6 +3,7 @@
   "workbench.colorTheme": "Monokai",
   "workbench.iconTheme": "material-icon-theme",
   //Todo Work Bench Text Settings
+  "remote.localPortHost": "localhost",
   "files.autoSave": "onFocusChange", //автосохранение  после переноса фокуса
   "diffEditor.wordWrap": "on", //перенос слов по ширине окна
   "editor.tabSize": 2, //размер табуляции
@@ -43,7 +44,7 @@
           "punctuation.definition.comment"
         ],
         "settings": {
-          "foreground": "#60c560"
+          "foreground": "#7d7e7d"
         }
       },
       {
@@ -52,7 +53,7 @@
         ],
         "settings": {
           "fontStyle": "italic",
-          "foreground": "#60c560"
+          "foreground": "#7d7e7d"
         }
       },
       {

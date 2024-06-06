@@ -29,34 +29,63 @@
 
 // console.log(shortid.generate());
 
-import validatePassword from './js/validate-password';
+// import validatePassword from './js/validate-password';
 
-console.log(validatePassword);
+// console.log(validatePassword);
 
 //импорт  обьекта функций
-import apiServise from './js/serever';
+// import apiServise from './js/serever';
 
-console.log(apiServise);
+// console.log(apiServise);
 
 //импортируем имена сущностей файла
 
-import {
-  updateUserById,
-  number as value, //переназываем сущность
-} from './js/serever';
+// import {
+//   updateUserById,
+//   number as value, //переназываем сущность
+// } from './js/serever';
 
 // import { number } from './js/serever';
 
 // console.log(number);
-console.log(value);
-console.log(updateUserById);
+// console.log(value);
+// console.log(updateUserById);
 
 //импорт пространства имен (импортируем все функции из файла export default)
 
-import * as apiServis from './js/serever';
+// import * as apiServis from './js/serever';
 
-console.log(apiServis);
+// console.log(apiServis);
 
-import validatePassword from './js/validate-password';
+// import validatePassword from './js/validate-password';
 
-console.log(validatePassword);
+// console.log(validatePassword);
+
+// module.exports = {
+//   entry: './path/to/my/entry/file.js',
+// };
+/***** */
+// const path = require('path');
+
+// module.exports = {
+//   entry: './path/to/my/entry/file.js',
+//   output: {
+//     path: path.resolve(__dirname, 'dist'),
+//     filename: 'my-first-webpack.bundle.js',
+//   },
+// };
+
+// function component() {
+//   const element = document.createElement('div');
+
+//   // Lodash, currently included via a script, is required for this line to work
+//   element.innerHTML = _.join(['Hello', 'webpack'], ' ');
+
+//   return element;
+// }
+
+// document.body.appendChild(component());
+
+// import app from './js/app';
+
+// console.log(app);

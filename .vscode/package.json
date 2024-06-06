@@ -6,6 +6,8 @@
 	"source": "src/index.html",
 
 	"scripts": {
+		"start": "rm -rf .parcel-cache && parcel",
+		"dev": "parcel src/index.html",
 		"start": "node index.js",
 		"build": "babel src -d dist, parcel build",
 		"server": "node server.js",
@@ -19,7 +21,8 @@
 		"all": "npm run script1 && npm run script2",
 		"dev": "parcel src/*.html",
 		"start": "parcel",
-		"build": "parcel build"
+		"build": "parcel build",
+		"server": "webpack serve"
 	},
 	"keywords": [],
 	"author": "",

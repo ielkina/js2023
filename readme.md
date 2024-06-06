@@ -214,6 +214,11 @@
   - [Browserslist](https://github.com/browserslist/browserslist)
 - [сборщик Parcel](https://parceljs.org/)
 - [ECMAScript модули](https://exploringjs.com/impatient-js/ch_modules.html)
+- [Webpack](https://webpack.js.org/)
+  - точка входа
+  - точка выхода
+  - загрузчики
+  - плагины
 
 # урок 2
 

@@ -1,3 +1,8 @@
+// import name from './js/app.js';
+// import './css/styles.scss';
+
+// console.log(name);
+
 // const Joi = require('joi');
 // const { required } = require('joi');
 // const shortid = require('shortid');
@@ -89,3 +94,7 @@
 // import app from './js/app';
 
 // console.log(app);
+// console.log('hi');
+
+// import './css/styles.css';
+// import Styles from 'style-loader!css-loader?modules!./styles.css';

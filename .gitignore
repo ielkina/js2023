@@ -114,3 +114,7 @@ style.min.css.map
 package-lock.json
 #папка с кэшем parcel
 .parcel-cache
+**/parcel
+**/webpack
+**/goit-js-hw-08
+

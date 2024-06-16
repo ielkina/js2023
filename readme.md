@@ -179,6 +179,7 @@
 # План занятия
 
 - Терминал
+
   - [Шпаргалка 1](https://tproger.ru/translations/bash-cheatsheet)
   - [Шпаргалка 2](https://habr.com/ru/company/ruvds/blog/445270/)
   - Открыть
@@ -186,15 +187,23 @@
     - `view > terminal`
     - через палитру `command + shift + p`
   - Основные полезные команды
-    - путь (pwd)
-    - лист (ls)
+
+    - путь (pwd) путь, адрес директории где открыт терминал
     - навигация (cd)
     - очистка `clear` или `control + l`
-    - создание файлов(touch)
-    - создание папок(mkdir)
-    - переименование/перемещение (mv)
-    - удаление (rm)
+    - лист (ls), ls js/ - список файлов папки js/
+    - скрытые файлы (ls -la),
+    - создание файлов(touch), touch ./source/index.js - создание файла в папке source
+    - создание папок(mkdir), создает только одну папку
+    - переименование/перемещение (mv), mv index.js main.js
+    - удаление (rm, rm -r), rm -rf css/ - удаление папку со всем контентом, rm dir - удаляет пустую папку
+    - информация про консольные команды (command name --help, man command name)
+
 - Node.js и npm
+
+    с терминала переходим в папку папке js/mod8/node-tut/
+    И в терминале запускаем командой $ node index.js фаил
+
   - установка
   - инициализация и package.json
   - [npmjs.com](https://www.npmjs.com/)
@@ -207,13 +216,18 @@
     - команды для терминала npm run dev(команда юзера прописанная в package.json)
     - команды npm start и npm test прописываются без run
     - pre(prestart, pretest) запуск скрипта перед основным файлом команды start и post тоже самое только после.
+
 - Таблица кода
+
   - [Babel](https://babeljs.io/)
   - CLI и npm-скрипты
   - Пресеты
   - [Browserslist](https://github.com/browserslist/browserslist)
+
 - [сборщик Parcel](https://parceljs.org/)
+
 - [ECMAScript модули](https://exploringjs.com/impatient-js/ch_modules.html)
+
 - [Webpack](https://webpack.js.org/)
   - точка входа
   - точка выхода

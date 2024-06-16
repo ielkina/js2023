@@ -1,107 +1,57 @@
 <!DOCTYPE html>
-
 <html lang="en">
-
-<head>
-  <meta charset="UTF-8">
-  <!--  -->
-  <!--адаптация под старый браузер internet explorer-->
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <!--масштабирование экрана при адаптивной верстке-->
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!--  -->
-  <!--определяет цвет фона в закладке-->
-  <meta name="msapplication-TileColor" content="#da532c">
-  <meta name="theme-color" content="#da532c">
-  <!--  -->
-  <!-- Фавикон -->
-  <!-- моб устройства -->
-  <link rel="apple-touch-icon" href="img/favicon/apple-touch-icon180*180.png"><!-- 180x180 -->
-  <!-- <link rel="apple-touch-icon" href="img/favicon/apple-touch-icon256*256.png">256*256 -->
-  <link rel="manifest" href="favik.manifest.json">
-  <!-- браузеры -->
-  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
-  <link rel="icon" href="img/favicon/favicon.svg" type="image/svg+xml">
-  <link rel="icon" href="favicon.ico" size="32x32"><!-- должна храниться в корне  папки проекта -->
-  <!--  -->
-  <link rel="apple-touch-icon" sizes="180x180" href="**img/favicon/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="**img/favicon/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="**img/favicon/favicon-16x16.png">
-  <link rel="manifest" href="img/favicon/site.webmanifest">
-  <link rel="mask-icon" href="img/favicon/safari-pinned-tab.svg" color="#5bbad5">
-  <!--  -->
-  <link href="/css/style.min.css" rel="stylesheet">
-  <title>Модуль 8</title>
-</head>
-
-<body class="wrapper">
-
-  <header>
-    <h1>Модуль 8</h1>
-    <p>
-      Модульное подключения файла скрипта автоматически включает "use strick"
-      <br>
-      Преимущества модульного
+  <head>
+    <meta charset="UTF-8">
+    <!--  -->
+    <!--адаптация под старый браузер internet explorer-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!--масштабирование экрана при адаптивной верстке-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--  -->
+    <!--определяет цвет фона в закладке-->
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#da532c">
+    <!--  -->
+    <!-- Фавикон -->
+    <!-- моб устройства -->
+    <link rel="apple-touch-icon" href="img/favicon/apple-touch-icon180*180.png">
+    <!-- 180x180 -->
+    <!-- <link rel="apple-touch-icon" href="img/favicon/apple-touch-icon256*256.png">256*256 -->
+    <link rel="manifest" href="favik.manifest.json">
+    <!-- браузеры -->
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+    <link rel="icon" href="img/favicon/favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="favicon.ico" size="32x32">
+    <!-- должна храниться в корне  папки проекта -->
+    <!--  -->
+    <link rel="apple-touch-icon" sizes="180x180" href="**img/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="**img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="**img/favicon/favicon-16x16.png">
+    <link rel="manifest" href="img/favicon/site.webmanifest">
+    <link rel="mask-icon" href="img/favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <!--  -->
+    <link href="/css/style.min.css" rel="stylesheet">
+    <title>Модуль 8</title>
+  </head>
+  <body class="wrapper">
+    <header>
+      <h1>Модуль 8</h1>
+      <p>
+        Модульное подключения файла скрипта автоматически включает "use strick"
+        <br>
+        Преимущества модульного
       подключения файлов скрипта.
-      <br>
-      В разных файлах могут писаться переменные с одинаковым название.
-      <br>
-    </p>
-    <a href="../index.html">На&nbsp;главную</a>
-    <a id="top" href="#bottom">Вниз 🔻</a>
-  </header>
-
-  <main>
-
-    <section class="section lesson one repeta">
-      <ul class="terminal">Распространенные команды терминала
-        <li class="terminal__item">
-          pwd - путь, адрес директории где открыт терминал
-        </li>
-        <li class="terminal__item">
-          `Ctrl + l` - очищение терминала
-        </li>
-        <li class="terminal__item">
-          ls
-        </li>
-        <li class="terminal__item">
-          cd
-        </li>
-        <li class="terminal__item">
-          cd
-        </li>
-        <li class="terminal__item">
-          ls
-        </li>
-        <li class="terminal__item">
-          ls -la -
-        </li>
-        <li class="terminal__item">
-          <strong>ls js/</strong>-
-        </li>
-        <li class="terminal__item">
-          rm -rf css/- удаление папку со всем контентом
-        </li>
-        <li class="terminal__item">
-          rm dir - удаляет пустую папку
-        </li>
-        <li class="terminal__item"></li>
-        <li class="terminal__item"></li>
-        <li class="terminal__item"></li>
-      </ul>
-
-      Node.js
-      с терминала переходим в папку папке js/mod8/node-tut/
-      И в терминале запускаем командой $ node index.js фаил
-      <!-- 1.13 -->
-    </section>
-
-  </main>
-
-  <footer>
-    <a href="../index.html">На&nbsp;главную</a>
-    <a id="bottom" href="#top">На верх 🔺</a>
-  </footer>
-</body>
-
+        <br>
+        В разных файлах могут писаться переменные с одинаковым название.
+        <br>
+      </p>
+      <a href="../index.html">На&nbsp;главную</a>
+      <a id="top" href="#bottom">Вниз 🔻</a>
+    </header>
+    <main></main>
+    <footer>
+      <a href="../index.html">На&nbsp;главную</a>
+      <a id="bottom" href="#top">На верх 🔺</a>
+    </footer>
+  </body>
 </html>

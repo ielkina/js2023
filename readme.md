@@ -238,4 +238,12 @@
 
 # План занятия
 
+- WebStorage API JSON
+- Выведение в шаблонизацию
+  - [Пакет для Parcel]()
+- Билд в production
+  - root link
+  - [Public url]()
+  - [Структура папок для Parcel]()
+  
 https://ielkina.github.io/js2023/

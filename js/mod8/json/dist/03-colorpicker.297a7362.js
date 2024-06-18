@@ -117,27 +117,88 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   }
 
   return newRequire;
-})({"js/01-localstorage.js":[function(require,module,exports) {
-// JSON.stringify()
-// JSON.parse()
+})({"js/03-colorpicker.js":[function(require,module,exports) {
+// console.log("03-colorpicker.js");
 
-var user = {
-  name: "mango",
-  age: 2
-};
-console.log(JSON.stringify(user));
-var userData = '{"name":"mango","age":2}';
-console.log(JSON.parse(userData));
-console.log(localStorage);
-localStorage.setItem("my-data", JSON.stringify({
-  name: "mango",
-  age: 2
-}));
-console.log(localStorage.getItem("my-data"));
-var saveData = localStorage.getItem("my-data");
-console.log("saveData", saveData);
-var parseData = JSON.parse(saveData);
-console.log("parseData", parseData);
+// const colors = [
+//   { hex: "#ff0000", rgb: "255, 0, 0" },
+//   { hex: "#00ff00", rgb: "0, 255, 0" },
+//   { hex: "#0000ff", rgb: "0, 0, 255" },
+// ];
+
+// const colorPickerRefs = {
+//   palette: document.querySelector(".js-palette"),
+//   colorCard: document.querySelector(".color-card"),
+//   colorSwatch: document.querySelector(".color-swatch"),
+//   colorMeta: document.querySelector(".color-meta"),
+//   p: document.querySelector("p"),
+// };
+
+// const { palette, colorCard, colorMeta, colorSwatch, p } = colorPickerRefs;
+
+// console.log(createColorCardsMarkup(colors));
+
+// const cardsMarkup = createColorCardsMarkup(colors);
+
+// palette.insertAdjacentHTML("beforeend", cardsMarkup);
+// palette.addEventListener("click", onPaletteContainerClick);
+
+// function createColorCardsMarkup(colors) {
+//   return colors
+//     .map(({ hex, rgb }) => {
+//       return `
+//     <div class="color-card">
+//       <div class="color-swatch"
+//         data-hex="${hex}"
+//         data-rgb="${rgb}"
+//         style="background-color: ${hex}; width: 100px; height: 50px;">
+//       </div>
+//       <div class="color-meta">
+//         <p>HEX:${hex}</p>
+//         <p>RGB:${rgb}</p>
+//       </div>
+//     </div>`;
+//     })
+//     .join("");
+//   // console.log(markup[0]);
+// }
+// function onPaletteContainerClick(e) {
+//   const isColorSwatchEl = e.target.classList.contains("color-swatch");
+//   if (!isColorSwatchEl) {
+//     //проверка на какой элемент кликнули
+//     return;
+//   }
+//   const swatchEl = e.target;
+//   // const parentColorCard = swatchEl.parentNode;
+//   const parentColorCard = swatchEl.closest(".color-card"); //closest из вложенности до родительского элемента ищет ближайший элемент с классом .color-card
+//   removeActiveCardClass();
+//   addActiveCardClass(parentColorCard);
+//   setBodyBgColor(swatchEl.dataset.hex);
+// }
+// function setBodyBgColor(color) {
+//   document.body.style.backgroundColor = color;
+// }
+// function removeActiveCardClass() {
+//   const currentActiveCard = document.querySelector(".color-card.is-active");
+//   if (currentActiveCard) {
+//     currentActiveCard.classList.remove("is-active");
+//   }
+// }
+// function addActiveCardClass(card) {
+//   // parentColorCard.classList.add("is-active");
+//   // console.log(parentColorCard);
+//   // console.log(e.target.dataset.hex);
+//   // document.body.style.backgroundColor = swatchEl.dataset.hex;
+//   card.classList.add("is-active");
+// }
+
+//===============================
+var template = SuperTemplatingEngine.compile("<div>{{name}}</div>");
+template({
+  name: "Mango"
+}); //`<div>{{name}}</div>`
+
+//48.53
 },{}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
@@ -307,5 +368,5 @@ function hmrAcceptRun(bundle, id) {
     return true;
   }
 }
-},{}]},{},["../node_modules/parcel-bundler/src/builtins/hmr-runtime.js","js/01-localstorage.js"], null)
-//# sourceMappingURL=/01-localstorage.92d9819a.js.map
+},{}]},{},["../node_modules/parcel-bundler/src/builtins/hmr-runtime.js","js/03-colorpicker.js"], null)
+//# sourceMappingURL=/03-colorpicker.297a7362.js.map

@@ -240,10 +240,10 @@
 
 - WebStorage API JSON
 - Выведение в шаблонизацию
-  - [Пакет для Parcel]()
+  - [Пакет для Parcel](https://www.npmjs.com/package/parcel-plugin-handlebars-precompile)
 - Билд в production
   - root link
-  - [Public url]()
-  - [Структура папок для Parcel]()
+  - [Public url](https://parceljs.org/features/targets/#publicurl)(https://parceljs.org/cli.html#set-the-public-url-to-server-on)
+  - [Структура папок для Parcel (плагин)](https://github.com/VladimirMikulic/parcel-plugin-custom-dist-structure)
   
 https://ielkina.github.io/js2023/

@@ -1,0 +1,14 @@
+{{!-- Шаблон массива обьектов (выполняется быстрее)--}}
+{{#each this}}
+{{!-- или --}}
+{{!-- {{#each colors}} --}}
+	<div class='color-card'>
+		<div class='color-swatch' data-hex='{{ hex }}' data-rgb='{{ rgb }}' style='background-color: {{ hex }}; width: 100px; height: 50px;'></div>
+		<div class='color-meta'>
+			<p>Name:
+				{{ name }}</p>
+			<p>HEX:{{ hex }}</p>
+			<p>RGB:{{ rgb }}</p>
+		</div>
+	</div>
+{{/each}}

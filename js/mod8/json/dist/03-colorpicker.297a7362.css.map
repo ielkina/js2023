@@ -1,0 +1,1 @@
+{"version":3,"sources":["css/reset.css","css/style.css"],"names":[],"mappings":"AAAA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;ACXA","file":"03-colorpicker.297a7362.css","sourceRoot":"..\\src","sourcesContent":["body {\r\n  margin: 0;\r\n  padding: 0;\r\n}\r\n\r\n.link {\r\n  font-size: 24px;\r\n  text-decoration: none;\r\n}\r\nli {\r\n  list-style: none;\r\n}",""]}

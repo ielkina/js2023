@@ -117,7 +117,132 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   }
 
   return newRequire;
-})({"../node_modules/handlebars/dist/handlebars.runtime.js":[function(require,module,exports) {
+})({"../node_modules/parcel-bundler/src/builtins/bundle-url.js":[function(require,module,exports) {
+var bundleURL = null;
+function getBundleURLCached() {
+  if (!bundleURL) {
+    bundleURL = getBundleURL();
+  }
+  return bundleURL;
+}
+function getBundleURL() {
+  // Attempt to find the URL of the current script and use that as the base URL
+  try {
+    throw new Error();
+  } catch (err) {
+    var matches = ('' + err.stack).match(/(https?|file|ftp|chrome-extension|moz-extension):\/\/[^)\n]+/g);
+    if (matches) {
+      return getBaseURL(matches[0]);
+    }
+  }
+  return '/';
+}
+function getBaseURL(url) {
+  return ('' + url).replace(/^((?:https?|file|ftp|chrome-extension|moz-extension):\/\/.+)?\/[^/]+(?:\?.*)?$/, '$1') + '/';
+}
+exports.getBundleURL = getBundleURLCached;
+exports.getBaseURL = getBaseURL;
+},{}],"../node_modules/parcel-bundler/src/builtins/css-loader.js":[function(require,module,exports) {
+var bundle = require('./bundle-url');
+function updateLink(link) {
+  var newLink = link.cloneNode();
+  newLink.onload = function () {
+    link.remove();
+  };
+  newLink.href = link.href.split('?')[0] + '?' + Date.now();
+  link.parentNode.insertBefore(newLink, link.nextSibling);
+}
+var cssTimeout = null;
+function reloadCSS() {
+  if (cssTimeout) {
+    return;
+  }
+  cssTimeout = setTimeout(function () {
+    var links = document.querySelectorAll('link[rel="stylesheet"]');
+    for (var i = 0; i < links.length; i++) {
+      if (bundle.getBaseURL(links[i].href) === bundle.getBundleURL()) {
+        updateLink(links[i]);
+      }
+    }
+    cssTimeout = null;
+  }, 50);
+}
+module.exports = reloadCSS;
+},{"./bundle-url":"../node_modules/parcel-bundler/src/builtins/bundle-url.js"}],"css/reset.css":[function(require,module,exports) {
+var reloadCSS = require('_css_loader');
+module.hot.dispose(reloadCSS);
+module.hot.accept(reloadCSS);
+},{"_css_loader":"../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"css/style.css":[function(require,module,exports) {
+var reloadCSS = require('_css_loader');
+module.hot.dispose(reloadCSS);
+module.hot.accept(reloadCSS);
+},{"_css_loader":"../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"js/countries.json":[function(require,module,exports) {
+module.exports = [{
+  "name": "United States",
+  "capital": "Washington, D.C.",
+  "currency": "United States Dollar (USD)",
+  "language": "English",
+  "population": "331 million",
+  "flag": "https://www.megaflag.ru/sites/default/files/images/directory_names/flag_usa_enl.jpg",
+  "infected": 45000000
+}, {
+  "name": "Germany",
+  "capital": "Berlin",
+  "currency": "Euro (EUR)",
+  "language": "German",
+  "population": "83 million",
+  "flag": "https://www.megaflag.ru/sites/default/files/images/directory_names/flag_germanija_enl.jpg",
+  "infected": true
+}, {
+  "name": "China",
+  "capital": "Beijing",
+  "currency": "Chinese Yuan (CNY)",
+  "language": "Chinese",
+  "population": "1400 million",
+  "flag": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Flag_of_the_People%27s_Republic_of_China.svg/800px-Flag_of_the_People%27s_Republic_of_China.svg.png",
+  "infected": false
+}, {
+  "name": "France",
+  "capital": "Paris",
+  "currency": "Euro",
+  "language": "French",
+  "population": 65273511,
+  "flag": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Flag_of_France_%281794%E2%80%931815%2C_1830%E2%80%931974%29.svg/250px-Flag_of_France_%281794%E2%80%931815%2C_1830%E2%80%931974%29.svg.png",
+  "infected": true
+}, {
+  "name": "Brazil",
+  "capital": "Brasília",
+  "currency": "Brazilian Real",
+  "language": "Portuguese",
+  "population": 213993437,
+  "flag": "data:image/png;base64,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",
+  "infected": 3000000
+}, {
+  "name": "Japan",
+  "capital": "Tokyo",
+  "currency": "Japanese Yen",
+  "language": "Japanese",
+  "population": 126050000,
+  "flag": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAQwAAAC8CAMAAAC672BgAAAAe1BMVEX///+wMT+tIzSvLDurFSqrGCysHS+qDiauKDivLTysHzGyNEL++/vbrLD16Om0PEnv2tzoy8747/DNiI7x3uDVn6Plw8bftrnivMDAZG24TFfr0NO7V2H79PW9XGXTl5zPj5XHeYDEbnbKgYe6UVzYpaq2RlHEc3qpACEs93TSAAAEBUlEQVR4nO3dCXaCMBAGYFnC5goqiopWa6v3P2FB22e0Koskk+D/nYCZl50snQ4AAAAAAAAAAAAAAAAAAAAAAAAA3EgHozCM4zhcTqIe9cfQicLpbt9lNmNOjtluMFyN+8u3S0k6/xy6julZvsHzLTNg9mqzpP4+eQb9vet412ngWSazD/FbFJA4sQPrYSL+eMwbT6g/VbB0ajCvMBNnpruKqb9XoPTDNR/Xjjv1hQ3n1N8sSG/DzAqZOPHZsJWlY2YFVVNxSoe9bl3bEa3tKhWE57kb6q9vVv9Yttm8Jxi2qHCkCXshFRnL/aKOoSkj65ViccZ27RiE9d26rQXP6w6oA2nA2G4gFUY+6NB/xnJwmslF1sm6uo/AklqDiwfcPnU4L1lVHnM+ddQ5G0mzucjKxow6pNq2TdaR32zoOlXZvDjUuovpORiduwJyYfhmSh1YDQMR5SLjrakjq2FYvLZXj6PfJHbbdEdy4eo2FI2FNBhnvq/XpK1nNDE5e8T8pI6vkrG4SpI7jqgDrGAksJLkrG/qCCtYiepJ/jB9huVhQ0sYj/ld6hhL+xZdMAwj0GVRNBZeMDImdZQl7cUXjKxo6LG0MZJRMAx/SB1nKdvXfwyUYYfUgZaQNrYC/Jx3oI60hH7zy1v3MQ0WNqQ0nzkNmtDoKCkXhqX+Ko+0WpLVk4g62CKJnL4k56j+h60nqS/JeaovaywFLQPfpfqQfCp2VeearfguhURWx5pTvdHoilz7vGV+UIf7VCRlkvbHSqjjfSqU2X6qvt41kzfkyrlK/0DZyOxMsu5E6V/yn/LGnzm197xJHIzn1O5bFzJ7VtVn8VKHGdlAY0od8DMyx5/KJ0Nuk2GYSu9bQTI4PtqMCzSgHHStHAy6OBiOczBR42AKz5G8uGNQx/sUlv14QjfD3lJ8QRi/Cnj4icSR2oIG1NEW6ElMhreljraIxEZD9Saj0/nCZpWLgeADBRfWijrWYgtscLuQt/VR+VrS6aSS+hNvRx1pGQdsl77ARnqe8ENZOUeTg1kyDt/4HnWUZUnoXR0N+tUzHNjjrUV3KBod5exMRB/yXVBHWAWOf3NwMQBP6JURltK/S+7AZSK8rrBrZj6oQ6tuIuoCIg3WdP6b4WoqjpBLy9T+8f7EAdfZcXDRIa/hKzA1vxAUl6Pyds0ddNW6jpw1dqGyHivABXDVNm9kNnAJe6Lb5OwRXM9/BQ838KKk/pMettLb5WuZd2s+9pK0o+W8MXVqPAP03YYO9Z50YweVHoiy2/ki0q9epafD1m1OxQkelbsy6K+Knhtk2/d4bvDk6UOU+3d6iPJXFH5tF/+fKB29T5H4B4/XAgAAAAAAAAAAAAAAAAAAAAAAABT7AXW+SAFnxumHAAAAAElFTkSuQmCC",
+  "infected": 800000
+}, {
+  "name": "Australia",
+  "capital": "Canberra",
+  "currency": "Australian Dollar",
+  "language": "English",
+  "population": 25687000,
+  "flag": "data:image/png;base64,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",
+  "infected": 60000
+}, {
+  "name": "South Africa",
+  "capital": "Pretoria",
+  "currency": "South African Rand",
+  "language": "Afrikaans, English",
+  "population": 59308690,
+  "flag": "https://brandburg.ru/images/flags/4x3/st.svg",
+  "infected": 1200000
+}];
+},{}],"../node_modules/handlebars/dist/handlebars.runtime.js":[function(require,module,exports) {
 var define;
 var global = arguments[3];
 /**!
@@ -2430,120 +2555,7 @@ THE SOFTWARE.
   /******/)]);
 });
 ;
-},{}],"templates/color-card.hbs":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-var _handlebars = _interopRequireDefault(require("handlebars/dist/handlebars.runtime"));
-function _interopRequireDefault(e) { return e && e.__esModule ? e : { default: e }; }
-function _typeof(o) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (o) { return typeof o; } : function (o) { return o && "function" == typeof Symbol && o.constructor === Symbol && o !== Symbol.prototype ? "symbol" : typeof o; }, _typeof(o); }
-var templateFunction = _handlebars.default.template({
-  "compiler": [8, ">= 4.3.0"],
-  "main": function main(container, depth0, helpers, partials, data) {
-    var helper,
-      alias1 = depth0 != null ? depth0 : container.nullContext || {},
-      alias2 = container.hooks.helperMissing,
-      alias3 = "function",
-      alias4 = container.escapeExpression,
-      lookupProperty = container.lookupProperty || function (parent, propertyName) {
-        if (Object.prototype.hasOwnProperty.call(parent, propertyName)) {
-          return parent[propertyName];
-        }
-        return undefined;
-      };
-    return "<div class=\"color-card\">\r\n  <div class=\"color-swatch\"\r\n    data-hex=\"" + alias4((helper = (helper = lookupProperty(helpers, "hex") || (depth0 != null ? lookupProperty(depth0, "hex") : depth0)) != null ? helper : alias2, _typeof(helper) === alias3 ? helper.call(alias1, {
-      "name": "hex",
-      "hash": {},
-      "data": data,
-      "loc": {
-        "start": {
-          "line": 4,
-          "column": 14
-        },
-        "end": {
-          "line": 4,
-          "column": 21
-        }
-      }
-    }) : helper)) + "\"\r\n    data-rgb=\"" + alias4((helper = (helper = lookupProperty(helpers, "rgb") || (depth0 != null ? lookupProperty(depth0, "rgb") : depth0)) != null ? helper : alias2, _typeof(helper) === alias3 ? helper.call(alias1, {
-      "name": "rgb",
-      "hash": {},
-      "data": data,
-      "loc": {
-        "start": {
-          "line": 5,
-          "column": 14
-        },
-        "end": {
-          "line": 5,
-          "column": 21
-        }
-      }
-    }) : helper)) + "\"\r\n    style=\"background-color: " + alias4((helper = (helper = lookupProperty(helpers, "hex") || (depth0 != null ? lookupProperty(depth0, "hex") : depth0)) != null ? helper : alias2, _typeof(helper) === alias3 ? helper.call(alias1, {
-      "name": "hex",
-      "hash": {},
-      "data": data,
-      "loc": {
-        "start": {
-          "line": 6,
-          "column": 29
-        },
-        "end": {
-          "line": 6,
-          "column": 36
-        }
-      }
-    }) : helper)) + "; width: 100px; height: 50px;\">\r\n  </div>\r\n  <div class=\"color-meta\">\r\n    <p>Name: " + alias4((helper = (helper = lookupProperty(helpers, "name") || (depth0 != null ? lookupProperty(depth0, "name") : depth0)) != null ? helper : alias2, _typeof(helper) === alias3 ? helper.call(alias1, {
-      "name": "name",
-      "hash": {},
-      "data": data,
-      "loc": {
-        "start": {
-          "line": 9,
-          "column": 13
-        },
-        "end": {
-          "line": 9,
-          "column": 21
-        }
-      }
-    }) : helper)) + "</p>\r\n    <p>HEX:" + alias4((helper = (helper = lookupProperty(helpers, "hex") || (depth0 != null ? lookupProperty(depth0, "hex") : depth0)) != null ? helper : alias2, _typeof(helper) === alias3 ? helper.call(alias1, {
-      "name": "hex",
-      "hash": {},
-      "data": data,
-      "loc": {
-        "start": {
-          "line": 10,
-          "column": 11
-        },
-        "end": {
-          "line": 10,
-          "column": 18
-        }
-      }
-    }) : helper)) + "</p>\r\n    <p>RGB:" + alias4((helper = (helper = lookupProperty(helpers, "rgb") || (depth0 != null ? lookupProperty(depth0, "rgb") : depth0)) != null ? helper : alias2, _typeof(helper) === alias3 ? helper.call(alias1, {
-      "name": "rgb",
-      "hash": {},
-      "data": data,
-      "loc": {
-        "start": {
-          "line": 11,
-          "column": 11
-        },
-        "end": {
-          "line": 11,
-          "column": 18
-        }
-      }
-    }) : helper)) + "</p>\r\n  </div>\r\n</div>";
-  },
-  "useData": true
-});
-var _default = exports.default = templateFunction;
-},{"handlebars/dist/handlebars.runtime":"../node_modules/handlebars/dist/handlebars.runtime.js"}],"templates/color-cards.hbs":[function(require,module,exports) {
+},{}],"templates/gallery-items.hbs":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -2555,7 +2567,8 @@ function _interopRequireDefault(e) { return e && e.__esModule ? e : { default: e
 function _typeof(o) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (o) { return typeof o; } : function (o) { return o && "function" == typeof Symbol && o.constructor === Symbol && o !== Symbol.prototype ? "symbol" : typeof o; }, _typeof(o); }
 var templateFunction = _handlebars.default.template({
   "1": function _(container, depth0, helpers, partials, data) {
-    var helper,
+    var stack1,
+      helper,
       alias1 = depth0 != null ? depth0 : container.nullContext || {},
       alias2 = container.hooks.helperMissing,
       alias3 = "function",
@@ -2566,91 +2579,164 @@ var templateFunction = _handlebars.default.template({
         }
         return undefined;
       };
-    return "	<div class='color-card'>\r\n		<div class='color-swatch' data-hex='" + alias4((helper = (helper = lookupProperty(helpers, "hex") || (depth0 != null ? lookupProperty(depth0, "hex") : depth0)) != null ? helper : alias2, _typeof(helper) === alias3 ? helper.call(alias1, {
-      "name": "hex",
+    return "<li class='gallery__item'>\r\n	<div class='gallery__thumb'>\r\n		<img src='" + alias4((helper = (helper = lookupProperty(helpers, "flag") || (depth0 != null ? lookupProperty(depth0, "flag") : depth0)) != null ? helper : alias2, _typeof(helper) === alias3 ? helper.call(alias1, {
+      "name": "flag",
       "hash": {},
       "data": data,
       "loc": {
         "start": {
-          "line": 6,
-          "column": 38
+          "line": 4,
+          "column": 12
         },
         "end": {
-          "line": 6,
-          "column": 47
+          "line": 4,
+          "column": 22
         }
       }
-    }) : helper)) + "' data-rgb='" + alias4((helper = (helper = lookupProperty(helpers, "rgb") || (depth0 != null ? lookupProperty(depth0, "rgb") : depth0)) != null ? helper : alias2, _typeof(helper) === alias3 ? helper.call(alias1, {
-      "name": "rgb",
-      "hash": {},
-      "data": data,
-      "loc": {
-        "start": {
-          "line": 6,
-          "column": 59
-        },
-        "end": {
-          "line": 6,
-          "column": 68
-        }
-      }
-    }) : helper)) + "' style='background-color: " + alias4((helper = (helper = lookupProperty(helpers, "hex") || (depth0 != null ? lookupProperty(depth0, "hex") : depth0)) != null ? helper : alias2, _typeof(helper) === alias3 ? helper.call(alias1, {
-      "name": "hex",
-      "hash": {},
-      "data": data,
-      "loc": {
-        "start": {
-          "line": 6,
-          "column": 95
-        },
-        "end": {
-          "line": 6,
-          "column": 104
-        }
-      }
-    }) : helper)) + "; width: 100px; height: 50px;'></div>\r\n		<div class='color-meta'>\r\n			<p>Name:\r\n				" + alias4((helper = (helper = lookupProperty(helpers, "name") || (depth0 != null ? lookupProperty(depth0, "name") : depth0)) != null ? helper : alias2, _typeof(helper) === alias3 ? helper.call(alias1, {
+    }) : helper)) + "' alt='Флаг " + alias4((helper = (helper = lookupProperty(helpers, "name") || (depth0 != null ? lookupProperty(depth0, "name") : depth0)) != null ? helper : alias2, _typeof(helper) === alias3 ? helper.call(alias1, {
       "name": "name",
       "hash": {},
       "data": data,
       "loc": {
         "start": {
-          "line": 9,
-          "column": 4
+          "line": 4,
+          "column": 34
         },
         "end": {
-          "line": 9,
-          "column": 14
+          "line": 4,
+          "column": 44
         }
       }
-    }) : helper)) + "</p>\r\n			<p>HEX:" + alias4((helper = (helper = lookupProperty(helpers, "hex") || (depth0 != null ? lookupProperty(depth0, "hex") : depth0)) != null ? helper : alias2, _typeof(helper) === alias3 ? helper.call(alias1, {
-      "name": "hex",
+    }) : helper)) + "' width='320' />\r\n	</div>\r\n	<h2>" + alias4((helper = (helper = lookupProperty(helpers, "name") || (depth0 != null ? lookupProperty(depth0, "name") : depth0)) != null ? helper : alias2, _typeof(helper) === alias3 ? helper.call(alias1, {
+      "name": "name",
       "hash": {},
       "data": data,
       "loc": {
         "start": {
-          "line": 10,
-          "column": 10
+          "line": 6,
+          "column": 5
         },
         "end": {
-          "line": 10,
-          "column": 19
+          "line": 6,
+          "column": 15
         }
       }
-    }) : helper)) + "</p>\r\n			<p>RGB:" + alias4((helper = (helper = lookupProperty(helpers, "rgb") || (depth0 != null ? lookupProperty(depth0, "rgb") : depth0)) != null ? helper : alias2, _typeof(helper) === alias3 ? helper.call(alias1, {
-      "name": "rgb",
+    }) : helper)) + "</h2>\r\n	<p>\r\n		<b>столица:</b>\r\n		" + alias4((helper = (helper = lookupProperty(helpers, "capital") || (depth0 != null ? lookupProperty(depth0, "capital") : depth0)) != null ? helper : alias2, _typeof(helper) === alias3 ? helper.call(alias1, {
+      "name": "capital",
       "hash": {},
       "data": data,
       "loc": {
         "start": {
-          "line": 11,
-          "column": 10
+          "line": 9,
+          "column": 2
         },
         "end": {
-          "line": 11,
-          "column": 19
+          "line": 9,
+          "column": 15
         }
       }
-    }) : helper)) + "</p>\r\n		</div>\r\n	</div>\r\n";
+    }) : helper)) + "\r\n	</p>\r\n	<p>\r\n		<b>Валюта:</b>\r\n		" + alias4((helper = (helper = lookupProperty(helpers, "currency") || (depth0 != null ? lookupProperty(depth0, "currency") : depth0)) != null ? helper : alias2, _typeof(helper) === alias3 ? helper.call(alias1, {
+      "name": "currency",
+      "hash": {},
+      "data": data,
+      "loc": {
+        "start": {
+          "line": 13,
+          "column": 2
+        },
+        "end": {
+          "line": 13,
+          "column": 16
+        }
+      }
+    }) : helper)) + "\r\n	</p>\r\n	<p>\r\n		<b>Официальный язык:</b>\r\n		" + alias4((helper = (helper = lookupProperty(helpers, "language") || (depth0 != null ? lookupProperty(depth0, "language") : depth0)) != null ? helper : alias2, _typeof(helper) === alias3 ? helper.call(alias1, {
+      "name": "language",
+      "hash": {},
+      "data": data,
+      "loc": {
+        "start": {
+          "line": 17,
+          "column": 2
+        },
+        "end": {
+          "line": 17,
+          "column": 16
+        }
+      }
+    }) : helper)) + "\r\n	</p>\r\n	<p>\r\n		<b>Население:</b>\r\n		" + alias4((helper = (helper = lookupProperty(helpers, "population") || (depth0 != null ? lookupProperty(depth0, "population") : depth0)) != null ? helper : alias2, _typeof(helper) === alias3 ? helper.call(alias1, {
+      "name": "population",
+      "hash": {},
+      "data": data,
+      "loc": {
+        "start": {
+          "line": 21,
+          "column": 2
+        },
+        "end": {
+          "line": 21,
+          "column": 18
+        }
+      }
+    }) : helper)) + "\r\n		человек\r\n	</p>\r\n" + ((stack1 = lookupProperty(helpers, "if").call(alias1, depth0 != null ? lookupProperty(depth0, "infected") : depth0, {
+      "name": "if",
+      "hash": {},
+      "fn": container.program(2, data, 0),
+      "inverse": container.noop,
+      "data": data,
+      "loc": {
+        "start": {
+          "line": 24,
+          "column": 1
+        },
+        "end": {
+          "line": 26,
+          "column": 8
+        }
+      }
+    })) != null ? stack1 : "") + ((stack1 = lookupProperty(helpers, "unless").call(alias1, depth0 != null ? lookupProperty(depth0, "infected") : depth0, {
+      "name": "unless",
+      "hash": {},
+      "fn": container.program(4, data, 0),
+      "inverse": container.noop,
+      "data": data,
+      "loc": {
+        "start": {
+          "line": 27,
+          "column": 1
+        },
+        "end": {
+          "line": 29,
+          "column": 12
+        }
+      }
+    })) != null ? stack1 : "") + "</li>\r\n";
+  },
+  "2": function _(container, depth0, helpers, partials, data) {
+    var helper,
+      lookupProperty = container.lookupProperty || function (parent, propertyName) {
+        if (Object.prototype.hasOwnProperty.call(parent, propertyName)) {
+          return parent[propertyName];
+        }
+        return undefined;
+      };
+    return "	<p style=\"color: red;\">Все пропало! " + container.escapeExpression((helper = (helper = lookupProperty(helpers, "infected") || (depth0 != null ? lookupProperty(depth0, "infected") : depth0)) != null ? helper : container.hooks.helperMissing, typeof helper === "function" ? helper.call(depth0 != null ? depth0 : container.nullContext || {}, {
+      "name": "infected",
+      "hash": {},
+      "data": data,
+      "loc": {
+        "start": {
+          "line": 25,
+          "column": 37
+        },
+        "end": {
+          "line": 25,
+          "column": 49
+        }
+      }
+    }) : helper)) + "</p>\r\n";
+  },
+  "4": function _(container, depth0, helpers, partials, data) {
+    return "	<p style=\"color: green;\">Пронесло</p>\r\n";
   },
   "compiler": [8, ">= 4.3.0"],
   "main": function main(container, depth0, helpers, partials, data) {
@@ -2669,11 +2755,11 @@ var templateFunction = _handlebars.default.template({
       "data": data,
       "loc": {
         "start": {
-          "line": 2,
+          "line": 1,
           "column": 0
         },
         "end": {
-          "line": 14,
+          "line": 31,
           "column": 9
         }
       }
@@ -2682,248 +2768,20 @@ var templateFunction = _handlebars.default.template({
   "useData": true
 });
 var _default = exports.default = templateFunction;
-},{"handlebars/dist/handlebars.runtime":"../node_modules/handlebars/dist/handlebars.runtime.js"}],"js/colors.json":[function(require,module,exports) {
-module.exports = [{
-  "hex": "#FF0000",
-  "rgb": "rgb(255, 0, 0)",
-  "name": "Red"
-}, {
-  "hex": "#00FF00",
-  "rgb": "rgb(0, 255, 0)",
-  "name": "Green"
-}, {
-  "hex": "#0000FF",
-  "rgb": "rgb(0, 0, 255)",
-  "name": "Blue"
-}, {
-  "hex": "#FFFF00",
-  "rgb": "rgb(255, 255, 0)",
-  "name": "Yellow"
-}, {
-  "hex": "#FF00FF",
-  "rgb": "rgb(255, 0, 255)",
-  "name": "Magenta"
-}, {
-  "hex": "#00FFFF",
-  "rgb": "rgb(0, 255, 255)",
-  "name": "Cyan"
-}, {
-  "hex": "#800080",
-  "rgb": "rgb(128, 0, 128)",
-  "name": "Purple"
-}];
-},{}],"../node_modules/parcel-bundler/src/builtins/bundle-url.js":[function(require,module,exports) {
-var bundleURL = null;
-function getBundleURLCached() {
-  if (!bundleURL) {
-    bundleURL = getBundleURL();
-  }
-  return bundleURL;
-}
-function getBundleURL() {
-  // Attempt to find the URL of the current script and use that as the base URL
-  try {
-    throw new Error();
-  } catch (err) {
-    var matches = ('' + err.stack).match(/(https?|file|ftp|chrome-extension|moz-extension):\/\/[^)\n]+/g);
-    if (matches) {
-      return getBaseURL(matches[0]);
-    }
-  }
-  return '/';
-}
-function getBaseURL(url) {
-  return ('' + url).replace(/^((?:https?|file|ftp|chrome-extension|moz-extension):\/\/.+)?\/[^/]+(?:\?.*)?$/, '$1') + '/';
-}
-exports.getBundleURL = getBundleURLCached;
-exports.getBaseURL = getBaseURL;
-},{}],"../node_modules/parcel-bundler/src/builtins/css-loader.js":[function(require,module,exports) {
-var bundle = require('./bundle-url');
-function updateLink(link) {
-  var newLink = link.cloneNode();
-  newLink.onload = function () {
-    link.remove();
-  };
-  newLink.href = link.href.split('?')[0] + '?' + Date.now();
-  link.parentNode.insertBefore(newLink, link.nextSibling);
-}
-var cssTimeout = null;
-function reloadCSS() {
-  if (cssTimeout) {
-    return;
-  }
-  cssTimeout = setTimeout(function () {
-    var links = document.querySelectorAll('link[rel="stylesheet"]');
-    for (var i = 0; i < links.length; i++) {
-      if (bundle.getBaseURL(links[i].href) === bundle.getBundleURL()) {
-        updateLink(links[i]);
-      }
-    }
-    cssTimeout = null;
-  }, 50);
-}
-module.exports = reloadCSS;
-},{"./bundle-url":"../node_modules/parcel-bundler/src/builtins/bundle-url.js"}],"css/reset.css":[function(require,module,exports) {
-var reloadCSS = require('_css_loader');
-module.hot.dispose(reloadCSS);
-module.hot.accept(reloadCSS);
-},{"_css_loader":"../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"css/style.css":[function(require,module,exports) {
-var reloadCSS = require('_css_loader');
-module.hot.dispose(reloadCSS);
-module.hot.accept(reloadCSS);
-},{"_css_loader":"../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"js/03-colorpicker.js":[function(require,module,exports) {
+},{"handlebars/dist/handlebars.runtime":"../node_modules/handlebars/dist/handlebars.runtime.js"}],"js/04-gallery.js":[function(require,module,exports) {
 "use strict";
 
-var _colorCard = _interopRequireDefault(require("../templates/color-card.hbs"));
-var _colorCards = _interopRequireDefault(require("../templates/color-cards.hbs"));
-var _colors = _interopRequireDefault(require("./colors.json"));
 require("../css/reset.css");
 require("../css/style.css");
+var _countries = _interopRequireDefault(require("./countries.json"));
+var _galleryItems = _interopRequireDefault(require("../templates/gallery-items.hbs"));
 function _interopRequireDefault(e) { return e && e.__esModule ? e : { default: e }; }
-console.log('03-colorpicker.js');
+// console.log('text');
 
-//шаблонизация
-//===============================
-
-// `<div>{{name}}</div>`;
-// const template = SuperTemplatingEngine.compile(`<div>{{name}}</div>`);
-
-// template({
-//   name: 'Mango'
-// }); //`<div>{{name}}</div>`
-
-// function template(data) {
-//   return `
-//     <div>${data.name}</div>
-//   `;
-// }
-/**************************************************************** */
-
-//Синтаксис Без работы плагина шаблонизатор для парсел
-{
-  // const colorPickerRefs = {
-  //   palette: document.querySelector(".js-palette"),
-  //   colorCard: document.querySelector(".color-card"),
-  //   colorSwatch: document.querySelector(".color-swatch"),
-  //   colorMeta: document.querySelector(".color-meta"),
-  //   p: document.querySelector("p"),
-  // };
-  // const { palette, colorCard, colorMeta, colorSwatch, p } = colorPickerRefs;
-  // console.log(createColorCardsMarkup(colors));
-  // const cardsMarkup = createColorCardsMarkup(colors);
-  // palette.insertAdjacentHTML("beforeend", cardsMarkup);
-  // palette.addEventListener("click", onPaletteContainerClick);
-  // function createColorCardsMarkup(colors) {
-  //   return colors
-  //     .map(({ hex, rgb, name }) => {
-  //       return `
-  //     <div class="color-card">
-  //       <div class="color-swatch"
-  //         data-hex="${hex}"
-  //         data-rgb="${rgb}"
-  //         style="background-color: ${hex}; width: 100px; height: 50px;">
-  //       </div>
-  //       <div class="color-meta">
-  //         <p>NAME:${name}</p>
-  //         <p>HEX:${hex}</p>
-  //         <p>RGB:${rgb}</p>
-  //       </div>
-  //     </div>`;
-  //     })
-  //     .join("");
-  //   // console.log(markup[0]);
-  // }
-  // function onPaletteContainerClick(e) {
-  //   const isColorSwatchEl = e.target.classList.contains("color-swatch");
-  //   if (!isColorSwatchEl) {
-  //     //проверка на какой элемент кликнули
-  //     return;
-  //   }
-  //   const swatchEl = e.target;
-  //   // const parentColorCard = swatchEl.parentNode;
-  //   const parentColorCard = swatchEl.closest(".color-card"); //closest из вложенности до родительского элемента ищет ближайший элемент с классом .color-card
-  //   removeActiveCardClass();
-  //   addActiveCardClass(parentColorCard);
-  //   setBodyBgColor(swatchEl.dataset.hex);
-  // }
-  // function setBodyBgColor(color) {
-  //   document.body.style.backgroundColor = color;
-  // }
-  // function removeActiveCardClass() {
-  //   const currentActiveCard = document.querySelector(".color-card.is-active");
-  //   if (currentActiveCard) {
-  //     currentActiveCard.classList.remove("is-active");
-  //   }
-  // }
-  // function addActiveCardClass(card) {
-  //   // parentColorCard.classList.add("is-active");
-  //   // console.log(parentColorCard);
-  //   // console.log(e.target.dataset.hex);
-  //   // document.body.style.backgroundColor = swatchEl.dataset.hex;
-  //   card.classList.add("is-active");
-  // }
-}
-
-//Переписанный код с помощью плагина шаблонизатора для парсел
-
-//синтаксис передачи массива обьектов #each
-
-// console.log(colorCardTpl(colors[0]));//работа плагина parcel-plugin-handlebars-precompile
-
-var colorPickerRefs = {
-  palette: document.querySelector('.js-palette'),
-  colorCard: document.querySelector('.color-card'),
-  colorSwatch: document.querySelector('.color-swatch'),
-  colorMeta: document.querySelector('.color-meta'),
-  p: document.querySelector('p')
-};
-var palette = colorPickerRefs.palette,
-  colorCard = colorPickerRefs.colorCard,
-  colorMeta = colorPickerRefs.colorMeta,
-  colorSwatch = colorPickerRefs.colorSwatch,
-  p = colorPickerRefs.p;
-console.log(createColorCardsMarkup(_colors.default));
-var cardsMarkup = createColorCardsMarkup(_colors.default);
-palette.insertAdjacentHTML('beforeend', cardsMarkup);
-palette.addEventListener('click', onPaletteContainerClick);
-function createColorCardsMarkup(colors) {
-  // return colors.map(color => colorCardTpl(color)).join(''); //?????????????? Создание экземпляра карточки шаблонизатором
-  //передача шаблона одной карточки
-  // return colors.map(colorCardTpl).join(''); //?????????????? Создание экземпляра карточки шаблонизатором
-  return (0, _colorCards.default)(colors); //this
-}
-function onPaletteContainerClick(e) {
-  var isColorSwatchEl = e.target.classList.contains('color-swatch');
-  if (!isColorSwatchEl) {
-    //проверка на какой элемент кликнули
-    return;
-  }
-  var swatchEl = e.target;
-  // const parentColorCard = swatchEl.parentNode;
-  var parentColorCard = swatchEl.closest('.color-card'); //closest из вложенности до родительского элемента ищет ближайший элемент с классом .color-card
-  removeActiveCardClass();
-  addActiveCardClass(parentColorCard);
-  setBodyBgColor(swatchEl.dataset.hex);
-}
-function setBodyBgColor(color) {
-  document.body.style.backgroundColor = color;
-}
-function removeActiveCardClass() {
-  var currentActiveCard = document.querySelector('.color-card.is-active');
-  if (currentActiveCard) {
-    currentActiveCard.classList.remove('is-active');
-  }
-}
-function addActiveCardClass(card) {
-  // parentColorCard.classList.add("is-active");
-  // console.log(parentColorCard);
-  // console.log(e.target.dataset.hex);
-  // document.body.style.backgroundColor = swatchEl.dataset.hex;
-  card.classList.add('is-active');
-}
-
-//1,02
-},{"../templates/color-card.hbs":"templates/color-card.hbs","../templates/color-cards.hbs":"templates/color-cards.hbs","./colors.json":"js/colors.json","../css/reset.css":"css/reset.css","../css/style.css":"css/style.css"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+var galleryRef = document.querySelector('.js-gallery');
+var markup = (0, _galleryItems.default)(_countries.default);
+galleryRef.insertAdjacentHTML('beforeend', markup);
+},{"../css/reset.css":"css/reset.css","../css/style.css":"css/style.css","./countries.json":"js/countries.json","../templates/gallery-items.hbs":"templates/gallery-items.hbs"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -3092,5 +2950,5 @@ function hmrAcceptRun(bundle, id) {
     return true;
   }
 }
-},{}]},{},["../node_modules/parcel-bundler/src/builtins/hmr-runtime.js","js/03-colorpicker.js"], null)
-//# sourceMappingURL=/03-colorpicker.297a7362.js.map
+},{}]},{},["../node_modules/parcel-bundler/src/builtins/hmr-runtime.js","js/04-gallery.js"], null)
+//# sourceMappingURL=/04-gallery.b269c427.js.map

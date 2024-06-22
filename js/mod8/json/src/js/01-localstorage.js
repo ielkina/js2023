@@ -12,6 +12,8 @@ const userData = '{"name":"mango","age":2}';
 
 console.log(JSON.parse(userData));
 
+
+//
 console.log(localStorage);
 
 localStorage.setItem("my-data", JSON.stringify({ name: "mango", age: 2 }));

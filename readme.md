@@ -201,8 +201,7 @@
 
 - Node.js и npm
 
-    с терминала переходим в папку папке js/mod8/node-tut/
-    И в терминале запускаем командой $ node index.js фаил
+  с терминала переходим в папку папке js/mod8/node-tut/ И в терминале запускаем командой $ node index.js фаил
 
   - установка
   - инициализация и package.json
@@ -245,5 +244,56 @@
   - root link
   - [Public url](https://parceljs.org/features/targets/#publicurl)(https://parceljs.org/cli.html#set-the-public-url-to-server-on)
   - [Структура папок для Parcel (плагин)](https://github.com/VladimirMikulic/parcel-plugin-custom-dist-structure)
-  
+
+# [Модуль 9](https://github.com/ielkina/js2023/tree/main/js/mod9)
+
+# урок 1
+
+# План занятия
+
+- Асинхронность в JavaScript
+  - Однопоточность и многопоточность
+  - отложенные вызовы (планирование)
+  - Web workers для "многопоточность"
+  - Service workers для "перехвата" запросов от документа (кеширование)
+  - [Статьи]()
+- Планирование: Window.setTimeout() и window.setInterval()
+- Цикл событий (event loop)
+  - [Площадка]()
+  - setTimeout(N) и setTimeout(0)
+- Мастерская: оповещение
+- Мастерская: "надоедалка" подписки
+  - Bootstrap для CSS
+  - Bootstrap Native для JS
+- Встроенный обьект Date
+  - Создание
+  - Разница времени
+  - Date.now() и new Date().getTime()
+  - [Библиотека date-fns]()
+- Мастерская: таймер
+
+# урок 2
+
+# План занятия
+
+# [Модуль 10](https://github.com/ielkina/js2023/tree/main/js/mod10)
+
+# урок 1
+
+# План занятия
+
+# урок 2
+
+# План занятия
+
+# [Модуль 11](https://github.com/ielkina/js2023/tree/main/js/mod11)
+
+# урок 1
+
+# План занятия
+
+# урок 2
+
+# План занятия
+
 https://ielkina.github.io/js2023/

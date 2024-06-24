@@ -259,7 +259,7 @@
   - [Статьи](https://bitsofco.de/web-workers-vs-service-workers-vs-worklets/)
 - Планирование: Window.setTimeout() и window.setInterval()
 - Цикл событий (event loop)
-  - [Площадка]()
+  - [Площадка](http://latentflip.com/loupe/)
   - setTimeout(N) и setTimeout(0)
 - Мастерская: оповещение
 - Мастерская: "надоедалка" подписки
@@ -269,7 +269,7 @@
   - Создание
   - Разница времени
   - Date.now() и new Date().getTime()
-  - [Библиотека date-fns]()
+  - [Библиотека date-fns](https://date-fns.org/)
 - Мастерская: таймер
 
 # урок 2

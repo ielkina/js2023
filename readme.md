@@ -256,7 +256,7 @@
   - отложенные вызовы (планирование)
   - Web workers для "многопоточность"
   - Service workers для "перехвата" запросов от документа (кеширование)
-  - [Статьи]()
+  - [Статьи](https://bitsofco.de/web-workers-vs-service-workers-vs-worklets/)
 - Планирование: Window.setTimeout() и window.setInterval()
 - Цикл событий (event loop)
   - [Площадка]()

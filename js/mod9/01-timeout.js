@@ -50,3 +50,21 @@ console.log(shouldCancelTimer);
 if (shouldCancelTimer) {
   clearTimeout(timerId);
 }
+
+//? Даже если у отложенной колбэк функции будет нулевая задержка выполнения кода
+//? Она будет ставиться в Web Apis(планировщик)
+//? в приоритете будет всегда синхронные функции
+//? а асинхронные будут выполнены после, так как она будет ждать выполнения синхронного кода
+//? в планировщики
+
+console.log('До вызова setTimeout');
+
+setTimeout(() => {
+  console.log('Вызов setTimeout');
+}, 0);
+
+console.log('После вызова setTimeout');
+
+//! До вызова setTimeout
+//! После вызова setTimeout
+//! ВЫзов  setTimeout

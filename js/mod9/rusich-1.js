@@ -4,8 +4,6 @@ console.log('rusich 1');
 //? https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Date
 //? https://uk.wikipedia.org/wiki/%D0%A7%D0%B0%D1%81_Unix
 
-
-
 // console.log('start');
 // setTimeout(()=>{console.log('setTimeout');},0)
 // console.log('finish');
@@ -44,10 +42,15 @@ console.log('rusich 1');
 
 // console.log('Date.now()',currentDate);
 //*** */
+//*Рекламка
 
 const box = document.querySelector('.js-box');
 const titleTimer = document.querySelector('.js-timer');
-let counter = 11;//время отсчета 
+let counter = 11;
+
+function onClick() {
+  box.style.display = 'none';
+}
 
 setTimeout(() => {
   box.style.display = 'block';
@@ -55,23 +58,19 @@ setTimeout(() => {
   const id = setInterval(() => {
     counter -= 1;
     titleTimer.textContent = counter;
+
     if (!counter) {
-      // !counter counter === 0
+      //!counter counter === 0
       clearInterval(id);
-      titleTimer.textContent = 'X';
+      // box.style.display = "none";
+      //или закрываем по клику
+      titleTimer.textContent = '❌';
       titleTimer.addEventListener('click', onClick);
-      box.style.display = "none";
     }
   }, 1000);
-
 }, 5000);
-
-function onClick() {
-  box.style.display = "none";
-}
-
 //** */
-
+//*Часы
 const day = document.querySelector('.date-day');
 const date = document.querySelector('.date');
 const month = document.querySelector('.date-month');
@@ -112,7 +111,8 @@ setInterval(() => {
   const changeMinutes = (360 / 60) * currentMinutes;
   const changeHours = (360 / 12) * currentHour + (360 / 12 / 60) * currentMinutes;
 
-  console.log(changeSeconds);
+  // console.log(changeSeconds);
+
   const formatTime = `${currentHour.toString().padStart(2, '0')} : ${currentMinutes
     .toString()
     .padStart(2, '0')} : ${currentSeconds.toString().padStart(2, '0')}`;
@@ -129,33 +129,28 @@ setInterval(() => {
   arrowHours.style.transform = `rotate(${changeHours}deg)`;
 }, 1000);
 
-// // console.log(currentYear);
+// console.log(currentYear);
 
-// const currentTime = new Date();
+//*Отсчет назад
+const currentTime = new Date();
 
-// const targetDate = new Date('4/11/2023')
+const targetDate = new Date('4/07/2024');
 
-// setInterval(()=>{
-//     const currentDate = new Date();
+setInterval(() => {
+  const currentDate = new Date();
+  console.log(convertMs(targetDate - currentDate));
+}, 1000);
 
-//     console.log(convertMs(targetDate - currentDate));
-// },1000)
 
-// function convertMs(ms) {
-//     // Number of milliseconds per unit of time
-//     const second = 1000;
-//     const minute = second * 60;
-//     const hour = minute * 60;
-//     const day = hour * 24;
 
-//     // Remaining days
-//     const days = Math.floor(ms / day);
-//     // Remaining hours
-//     const hours = Math.floor((ms % day) / hour);
-//     // Remaining minutes
-//     const minutes = Math.floor(((ms % day) % hour) / minute);
-//     // Remaining seconds
-//     const seconds = Math.floor((((ms % day) % hour) % minute) / second);
-
-//     return { days, hours, minutes, seconds };
-//   }
+function convertMs(ms) {
+  const second = 1000;
+  const minute = second * 60;
+  const hour = minute * 60;
+  const day = hour * 24;
+  const days = Math.floor(ms / day);
+  const hours = Math.floor((ms % day) / hour);
+  const minutes = Math.floor(((ms % day) % hour) / minute);
+  const seconds = Math.floor((((ms % day) % hour) % minute) / second);
+  return { days, hours, minutes, seconds };
+}

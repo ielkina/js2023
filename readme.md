@@ -276,6 +276,20 @@
 
 # План занятия
 
+- Promise API
+  - Promise.prototype.then(result)
+  - promise.prototype.catch(error)
+  - Promise.prototype.finally()
+- Цепочка промисов 
+- Промисификация функции
+- Статические методы: 
+  - Promise.all()
+  - Promise.race()
+- Мастерская: ипподром
+- Чтиво:
+  - [Промисы на примере бургер-вечеринки](https://habr.com/ru/companies/nix/articles/323066/)
+  - [У нас проблемы с промисами](https://habr.com/ru/companies/vk/articles/269465/)
+
 # [Модуль 10](https://github.com/ielkina/js2023/tree/main/js/mod10)
 
 # урок 1

@@ -6,9 +6,6 @@
  *  - Promise.prototype.then(onResolve, onReject)
  */
 
-// console.log(`✔ ${result}`);
-// console.log(`❌ ${error}`);
-
 const promise = new Promise((resolve, reject) => {
   const canFulfill = Math.random() > 0.5;
   setTimeout(() => {
@@ -21,21 +18,53 @@ const promise = new Promise((resolve, reject) => {
 
 promise.then(
   result => {
-    console.log(result);
+    console.log(`✅ ${result}`);
   },
   error => {
-    console.log(error);
+    console.log(`❌ ${error}`);
   }
 );
+
+function onFulfilled(result) {
+  console.log(result);
+}
+
+function onRejected(error) {
+  console.log(error);
+}
+
+promise.then(onFulfilled, onRejected);
 
 /**
  * Цепочка промисов (chaining)
  */
 
-/**
- * Promise.prototype.catch(error)
- */
-
-/**
- * Promise.prototype.finally()
- */
+promise
+  .then(onFulfilled) //выполнится если хорошо 
+  .then(result => {
+    console.log(result);
+    return 1;
+  })
+  .then(
+    x => {
+      console.log(x);
+      throw new Error('ошибка во втором then');
+      return 2;
+    },
+    error => console.log(error)
+  )
+  .then(
+    y => {
+      console.log(y);
+      return 3;
+    },
+    error => console.log(error)
+  )
+  /**
+   * Promise.prototype.catch(error)
+   */
+  .catch(error => console.log(error)) //ели плохо 
+  /**
+   * Promise.prototype.finally()
+   */
+  .finally(() => console.log('я буду выполнен в любом случае'));//в любом случае

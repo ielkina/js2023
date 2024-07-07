@@ -294,6 +294,44 @@
 
 # урок 1
 
+##[Часть 1(теория)](https://docs.google.com/presentation/u/0/)
+
+- Архитектура клиент-сервер
+  - Протоколы передачи данных: HTTP и HTTPS
+  - REST API (backend)
+  - Публичные REST API
+- Допмат (видео)
+  - [The World Wide Web]()
+  - [How The Internet Works](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfMRZm5DDxco3UdsFegvuB7)
+
+## Часть 2 (практика)
+
+- HTTP-запросы в браузере
+  - Fetch API
+  - Вкладка Network
+  - HTTP-методы
+  - Заголовки
+  - MIME-типы
+  - [Параметры запроса](https://pixabay.com/api/docs/)
+- Документация REST API
+- Обработка 404 с fetch
+- Аутентификация 
+  - [https://newsapi.org/](https://newsapi.org/)
+  - [https://weatherstack.com/](https://weatherstack.com/)
+  - [https://pixabay.com/api/docs/](https://pixabay.com/api/docs/)
+- Бибилотека-обертке
+- [Отмена  HTTP-запроса с AbortController](https://davidwalsh.name/javascript-promise-tricks)
+
+## Часть 3
+
+- Cross-Origin Resource Sharing (CORS)
+  - [Статьи на MDN](https://developer.mozilla.org/ru/docs/Web/HTTP/CORS)
+  - [https://pokeapi.co/](https://pokeapi.co/)
+  - [https://darksky.net/dev](https://darksky.net/dev)
+- Proxy
+  - Хранение API ключей и секретов
+  - [http://lpi-weather-service.herokuapp.com/](http://lpi-weather-service.herokuapp.com/)
+
 # План занятия
 
 # урок 2

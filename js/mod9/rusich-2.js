@@ -112,13 +112,13 @@ start.addEventListener('click', onStart);
 /******************************************************************************************************** */
 function onStart() {
   let counter = 0;
-
   [...container.children].forEach(box => (box.textContent = ''));
 
-  const promises = [...container.children].map((_, i) => createPromise(i));
+  const promises = [...container.children].map((_, i) => createPromise(i)); // _ пропускаем параметр map, подставляется вместо слов если не используется, валидатор  не подсвечивает ошибку
 
   Promise.allSettled(promises).then(items => {
     console.log(items);
+
     items.forEach((item, i) => {
       setTimeout(() => {
         if (item.status === 'fulfilled') {
@@ -126,6 +126,8 @@ function onStart() {
         }
         console.log(item);
         container.children[i].textContent = item.value || item.reason;
+
+        console.log(item.reason);
 
         if (container.children.length - 1 === i) {
           setTimeout(() => {

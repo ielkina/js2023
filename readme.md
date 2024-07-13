@@ -294,6 +294,8 @@
 
 # урок 1
 
+# План занятия
+
 ##[Часть 1(теория)](https://docs.google.com/presentation/u/0/)
 
 - Архитектура клиент-сервер
@@ -332,11 +334,19 @@
   - Хранение API ключей и секретов
   - [http://lpi-weather-service.herokuapp.com/](http://lpi-weather-service.herokuapp.com/)
 
-# План занятия
 
 # урок 2
 
 # План занятия
+
+- Пагинация  REST API
+  - Пжараметры запроса 
+  - "Старница"
+  - Кол-во элементов в одной странице 
+- Пагинация на клиенте с кнопкой "Load more"
+- Бесконечный  скрол 
+  - [https://infinite-scroll.com/](https://infinite-scroll.com/)
+
 
 # [Модуль 11](https://github.com/ielkina/js2023/tree/main/js/mod11)
 

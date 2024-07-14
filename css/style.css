@@ -192,3 +192,7 @@ input {
   opacity: 1;
   transform: scale(1);
 }/*# sourceMappingURL=style.css.map */
+
+.form-inline {
+  display: flex;
+}

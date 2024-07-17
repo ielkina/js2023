@@ -11,37 +11,41 @@ const list = document.querySelector('.js-list');
 search.addEventListener('submit', onSearch);
 
 function onSearch(evt) {
-  evt.preventDefault();
+  evt.preventDefault();//убираем дефолтное поведение ивента запроса
 
   const { query, days } = evt.currentTarget.elements;
+  console.log(days);
+
   getWeather(query.value, days.value)
     .then(data => (list.innerHTML = createMarkup(data.forecast.forecastday)))
     .catch(err => console.log(err));
+
 }
 
 function getWeather(city, days) {
+  //параметры запроса API
   const BASE_URL = 'http://api.weatherapi.com/v1';
-  const API_KEY = 'ce2cb9b2a3da414bb5b172546231704';
+  const API_KEY = 'e156a1bd04234fa2929122749241607';
   const params = new URLSearchParams({
     key: API_KEY,
     q: city,
     days: days,
     lang: 'uk',
   });
+  console.log(params.toString());
 
   return fetch(`${BASE_URL}/forecast.json?${params}`).then(resp => {
-    if (!resp.ok) {
-      throw new Error(resp.statusText);
+    if (!resp.ok) { //проверка на ошибку статуса запроса на бэкэнд
+      throw new Error(resp.statusText);// статус ошибки с бэкэнда
     }
-
-    return resp.json();
+    return resp.json();//при успешном запросе вернут data.json данные 
   });
 }
 
 function createMarkup(arr) {
   return arr
     .map(
-      ({
+      ({//деструктуризация ответа с бэкэнда для формирования html док на сайте
         date,
         day: {
           avgtemp_c,
@@ -59,3 +63,5 @@ function createMarkup(arr) {
 
 
 //49.50
+
+

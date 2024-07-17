@@ -2,9 +2,10 @@
   "name": "parcel-project-template",
   "version": "2.0.0",
   "description": "",
+  "source": "src/index.html",
   "homepage": "https://goitacademy.github.io/parcel-project-template",
   "scripts": {
-    "start": "parcel src/*.html",
+    "start": "parcel --no-source-maps",
     "build": "parcel build src/*.html --public-url /parcel-project-template/"
   },
   "repository": {

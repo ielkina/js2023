@@ -1,0 +1,24 @@
+{
+  "name": "parcel-starter",
+  "version": "1.0.0",
+  "source": "src/index.html",
+  "scripts": {
+    "start": "parcel --no-source-maps",
+    "build": "parcel build --no-source-maps --public-url .",
+    "server": "json-server --watch db.json"
+  },
+  "keywords": [],
+  "author": "WebDesign Master",
+  "license": "ISC",
+  "description": "Lightweight Parcel Template",
+  "devDependencies": {
+    "@agragregra/parcel-namer-beautify": "^1.0.1",
+    "@parcel/transformer-sass": "^2.12.0",
+    "json-server": "^1.0.0-beta.1",
+    "node-sass-glob-importer": "^5.3.3",
+    "parcel": "^2.12.0",
+    "posthtml-include": "^2.0.1",
+    "sharp": "^0.31.3"
+  },
+  "browserslist": "> 0.5%, last 2 versions, not dead"
+}

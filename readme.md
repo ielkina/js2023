@@ -280,9 +280,9 @@
   - Promise.prototype.then(result)
   - promise.prototype.catch(error)
   - Promise.prototype.finally()
-- Цепочка промисов 
+- Цепочка промисов
 - Промисификация функции
-- Статические методы: 
+- Статические методы:
   - Promise.all()
   - Promise.race()
 - Мастерская: ипподром
@@ -317,12 +317,12 @@
   - [Параметры запроса](https://pixabay.com/api/docs/)
 - Документация REST API
 - Обработка 404 с fetch
-- Аутентификация 
+- Аутентификация
   - [https://newsapi.org/](https://newsapi.org/)
   - [https://weatherstack.com/](https://weatherstack.com/)
   - [https://pixabay.com/api/docs/](https://pixabay.com/api/docs/)
 - Бибилотека-обертке
-- [Отмена  HTTP-запроса с AbortController](https://davidwalsh.name/javascript-promise-tricks)
+- [Отмена HTTP-запроса с AbortController](https://davidwalsh.name/javascript-promise-tricks)
 
 ## Часть 3
 
@@ -334,19 +334,17 @@
   - Хранение API ключей и секретов
   - [http://lpi-weather-service.herokuapp.com/](http://lpi-weather-service.herokuapp.com/)
 
-
 # урок 2
 
 # План занятия
 
-- Пагинация  REST API
-  - Пжараметры запроса 
+- Пагинация REST API
+  - Пжараметры запроса
   - "Старница"
-  - Кол-во элементов в одной странице 
+  - Кол-во элементов в одной странице
 - Пагинация на клиенте с кнопкой "Load more"
-- Бесконечный  скрол 
+- Бесконечный скрол
   - [https://infinite-scroll.com/](https://infinite-scroll.com/)
-
 
 # [Модуль 11](https://github.com/ielkina/js2023/tree/main/js/mod11)
 
@@ -354,8 +352,47 @@
 
 # План занятия
 
+- Пакет [json-server](https://github.com/typicode/json-server)
+- Postman/Postwoman/insomnia и т.д
+- Работа с приватным API
+  - **С** reate
+    - Метод POST
+    - Тело
+    - Заголовки
+    - Ответ
+  - **R** ead
+    - Метод GET
+    - Ответ
+  - **U** pdate
+    - Метод PUT PATCH
+    - Тело
+    - Ззаголовки
+    - Ответ
+  - **D** elete
+    - Метод DELETE
+    - Ответ
+- Цикли запрос-ответ
+
 # урок 2
 
 # План занятия
+
+- Обработка ошибок с try...catch
+  - Синтаксис
+  - Какие ошибки ловит 
+    - Время оценки (чтение) - ошибки парсинга (parsing errors)
+    - Время выполнения скрипта - ошибки выполнения (runtime errors)
+    - []()
+  - Ловит только ошибки в синхронном коде 
+    - Как словить ошибку в асинхронном коде
+  - Объект ошибки 
+    - name 
+    - message
+    - stack
+  - Бло catch без ошибки 
+  - Использование - грамотный парс JSON
+- Parceljs и asyn/await. Ошибка regenerator runtime
+- Синтаксис async/await
+
 
 https://ielkina.github.io/js2023/

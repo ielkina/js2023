@@ -1,0 +1,1804 @@
+{
+  "books": [
+    {
+      "author": "Harper Lee",
+      "available": 3,
+      "copies": 5,
+      "genre": "Fiction",
+      "id": "1",
+      "isbn": "9780061120084",
+      "title": "method PATCH",
+      "year": 1960
+    },
+    {
+      "author": "George Orwell",
+      "available": 1,
+      "copies": 3,
+      "genre": "Science Fiction",
+      "id": "2",
+      "isbn": "9780451524935",
+      "title": "1984",
+      "year": 1949
+    },
+    {
+      "author": "Jane Austen",
+      "available": 7,
+      "copies": 7,
+      "genre": "Classic Fiction",
+      "id": "3",
+      "isbn": "9780141439518",
+      "title": "Pride and Prejudice",
+      "year": 1813
+    },
+    {
+      "author": "Herman Melville",
+      "available": 6,
+      "copies": 6,
+      "genre": "Adventure",
+      "id": "5",
+      "isbn": "9780142000083",
+      "title": "Moby Dick",
+      "year": 1851
+    },
+    {
+      "author": "J.D. Salinger",
+      "available": 4,
+      "copies": 5,
+      "genre": "Fiction",
+      "id": "6",
+      "isbn": "9780316769488",
+      "title": "The Catcher in the Rye",
+      "year": 1951
+    },
+    {
+      "author": "Charlotte Brontë",
+      "available": 1,
+      "copies": 3,
+      "genre": "Gothic Fiction",
+      "id": "7",
+      "isbn": "9780141441146",
+      "title": "Jane Eyre",
+      "year": 1847
+    },
+    {
+      "author": "J.R.R. Tolkien",
+      "available": 8,
+      "copies": 8,
+      "genre": "Fantasy",
+      "id": "8",
+      "isbn": "9780547928227",
+      "title": "The Hobbit",
+      "year": 1937
+    },
+    {
+      "author": "Aldous Huxley",
+      "available": 3,
+      "copies": 4,
+      "genre": "Science Fiction",
+      "id": "9",
+      "isbn": "9780060850524",
+      "title": "Brave New World",
+      "year": 1932
+    },
+    {
+      "author": "Fyodor Dostoevsky",
+      "available": 2,
+      "copies": 3,
+      "genre": "Philosophical Fiction",
+      "id": "11",
+      "isbn": "9780140449136",
+      "title": "Crime and Punishment",
+      "year": 1866
+    },
+    {
+      "author": "Oscar Wilde",
+      "available": 4,
+      "copies": 5,
+      "genre": "Gothic Fiction",
+      "id": "12",
+      "isbn": "9780141439570",
+      "title": "The Picture of Dorian Gray",
+      "year": 1890
+    },
+    {
+      "author": "Harper Lee",
+      "available": 3,
+      "copies": 5,
+      "genre": "Fiction",
+      "id": "c03d",
+      "isbn": "9780061120084",
+      "title": "Test book for post",
+      "year": 1960
+    },
+    {
+      "author": "Harper Lee",
+      "available": 3,
+      "copies": 5,
+      "genre": "Fiction",
+      "id": "20d1",
+      "isbn": "9780061120084",
+      "title": "Test book for post",
+      "year": 1960
+    },
+    {
+      "author": "Harper Lee",
+      "available": 3,
+      "copies": 5,
+      "genre": "Fiction",
+      "id": "f5e9",
+      "isbn": "9780061120084",
+      "title": "Test book for post",
+      "year": 1960
+    },
+    {
+      "id": "7892",
+      "title": "Test book for post"
+    },
+    {
+      "author": "Harper Lee",
+      "available": 3,
+      "copies": 5,
+      "genre": "Fiction",
+      "id": "9df4",
+      "isbn": "9780061120084",
+      "title": "Test book for post",
+      "year": 1960
+    },
+    {
+      "author": "Harper Lee",
+      "available": 3,
+      "copies": 5,
+      "genre": "Fiction",
+      "id": "d901",
+      "isbn": "9780061120084",
+      "title": "Test book for post",
+      "year": 1960
+    },
+    {
+      "author": "Harper Lee",
+      "available": 3,
+      "copies": 5,
+      "genre": "Fiction",
+      "id": "54c6",
+      "isbn": "9780061120084",
+      "title": "Test book for post",
+      "year": 1960
+    },
+    {
+      "author": "Harper Lee",
+      "available": 3,
+      "copies": 5,
+      "genre": "Fiction",
+      "id": "2c61",
+      "isbn": "9780061120084",
+      "title": "Test book for post",
+      "year": 1960
+    },
+    {
+      "author": "Harper Lee",
+      "available": 3,
+      "copies": 5,
+      "genre": "Fiction",
+      "id": "0392",
+      "isbn": "9780061120084",
+      "title": "Test book for post",
+      "year": 1960
+    },
+    {
+      "author": "Harper Lee",
+      "available": 3,
+      "copies": 5,
+      "genre": "Fiction",
+      "id": "457d",
+      "isbn": "9780061120084",
+      "title": "Test book for post",
+      "year": 1960
+    },
+    {
+      "author": "Harper Lee",
+      "available": 3,
+      "copies": 5,
+      "genre": "Fiction",
+      "id": "c038",
+      "isbn": "9780061120084",
+      "title": "Test book for post",
+      "year": 1960
+    },
+    {
+      "author": "Harper Lee",
+      "available": 3,
+      "copies": 5,
+      "genre": "Fiction",
+      "id": "58b6",
+      "isbn": "9780061120084",
+      "title": "Test book for post",
+      "year": 1960
+    },
+    {
+      "author": "Harper Lee",
+      "available": 3,
+      "copies": 5,
+      "genre": "Fiction",
+      "id": "9628",
+      "isbn": "9780061120084",
+      "title": "Test book for post",
+      "year": 1960
+    },
+    {
+      "author": "Harper Lee",
+      "available": 3,
+      "copies": 5,
+      "genre": "Fiction",
+      "id": "4568",
+      "isbn": "9780061120084",
+      "title": "Test book for post",
+      "year": 1960
+    },
+    {
+      "author": "Harper Lee",
+      "available": 3,
+      "copies": 5,
+      "genre": "Fiction",
+      "id": "1d66",
+      "isbn": "9780061120084",
+      "title": "Test book for post",
+      "year": 1960
+    },
+    {
+      "author": "Harper Lee",
+      "available": 3,
+      "copies": 5,
+      "genre": "Fiction",
+      "id": "257b",
+      "isbn": "9780061120084",
+      "title": "Test book for post",
+      "year": 1960
+    },
+    {
+      "author": "Harper Lee",
+      "available": 3,
+      "copies": 5,
+      "genre": "Fiction",
+      "id": "de57",
+      "isbn": "9780061120084",
+      "title": "Test book for post",
+      "year": 1960
+    },
+    {
+      "author": "Harper Lee",
+      "available": 3,
+      "copies": 5,
+      "genre": "Fiction",
+      "id": "18f2",
+      "isbn": "9780061120084",
+      "title": "Test book for post",
+      "year": 1960
+    },
+    {
+      "author": "Harper Lee",
+      "available": 3,
+      "copies": 5,
+      "genre": "Fiction",
+      "id": "6aa6",
+      "isbn": "9780061120084",
+      "title": "Test book for post",
+      "year": 1960
+    },
+    {
+      "author": "Harper Lee",
+      "available": 3,
+      "copies": 5,
+      "genre": "Fiction",
+      "id": "ada0",
+      "isbn": "9780061120084",
+      "title": "Test book for post",
+      "year": 1960
+    },
+    {
+      "author": "Harper Lee",
+      "available": 3,
+      "copies": 5,
+      "genre": "Fiction",
+      "id": "5c40",
+      "isbn": "9780061120084",
+      "title": "Test book for post",
+      "year": 1960
+    },
+    {
+      "author": "Harper Lee",
+      "available": 3,
+      "copies": 5,
+      "genre": "Fiction",
+      "id": "633d",
+      "isbn": "9780061120084",
+      "title": "Test book for post",
+      "year": 1960
+    },
+    {
+      "author": "Harper Lee",
+      "available": 3,
+      "copies": 5,
+      "genre": "Fiction",
+      "id": "8151",
+      "isbn": "9780061120084",
+      "title": "Test book for post",
+      "year": 1960
+    },
+    {
+      "author": "Harper Lee",
+      "available": 3,
+      "copies": 5,
+      "genre": "Fiction",
+      "id": "30bc",
+      "isbn": "9780061120084",
+      "title": "Test book for post",
+      "year": 1960
+    },
+    {
+      "author": "Harper Lee",
+      "available": 3,
+      "copies": 5,
+      "genre": "Fiction",
+      "id": "2c96",
+      "isbn": "9780061120084",
+      "title": "Test book for post",
+      "year": 1960
+    },
+    {
+      "author": "Fyodor Dostoevsky",
+      "available": 2,
+      "copies": 3,
+      "genre": "Philosophical Fiction",
+      "id": "e280",
+      "isbn": "9780140449136",
+      "title": "Crime and Punishment",
+      "year": 1866
+    },
+    {
+      "author": "Harper Lee",
+      "available": 3,
+      "copies": 5,
+      "genre": "Fiction",
+      "id": "abb6",
+      "isbn": "9780061120084",
+      "title": "Test book for post",
+      "year": 1960
+    },
+    {
+      "author": "Fyodor Dostoevsky",
+      "available": 2,
+      "copies": 3,
+      "genre": "Philosophical Fiction",
+      "id": "48ef",
+      "isbn": "9780140449136",
+      "title": "Crime and Punishment",
+      "year": 1866
+    },
+    {
+      "author": "Harper Lee",
+      "available": 3,
+      "copies": 5,
+      "genre": "Fiction",
+      "id": "f3df",
+      "isbn": "9780061120084",
+      "title": "Test book for post",
+      "year": 1960
+    },
+    {
+      "author": "Fyodor Dostoevsky",
+      "available": 2,
+      "copies": 3,
+      "genre": "Philosophical Fiction",
+      "id": "a062",
+      "isbn": "9780140449136",
+      "title": "Crime and Punishment",
+      "year": 1866
+    },
+    {
+      "author": "Harper Lee",
+      "available": 3,
+      "copies": 5,
+      "genre": "Fiction",
+      "id": "6921",
+      "isbn": "9780061120084",
+      "title": "Test book for post",
+      "year": 1960
+    },
+    {
+      "author": "Fyodor Dostoevsky",
+      "available": 2,
+      "copies": 3,
+      "genre": "Philosophical Fiction",
+      "id": "ce54",
+      "isbn": "9780140449136",
+      "title": "Crime and Punishment",
+      "year": 1866
+    },
+    {
+      "author": "Harper Lee",
+      "available": 3,
+      "copies": 5,
+      "genre": "Fiction",
+      "id": "0d78",
+      "isbn": "9780061120084",
+      "title": "Test book for post",
+      "year": 1960
+    },
+    {
+      "author": "Fyodor Dostoevsky",
+      "available": 2,
+      "copies": 3,
+      "genre": "Philosophical Fiction",
+      "id": "483e",
+      "isbn": "9780140449136",
+      "title": "Crime and Punishment",
+      "year": 1866
+    },
+    {
+      "author": "Harper Lee",
+      "available": 3,
+      "copies": 5,
+      "genre": "Fiction",
+      "id": "e355",
+      "isbn": "9780061120084",
+      "title": "Test book for post",
+      "year": 1960
+    },
+    {
+      "author": "Fyodor Dostoevsky",
+      "available": 2,
+      "copies": 3,
+      "genre": "Philosophical Fiction",
+      "id": "a9c6",
+      "isbn": "9780140449136",
+      "title": "Crime and Punishment",
+      "year": 1866
+    },
+    {
+      "author": "Harper Lee",
+      "available": 3,
+      "copies": 5,
+      "genre": "Fiction",
+      "id": "8095",
+      "isbn": "9780061120084",
+      "title": "Test book for post",
+      "year": 1960
+    },
+    {
+      "author": "Fyodor Dostoevsky",
+      "available": 2,
+      "copies": 3,
+      "genre": "Philosophical Fiction",
+      "id": "d96a",
+      "isbn": "9780140449136",
+      "title": "Crime and Punishment",
+      "year": 1866
+    },
+    {
+      "author": "Harper Lee",
+      "available": 3,
+      "copies": 5,
+      "genre": "Fiction",
+      "id": "44ac",
+      "isbn": "9780061120084",
+      "title": "Test book for post",
+      "year": 1960
+    },
+    {
+      "author": "Fyodor Dostoevsky",
+      "available": 2,
+      "copies": 3,
+      "genre": "Philosophical Fiction",
+      "id": "36dd",
+      "isbn": "9780140449136",
+      "title": "Crime and Punishment",
+      "year": 1866
+    },
+    {
+      "author": "Harper Lee",
+      "available": 3,
+      "copies": 5,
+      "genre": "Fiction",
+      "id": "6642",
+      "isbn": "9780061120084",
+      "title": "Test book for post",
+      "year": 1960
+    },
+    {
+      "author": "Harper Lee",
+      "available": 3,
+      "copies": 5,
+      "genre": "Fiction",
+      "id": "2a70",
+      "isbn": "9780061120084",
+      "title": "Test book for post",
+      "year": 1960
+    },
+    {
+      "author": "Fyodor Dostoevsky",
+      "available": 2,
+      "copies": 3,
+      "genre": "Philosophical Fiction",
+      "id": "a42a",
+      "isbn": "9780140449136",
+      "title": "Crime and Punishment",
+      "year": 1866
+    },
+    {
+      "author": "Harper Lee",
+      "available": 3,
+      "copies": 5,
+      "genre": "Fiction",
+      "id": "0108",
+      "isbn": "9780061120084",
+      "title": "Test book for post",
+      "year": 1960
+    },
+    {
+      "author": "Fyodor Dostoevsky",
+      "available": 2,
+      "copies": 3,
+      "genre": "Philosophical Fiction",
+      "id": "fd52",
+      "isbn": "9780140449136",
+      "title": "Crime and Punishment",
+      "year": 1866
+    },
+    {
+      "author": "Fyodor Dostoevsky",
+      "available": 2,
+      "copies": 3,
+      "genre": "Philosophical Fiction",
+      "id": "c76e",
+      "isbn": "9780140449136",
+      "title": "Crime and Punishment",
+      "year": 1866
+    },
+    {
+      "author": "Harper Lee",
+      "available": 3,
+      "copies": 5,
+      "genre": "Fiction",
+      "id": "ee27",
+      "isbn": "9780061120084",
+      "title": "Test book for post",
+      "year": 1960
+    },
+    {
+      "0": {
+        "author": "Harper Lee",
+        "available": 3,
+        "copies": 5,
+        "genre": "Fiction",
+        "isbn": "9780061120084",
+        "title": "1",
+        "year": 1960
+      },
+      "1": {
+        "author": "Harper Lee",
+        "available": 3,
+        "copies": 5,
+        "genre": "Fiction",
+        "isbn": "9780061120084",
+        "title": "2",
+        "year": 1960
+      },
+      "id": "0bf8"
+    },
+    {
+      "author": "Fyodor Dostoevsky",
+      "available": 2,
+      "copies": 3,
+      "genre": "Philosophical Fiction",
+      "id": "01b2",
+      "isbn": "9780140449136",
+      "title": "Crime and Punishment",
+      "year": 1866
+    },
+    {
+      "book": {
+        "author": "Harper Lee",
+        "available": 3,
+        "copies": 5,
+        "genre": "Fiction",
+        "isbn": "9780061120084",
+        "title": "2",
+        "year": 1960
+      },
+      "id": "2046"
+    },
+    {
+      "author": "Harper Lee",
+      "available": 3,
+      "copies": 5,
+      "genre": "Fiction",
+      "id": "2cc9",
+      "isbn": "9780061120084",
+      "title": "Test book for post",
+      "year": 1960
+    },
+    {
+      "author": "Fyodor Dostoevsky",
+      "available": 2,
+      "copies": 3,
+      "genre": "Philosophical Fiction",
+      "id": "d91f",
+      "isbn": "9780140449136",
+      "title": "Crime and Punishment",
+      "year": 1866
+    },
+    {
+      "author": "Harper Lee",
+      "available": 3,
+      "copies": 5,
+      "genre": "Fiction",
+      "id": "d9f8",
+      "isbn": "9780061120084",
+      "title": "Test book for post",
+      "year": 1960
+    },
+    {
+      "book": {
+        "author": "Harper Lee",
+        "available": 3,
+        "copies": 5,
+        "genre": "Fiction",
+        "isbn": "9780061120084",
+        "title": "2",
+        "year": 1960
+      },
+      "id": "f04a"
+    },
+    {
+      "author": "Fyodor Dostoevsky",
+      "available": 2,
+      "copies": 3,
+      "genre": "Philosophical Fiction",
+      "id": "5e93",
+      "isbn": "9780140449136",
+      "title": "Crime and Punishment",
+      "year": 1866
+    },
+    {
+      "author": "Harper Lee",
+      "available": 3,
+      "copies": 5,
+      "genre": "Fiction",
+      "id": "9384",
+      "isbn": "9780061120084",
+      "title": "Test book for post",
+      "year": 1960
+    },
+    {
+      "book": {
+        "author": "Harper Lee",
+        "available": 3,
+        "copies": 5,
+        "genre": "Fiction",
+        "isbn": "9780061120084",
+        "title": "2",
+        "year": 1960
+      },
+      "books": {
+        "author": "Harper Lee",
+        "available": 3,
+        "copies": 5,
+        "genre": "Fiction",
+        "isbn": "9780061120084",
+        "title": "1",
+        "year": 1960
+      },
+      "id": "7429"
+    },
+    {
+      "author": "Fyodor Dostoevsky",
+      "available": 2,
+      "copies": 3,
+      "genre": "Philosophical Fiction",
+      "id": "a5d7",
+      "isbn": "9780140449136",
+      "title": "Crime and Punishment",
+      "year": 1866
+    },
+    {
+      "author": "Harper Lee",
+      "available": 3,
+      "copies": 5,
+      "genre": "Fiction",
+      "id": "e0c4",
+      "isbn": "9780061120084",
+      "title": "Test book for post",
+      "year": 1960
+    },
+    {
+      "books": {
+        "author": "Harper Lee",
+        "available": 3,
+        "copies": 5,
+        "genre": "Fiction",
+        "isbn": "9780061120084",
+        "title": "2",
+        "year": 1960
+      },
+      "id": "5a09"
+    },
+    {
+      "author": "Fyodor Dostoevsky",
+      "available": 2,
+      "copies": 3,
+      "genre": "Philosophical Fiction",
+      "id": "169a",
+      "isbn": "9780140449136",
+      "title": "Crime and Punishment",
+      "year": 1866
+    },
+    {
+      "author": "Harper Lee",
+      "available": 3,
+      "copies": 5,
+      "genre": "Fiction",
+      "id": "1b52",
+      "isbn": "9780061120084",
+      "title": "Test book for post",
+      "year": 1960
+    },
+    {
+      "id": "3467"
+    },
+    {
+      "author": "Fyodor Dostoevsky",
+      "available": 2,
+      "copies": 3,
+      "genre": "Philosophical Fiction",
+      "id": "deb5",
+      "isbn": "9780140449136",
+      "title": "Crime and Punishment",
+      "year": 1866
+    },
+    {
+      "author": "Harper Lee",
+      "available": 3,
+      "copies": 5,
+      "genre": "Fiction",
+      "id": "9403",
+      "isbn": "9780061120084",
+      "title": "Test book for post",
+      "year": 1960
+    },
+    {
+      "id": "516c"
+    },
+    {
+      "id": "4042"
+    },
+    {
+      "author": "Harper Lee",
+      "available": 3,
+      "copies": 5,
+      "genre": "Fiction",
+      "id": "e0fc",
+      "isbn": "9780061120084",
+      "title": "Test book for post",
+      "year": 1960
+    },
+    {
+      "id": "eeef",
+      "title": "PUT method, нахождение по  id и удаление свойства с перезаписью, останется только то которое было указано в body"
+    },
+    {
+      "author": "Harper Lee",
+      "available": 3,
+      "copies": 5,
+      "genre": "Fiction",
+      "id": "58d4",
+      "isbn": "9780061120084",
+      "title": "PUTCH method, нахождение по  id и замена свойства",
+      "year": 1960
+    },
+    {
+      "0": {
+        "author": "Harper Lee",
+        "available": 3,
+        "copies": 5,
+        "genre": "Fiction",
+        "isbn": "9780061120084",
+        "title": "1",
+        "year": 1960
+      },
+      "1": {
+        "author": "Harper Lee",
+        "available": 3,
+        "copies": 5,
+        "genre": "Fiction",
+        "isbn": "9780061120084",
+        "title": "2",
+        "year": 1960
+      },
+      "id": "7b35"
+    },
+    {
+      "author": "Fyodor Dostoevsky",
+      "available": 2,
+      "copies": 3,
+      "genre": "Philosophical Fiction",
+      "id": "0847",
+      "isbn": "9780140449136",
+      "title": "Crime and Punishment",
+      "year": 1866
+    },
+    {
+      "author": "Harper Lee",
+      "available": 3,
+      "copies": 5,
+      "genre": "Fiction",
+      "id": "b306",
+      "isbn": "9780061120084",
+      "title": "Test book for post",
+      "year": 1960
+    },
+    {
+      "0": {
+        "author": "Harper Lee",
+        "available": 3,
+        "copies": 5,
+        "genre": "Fiction",
+        "isbn": "9780061120084",
+        "title": "1",
+        "year": 1960
+      },
+      "1": {
+        "author": "Harper Lee",
+        "available": 3,
+        "copies": 5,
+        "genre": "Fiction",
+        "isbn": "9780061120084",
+        "title": "2",
+        "year": 1960
+      },
+      "id": "9cd1"
+    },
+    {
+      "author": "Fyodor Dostoevsky",
+      "available": 2,
+      "copies": 3,
+      "genre": "Philosophical Fiction",
+      "id": "d45d",
+      "isbn": "9780140449136",
+      "title": "Crime and Punishment",
+      "year": 1866
+    },
+    {
+      "author": "Harper Lee",
+      "available": 3,
+      "copies": 5,
+      "genre": "Fiction",
+      "id": "2818",
+      "isbn": "9780061120084",
+      "title": "Test book for post",
+      "year": 1960
+    },
+    {
+      "0": {
+        "author": "Harper Lee",
+        "available": 3,
+        "copies": 5,
+        "genre": "Fiction",
+        "isbn": "9780061120084",
+        "title": "1",
+        "year": 1960
+      },
+      "1": {
+        "author": "Harper Lee",
+        "available": 3,
+        "copies": 5,
+        "genre": "Fiction",
+        "isbn": "9780061120084",
+        "title": "2",
+        "year": 1960
+      },
+      "id": "9b61"
+    },
+    {
+      "author": "Fyodor Dostoevsky",
+      "available": 2,
+      "copies": 3,
+      "genre": "Philosophical Fiction",
+      "id": "29fb",
+      "isbn": "9780140449136",
+      "title": "Crime and Punishment",
+      "year": 1866
+    },
+    {
+      "author": "Harper Lee",
+      "available": 3,
+      "copies": 5,
+      "genre": "Fiction",
+      "id": "e4ad",
+      "isbn": "9780061120084",
+      "title": "Test book for post",
+      "year": 1960
+    },
+    {
+      "0": {
+        "author": "Harper Lee",
+        "available": 3,
+        "copies": 5,
+        "genre": "Fiction",
+        "isbn": "9780061120084",
+        "title": "1",
+        "year": 1960
+      },
+      "1": {
+        "author": "Harper Lee",
+        "available": 3,
+        "copies": 5,
+        "genre": "Fiction",
+        "isbn": "9780061120084",
+        "title": "2",
+        "year": 1960
+      },
+      "id": "0802"
+    },
+    {
+      "author": "Fyodor Dostoevsky",
+      "available": 2,
+      "copies": 3,
+      "genre": "Philosophical Fiction",
+      "id": "45f0",
+      "isbn": "9780140449136",
+      "title": "Crime and Punishment",
+      "year": 1866
+    },
+    {
+      "author": "Harper Lee",
+      "available": 3,
+      "copies": 5,
+      "genre": "Fiction",
+      "id": "dc72",
+      "isbn": "9780061120084",
+      "title": "Test book for post",
+      "year": 1960
+    },
+    {
+      "author": "Fyodor Dostoevsky",
+      "available": 2,
+      "copies": 3,
+      "genre": "Philosophical Fiction",
+      "id": "29e6",
+      "isbn": "9780140449136",
+      "title": "Crime and Punishment",
+      "year": 1866
+    },
+    {
+      "author": "Harper Lee",
+      "available": 3,
+      "copies": 5,
+      "genre": "Fiction",
+      "id": "2ed8",
+      "isbn": "9780061120084",
+      "title": "Test book for post",
+      "year": 1960
+    },
+    {
+      "author": "Fyodor Dostoevsky",
+      "available": 2,
+      "copies": 3,
+      "genre": "Philosophical Fiction",
+      "id": "32ae",
+      "isbn": "9780140449136",
+      "title": "Crime and Punishment",
+      "year": 1866
+    },
+    {
+      "author": "Harper Lee",
+      "available": 3,
+      "copies": 5,
+      "genre": "Fiction",
+      "id": "0332",
+      "isbn": "9780061120084",
+      "title": "Test book for post",
+      "year": 1960
+    },
+    {
+      "author": "Fyodor Dostoevsky",
+      "available": 2,
+      "copies": 3,
+      "genre": "Philosophical Fiction",
+      "id": "a640",
+      "isbn": "9780140449136",
+      "title": "Crime and Punishment",
+      "year": 1866
+    },
+    {
+      "author": "Fyodor Dostoevsky",
+      "available": 2,
+      "copies": 3,
+      "genre": "Philosophical Fiction",
+      "id": "98dd",
+      "isbn": "9780140449136",
+      "title": "Crime and Punishment",
+      "year": 1866
+    },
+    {
+      "author": "Harper Lee",
+      "available": 3,
+      "copies": 5,
+      "genre": "Fiction",
+      "id": "c454",
+      "isbn": "9780061120084",
+      "title": "Test book for post",
+      "year": 1960
+    },
+    {
+      "author": "Fyodor Dostoevsky",
+      "available": 2,
+      "copies": 3,
+      "genre": "Philosophical Fiction",
+      "id": "f8ba",
+      "isbn": "9780140449136",
+      "title": "Crime and Punishment",
+      "year": 1866
+    },
+    {
+      "author": "Harper Lee",
+      "available": 3,
+      "copies": 5,
+      "genre": "Fiction",
+      "id": "1b1f",
+      "isbn": "9780061120084",
+      "title": "Test book for post",
+      "year": 1960
+    },
+    {
+      "author": "Fyodor Dostoevsky",
+      "available": 2,
+      "copies": 3,
+      "genre": "Philosophical Fiction",
+      "id": "3e79",
+      "isbn": "9780140449136",
+      "title": "Crime and Punishment",
+      "year": 1866
+    },
+    {
+      "author": "Harper Lee",
+      "available": 3,
+      "copies": 5,
+      "genre": "Fiction",
+      "id": "8752",
+      "isbn": "9780061120084",
+      "title": "Test book for post",
+      "year": 1960
+    },
+    {
+      "author": "Fyodor Dostoevsky",
+      "available": 2,
+      "copies": 3,
+      "genre": "Philosophical Fiction",
+      "id": "f8b9",
+      "isbn": "9780140449136",
+      "title": "Crime and Punishment",
+      "year": 1866
+    },
+    {
+      "author": "Harper Lee",
+      "available": 3,
+      "copies": 5,
+      "genre": "Fiction",
+      "id": "d9e7",
+      "isbn": "9780061120084",
+      "title": "Test book for post",
+      "year": 1960
+    },
+    {
+      "author": "Fyodor Dostoevsky",
+      "available": 2,
+      "copies": 3,
+      "genre": "Philosophical Fiction",
+      "id": "70af",
+      "isbn": "9780140449136",
+      "title": "Crime and Punishment",
+      "year": 1866
+    },
+    {
+      "author": "Harper Lee",
+      "available": 3,
+      "copies": 5,
+      "genre": "Fiction",
+      "id": "37d3",
+      "isbn": "9780061120084",
+      "title": "Test book for post",
+      "year": 1960
+    },
+    {
+      "author": "Fyodor Dostoevsky",
+      "available": 2,
+      "copies": 3,
+      "genre": "Philosophical Fiction",
+      "id": "9a62",
+      "isbn": "9780140449136",
+      "title": "Crime and Punishment",
+      "year": 1866
+    },
+    {
+      "author": "Fyodor Dostoevsky",
+      "available": 2,
+      "copies": 3,
+      "genre": "Philosophical Fiction",
+      "id": "7b64",
+      "isbn": "9780140449136",
+      "title": "Crime and Punishment",
+      "year": 1866
+    },
+    {
+      "author": "Harper Lee",
+      "available": 3,
+      "copies": 5,
+      "genre": "Fiction",
+      "id": "51ab",
+      "isbn": "9780061120084",
+      "title": "Test book for post",
+      "year": 1960
+    },
+    {
+      "author": "Fyodor Dostoevsky",
+      "available": 2,
+      "copies": 3,
+      "genre": "Philosophical Fiction",
+      "id": "565a",
+      "isbn": "9780140449136",
+      "title": "Crime and Punishment",
+      "year": 1866
+    },
+    {
+      "author": "Harper Lee",
+      "available": 3,
+      "copies": 5,
+      "genre": "Fiction",
+      "id": "8bdb",
+      "isbn": "9780061120084",
+      "title": "Test book for post",
+      "year": 1960
+    },
+    {
+      "author": "Fyodor Dostoevsky",
+      "available": 2,
+      "copies": 3,
+      "genre": "Philosophical Fiction",
+      "id": "6513",
+      "isbn": "9780140449136",
+      "title": "Crime and Punishment",
+      "year": 1866
+    },
+    {
+      "author": "Harper Lee",
+      "available": 3,
+      "copies": 5,
+      "genre": "Fiction",
+      "id": "a1be",
+      "isbn": "9780061120084",
+      "title": "Test book for post",
+      "year": 1960
+    },
+    {
+      "author": "Fyodor Dostoevsky",
+      "available": 2,
+      "copies": 3,
+      "genre": "Philosophical Fiction",
+      "id": "b0c7",
+      "isbn": "9780140449136",
+      "title": "Crime and Punishment",
+      "year": 1866
+    },
+    {
+      "author": "Harper Lee",
+      "available": 3,
+      "copies": 5,
+      "genre": "Fiction",
+      "id": "6b62",
+      "isbn": "9780061120084",
+      "title": "Test book for post",
+      "year": 1960
+    },
+    {
+      "author": "Fyodor Dostoevsky",
+      "available": 2,
+      "copies": 3,
+      "genre": "Philosophical Fiction",
+      "id": "7be8",
+      "isbn": "9780140449136",
+      "title": "Crime and Punishment",
+      "year": 1866
+    },
+    {
+      "author": "Fyodor Dostoevsky",
+      "available": 2,
+      "copies": 3,
+      "genre": "Philosophical Fiction",
+      "id": "de16",
+      "isbn": "9780140449136",
+      "title": "Crime and Punishment",
+      "year": 1866
+    },
+    {
+      "author": "Fyodor Dostoevsky",
+      "available": 2,
+      "copies": 3,
+      "genre": "Philosophical Fiction",
+      "id": "6dff",
+      "isbn": "9780140449136",
+      "title": "Crime and Punishment",
+      "year": 1866
+    },
+    {
+      "author": "Harper Lee",
+      "available": 3,
+      "copies": 5,
+      "genre": "Fiction",
+      "id": "1382",
+      "isbn": "9780061120084",
+      "title": "Test book for post",
+      "year": 1960
+    },
+    {
+      "author": "Fyodor Dostoevsky",
+      "available": 2,
+      "copies": 3,
+      "genre": "Philosophical Fiction",
+      "id": "ee7f",
+      "isbn": "9780140449136",
+      "title": "Crime and Punishment",
+      "year": 1866
+    },
+    {
+      "author": "Harper Lee",
+      "available": 3,
+      "copies": 5,
+      "genre": "Fiction",
+      "id": "98d8",
+      "isbn": "9780061120084",
+      "title": "Test book for post",
+      "year": 1960
+    },
+    {
+      "author": "Fyodor Dostoevsky",
+      "available": 2,
+      "copies": 3,
+      "genre": "Philosophical Fiction",
+      "id": "3949",
+      "isbn": "9780140449136",
+      "title": "Crime and Punishment",
+      "year": 1866
+    },
+    {
+      "author": "Harper Lee",
+      "available": 3,
+      "copies": 5,
+      "genre": "Fiction",
+      "id": "a3e2",
+      "isbn": "9780061120084",
+      "title": "Test book for post",
+      "year": 1960
+    },
+    {
+      "author": "Fyodor Dostoevsky",
+      "available": 2,
+      "copies": 3,
+      "genre": "Philosophical Fiction",
+      "id": "7c55",
+      "isbn": "9780140449136",
+      "title": "Crime and Punishment",
+      "year": 1866
+    },
+    {
+      "author": "Harper Lee",
+      "available": 3,
+      "copies": 5,
+      "genre": "Fiction",
+      "id": "1788",
+      "isbn": "9780061120084",
+      "title": "Test book for post",
+      "year": 1960
+    },
+    {
+      "author": "Fyodor Dostoevsky",
+      "available": 2,
+      "copies": 3,
+      "genre": "Philosophical Fiction",
+      "id": "9fda",
+      "isbn": "9780140449136",
+      "title": "Crime and Punishment",
+      "year": 1866
+    },
+    {
+      "author": "Harper Lee",
+      "available": 3,
+      "copies": 5,
+      "genre": "Fiction",
+      "id": "fbac",
+      "isbn": "9780061120084",
+      "title": "Test book for post",
+      "year": 1960
+    },
+    {
+      "author": "Fyodor Dostoevsky",
+      "available": 2,
+      "copies": 3,
+      "genre": "Philosophical Fiction",
+      "id": "64a5",
+      "isbn": "9780140449136",
+      "title": "Crime and Punishment",
+      "year": 1866
+    },
+    {
+      "author": "Harper Lee",
+      "available": 3,
+      "copies": 5,
+      "genre": "Fiction",
+      "id": "ca15",
+      "isbn": "9780061120084",
+      "title": "Test book for post",
+      "year": 1960
+    },
+    {
+      "author": "Fyodor Dostoevsky",
+      "available": 2,
+      "copies": 3,
+      "genre": "Philosophical Fiction",
+      "id": "117b",
+      "isbn": "9780140449136",
+      "title": "Crime and Punishment",
+      "year": 1866
+    },
+    {
+      "author": "Harper Lee",
+      "available": 3,
+      "copies": 5,
+      "genre": "Fiction",
+      "id": "e134",
+      "isbn": "9780061120084",
+      "title": "Test book for post",
+      "year": 1960
+    },
+    {
+      "author": "Fyodor Dostoevsky",
+      "available": 2,
+      "copies": 3,
+      "genre": "Philosophical Fiction",
+      "id": "a73a",
+      "isbn": "9780140449136",
+      "title": "Crime and Punishment",
+      "year": 1866
+    },
+    {
+      "author": "Harper Lee",
+      "available": 3,
+      "copies": 5,
+      "genre": "Fiction",
+      "id": "9eaf",
+      "isbn": "9780061120084",
+      "title": "Test book for post",
+      "year": 1960
+    },
+    {
+      "author": "Fyodor Dostoevsky",
+      "available": 2,
+      "copies": 3,
+      "genre": "Philosophical Fiction",
+      "id": "34fa",
+      "isbn": "9780140449136",
+      "title": "Crime and Punishment",
+      "year": 1866
+    },
+    {
+      "author": "Harper Lee",
+      "available": 3,
+      "copies": 5,
+      "genre": "Fiction",
+      "id": "739a",
+      "isbn": "9780061120084",
+      "title": "Test book for post",
+      "year": 1960
+    },
+    {
+      "author": "Fyodor Dostoevsky",
+      "available": 2,
+      "copies": 3,
+      "genre": "Philosophical Fiction",
+      "id": "2977",
+      "isbn": "9780140449136",
+      "title": "Crime and Punishment",
+      "year": 1866
+    },
+    {
+      "author": "Harper Lee",
+      "available": 3,
+      "copies": 5,
+      "genre": "Fiction",
+      "id": "0690",
+      "isbn": "9780061120084",
+      "title": "Test book for post",
+      "year": 1960
+    },
+    {
+      "author": "Fyodor Dostoevsky",
+      "available": 2,
+      "copies": 3,
+      "genre": "Philosophical Fiction",
+      "id": "aa9a",
+      "isbn": "9780140449136",
+      "title": "Crime and Punishment",
+      "year": 1866
+    },
+    {
+      "author": "Harper Lee",
+      "available": 3,
+      "copies": 5,
+      "genre": "Fiction",
+      "id": "eff6",
+      "isbn": "9780061120084",
+      "title": "Test book for post",
+      "year": 1960
+    },
+    {
+      "author": "Fyodor Dostoevsky",
+      "available": 2,
+      "copies": 3,
+      "genre": "Philosophical Fiction",
+      "id": "5056",
+      "isbn": "9780140449136",
+      "title": "Crime and Punishment",
+      "year": 1866
+    },
+    {
+      "author": "Harper Lee",
+      "available": 3,
+      "copies": 5,
+      "genre": "Fiction",
+      "id": "df50",
+      "isbn": "9780061120084",
+      "title": "Test book for post",
+      "year": 1960
+    },
+    {
+      "author": "Fyodor Dostoevsky",
+      "available": 2,
+      "copies": 3,
+      "genre": "Philosophical Fiction",
+      "id": "c5bc",
+      "isbn": "9780140449136",
+      "title": "Crime and Punishment",
+      "year": 1866
+    },
+    {
+      "author": "Harper Lee",
+      "available": 3,
+      "copies": 5,
+      "genre": "Fiction",
+      "id": "29dd",
+      "isbn": "9780061120084",
+      "title": "Test book for post",
+      "year": 1960
+    },
+    {
+      "author": "Fyodor Dostoevsky",
+      "available": 2,
+      "copies": 3,
+      "genre": "Philosophical Fiction",
+      "id": "568e",
+      "isbn": "9780140449136",
+      "title": "Crime and Punishment",
+      "year": 1866
+    },
+    {
+      "author": "Harper Lee",
+      "available": 3,
+      "copies": 5,
+      "genre": "Fiction",
+      "id": "2500",
+      "isbn": "9780061120084",
+      "title": "Test book for post",
+      "year": 1960
+    },
+    {
+      "author": "Fyodor Dostoevsky",
+      "available": 2,
+      "copies": 3,
+      "genre": "Philosophical Fiction",
+      "id": "de9e",
+      "isbn": "9780140449136",
+      "title": "Crime and Punishment",
+      "year": 1866
+    },
+    {
+      "author": "Harper Lee",
+      "available": 3,
+      "copies": 5,
+      "genre": "Fiction",
+      "id": "f71a",
+      "isbn": "9780061120084",
+      "title": "Test book for post",
+      "year": 1960
+    },
+    {
+      "author": "Fyodor Dostoevsky",
+      "available": 2,
+      "copies": 3,
+      "genre": "Philosophical Fiction",
+      "id": "4c3b",
+      "isbn": "9780140449136",
+      "title": "Crime and Punishment",
+      "year": 1866
+    },
+    {
+      "author": "Harper Lee",
+      "available": 3,
+      "copies": 5,
+      "genre": "Fiction",
+      "id": "a320",
+      "isbn": "9780061120084",
+      "title": "Test book for post",
+      "year": 1960
+    },
+    {
+      "author": "Fyodor Dostoevsky",
+      "available": 2,
+      "copies": 3,
+      "genre": "Philosophical Fiction",
+      "id": "cdcc",
+      "isbn": "9780140449136",
+      "title": "Crime and Punishment",
+      "year": 1866
+    },
+    {
+      "author": "Harper Lee",
+      "available": 3,
+      "copies": 5,
+      "genre": "Fiction",
+      "id": "54b7",
+      "isbn": "9780061120084",
+      "title": "Test book for post",
+      "year": 1960
+    },
+    {
+      "author": "Fyodor Dostoevsky",
+      "available": 2,
+      "copies": 3,
+      "genre": "Philosophical Fiction",
+      "id": "c7f5",
+      "isbn": "9780140449136",
+      "title": "Crime and Punishment",
+      "year": 1866
+    },
+    {
+      "author": "Harper Lee",
+      "available": 3,
+      "copies": 5,
+      "genre": "Fiction",
+      "id": "b122",
+      "isbn": "9780061120084",
+      "title": "Test book for post",
+      "year": 1960
+    },
+    {
+      "author": "Fyodor Dostoevsky",
+      "available": 2,
+      "copies": 3,
+      "genre": "Philosophical Fiction",
+      "id": "fe7f",
+      "isbn": "9780140449136",
+      "title": "Crime and Punishment",
+      "year": 1866
+    },
+    {
+      "author": "Harper Lee",
+      "available": 3,
+      "copies": 5,
+      "genre": "Fiction",
+      "id": "b5d7",
+      "isbn": "9780061120084",
+      "title": "Test book for post",
+      "year": 1960
+    },
+    {
+      "author": "Fyodor Dostoevsky",
+      "available": 2,
+      "copies": 3,
+      "genre": "Philosophical Fiction",
+      "id": "2e18",
+      "isbn": "9780140449136",
+      "title": "Crime and Punishment",
+      "year": 1866
+    },
+    {
+      "author": "Harper Lee",
+      "available": 3,
+      "copies": 5,
+      "genre": "Fiction",
+      "id": "ab7e",
+      "isbn": "9780061120084",
+      "title": "Test book for post",
+      "year": 1960
+    },
+    {
+      "author": "Fyodor Dostoevsky",
+      "available": 2,
+      "copies": 3,
+      "genre": "Philosophical Fiction",
+      "id": "c430",
+      "isbn": "9780140449136",
+      "title": "Crime and Punishment",
+      "year": 1866
+    },
+    {
+      "author": "Fyodor Dostoevsky",
+      "available": 2,
+      "copies": 3,
+      "genre": "Philosophical Fiction",
+      "id": "e009",
+      "isbn": "9780140449136",
+      "title": "Crime and Punishment",
+      "year": 1866
+    },
+    {
+      "author": "Harper Lee",
+      "available": 3,
+      "copies": 5,
+      "genre": "Fiction",
+      "id": "117a",
+      "isbn": "9780061120084",
+      "title": "Test book for post",
+      "year": 1960
+    },
+    {
+      "author": "Fyodor Dostoevsky",
+      "available": 2,
+      "copies": 3,
+      "genre": "Philosophical Fiction",
+      "id": "f66f",
+      "isbn": "9780140449136",
+      "title": "Crime and Punishment",
+      "year": 1866
+    },
+    {
+      "author": "Harper Lee",
+      "available": 3,
+      "copies": 5,
+      "genre": "Fiction",
+      "id": "85ec",
+      "isbn": "9780061120084",
+      "title": "Test book for post",
+      "year": 1960
+    },
+    {
+      "author": "Fyodor Dostoevsky",
+      "available": 2,
+      "copies": 3,
+      "genre": "Philosophical Fiction",
+      "id": "60aa",
+      "isbn": "9780140449136",
+      "title": "Crime and Punishment",
+      "year": 1866
+    },
+    {
+      "author": "Harper Lee",
+      "available": 3,
+      "copies": 5,
+      "genre": "Fiction",
+      "id": "3caf",
+      "isbn": "9780061120084",
+      "title": "Test book for post",
+      "year": 1960
+    },
+    {
+      "author": "Fyodor Dostoevsky",
+      "available": 2,
+      "copies": 3,
+      "genre": "Philosophical Fiction",
+      "id": "33bb",
+      "isbn": "9780140449136",
+      "title": "Crime and Punishment",
+      "year": 1866
+    },
+    {
+      "author": "Harper Lee",
+      "available": 3,
+      "copies": 5,
+      "genre": "Fiction",
+      "id": "9724",
+      "isbn": "9780061120084",
+      "title": "Test book for post",
+      "year": 1960
+    },
+    {
+      "author": "Fyodor Dostoevsky",
+      "available": 2,
+      "copies": 3,
+      "genre": "Philosophical Fiction",
+      "id": "d766",
+      "isbn": "9780140449136",
+      "title": "Crime and Punishment",
+      "year": 1866
+    },
+    {
+      "author": "Harper Lee",
+      "available": 3,
+      "copies": 5,
+      "genre": "Fiction",
+      "id": "dfb9",
+      "isbn": "9780061120084",
+      "title": "Test book for post",
+      "year": 1960
+    },
+    {
+      "author": "Fyodor Dostoevsky",
+      "available": 2,
+      "copies": 3,
+      "genre": "Philosophical Fiction",
+      "id": "ad84",
+      "isbn": "9780140449136",
+      "title": "Crime and Punishment",
+      "year": 1866
+    },
+    {
+      "author": "Fyodor Dostoevsky",
+      "available": 2,
+      "copies": 3,
+      "genre": "Philosophical Fiction",
+      "id": "6805",
+      "isbn": "9780140449136",
+      "title": "Crime and Punishment",
+      "year": 1866
+    },
+    {
+      "author": "Harper Lee",
+      "available": 3,
+      "copies": 5,
+      "genre": "Fiction",
+      "id": "a670",
+      "isbn": "9780061120084",
+      "title": "Test book for post",
+      "year": 1960
+    },
+    {
+      "author": "Fyodor Dostoevsky",
+      "available": 2,
+      "copies": 3,
+      "genre": "Philosophical Fiction",
+      "id": "d05d",
+      "isbn": "9780140449136",
+      "title": "Crime and Punishment",
+      "year": 1866
+    },
+    {
+      "author": "Harper Lee",
+      "available": 3,
+      "copies": 5,
+      "genre": "Fiction",
+      "id": "e57d",
+      "isbn": "9780061120084",
+      "title": "Test book for post",
+      "year": 1960
+    },
+    {
+      "author": "Fyodor Dostoevsky",
+      "available": 2,
+      "copies": 3,
+      "genre": "Philosophical Fiction",
+      "id": "54cb",
+      "isbn": "9780140449136",
+      "title": "Crime and Punishment",
+      "year": 1866
+    },
+    {
+      "author": "Harper Lee",
+      "available": 3,
+      "copies": 5,
+      "genre": "Fiction",
+      "id": "7fc7",
+      "isbn": "9780061120084",
+      "title": "Test book for post",
+      "year": 1960
+    }
+  ],
+  "movies": []
+}

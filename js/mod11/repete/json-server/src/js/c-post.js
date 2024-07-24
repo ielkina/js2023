@@ -59,6 +59,7 @@ createNewBook({
   isbn: '9780140449136',
 }).then(renderBook);
 
+//then/catch для отлова ошибок выполняется вне не асинхронной функции  
 createNewBook(newBook)
   .then(renderBook)
   .catch(err => console.log(err));

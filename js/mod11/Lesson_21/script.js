@@ -1,4 +1,5 @@
 // https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest
+// https://axios-http.com/docs/intro
 
 // CRUD
 
@@ -29,8 +30,6 @@ fetch('https://jsonplaceholder.typicode.com/posts', options)
   })
   .then(data => console.log(data))
   .catch(err => console.log(err));
-
-//****** */
 
 const addPost = document.querySelector('.js-add');
 const listPosts = document.querySelector('.js-posts');
@@ -115,7 +114,7 @@ function addPostService(data) {
 // U PUT PATCH
 
 // {
-//     id:101,
+//     id:101, //обязательно передавать id
 //     title: 'Hello fish',
 //     body: "Hello dog",
 //     userId : 1
@@ -141,10 +140,10 @@ function addPostService(data) {
 // }
 
 // const options = {
-//   method: "PUT",
+//   method: "PUT", //перетрет обьект в базе кроме id а все остальные удалит 
 //   body: JSON.stringify({
-//     id: 1,
-//     title: "cat",
+//     id: 1, //обязательно указать какой id
+//     title: "cat", //какой элемент надо оставить при обновлении  
 //   }),
 //   headers: {
 //     "Content-type": "application/json",
@@ -156,7 +155,7 @@ fetch('https://jsonplaceholder.typicode.com/posts/1', options)
   .then(data => console.log(data));
 
 // const options = {
-//     method: "PATCH",
+//     method: "PATCH", //обновит элемент обьекта только то поле которое мы указали
 //     body: JSON.stringify({
 //       id: 1,
 //       title: "cat",
